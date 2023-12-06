@@ -13,7 +13,7 @@ using Game.Economy;
 using Unity.Mathematics;
 
 #if BEPINEX6
-global using BepInEx.Unity.Mono;
+using BepInEx.Unity.Mono;
 #endif
 
 namespace WhitesharkCheatOverhaul;
