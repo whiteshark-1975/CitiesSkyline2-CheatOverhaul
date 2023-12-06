@@ -12,7 +12,12 @@ using System.Data.SqlTypes;
 using Game.Economy;
 using Unity.Mathematics;
 
+#if BEPINEX6
+global using BepInEx.Unity.Mono;
+#endif
+
 namespace WhitesharkCheatOverhaul;
+
 
 [BepInPlugin("WhitesharkCheatOverhaul", "CheatOverhaul", "0.3.14")]
 #pragma warning disable BepInEx002
