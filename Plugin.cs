@@ -19,7 +19,7 @@ using BepInEx.Unity.Mono;
 namespace WhitesharkCheatOverhaul;
 
 
-[BepInPlugin("WhitesharkCheatOverhaul", "CheatOverhaul", "0.3.14")]
+[BepInPlugin("WhitesharkCheatOverhaul", "CheatOverhaul", "0.3.15")]
 #pragma warning disable BepInEx002
 public class WhitesharkCheatOverhaul : BaseUnityPlugin
 #pragma warning restore BepInEx002
