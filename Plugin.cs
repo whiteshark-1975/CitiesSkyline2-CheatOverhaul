@@ -543,7 +543,7 @@ public static class Schoolpollution
     }
 }
 [HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
-public static class Windmill
+public static class WindTurbine
 {
     private static readonly Dictionary<string, (int, int, int)> _wind_production_upkeep_noise = new()
     {
