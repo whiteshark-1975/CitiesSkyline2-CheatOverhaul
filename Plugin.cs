@@ -570,7 +570,7 @@ public static class Windmill
     }
 }
 [HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
-public static class Battery
+public static class EmergencyBatteryStation
 {
     private static readonly Dictionary<string, (int, int, int, int, int)> _capacity_upkeep_water_garbage_noise = new()
     {
@@ -601,7 +601,7 @@ public static class Battery
     }
 }
 [HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
-public static class Geothermal
+public static class GeothermalPowerPlant
 {
     private static readonly Dictionary<string, (int, int, int, int, int, int, int)> _ConsumptionAndPollution = new()
     {

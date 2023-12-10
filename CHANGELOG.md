@@ -4,7 +4,7 @@
 * 0.3.15 Added:
 	* CoalPowerplant
 	* Nuclear Powerplant
-	* Windmill
-	* Battery
-	* Solar powerstation
-	* Geothermal
+	* WindTurbine
+	* Emergency Battery Station
+	* Solar Power Station
+	* Geothermal Power Plant
