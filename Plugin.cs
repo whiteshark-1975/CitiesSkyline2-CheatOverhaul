@@ -43,7 +43,7 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
 }
 
 [HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
-public static class PowerPlants_Consumption_Pollution_Production
+public static class PowerPlants
 {
     private static readonly Dictionary<string, (int, int, int, int, int, int, int)> _ConsumptionAndPollution = new()
     {
@@ -77,11 +77,14 @@ public static class PowerPlants_Consumption_Pollution_Production
     }
 }
 [HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
-public static class WaterPump_Consumption_Pollution_Production
+public static class WaterPumps
 {
     private static readonly Dictionary<string, (int, int, int, int, int)> _watercostAndCapacity = new()
     {
-        { "WaterPumpingStation01", (50,1000000,0,0,0) }
+        { "WaterPumpingStation01", (50,1000000,0,0,0) },
+        { "GroundwaterPumpingStation01", (50,1000000,0,0,0) },
+        { "DesalinationPlant01", (50,1000000,0,0,0) },
+        { "WaterTower01", (50,1000000,0,0,0) }
     };
 
     [HarmonyPrefix]
@@ -285,11 +288,12 @@ public static class ParkPatch_Happiness
     }
 }
 [HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
-public static class SewagePatch_Costs
+public static class Sewage
 {
     private static readonly Dictionary<string, (int, int, int, int, int, int, int)> _sewagecostAndCapacity = new()
     {
-        { "WastewaterTreatmentPlant01", (10000000,1,50,0,0,0,0) }
+        { "WastewaterTreatmentPlant01", (10000000,1,50,0,0,0,0) },
+        { "SewageOutlet01", (10000000,1,50,0,0,0,0) }
     };
 
     [HarmonyPrefix]
@@ -316,39 +320,6 @@ public static class SewagePatch_Costs
     }
 }
 
-[HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
-public static class CustomFarm
-{
-    private static readonly Dictionary<string, ResourceInEditor[]> _customitems = new()
-    {
-        { "IndustrialManufacturingSignature01", new[] {
-            ResourceInEditor.Paper,
-            ResourceInEditor.Furniture,
-            ResourceInEditor.Oil,
-            ResourceInEditor.Chemicals,
-            ResourceInEditor.Stone,
-            ResourceInEditor.Livestock,
-            ResourceInEditor.Electronics,
-            ResourceInEditor.Pharmaceuticals,
-            ResourceInEditor.Petrochemicals
-          
-
-        }}
-    };
-
-    [HarmonyPrefix]
-    public static bool Prefix(object __instance, PrefabBase prefab)
-    {
-        if (_customitems.TryGetValue(prefab.name, out var items))
-        {
-            var manufactorComponent = prefab.GetComponent<Game.Prefabs.BuildingProperties>();
-            var allowedManufatured = manufactorComponent.m_AllowedManufactured.ToList();
-            allowedManufatured.AddRange(items);
-            manufactorComponent.m_AllowedManufactured = allowedManufatured.Distinct().ToArray();
-        }
-        return true;
-    }
-}
 [HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
 public static class CustomPopHouse
 {
@@ -663,6 +634,112 @@ public static class Solarpowerstation
             var capacityComponent = prefab.GetComponent<Game.Prefabs.Battery>();
             capacityComponent.m_Capacity = capacity;
 
+        }
+        return true;
+    }
+}
+[HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
+public static class Hospitals
+{
+    private static readonly Dictionary<string, (int, int, int, int,int, int, int, int, int, int, int)> _hospitalstatsAndCapacity = new()
+    {
+        { "MedicalClinic01", (50,0,5000,30,50,0,0,0,10000,30000,10) },
+        { "Hospital01", (50,25,5000,30,50,0,0,0,10000,30000,10) }
+        
+        
+    };
+
+    [HarmonyPrefix]
+    public static bool Prefix(object __instance, PrefabBase prefab)
+    {
+        if (_hospitalstatsAndCapacity.TryGetValue(prefab.name, out var pair))
+        {
+            (var ambulances, var helicopter, var patient, var treatment, var upkeep, var electricity, var water, var garbage, var range, var capacity, var magnitude) = pair;
+                       
+            var hospitalComponent = prefab.GetComponent<Game.Prefabs.Hospital>();
+            hospitalComponent.m_AmbulanceCapacity = ambulances;
+            hospitalComponent.m_MedicalHelicopterCapacity = helicopter;
+            hospitalComponent.m_PatientCapacity = patient;
+            hospitalComponent.m_TreatmentBonus = treatment;
+
+            var serviceComponent = prefab.GetComponent<Game.Prefabs.ServiceConsumption>();
+            serviceComponent.m_Upkeep = upkeep;
+            serviceComponent.m_ElectricityConsumption = electricity;
+            serviceComponent.m_WaterConsumption = water;
+            serviceComponent.m_GarbageAccumulation = garbage;
+
+            var coverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
+            coverageComponent.m_Range = range;
+            coverageComponent.m_Capacity = capacity;
+            coverageComponent.m_Magnitude = magnitude;
+
+        }
+        return true;
+    }
+}
+[HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
+public static class Cemetery
+{
+    private static readonly Dictionary<string, (int, int, int, int, int, int)> _cemeterystatsAndCapacity = new()
+    {
+        { "Cemetery01", (50,50,0,0,0,10000) }
+        
+
+
+    };
+
+    [HarmonyPrefix]
+    public static bool Prefix(object __instance, PrefabBase prefab)
+    {
+        if (_cemeterystatsAndCapacity.TryGetValue(prefab.name, out var pair))
+        {
+            (var hearse, var upkeep, var electricity, var water, var garbage, var storage) = pair;
+
+            var serviceComponent = prefab.GetComponent<Game.Prefabs.ServiceConsumption>();
+            serviceComponent.m_Upkeep = upkeep;
+            serviceComponent.m_ElectricityConsumption = electricity;
+            serviceComponent.m_WaterConsumption = water;
+            serviceComponent.m_GarbageAccumulation = garbage;
+
+            var deathcareComponent = prefab.GetComponent<Game.Prefabs.DeathcareFacility>();
+            deathcareComponent.m_HearseCapacity = hearse;
+            deathcareComponent.m_StorageCapacity = storage;
+        }
+        return true;
+    }
+}
+[HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
+public static class Crematorium
+{
+    private static readonly Dictionary<string, (int, int, int, int, int, int, int, int, int, int)> _cemeterystatsAndCapacity = new()
+    {
+        { "Crematorium01", (50,50,0,0,0,500,100,0,0,0) }
+
+
+
+    };
+
+    [HarmonyPrefix]
+    public static bool Prefix(object __instance, PrefabBase prefab)
+    {
+        if (_cemeterystatsAndCapacity.TryGetValue(prefab.name, out var pair))
+        {
+            (var hearse, var upkeep, var electricity, var water, var garbage, var storage, var rate, var air, var ground, var noise) = pair;
+
+            var serviceComponent = prefab.GetComponent<Game.Prefabs.ServiceConsumption>();
+            serviceComponent.m_Upkeep = upkeep;
+            serviceComponent.m_ElectricityConsumption = electricity;
+            serviceComponent.m_WaterConsumption = water;
+            serviceComponent.m_GarbageAccumulation = garbage;
+
+            var deathcareComponent = prefab.GetComponent<Game.Prefabs.DeathcareFacility>();
+            deathcareComponent.m_HearseCapacity = hearse;
+            deathcareComponent.m_StorageCapacity = storage;
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_AirPollution = air;
+            PollutionComponent.m_GroundPollution = ground;
+            PollutionComponent.m_NoisePollution = noise;
         }
         return true;
     }

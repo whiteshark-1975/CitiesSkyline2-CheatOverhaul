@@ -8,3 +8,11 @@
 	* Emergency Battery Station
 	* Solar Power Station
 	* Geothermal Power Plant
+	* Groundwater Pumping Station
+	* Desalination Plant / Advanced Water Pumping Station
+	* Water Tower
+	* Sewage Outlet
+	* Medical Clinic
+	* Hospital
+	* Cemetery
+	* Crematorium
