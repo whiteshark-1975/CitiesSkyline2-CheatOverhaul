@@ -6,11 +6,8 @@ using System.Linq;
 using Game.Prefabs;
 using System.Collections.Generic;
 using Game.Buildings;
-using Unity.Entities.UniversalDelegates;
-using Unity.Transforms;
-using System.Data.SqlTypes;
-using Game.Economy;
-using Unity.Mathematics;
+using Wayz.CS2;
+using Game.Modding;
 
 #if BEPINEX6
 using BepInEx.Unity.Mono;
@@ -19,16 +16,47 @@ using BepInEx.Unity.Mono;
 namespace WhitesharkCheatOverhaul;
 
 
-[BepInPlugin("WhitesharkCheatOverhaul", "CheatOverhaul", "0.3.15")]
+[BepInPlugin("WhitesharkCheatOverhaul", "CheatOverhaul", "0.3.16")]
+
 #pragma warning disable BepInEx002
 public class WhitesharkCheatOverhaul : BaseUnityPlugin
 #pragma warning restore BepInEx002
-{
-    public static ManualLogSource GameLogger = null!;
 
+{
+    public static ManualLogSource GameLogger { get; set; }
+    public static IWayzSettingsManager SettingsManager { get; set; }
+    internal static WhitesharkCheatOverhaulSettings ModSettings { get; set; }
+
+   
     private void Awake()
     {
         GameLogger = Logger;
+        SettingsManager = new WayzSettingsManager();
+        try
+        {
+            if (SettingsManager.TryGetSettings<WhitesharkCheatOverhaulSettings>("WhitesharkCheatOverhaul", "settings", out var settings))
+            {
+                ModSettings = settings;
+            }
+        }
+        catch
+        {
+            Logger.LogError("Invalid config file, regenerating settings");
+        }
+
+        if (ModSettings == null)
+        {
+            ModSettings = new WhitesharkCheatOverhaulSettings();
+            try
+            {
+                SettingsManager.SaveSettings("WhitesharkCheatOverhaul", "settings", ModSettings);
+                Logger.LogInfo("Created new settings file");
+            }
+            catch
+            {
+                Logger.LogWarning("Unable to save settings file, using default settings in-memory only");
+            }
+        }
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
 
         var patchedMethods = harmony.GetPatchedMethods();
@@ -47,31 +75,33 @@ public static class PowerPlants
 {
     private static readonly Dictionary<string, (int, int, int, int, int, int, int)> _ConsumptionAndPollution = new()
     {
-        { "GasPowerPlant01", (50,0,0,0,0,0,10000000) },
-        { "CoalPowerPlant01", (50,0,0,0,0,0,10000000) },
-        { "NuclearPowerPlant01", (50,0,0,0,0,0,10000000) },
-        { "SmallCoalPowerPlant01", (50,0,0,0,0,0,10000000) }
+        { "GasPowerPlant01", (WhitesharkCheatOverhaul.ModSettings.Powerplantcost,WhitesharkCheatOverhaul.ModSettings.Powerplantwater,WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,WhitesharkCheatOverhaul.ModSettings.Powerplantair,WhitesharkCheatOverhaul.ModSettings.Powerplantground,WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,WhitesharkCheatOverhaul.ModSettings.Powerplantproduction)},
+        { "CoalPowerPlant01", (WhitesharkCheatOverhaul.ModSettings.Powerplantcost,WhitesharkCheatOverhaul.ModSettings.Powerplantwater,WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,WhitesharkCheatOverhaul.ModSettings.Powerplantair,WhitesharkCheatOverhaul.ModSettings.Powerplantground,WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,WhitesharkCheatOverhaul.ModSettings.Powerplantproduction)},
+        { "NuclearPowerPlant01", (WhitesharkCheatOverhaul.ModSettings.Powerplantcost,WhitesharkCheatOverhaul.ModSettings.Powerplantwater,WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,WhitesharkCheatOverhaul.ModSettings.Powerplantair,WhitesharkCheatOverhaul.ModSettings.Powerplantground,WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,WhitesharkCheatOverhaul.ModSettings.Powerplantproduction)},
+        { "SmallCoalPowerPlant01", (WhitesharkCheatOverhaul.ModSettings.Powerplantcost,WhitesharkCheatOverhaul.ModSettings.Powerplantwater,WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,WhitesharkCheatOverhaul.ModSettings.Powerplantair,WhitesharkCheatOverhaul.ModSettings.Powerplantground,WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,WhitesharkCheatOverhaul.ModSettings.Powerplantproduction)}
     };
-
+    
     [HarmonyPrefix]
     public static bool Prefix(object __instance, PrefabBase prefab)
     {
+      
+
         if (_ConsumptionAndPollution.TryGetValue(prefab.name, out var pair))
         {
-            (var cost, var water, var garbage, var air, var ground, var noise, var production) = pair;
+            (var powerplantcost, var powerplantwater, var powerplantgarbage, var powerplantair, var powerplantground, var powerplantnoise, var powerplantproduction) = pair;
 
             var ConsumptionComponent = prefab.GetComponent<ServiceConsumption>();
-            ConsumptionComponent.m_Upkeep = cost;
-            ConsumptionComponent.m_GarbageAccumulation = garbage;
-            ConsumptionComponent.m_WaterConsumption = water;
+            ConsumptionComponent.m_Upkeep = powerplantcost;
+            ConsumptionComponent.m_GarbageAccumulation = powerplantgarbage;
+            ConsumptionComponent.m_WaterConsumption = powerplantwater;
 
             var PollutionComponent = prefab.GetComponent<Pollution>();
-            PollutionComponent.m_AirPollution = air;
-            PollutionComponent.m_GroundPollution = ground;
-            PollutionComponent.m_NoisePollution = noise;
+            PollutionComponent.m_AirPollution = powerplantair;
+            PollutionComponent.m_GroundPollution = powerplantground;
+            PollutionComponent.m_NoisePollution = powerplantnoise;
 
             var ProductionComponent = prefab.GetComponent<PowerPlant>();
-            ProductionComponent.m_ElectricityProduction = production;
+            ProductionComponent.m_ElectricityProduction = powerplantproduction;
         }
         return true;
     }
@@ -713,7 +743,7 @@ public static class Crematorium
 {
     private static readonly Dictionary<string, (int, int, int, int, int, int, int, int, int, int)> _cemeterystatsAndCapacity = new()
     {
-        { "Crematorium01", (50,50,0,0,0,500,100,0,0,0) }
+        { "Crematorium01", (50,50,0,0,0,500,200,0,0,0) }
 
 
 
@@ -735,6 +765,7 @@ public static class Crematorium
             var deathcareComponent = prefab.GetComponent<Game.Prefabs.DeathcareFacility>();
             deathcareComponent.m_HearseCapacity = hearse;
             deathcareComponent.m_StorageCapacity = storage;
+            deathcareComponent.m_ProcessingRate = rate;
 
             var PollutionComponent = prefab.GetComponent<Pollution>();
             PollutionComponent.m_AirPollution = air;
