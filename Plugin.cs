@@ -7,8 +7,6 @@ using Game.Prefabs;
 using System.Collections.Generic;
 using Game.Buildings;
 using Wayz.CS2;
-using Game.Modding;
-
 #if BEPINEX6
 using BepInEx.Unity.Mono;
 #endif
@@ -23,9 +21,9 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
 #pragma warning restore BepInEx002
 
 {
-    public static ManualLogSource GameLogger { get; set; }
-    public static IWayzSettingsManager SettingsManager { get; set; }
-    internal static WhitesharkCheatOverhaulSettings ModSettings { get; set; }
+    public static ManualLogSource GameLogger { get; private set; }
+    public static IWayzSettingsManager SettingsManager { get; private set; }
+    internal static WhitesharkCheatOverhaulSettings ModSettings { get; private set; }
 
    
     private void Awake()
@@ -75,10 +73,42 @@ public static class PowerPlants
 {
     private static readonly Dictionary<string, (int, int, int, int, int, int, int)> _ConsumptionAndPollution = new()
     {
-        { "GasPowerPlant01", (WhitesharkCheatOverhaul.ModSettings.Powerplantcost,WhitesharkCheatOverhaul.ModSettings.Powerplantwater,WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,WhitesharkCheatOverhaul.ModSettings.Powerplantair,WhitesharkCheatOverhaul.ModSettings.Powerplantground,WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,WhitesharkCheatOverhaul.ModSettings.Powerplantproduction)},
-        { "CoalPowerPlant01", (WhitesharkCheatOverhaul.ModSettings.Powerplantcost,WhitesharkCheatOverhaul.ModSettings.Powerplantwater,WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,WhitesharkCheatOverhaul.ModSettings.Powerplantair,WhitesharkCheatOverhaul.ModSettings.Powerplantground,WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,WhitesharkCheatOverhaul.ModSettings.Powerplantproduction)},
-        { "NuclearPowerPlant01", (WhitesharkCheatOverhaul.ModSettings.Powerplantcost,WhitesharkCheatOverhaul.ModSettings.Powerplantwater,WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,WhitesharkCheatOverhaul.ModSettings.Powerplantair,WhitesharkCheatOverhaul.ModSettings.Powerplantground,WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,WhitesharkCheatOverhaul.ModSettings.Powerplantproduction)},
-        { "SmallCoalPowerPlant01", (WhitesharkCheatOverhaul.ModSettings.Powerplantcost,WhitesharkCheatOverhaul.ModSettings.Powerplantwater,WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,WhitesharkCheatOverhaul.ModSettings.Powerplantair,WhitesharkCheatOverhaul.ModSettings.Powerplantground,WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,WhitesharkCheatOverhaul.ModSettings.Powerplantproduction)}
+        { "GasPowerPlant01", (
+            WhitesharkCheatOverhaul.ModSettings.Powerplantcost,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantwater,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantair,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantground,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantproduction
+            )},
+        { "CoalPowerPlant01", (
+            WhitesharkCheatOverhaul.ModSettings.Powerplantcost,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantwater,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantair,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantground,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantproduction
+            )},
+        { "NuclearPowerPlant01", (
+            WhitesharkCheatOverhaul.ModSettings.Powerplantcost,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantwater,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantair,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantground,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantproduction
+            )},
+        { "SmallCoalPowerPlant01", (
+            WhitesharkCheatOverhaul.ModSettings.Powerplantcost,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantwater,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantgarbage,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantair,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantground,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantnoise,
+            WhitesharkCheatOverhaul.ModSettings.Powerplantproduction
+            )}
     };
     
     [HarmonyPrefix]
@@ -111,10 +141,34 @@ public static class WaterPumps
 {
     private static readonly Dictionary<string, (int, int, int, int, int)> _watercostAndCapacity = new()
     {
-        { "WaterPumpingStation01", (50,1000000,0,0,0) },
-        { "GroundwaterPumpingStation01", (50,1000000,0,0,0) },
-        { "DesalinationPlant01", (50,1000000,0,0,0) },
-        { "WaterTower01", (50,1000000,0,0,0) }
+        { "WaterPumpingStation01", (
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpcost,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpcapacity,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpgarbage,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpelectricity,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpnoise
+            ) },
+        { "GroundwaterPumpingStation01", (
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpcost,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpcapacity,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpgarbage,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpelectricity,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpnoise
+            ) },
+        { "DesalinationPlant01", (
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpcost,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpcapacity,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpgarbage,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpelectricity,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpnoise
+            ) },
+        { "WaterTower01", (
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpcost,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpcapacity,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpgarbage,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpelectricity,
+            WhitesharkCheatOverhaul.ModSettings.Waterpumpnoise
+            ) }
     };
 
     [HarmonyPrefix]
@@ -137,11 +191,15 @@ public static class WaterPumps
     }
 }
 [HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
-public static class LowpowerPatch_Costs
+public static class TransformerStation
 {
     private static readonly Dictionary<string, (int, int, int)> _lowpowercostAndCapacity = new()
     {
-        { "TransformerStation01", (50,0,0) }
+        { "TransformerStation01", (
+            WhitesharkCheatOverhaul.ModSettings.Transformercost,
+            WhitesharkCheatOverhaul.ModSettings.Transformergarbage,
+            WhitesharkCheatOverhaul.ModSettings.Transformernoise
+            ) }
     };
 
     [HarmonyPrefix]
@@ -163,11 +221,19 @@ public static class LowpowerPatch_Costs
     }
 }
 [HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
-public static class ServerPatch_Costs
+public static class Serverfarm
 {
     private static readonly Dictionary<string, (int, int, int, int, int, int, int)> _servercostAndCapacity = new()
     {
-        { "ServerFarm01", (50,0,0,0,12500,200000,0) }
+        { "ServerFarm01", ( 
+            WhitesharkCheatOverhaul.ModSettings.Serverfarmcost, 
+            WhitesharkCheatOverhaul.ModSettings.Serverfarmelectricity, 
+            WhitesharkCheatOverhaul.ModSettings.Serverfarmwater,
+            WhitesharkCheatOverhaul.ModSettings.Serverfarmgarbage,
+            WhitesharkCheatOverhaul.ModSettings.Serverfarmrange,
+            WhitesharkCheatOverhaul.ModSettings.Serverfarmcapacity,
+            WhitesharkCheatOverhaul.ModSettings.Serverfarmnoise
+            ) }
     };
 
     [HarmonyPrefix]
@@ -196,11 +262,14 @@ public static class ServerPatch_Costs
 }
 
 [HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
-public static class GarbagePatch_Costs
+public static class GarbageTruckMod
 {
     private static readonly Dictionary<string, (int, int)> _garbagecostAndCapacity = new()
     {
-        { "GarbageTruck01", (80000,10000) }
+        { "GarbageTruck01", ( 
+            WhitesharkCheatOverhaul.ModSettings.Garbagetruckcapacity, 
+            WhitesharkCheatOverhaul.ModSettings.Garbagetruckunload
+            ) }
     };
 
     [HarmonyPrefix]
