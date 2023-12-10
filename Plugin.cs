@@ -48,6 +48,8 @@ public static class PowerPlants_Consumption_Pollution_Production
     private static readonly Dictionary<string, (int, int, int, int, int, int, int)> _ConsumptionAndPollution = new()
     {
         { "GasPowerPlant01", (50,0,0,0,0,0,10000000) },
+        { "CoalPowerPlant01", (50,0,0,0,0,0,10000000) },
+        { "NuclearPowerPlant01", (50,0,0,0,0,0,10000000) },
         { "SmallCoalPowerPlant01", (50,0,0,0,0,0,10000000) }
     };
 
@@ -508,8 +510,7 @@ public static class IncineratorPatch_Costs
             var capComponent = prefab.GetComponent<Game.Prefabs.GarbageFacility>();
             capComponent.m_GarbageCapacity = garbagecapacity;
             capComponent.m_VehicleCapacity = vehiclecapacity;
-
-
+            
 
         }
         return true;
@@ -536,6 +537,131 @@ public static class Schoolpollution
             PollutionComponent.m_AirPollution = air;
             PollutionComponent.m_GroundPollution = ground;
             PollutionComponent.m_NoisePollution = noise;
+
+        }
+        return true;
+    }
+}
+[HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
+public static class Windmill
+{
+    private static readonly Dictionary<string, (int, int, int)> _wind_production_upkeep_noise = new()
+    {
+        { "WindTurbine01", (100000,50,0) }
+    };
+
+    [HarmonyPrefix]
+    public static bool Prefix(object __instance, PrefabBase prefab)
+    {
+        if (_wind_production_upkeep_noise.TryGetValue(prefab.name, out var pair))
+        {
+            (var production, var cost, var noise) = pair;
+
+            var windComponent = prefab.GetComponent<WindPowered>();
+            windComponent.m_Production = production;
+
+            var polutionComponent = prefab.GetComponent<Pollution>();
+            polutionComponent.m_NoisePollution = noise;
+            
+            var costComponent = prefab.GetComponent<ServiceConsumption>();
+            costComponent.m_Upkeep = cost;
+        }
+        return true;
+    }
+}
+[HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
+public static class Battery
+{
+    private static readonly Dictionary<string, (int, int, int, int, int)> _capacity_upkeep_water_garbage_noise = new()
+    {
+        { "EmergencyBatteryStation01", (10000000,50,0,0,0) }
+    };
+
+    [HarmonyPrefix]
+    public static bool Prefix(object __instance, PrefabBase prefab)
+    {
+        if (_capacity_upkeep_water_garbage_noise.TryGetValue(prefab.name, out var pair))
+        {
+            (var capacity, var cost, var water, var garbage, var noise) = pair;
+
+            var capacityComponent = prefab.GetComponent<Game.Prefabs.Battery>();
+            capacityComponent.m_Capacity = capacity;
+
+            var polutionComponent = prefab.GetComponent<Pollution>();
+            polutionComponent.m_NoisePollution = noise;
+
+            var costComponent = prefab.GetComponent<ServiceConsumption>();
+            costComponent.m_Upkeep = cost;
+            costComponent.m_WaterConsumption = water;
+            costComponent.m_GarbageAccumulation = garbage;
+
+
+        }
+        return true;
+    }
+}
+[HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
+public static class Geothermal
+{
+    private static readonly Dictionary<string, (int, int, int, int, int, int, int)> _ConsumptionAndPollution = new()
+    {
+        { "GeothermalPowerPlant01", (50,400,0,0,0,0,10000000) }
+    };
+
+    [HarmonyPrefix]
+    public static bool Prefix(object __instance, PrefabBase prefab)
+    {
+        if (_ConsumptionAndPollution.TryGetValue(prefab.name, out var pair))
+        {
+            (var cost, var groundwater, var garbage, var air, var ground, var noise, var production) = pair;
+
+            var ConsumptionComponent = prefab.GetComponent<ServiceConsumption>();
+            ConsumptionComponent.m_Upkeep = cost;
+            ConsumptionComponent.m_GarbageAccumulation = garbage;
+            
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_AirPollution = air;
+            PollutionComponent.m_GroundPollution = ground;
+            PollutionComponent.m_NoisePollution = noise;
+
+            var ProductionComponent = prefab.GetComponent<GroundWaterPowered>();
+            ProductionComponent.m_Production = production;
+            ProductionComponent.m_MaximumGroundWater = groundwater;
+        }
+        return true;
+    }
+}
+[HarmonyPatch(typeof(Game.Prefabs.PrefabSystem), "AddPrefab")]
+public static class Solarpowerstation
+{
+    private static readonly Dictionary<string, (int,int, int, int, int, int, int, int)> _ConsumptionAndPollution = new()
+    {
+        { "SolarPowerStation01", (1000000,0,50,0,0,0,0,10000000) }
+    };
+
+    [HarmonyPrefix]
+    public static bool Prefix(object __instance, PrefabBase prefab)
+    {
+        if (_ConsumptionAndPollution.TryGetValue(prefab.name, out var pair))
+        {
+            (var capacity, var water, var cost, var garbage, var air, var ground, var noise, var production) = pair;
+
+            var ConsumptionComponent = prefab.GetComponent<ServiceConsumption>();
+            ConsumptionComponent.m_Upkeep = cost;
+            ConsumptionComponent.m_GarbageAccumulation = garbage;
+            ConsumptionComponent.m_WaterConsumption = water;
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_AirPollution = air;
+            PollutionComponent.m_GroundPollution = ground;
+            PollutionComponent.m_NoisePollution = noise;
+
+            var ProductionComponent = prefab.GetComponent<SolarPowered>();
+            ProductionComponent.m_Production = production;
+            
+            var capacityComponent = prefab.GetComponent<Game.Prefabs.Battery>();
+            capacityComponent.m_Capacity = capacity;
 
         }
         return true;

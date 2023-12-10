@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-     <BepInEx6>true</BepInEx6>
+     <BepInEx6>false</BepInEx6>
     <Cities2_Location>D:\SteamLibrary\steamapps\common\Cities Skylines II</Cities2_Location>
   </PropertyGroup>
 	
