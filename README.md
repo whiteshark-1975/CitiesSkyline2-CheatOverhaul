@@ -1,4 +1,4 @@
-#Modded Assets For Cities Skylines II
+# Modded Assets For Cities Skylines II
 * School_Options
 * Powerplant_Options
 * Waterpump_Options
@@ -12,6 +12,6 @@
 * IncinerationPlant_Options
 * Healthcare_Options
 
-#A setting File will be created at 1st run.
+# A setting File will be created at 1st run.
 Location for settingsfile:
 * %appdata%\LocalLow\Colossal Order\Cities Skylines II\ModSettings\
