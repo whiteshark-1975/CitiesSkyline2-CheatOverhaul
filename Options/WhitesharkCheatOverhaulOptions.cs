@@ -487,7 +487,6 @@ public class WhitesharkCheatOverhaulOptions
         }
         return Transportbusdict;
     }
-
     public IReadOnlyDictionary<string, ParkinghallOptions> GetParkinghallDictionary()
     {
         var Parkinghalldict = new Dictionary<string, ParkinghallOptions>();
@@ -524,7 +523,6 @@ public class WhitesharkCheatOverhaulOptions
         }
         return IncinerationPlantdict;
     }
-
     public IReadOnlyDictionary<string, HealthcareOptions> GetHealthcareDictionary()
     {
         var Healthcaredict = new Dictionary<string, HealthcareOptions>();
