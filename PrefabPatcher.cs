@@ -104,6 +104,23 @@ public static class PrefabPatcher
 
         }
 
+        if (WhitesharkCheatOverhaul.ParkinghallOptions.TryGetValue(prefab.name, out var Parkinghalloverrides))
+        {
+
+            var ParkinghallComponent = prefab.GetComponent<ParkingFacility>();
+            ParkinghallComponent.m_GarageMarkerCapacity = Parkinghalloverrides.GarageCapacity;
+            ParkinghallComponent.m_ComfortFactor = Parkinghalloverrides.Comfortfactor;
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Parkinghalloverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = Parkinghalloverrides.Electricityconsumption;
+            ServiceComponent.m_WaterConsumption = Parkinghalloverrides.Waterconsumption;
+            ServiceComponent.m_GarbageAccumulation = Parkinghalloverrides.GarbageAccumulation;
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_NoisePollution = Parkinghalloverrides.Noisepollution;
+        }
+
         return true;
     }
 }

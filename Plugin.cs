@@ -23,6 +23,13 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, ServerfarmOptions> ServerfarmOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, GarbagetruckOptions> GarbagetruckOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, TransportbusOptions> TransportbusOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, ParkinghallOptions> ParkinghallOptions { get; private set; } = null!;
+
+
+
+
+
+
     private void Awake()
     {
         GameLogger = Logger;
@@ -50,7 +57,7 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.ServerfarmOptions = options.GetServerfarmDictionary();
         WhitesharkCheatOverhaul.GarbagetruckOptions = options.GetGarbagetruckDictionary();
         WhitesharkCheatOverhaul.TransportbusOptions = options.GetTransportbusDictionary();
-
+        WhitesharkCheatOverhaul.ParkinghallOptions = options.GetParkinghallDictionary();
 
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");

@@ -188,6 +188,32 @@ public class WhitesharkCheatOverhaulOptions
                 Passengercapacity = 1000,
                 Maintenancerange = 10000
             }
+        },
+
+        Parkinghall_Options = new List<ParkinghallOptions>
+        {
+            new ParkinghallOptions
+            {
+                Name = "ParkingHall01",
+                Upkeep = 50,
+                GarageCapacity = 1000,
+                Comfortfactor = 1,
+                Electricityconsumption = 0,
+                Waterconsumption = 0,
+                GarbageAccumulation = 0,
+                Noisepollution = 0
+            },
+            new ParkinghallOptions
+            {
+                Name = "ParkingHall02",
+                Upkeep = 50,
+                GarageCapacity = 1000,
+                Comfortfactor = 1,
+                Electricityconsumption = 0,
+                Waterconsumption = 0,
+                GarbageAccumulation = 0,
+                Noisepollution = 0
+            }
         }
     };
 
@@ -198,6 +224,9 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<ServerfarmOptions> Serverfarm_Options { get; set; }
     public IEnumerable<GarbagetruckOptions> Garbagetruck_Options { get; set; }
     public IEnumerable<TransportbusOptions> Transportbus_Options { get; set; }
+    public IEnumerable<ParkinghallOptions> Parkinghall_Options { get; set; }
+
+
 
 
 
@@ -265,6 +294,15 @@ public class WhitesharkCheatOverhaulOptions
         return Transportbusdict;
     }
 
+    public IReadOnlyDictionary<string, ParkinghallOptions> GetParkinghallDictionary()
+    {
+        var Parkinghalldict = new Dictionary<string, ParkinghallOptions>();
+        foreach (var Parkinghall_option in Parkinghall_Options)
+        {
+            Parkinghalldict.Add(Parkinghall_option.Name, Parkinghall_option);
+        }
+        return Parkinghalldict;
+    }
 
 
 
@@ -322,5 +360,16 @@ public class WhitesharkCheatOverhaulOptions
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Passengercapacity >= 0 &&
             x.Maintenancerange >= 0);
+
+        var Parkinghall_length = Parkinghall_Options.Count();
+        Parkinghall_Options = Parkinghall_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.GarageCapacity >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Noisepollution >= 0 &&
+            x.Comfortfactor >= 0);
     }
 }
