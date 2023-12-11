@@ -14,11 +14,11 @@
 
 ## A setting File will be created at 1st run.
 Location for settingsfile:
-* %appdata%\LocalLow\Colossal Order\Cities Skylines II\ModSettings\
+* \AppData\LocalLow\Colossal Order\Cities Skylines II\ModSettings\WhitesharkCheatOverhaul\settings.json
 ## you can use this cloudsave to edit the settingfile with an GUI 
 * https://jsoneditoronline.org/#left=cloud.e55143e3dc5b4cb2bcb0f15d7bed23d7
-after edit just save it to:
-* %appdata%\LocalLow\Colossal Order\Cities Skylines II\ModSettings\
+after edit just save it as:
+* \AppData\LocalLow\Colossal Order\Cities Skylines II\ModSettings\WhitesharkCheatOverhaul\settings.json
 ## Installation - Thunderstore
 Coming soon
 
