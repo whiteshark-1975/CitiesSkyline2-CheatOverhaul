@@ -149,16 +149,14 @@ public class WhitesharkCheatOverhaulOptions
         }
         return Waterpumpdict;
     }
-    public int RemoveBadEntires()
+    public void RemoveBadEntires()
     {
         var School_length = School_Options.Count();
         School_Options = School_Options.Where(x => !string.IsNullOrEmpty(x.Name) && x.UpkeepCost >= 0);
-        return School_length - School_Options.Count();
-
+    
         var Waterpump_length = Waterpump_Options.Count();
         Waterpump_Options = Waterpump_Options.Where(x => !string.IsNullOrEmpty(x.Name) && x.UpkeepCost >= 0);
-        return Waterpump_length - Waterpump_Options.Count();
-        
+      
         var Powerplant_length = Powerplant_Options.Count();
         Powerplant_Options = Powerplant_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
@@ -169,6 +167,6 @@ public class WhitesharkCheatOverhaulOptions
             x.GroundPollution >= 0 &&
             x.NoisePollution >= 0 &&
             x.Production >= 0);
-        return Powerplant_length - Powerplant_Options.Count();
+  
     }
 }

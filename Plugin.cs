@@ -38,11 +38,8 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
             }
         }
 
-        var filtered = options.RemoveBadEntires();
-        if(filtered != 0)
-        {
-            Logger.LogWarning($"Removed {filtered} bad entries loaded from settings file!");
-        }
+        options.RemoveBadEntires();
+        
         WhitesharkCheatOverhaul.SchoolOptions = options.GetSchoolDictionary();
         WhitesharkCheatOverhaul.PowerplantOptions = options.GetPowerplantDictionary();
         WhitesharkCheatOverhaul.WaterpumpOptions = options.GetWaterpumpDictionary();
