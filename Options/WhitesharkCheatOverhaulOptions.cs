@@ -12,32 +12,49 @@ public class WhitesharkCheatOverhaulOptions
             new SchoolOptions
             {
                 Name = "ElementarySchool01",
-                UpkeepCost = 10,
-                
+                UpkeepCost = 50,
+                AirPollution = 0,
+                GroundPollution = 0,
+                NoisePollution = 0,
+                GarbageAccumulation = 0,
+                Waterconsumption = 0,
+                Electricityconsumption = 0
             },
             new SchoolOptions
             {
-                Name = "ElementarySchool01 Extension Wing",
-                UpkeepCost = 10,
-                
+                Name = "HighSchool01",
+                UpkeepCost = 50,
+                AirPollution = 0,
+                GroundPollution = 0,
+                NoisePollution = 0,
+                GarbageAccumulation = 0,
+                Waterconsumption = 0,
+                Electricityconsumption = 0
+
             },
             new SchoolOptions
             {
-                Name = "College01 Extension Wing",
-                UpkeepCost = 10,
-                
+                Name = "College01",
+                UpkeepCost = 50,
+                AirPollution = 0,
+                GroundPollution = 0,
+                NoisePollution = 0,
+                GarbageAccumulation = 0,
+                Waterconsumption = 0,
+                Electricityconsumption = 0
+
             },
             new SchoolOptions
             {
                 Name = "University01",
-                UpkeepCost = 10,
-                
-            },
-            new SchoolOptions
-            {
-                Name = "University01 Extension Wing",
-                UpkeepCost = 10,
-                
+                UpkeepCost = 50,
+                AirPollution = 0,
+                GroundPollution = 0,
+                NoisePollution = 0,
+                GarbageAccumulation = 0,
+                Waterconsumption = 0,
+                Electricityconsumption = 0
+
             }
         },
 
@@ -187,6 +204,42 @@ public class WhitesharkCheatOverhaulOptions
                 Name = "Bus03",
                 Passengercapacity = 1000,
                 Maintenancerange = 10000
+            },
+            new TransportbusOptions
+            {
+                Name = "TrainPassengerCar01",
+                Passengercapacity = 1000,
+                Maintenancerange = 10000
+            },
+            new TransportbusOptions
+            {
+                Name = "TrainPassengerEngine01",
+                Passengercapacity = 1000,
+                Maintenancerange = 10000
+            },
+            new TransportbusOptions
+            {
+                Name = "SubwayCar01",
+                Passengercapacity = 1000,
+                Maintenancerange = 10000
+            },
+            new TransportbusOptions
+            {
+                Name = "SubwayEngine01",
+                Passengercapacity = 1000,
+                Maintenancerange = 10000
+            },
+            new TransportbusOptions
+            {
+                Name = "TramCar01",
+                Passengercapacity = 1000,
+                Maintenancerange = 10000
+            },
+            new TransportbusOptions
+            {
+                Name = "TramEngine01",
+                Passengercapacity = 1000,
+                Maintenancerange = 10000
             }
         },
 
@@ -214,6 +267,106 @@ public class WhitesharkCheatOverhaulOptions
                 GarbageAccumulation = 0,
                 Noisepollution = 0
             }
+        },
+
+        Citypark_Options = new List<CityparkOptions>
+        {
+            new CityparkOptions
+            {
+                Name = "CityPark01",
+                Upkeep = 50,
+                Range = 100000,
+                Capacity = 20000,
+                Magnitude = 50,
+                Attractiveness = 50000,
+                Efficiency = 50,
+                Electricityconsumption = 0,
+                Waterconsumption = 0,
+                GarbageAccumulation = 0
+                
+},
+            new CityparkOptions
+            {
+                Name = "CityPark02",
+                Upkeep = 50,
+                Range = 100000,
+                Capacity = 20000,
+                Magnitude = 50,
+                Attractiveness = 50000,
+                Efficiency = 50,
+                Electricityconsumption = 0,
+                Waterconsumption = 0,
+                GarbageAccumulation = 0
+            },
+            new CityparkOptions
+            {
+                Name = "CityPark03",
+                Upkeep = 50,
+                Range = 100000,
+                Capacity = 20000,
+                Magnitude = 50,
+                Attractiveness = 50000,
+                Efficiency = 50,
+                Electricityconsumption = 0,
+                Waterconsumption = 0,
+                GarbageAccumulation = 0
+
+},
+            new CityparkOptions
+            {
+                Name = "CityPark04",
+                Upkeep = 50,
+                Range = 100000,
+                Capacity = 20000,
+                Magnitude = 50,
+                Attractiveness = 50000,
+                Efficiency = 50,
+                Electricityconsumption = 0,
+                Waterconsumption = 0,
+                GarbageAccumulation = 0
+            }
+        },
+
+        Wastewater_Options = new List<WastewaterOptions>
+        {
+            new WastewaterOptions
+            {
+                Name = "WastewaterTreatmentPlant01",
+                UpkeepCost = 50,
+                Capacity = 10000000,
+                Purification = 1,
+                GarbageAccumulation = 0,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 0,
+                ElectricityConsumption = 0
+            },
+            new WastewaterOptions
+            {
+                Name = "SewageOutlet01",
+                UpkeepCost = 50,
+                Capacity = 1000000,
+                Purification = 1,
+                GarbageAccumulation = 0,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 0,
+                ElectricityConsumption = 0
+            }
+        },
+        IncinerationPlant_Options = new List<IncinerationPlantOptions>
+        {
+            new IncinerationPlantOptions
+            {
+                Name = "IncinerationPlant01",
+                UpkeepCost = 50,
+                Waterconsumption = 0,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 0,
+                Garbagecapacity = 3000000,
+                Vehiclecapacity = 100
+            }
         }
     };
 
@@ -225,9 +378,9 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<GarbagetruckOptions> Garbagetruck_Options { get; set; }
     public IEnumerable<TransportbusOptions> Transportbus_Options { get; set; }
     public IEnumerable<ParkinghallOptions> Parkinghall_Options { get; set; }
-
-
-
+    public IEnumerable<CityparkOptions> Citypark_Options { get; set; }
+    public IEnumerable<WastewaterOptions> Wastewater_Options { get; set; }
+    public IEnumerable<IncinerationPlantOptions> IncinerationPlant_Options { get; set; }
 
 
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
@@ -303,13 +456,50 @@ public class WhitesharkCheatOverhaulOptions
         }
         return Parkinghalldict;
     }
+    public IReadOnlyDictionary<string, CityparkOptions> GetCityparkDictionary()
+    {
+        var Cityparkdict = new Dictionary<string, CityparkOptions>();
+        foreach (var Citypark_option in Citypark_Options)
+        {
+            Cityparkdict.Add(Citypark_option.Name, Citypark_option);
+        }
+        return Cityparkdict;
+    }
+    public IReadOnlyDictionary<string, WastewaterOptions> GetWastewaterDictionary()
+    {
+        var Wastewaterdict = new Dictionary<string, WastewaterOptions>();
+        foreach (var Wastewater_option in Wastewater_Options)
+        {
+            Wastewaterdict.Add(Wastewater_option.Name, Wastewater_option);
+        }
+        return Wastewaterdict;
+    }
+    public IReadOnlyDictionary<string, IncinerationPlantOptions> GetIncinerationPlantDictionary()
+    {
+        var IncinerationPlantdict = new Dictionary<string, IncinerationPlantOptions>();
+        foreach (var IncinerationPlant_option in IncinerationPlant_Options)
+        {
+            IncinerationPlantdict.Add(IncinerationPlant_option.Name, IncinerationPlant_option);
+        }
+        return IncinerationPlantdict;
+    }
+
+
 
 
 
     public void RemoveBadEntires()
     {
         var School_length = School_Options.Count();
-        School_Options = School_Options.Where(x => !string.IsNullOrEmpty(x.Name) && x.UpkeepCost >= 0);
+        School_Options = School_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) && 
+            x.UpkeepCost >= 0 &&
+            x.AirPollution >= 0 &&
+            x.GroundPollution >= 0 &&
+            x.NoisePollution >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.Electricityconsumption >= 0);
    
         var Powerplant_length = Powerplant_Options.Count();
         Powerplant_Options = Powerplant_Options.Where(
@@ -371,5 +561,41 @@ public class WhitesharkCheatOverhaulOptions
             x.GarbageAccumulation >= 0 &&
             x.Noisepollution >= 0 &&
             x.Comfortfactor >= 0);
+
+        var Citypark_length = Citypark_Options.Count();
+        Citypark_Options = Citypark_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Range >= 0 &&
+            x.Capacity >= 0 &&
+            x.Magnitude >= 0 &&
+            x.Efficiency >= 0 &&
+            x.Attractiveness >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0);
+
+        var Wastewater_length = Wastewater_Options.Count();
+        Wastewater_Options = Wastewater_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.UpkeepCost >= 0 &&
+            x.Capacity >= 0 &&
+            x.Purification >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.GroundPollution >= 0 &&
+            x.AirPollution >= 0 &&
+            x.NoisePollution >= 0 &&
+            x.ElectricityConsumption >= 0);
+
+        var IncinerationPlant_length = IncinerationPlant_Options.Count();
+        IncinerationPlant_Options = IncinerationPlant_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.UpkeepCost >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GroundPollution >= 0 &&
+            x.AirPollution >= 0 &&
+            x.NoisePollution >= 0 &&
+            x.Garbagecapacity >= 0 &&
+            x.Vehiclecapacity >= 0);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Game.Modding;
+﻿using Game.Buildings;
+using Game.Modding;
 using Game.Prefabs;
 using HarmonyLib;
 using Unity.Mathematics;
@@ -13,12 +14,18 @@ public static class PrefabPatcher
     {
         if (WhitesharkCheatOverhaul.SchoolOptions.TryGetValue(prefab.name, out var Schooloverrides))
         {
-            if (Schooloverrides.UpkeepCost != 0)
-            {
+            
                 var costComponent = prefab.GetComponent<ServiceConsumption>();
                 costComponent.m_Upkeep = Schooloverrides.UpkeepCost;
-            }
+                costComponent.m_GarbageAccumulation = Schooloverrides.GarbageAccumulation;
+                costComponent.m_WaterConsumption = Schooloverrides.Waterconsumption;
+                costComponent.m_ElectricityConsumption = Schooloverrides.Electricityconsumption;
 
+                var PollutionComponent = prefab.GetComponent<Pollution>();
+                PollutionComponent.m_AirPollution = Schooloverrides.AirPollution;
+                PollutionComponent.m_GroundPollution = Schooloverrides.GroundPollution;
+                PollutionComponent.m_NoisePollution = Schooloverrides.NoisePollution;
+                   
         }
 
         if (WhitesharkCheatOverhaul.PowerplantOptions.TryGetValue(prefab.name, out var Powerplantoverrides))
@@ -77,7 +84,7 @@ public static class PrefabPatcher
             ServiceComponent.m_WaterConsumption = Serverfarmoverrides.Waterconsumption;
             ServiceComponent.m_GarbageAccumulation = Serverfarmoverrides.GarbageAccumulation;
 
-            var TelecomComponent = prefab.GetComponent<TelecomFacility>();
+            var TelecomComponent = prefab.GetComponent<Game.Prefabs.TelecomFacility>();
             TelecomComponent.m_Range = Serverfarmoverrides.Range;
             TelecomComponent.m_NetworkCapacity = Serverfarmoverrides.Capacity;
 
@@ -107,7 +114,7 @@ public static class PrefabPatcher
         if (WhitesharkCheatOverhaul.ParkinghallOptions.TryGetValue(prefab.name, out var Parkinghalloverrides))
         {
 
-            var ParkinghallComponent = prefab.GetComponent<ParkingFacility>();
+            var ParkinghallComponent = prefab.GetComponent<Game.Prefabs.ParkingFacility>();
             ParkinghallComponent.m_GarageMarkerCapacity = Parkinghalloverrides.GarageCapacity;
             ParkinghallComponent.m_ComfortFactor = Parkinghalloverrides.Comfortfactor;
 
@@ -121,6 +128,65 @@ public static class PrefabPatcher
             PollutionComponent.m_NoisePollution = Parkinghalloverrides.Noisepollution;
         }
 
+        if (WhitesharkCheatOverhaul.CityparkOptions.TryGetValue(prefab.name, out var Cityparkoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Cityparkoverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = Cityparkoverrides.Electricityconsumption;
+            ServiceComponent.m_WaterConsumption = Cityparkoverrides.Waterconsumption;
+            ServiceComponent.m_GarbageAccumulation = Cityparkoverrides.GarbageAccumulation;
+
+            var CoverageComponent = prefab.GetComponent<ServiceCoverage>();
+            CoverageComponent.m_Range = Cityparkoverrides.Range;
+            CoverageComponent.m_Capacity = Cityparkoverrides.Capacity;
+            CoverageComponent.m_Magnitude = Cityparkoverrides.Magnitude;
+
+            var AttractionComponent = prefab.GetComponent<Game.Prefabs.Attraction>();
+            AttractionComponent.m_Attractiveness = Cityparkoverrides.Attractiveness;
+
+            var LeisureComponent = prefab.GetComponent<Game.Prefabs.LeisureProvider>();
+            LeisureComponent.m_Efficiency = Cityparkoverrides.Efficiency;
+
+
+        }
+
+        if (WhitesharkCheatOverhaul.WastewaterOptions.TryGetValue(prefab.name, out var Wastewateroverrides))
+        {
+
+            var SewageComponent = prefab.GetComponent<Game.Prefabs.SewageOutlet>();
+            SewageComponent.m_Capacity = Wastewateroverrides.Capacity;
+            SewageComponent.m_Purification = Wastewateroverrides.Purification;
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Wastewateroverrides.UpkeepCost;
+            ServiceComponent.m_GarbageAccumulation = Wastewateroverrides.GarbageAccumulation;
+            ServiceComponent.m_ElectricityConsumption = Wastewateroverrides.ElectricityConsumption;
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_NoisePollution = Wastewateroverrides.NoisePollution;
+            PollutionComponent.m_AirPollution = Wastewateroverrides.AirPollution;
+            PollutionComponent.m_GroundPollution = Wastewateroverrides.GroundPollution;
+
+        }
+
+        if (WhitesharkCheatOverhaul.IncinerationPlantOptions.TryGetValue(prefab.name, out var IncinerationPlantoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = IncinerationPlantoverrides.UpkeepCost;
+            ServiceComponent.m_WaterConsumption = IncinerationPlantoverrides.Waterconsumption;
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_NoisePollution = IncinerationPlantoverrides.NoisePollution;
+            PollutionComponent.m_AirPollution = IncinerationPlantoverrides.AirPollution;
+            PollutionComponent.m_GroundPollution = IncinerationPlantoverrides.GroundPollution;
+
+            var GarbageComponent = prefab.GetComponent<Game.Prefabs.GarbageFacility>();
+            GarbageComponent.m_GarbageCapacity = IncinerationPlantoverrides.Garbagecapacity;
+            GarbageComponent.m_VehicleCapacity = IncinerationPlantoverrides.Vehiclecapacity;
+
+        }
         return true;
     }
 }
