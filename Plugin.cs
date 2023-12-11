@@ -27,7 +27,7 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, CityparkOptions> CityparkOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, WastewaterOptions> WastewaterOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, IncinerationPlantOptions> IncinerationPlantOptions { get; private set; } = null!;
-
+    public static IReadOnlyDictionary<string, HealthcareOptions> HealthcareOptions { get; private set; } = null!;
 
 
     private void Awake()
@@ -61,6 +61,8 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.CityparkOptions = options.GetCityparkDictionary();
         WhitesharkCheatOverhaul.WastewaterOptions = options.GetWastewaterDictionary();
         WhitesharkCheatOverhaul.IncinerationPlantOptions = options.GetIncinerationPlantDictionary();
+        WhitesharkCheatOverhaul.HealthcareOptions = options.GetHealthcareDictionary();
+
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
 

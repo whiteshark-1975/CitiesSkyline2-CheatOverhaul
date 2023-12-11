@@ -1,8 +1,10 @@
 ﻿using Game.Buildings;
 using Game.Modding;
 using Game.Prefabs;
+using Game.Vehicles;
 using HarmonyLib;
 using Unity.Mathematics;
+using Unity.Transforms;
 
 namespace WhitesharkCheatOverhaul;
 
@@ -96,7 +98,7 @@ public static class PrefabPatcher
         if (WhitesharkCheatOverhaul.GarbagetruckOptions.TryGetValue(prefab.name, out var Garbagetruckoverrides))
         {
 
-            var GarbageComponent = prefab.GetComponent<GarbageTruck>();
+            var GarbageComponent = prefab.GetComponent<Game.Prefabs.GarbageTruck>();
             GarbageComponent.m_GarbageCapacity = Garbagetruckoverrides.Capacity;
             GarbageComponent.m_UnloadRate = Garbagetruckoverrides.Unloadrate;
            
@@ -105,7 +107,7 @@ public static class PrefabPatcher
         if (WhitesharkCheatOverhaul.TransportbusOptions.TryGetValue(prefab.name, out var Transportbusoverrides))
         {
 
-            var TransportComponent = prefab.GetComponent<PublicTransport>();
+            var TransportComponent = prefab.GetComponent<Game.Prefabs.PublicTransport>();
             TransportComponent.m_PassengerCapacity = Transportbusoverrides.Passengercapacity;
             TransportComponent.m_MaintenanceRange = Transportbusoverrides.Maintenancerange;
 
@@ -187,6 +189,29 @@ public static class PrefabPatcher
             GarbageComponent.m_VehicleCapacity = IncinerationPlantoverrides.Vehiclecapacity;
 
         }
+
+        if (WhitesharkCheatOverhaul.HealthcareOptions.TryGetValue(prefab.name, out var Healthcareoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Healthcareoverrides.UpkeepCost;
+            ServiceComponent.m_WaterConsumption = Healthcareoverrides.Waterconsumption;
+            ServiceComponent.m_ElectricityConsumption = Healthcareoverrides.Electricityconsumption;
+            ServiceComponent.m_GarbageAccumulation = Healthcareoverrides.GarbageAccumulation;
+
+            var HospitalComponent = prefab.GetComponent<Game.Prefabs.Hospital>();
+            HospitalComponent.m_AmbulanceCapacity = Healthcareoverrides.Ambulancecapacity;
+            HospitalComponent.m_MedicalHelicopterCapacity = Healthcareoverrides.Helicoptercapacity;
+            HospitalComponent.m_PatientCapacity = Healthcareoverrides.Patientcapacity;
+            HospitalComponent.m_TreatmentBonus = Healthcareoverrides.Treatmentbonus;
+
+            var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
+            CoverageComponent.m_Range = Healthcareoverrides.Range;
+            CoverageComponent.m_Capacity = Healthcareoverrides.Capacity;
+            CoverageComponent.m_Magnitude = Healthcareoverrides.Magnitude;
+
+        }
+        
         return true;
     }
 }

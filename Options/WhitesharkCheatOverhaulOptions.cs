@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Game.Simulation;
+using Game.UI.InGame;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.InputSystem.Utilities;
 
 namespace WhitesharkCheatOverhaul;
 
@@ -354,6 +358,7 @@ public class WhitesharkCheatOverhaulOptions
                 ElectricityConsumption = 0
             }
         },
+
         IncinerationPlant_Options = new List<IncinerationPlantOptions>
         {
             new IncinerationPlantOptions
@@ -366,6 +371,42 @@ public class WhitesharkCheatOverhaulOptions
                 NoisePollution = 0,
                 Garbagecapacity = 3000000,
                 Vehiclecapacity = 100
+            }
+        },
+
+        Healthcare_Options = new List<HealthcareOptions>
+        {
+            new HealthcareOptions
+            {
+                Name = "MedicalClinic01",
+                UpkeepCost = 50,
+                Waterconsumption = 0,
+                Electricityconsumption = 0,
+                GarbageAccumulation = 0,
+                NoisePollution = 0,
+                Ambulancecapacity = 50,
+                Helicoptercapacity = 25,
+                Patientcapacity = 10000,
+                Treatmentbonus = 30,
+                Capacity = 100000,
+                Range = 30000,
+                Magnitude = 10
+            },
+            new HealthcareOptions
+            {
+                Name = "Hospital01",
+                UpkeepCost = 50,
+                Waterconsumption = 0,
+                Electricityconsumption = 0,
+                GarbageAccumulation = 0,
+                NoisePollution = 0,
+                Ambulancecapacity = 50,
+                Helicoptercapacity = 25,
+                Patientcapacity = 10000,
+                Treatmentbonus = 30,
+                Capacity = 100000,
+                Range = 30000,
+                Magnitude = 10
             }
         }
     };
@@ -381,7 +422,7 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<CityparkOptions> Citypark_Options { get; set; }
     public IEnumerable<WastewaterOptions> Wastewater_Options { get; set; }
     public IEnumerable<IncinerationPlantOptions> IncinerationPlant_Options { get; set; }
-
+    public IEnumerable<HealthcareOptions> Healthcare_Options { get; set; }
 
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
     {
@@ -484,6 +525,15 @@ public class WhitesharkCheatOverhaulOptions
         return IncinerationPlantdict;
     }
 
+    public IReadOnlyDictionary<string, HealthcareOptions> GetHealthcareDictionary()
+    {
+        var Healthcaredict = new Dictionary<string, HealthcareOptions>();
+        foreach (var Healthcare_option in Healthcare_Options)
+        {
+            Healthcaredict.Add(Healthcare_option.Name, Healthcare_option);
+        }
+        return Healthcaredict;
+    }
 
 
 
@@ -597,5 +647,21 @@ public class WhitesharkCheatOverhaulOptions
             x.NoisePollution >= 0 &&
             x.Garbagecapacity >= 0 &&
             x.Vehiclecapacity >= 0);
+
+        var Healthcare_length = Healthcare_Options.Count();
+        Healthcare_Options = Healthcare_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.UpkeepCost >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.NoisePollution >= 0 &&
+            x.Ambulancecapacity >= 0 &&
+            x.Helicoptercapacity >= 0 &&
+            x.Patientcapacity >= 0 &&
+            x.Treatmentbonus >= 0 &&
+            x.Range >= 0 &&
+            x.Capacity >= 0 &&
+            x.Magnitude >= 0);
     }
 }
