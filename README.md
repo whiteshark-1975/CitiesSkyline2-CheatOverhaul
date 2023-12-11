@@ -15,11 +15,16 @@
 ## A setting File will be created at 1st run.
 Location for settingsfile:
 * %appdata%\LocalLow\Colossal Order\Cities Skylines II\ModSettings\
-
+## you can use this cloudsave to edit the settingfile with an GUI 
+* https://jsoneditoronline.org/#left=cloud.e55143e3dc5b4cb2bcb0f15d7bed23d7
+after edit just save it to:
+* %appdata%\LocalLow\Colossal Order\Cities Skylines II\ModSettings\
 ## Installation - Thunderstore
 Coming soon
 
 ## Installation - Manual
+* This Thunderstore Version only support BepInEX 5
+
 1. Install [BepInEx 6 Bleeding Edge build](https://builds.bepinex.dev/projects/bepinex_be) or BepInEx 5. 
 
    The pre-release version of BepInEx 6 available on their GitHub release page is quite outdated (dated August 2022) and may not support loading this mod. Please download the Bleeding Edge version from [their website](https://builds.bepinex.dev/projects/bepinex_be)
