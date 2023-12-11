@@ -11,7 +11,7 @@ using Wayz.CS2;
 
 namespace WhitesharkCheatOverhaul;
 
-[BepInPlugin("WhitesharkCheatOverhaul", "WhitesharkCheatOverhaul", "0.4.0")]
+[BepInPlugin("WhitesharkCheatOverhaul", "WhitesharkCheatOverhaul", "0.3.16")]
 public class WhitesharkCheatOverhaul : BaseUnityPlugin
 {
     public static ManualLogSource GameLogger = null!;
