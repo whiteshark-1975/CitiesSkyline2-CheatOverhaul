@@ -1,9 +1,11 @@
-﻿using Game.Buildings;
+﻿using Game.Audio.Radio;
+using Game.Buildings;
 using Game.Modding;
 using Game.Prefabs;
 using Game.Simulation;
 using Game.Vehicles;
 using HarmonyLib;
+using System.Linq;
 using Unity.Mathematics;
 using Unity.Transforms;
 
@@ -339,6 +341,16 @@ public static class PrefabPatcher
 
             var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
             PollutionComponent.m_NoisePollution = Solarpowerstationoverrides.NoisePollution;
+
+        }
+
+        if (WhitesharkCheatOverhaul.SignatureResidentialbuildingOptions.TryGetValue(prefab.name, out var SignatureResidentialbuildingoverrides))
+        {
+
+            var EffectsComponent = prefab.GetComponent<Game.Prefabs.LocalEffects>();
+            var WellbeingEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.Wellbeing);
+            WellbeingEffect.m_Delta = SignatureResidentialbuildingoverrides.Wellbeing;
+            WellbeingEffect.m_Radius = SignatureResidentialbuildingoverrides.Radius;
 
         }
 

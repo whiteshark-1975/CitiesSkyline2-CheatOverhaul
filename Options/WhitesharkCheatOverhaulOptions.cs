@@ -515,6 +515,119 @@ public class WhitesharkCheatOverhaulOptions
                 Capacity = 1000000,
                 NoisePollution = 0
             }
+        },
+
+        SignatureResidentialbuilding_Options = new List<SignatureResidentialbuildingOptions>
+        {
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "EU_ResidentialLowSignature01",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "EU_ResidentialLowSignature02",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "EU_ResidentialLowSignature03",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "NA_ResidentialLowSignature01",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "NA_ResidentialLowSignature02",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "NA_ResidentialLowSignature03",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "EU_ResidentialMediumSignature01",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "EU_ResidentialMediumSignature02",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "EU_ResidentialMediumSignature03",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "NA_ResidentialMediumSignature01",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "NA_ResidentialMediumSignature02",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "NA_ResidentialMediumSignature03",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "EU_ResidentialHighSignature01",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "EU_ResidentialHighSignature02",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "EU_ResidentialHighSignature03",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "NA_ResidentialHighSignature01",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "NA_ResidentialHighSignature02",
+                Wellbeing = 1000,
+                Radius = 5000
+            },
+            new SignatureResidentialbuildingOptions
+            {
+                Name = "NA_ResidentialHighSignature03",
+                Wellbeing = 1000,
+                Radius = 5000
+            }
+
         }
     };
 
@@ -537,6 +650,8 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<EmergencybatteryOptions> Emergencybattery_Options { get; set; }
     public IEnumerable<GeothermalpowerplantOptions> Geothermalpowerplant_Options { get; set; }
     public IEnumerable<SolarpowerstationOptions> Solarpowerstation_Options { get; set; }
+    public IEnumerable<SignatureResidentialbuildingOptions> SignatureResidentialbuilding_Options { get; set; }
+
 
 
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
@@ -710,8 +825,17 @@ public class WhitesharkCheatOverhaulOptions
         }
         return Solarpowerstationdict;
     }
+    public IReadOnlyDictionary<string, SignatureResidentialbuildingOptions> GetSignatureResidentialbuildingDictionary()
+    {
+        var SignatureResidentialbuildingdict = new Dictionary<string, SignatureResidentialbuildingOptions>();
+        foreach (var SignatureResidentialbuilding_option in SignatureResidentialbuilding_Options)
+        {
+            SignatureResidentialbuildingdict.Add(SignatureResidentialbuilding_option.Name, SignatureResidentialbuilding_option);
+        }
+        return SignatureResidentialbuildingdict;
+    }
 
-    
+
     public void RemoveBadEntires()
     {
          School_Options = School_Options.Where(
@@ -908,5 +1032,10 @@ public class WhitesharkCheatOverhaulOptions
             x.Poweroutput >= 0 &&
             x.Capacity >= 0 &&
             x.NoisePollution >= 0);
+
+        SignatureResidentialbuilding_Options = SignatureResidentialbuilding_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Wellbeing >= 0 &&
+            x.Radius >= 0);
     }
 }
