@@ -1,6 +1,7 @@
 ﻿using Game.Buildings;
 using Game.Modding;
 using Game.Prefabs;
+using Game.Simulation;
 using Game.Vehicles;
 using HarmonyLib;
 using Unity.Mathematics;
@@ -211,7 +212,139 @@ public static class PrefabPatcher
             CoverageComponent.m_Magnitude = Healthcareoverrides.Magnitude;
 
         }
-        
+
+        if (WhitesharkCheatOverhaul.PostofficeOptions.TryGetValue(prefab.name, out var Postofficeoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Postofficeoverrides.Upkeep;
+            ServiceComponent.m_WaterConsumption = Postofficeoverrides.Waterconsumption;
+            ServiceComponent.m_ElectricityConsumption = Postofficeoverrides.Electricityconsumption;
+            ServiceComponent.m_GarbageAccumulation = Postofficeoverrides.GarbageAccumulation;
+
+            var PostofficeComponent = prefab.GetComponent<Game.Prefabs.PostFacility>();
+            PostofficeComponent.m_MailBoxCapacity = Postofficeoverrides.Mailboxcapacity;
+            PostofficeComponent.m_PostVanCapacity = Postofficeoverrides.Postvancapacity;
+            PostofficeComponent.m_MailStorageCapacity = Postofficeoverrides.Mailstoragecapacity;
+            
+
+            var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
+            CoverageComponent.m_Range = Postofficeoverrides.Range;
+            CoverageComponent.m_Capacity = Postofficeoverrides.Capacity;
+            CoverageComponent.m_Magnitude = Postofficeoverrides.Magnitude;
+
+            var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
+            PollutionComponent.m_NoisePollution = Postofficeoverrides.Noisepollution;
+        }
+
+        if (WhitesharkCheatOverhaul.CemeteryOptions.TryGetValue(prefab.name, out var Cemeteryoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Cemeteryoverrides.Upkeep;
+            ServiceComponent.m_WaterConsumption = Cemeteryoverrides.Waterconsumption;
+            ServiceComponent.m_ElectricityConsumption = Cemeteryoverrides.Electricityconsumption;
+            ServiceComponent.m_GarbageAccumulation = Cemeteryoverrides.GarbageAccumulation;
+
+            var CemeteryComponent = prefab.GetComponent<Game.Prefabs.DeathcareFacility>();
+            CemeteryComponent.m_HearseCapacity = Cemeteryoverrides.Hearsecapacity;
+            CemeteryComponent.m_StorageCapacity = Cemeteryoverrides.Storagecapacity;
+
+            var LeisureComponent = prefab.GetComponent<Game.Prefabs.LeisureProvider>();
+            LeisureComponent.m_Efficiency = Cemeteryoverrides.Efficiency;
+
+        }
+
+        if (WhitesharkCheatOverhaul.CrematoriumOptions.TryGetValue(prefab.name, out var Crematoriumoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Crematoriumoverrides.Upkeep;
+            ServiceComponent.m_WaterConsumption = Crematoriumoverrides.Waterconsumption;
+            ServiceComponent.m_ElectricityConsumption = Crematoriumoverrides.Electricityconsumption;
+            ServiceComponent.m_GarbageAccumulation = Crematoriumoverrides.GarbageAccumulation;
+
+            var CemeteryComponent = prefab.GetComponent<Game.Prefabs.DeathcareFacility>();
+            CemeteryComponent.m_HearseCapacity = Crematoriumoverrides.Hearsecapacity;
+            CemeteryComponent.m_StorageCapacity = Crematoriumoverrides.Storagecapacity;
+            CemeteryComponent.m_ProcessingRate = Crematoriumoverrides.Processingrate;
+
+            var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
+            PollutionComponent.m_NoisePollution = Crematoriumoverrides.Noisepollution;
+            PollutionComponent.m_AirPollution = Crematoriumoverrides.Airpollution;
+        }
+
+        if (WhitesharkCheatOverhaul.WindturbineOptions.TryGetValue(prefab.name, out var Windturbineoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Windturbineoverrides.Upkeep;
+            
+            var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
+            PollutionComponent.m_NoisePollution = Windturbineoverrides.Noisepollution;
+
+            var WindComponent = prefab.GetComponent<Game.Prefabs.WindPowered>();
+            WindComponent.m_Production = Windturbineoverrides.Production;
+            WindComponent.m_MaximumWind = Windturbineoverrides.Maximumwind;
+        }
+
+        if (WhitesharkCheatOverhaul.EmergencybatteryOptions.TryGetValue(prefab.name, out var Emergencybatteryoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Emergencybatteryoverrides.Upkeep;
+            ServiceComponent.m_GarbageAccumulation = Emergencybatteryoverrides.GarbageAccumulation;
+            ServiceComponent.m_WaterConsumption = Emergencybatteryoverrides.Waterconsumption;
+
+            var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
+            PollutionComponent.m_NoisePollution = Emergencybatteryoverrides.Noisepollution;
+
+            var WindComponent = prefab.GetComponent<Game.Prefabs.Battery>();
+            WindComponent.m_Capacity = Emergencybatteryoverrides.Capacity;
+            WindComponent.m_PowerOutput = Emergencybatteryoverrides.Poweroutput;
+        }
+
+        if (WhitesharkCheatOverhaul.GeothermalpowerplantOptions.TryGetValue(prefab.name, out var Geothermalpowerplantoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Geothermalpowerplantoverrides.Upkeep;
+            ServiceComponent.m_GarbageAccumulation = Geothermalpowerplantoverrides.GarbageAccumulation;
+
+            var ProductionComponent = prefab.GetComponent<GroundWaterPowered>();
+            ProductionComponent.m_Production = Geothermalpowerplantoverrides.Production;
+            ProductionComponent.m_MaximumGroundWater = Geothermalpowerplantoverrides.Maximumgroundwater;
+
+            var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
+            PollutionComponent.m_AirPollution = Geothermalpowerplantoverrides.AirPollution;
+            PollutionComponent.m_GroundPollution = Geothermalpowerplantoverrides.GroundPollution;
+            PollutionComponent.m_NoisePollution = Geothermalpowerplantoverrides.NoisePollution;
+                       
+        }
+
+        if (WhitesharkCheatOverhaul.SolarpowerstationOptions.TryGetValue(prefab.name, out var Solarpowerstationoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Solarpowerstationoverrides.Upkeep;
+            ServiceComponent.m_GarbageAccumulation = Solarpowerstationoverrides.GarbageAccumulation;
+            ServiceComponent.m_WaterConsumption = Solarpowerstationoverrides.Waterconsumption;
+
+            var ProductionComponent = prefab.GetComponent<SolarPowered>();
+            ProductionComponent.m_Production = Solarpowerstationoverrides.Production;
+
+            var BatteryComponent = prefab.GetComponent<Game.Prefabs.Battery>();
+            BatteryComponent.m_PowerOutput = Solarpowerstationoverrides.Poweroutput;
+            BatteryComponent.m_Capacity = Solarpowerstationoverrides.Capacity;
+
+            var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
+            PollutionComponent.m_NoisePollution = Solarpowerstationoverrides.NoisePollution;
+
+        }
+
+
+
+
         return true;
     }
 }

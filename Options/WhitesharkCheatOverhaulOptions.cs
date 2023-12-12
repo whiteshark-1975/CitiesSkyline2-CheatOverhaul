@@ -408,6 +408,113 @@ public class WhitesharkCheatOverhaulOptions
                 Range = 30000,
                 Magnitude = 10
             }
+        },
+        
+        Postoffice_Options = new List<PostofficeOptions>
+        {
+            new PostofficeOptions
+            {
+                Name = "PostOffice01",
+                Upkeep = 50,
+                Waterconsumption = 0,
+                Electricityconsumption = 0,
+                GarbageAccumulation = 0,
+                Noisepollution = 0,
+                Mailboxcapacity = 3000,
+                Postvancapacity = 50,
+                Mailstoragecapacity = 1000000,
+                Capacity = 100000,
+                Range = 30000,
+                Magnitude = 10
+            }
+        },
+
+        Cemetery_Options = new List<CemeteryOptions>
+        {
+            new CemeteryOptions
+            {
+                Name = "Cemetery01",
+                Upkeep = 50,
+                Waterconsumption = 0,
+                Electricityconsumption = 0,
+                GarbageAccumulation = 0,
+                Hearsecapacity = 50,
+                Storagecapacity = 100000,
+                Efficiency = 10
+            }
+        },
+
+        Crematorium_Options = new List<CrematoriumOptions>
+        {
+            new CrematoriumOptions
+            {
+                Name = "Crematorium01",
+                Upkeep = 50,
+                Waterconsumption = 0,
+                Electricityconsumption = 0,
+                GarbageAccumulation = 0,
+                Hearsecapacity = 50,
+                Storagecapacity = 100000,
+                Processingrate = 100,
+                Airpollution = 0,
+                Noisepollution = 0
+            }
+        },
+
+        Windturbine_Options = new List<WindturbineOptions>
+        {
+            new WindturbineOptions
+            {
+                Name = "WindTurbine01",
+                Upkeep = 50,
+                Production = 100000,
+                Maximumwind = 1,
+                Noisepollution = 0
+            }
+        },
+
+        Emergencybattery_Options = new List<EmergencybatteryOptions>
+        {
+            new EmergencybatteryOptions
+            {
+                Name = "EmergencyBatteryStation01",
+                Upkeep = 50,
+                Capacity = 1000000,
+                Poweroutput = 400000,
+                Noisepollution = 0,
+                GarbageAccumulation = 0,
+                Waterconsumption = 0
+            }
+        },
+
+        Geothermalpowerplant_Options = new List<GeothermalpowerplantOptions>
+        {
+            new GeothermalpowerplantOptions
+            {
+                Name = "GeothermalPowerPlant01",
+                Upkeep = 50,
+                Production = 1000000,
+                Maximumgroundwater = 400,
+                GarbageAccumulation = 0,
+                AirPollution = 0,
+                GroundPollution = 0,
+                NoisePollution = 0
+            }
+        },
+
+        Solarpowerstation_Options = new List<SolarpowerstationOptions>
+        {
+            new SolarpowerstationOptions
+            {
+                Name = "SolarPowerStation01",
+                Upkeep = 50,
+                Waterconsumption = 0,
+                GarbageAccumulation = 0,
+                Production = 1000000,
+                Poweroutput = 400000,
+                Capacity = 1000000,
+                NoisePollution = 0
+            }
         }
     };
 
@@ -423,6 +530,14 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<WastewaterOptions> Wastewater_Options { get; set; }
     public IEnumerable<IncinerationPlantOptions> IncinerationPlant_Options { get; set; }
     public IEnumerable<HealthcareOptions> Healthcare_Options { get; set; }
+    public IEnumerable<PostofficeOptions> Postoffice_Options { get; set; }
+    public IEnumerable<CemeteryOptions> Cemetery_Options { get; set; }
+    public IEnumerable<CrematoriumOptions> Crematorium_Options { get; set; }
+    public IEnumerable<WindturbineOptions> Windturbine_Options { get; set; }
+    public IEnumerable<EmergencybatteryOptions> Emergencybattery_Options { get; set; }
+    public IEnumerable<GeothermalpowerplantOptions> Geothermalpowerplant_Options { get; set; }
+    public IEnumerable<SolarpowerstationOptions> Solarpowerstation_Options { get; set; }
+
 
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
     {
@@ -532,14 +647,74 @@ public class WhitesharkCheatOverhaulOptions
         }
         return Healthcaredict;
     }
+    public IReadOnlyDictionary<string, PostofficeOptions> GetPostofficeDictionary()
+    {
+        var Postofficedict = new Dictionary<string, PostofficeOptions>();
+        foreach (var Postoffice_option in Postoffice_Options)
+        {
+            Postofficedict.Add(Postoffice_option.Name, Postoffice_option);
+        }
+        return Postofficedict;
+    }
+    public IReadOnlyDictionary<string, CemeteryOptions> GetCemeteryDictionary()
+    {
+        var Cemeterydict = new Dictionary<string, CemeteryOptions>();
+        foreach (var Cemetery_option in Cemetery_Options)
+        {
+            Cemeterydict.Add(Cemetery_option.Name, Cemetery_option);
+        }
+        return Cemeterydict;
+    }
+    public IReadOnlyDictionary<string, CrematoriumOptions> GetCrematoriumDictionary()
+    {
+        var Crematoriumdict = new Dictionary<string, CrematoriumOptions>();
+        foreach (var Crematorium_option in Crematorium_Options)
+        {
+            Crematoriumdict.Add(Crematorium_option.Name, Crematorium_option);
+        }
+        return Crematoriumdict;
+    }
+    public IReadOnlyDictionary<string, WindturbineOptions> GetWindturbineDictionary()
+    {
+        var Windturbinedict = new Dictionary<string, WindturbineOptions>();
+        foreach (var Windturbine_option in Windturbine_Options)
+        {
+            Windturbinedict.Add(Windturbine_option.Name, Windturbine_option);
+        }
+        return Windturbinedict;
+    }
+    public IReadOnlyDictionary<string, EmergencybatteryOptions> GetEmergencybatteryDictionary()
+    {
+        var Emergencybatterydict = new Dictionary<string, EmergencybatteryOptions>();
+        foreach (var Emergencybattery_option in Emergencybattery_Options)
+        {
+            Emergencybatterydict.Add(Emergencybattery_option.Name, Emergencybattery_option);
+        }
+        return Emergencybatterydict;
+    }
+    public IReadOnlyDictionary<string, GeothermalpowerplantOptions> GetGeothermalpowerplantDictionary()
+    {
+        var Geothermalpowerplantdict = new Dictionary<string, GeothermalpowerplantOptions>();
+        foreach (var Geothermalpowerplant_option in Geothermalpowerplant_Options)
+        {
+            Geothermalpowerplantdict.Add(Geothermalpowerplant_option.Name, Geothermalpowerplant_option);
+        }
+        return Geothermalpowerplantdict;
+    }
+    public IReadOnlyDictionary<string, SolarpowerstationOptions> GetSolarpowerstationDictionary()
+    {
+        var Solarpowerstationdict = new Dictionary<string, SolarpowerstationOptions>();
+        foreach (var Solarpowerstation_option in Solarpowerstation_Options)
+        {
+            Solarpowerstationdict.Add(Solarpowerstation_option.Name, Solarpowerstation_option);
+        }
+        return Solarpowerstationdict;
+    }
 
-
-
-
+    
     public void RemoveBadEntires()
     {
-        var School_length = School_Options.Count();
-        School_Options = School_Options.Where(
+         School_Options = School_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) && 
             x.UpkeepCost >= 0 &&
             x.AirPollution >= 0 &&
@@ -549,7 +724,7 @@ public class WhitesharkCheatOverhaulOptions
             x.Waterconsumption >= 0 &&
             x.Electricityconsumption >= 0);
    
-        var Powerplant_length = Powerplant_Options.Count();
+        
         Powerplant_Options = Powerplant_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.UpkeepCost >= 0 &&
@@ -560,7 +735,7 @@ public class WhitesharkCheatOverhaulOptions
             x.NoisePollution >= 0 &&
             x.Production >= 0);
 
-        var Waterpump_length = Waterpump_Options.Count();
+        
         Waterpump_Options = Waterpump_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.UpkeepCost >= 0 &&
@@ -569,14 +744,14 @@ public class WhitesharkCheatOverhaulOptions
             x.ElectricityConsumption >= 0 &&
             x.NoisePollution >= 0);
 
-        var Transformerstation_length = Transformerstation_Options.Count();
+        
         Transformerstation_Options = Transformerstation_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.UpkeepCost >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.NoisePollution >= 0);
 
-        var Serverfarm_length = Serverfarm_Options.Count();
+        
         Serverfarm_Options = Serverfarm_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.UpkeepCost >= 0 &&
@@ -587,19 +762,19 @@ public class WhitesharkCheatOverhaulOptions
             x.Capacity >= 0 &&
             x.NoisePollution >= 0);
 
-        var Garbagetruck_length = Garbagetruck_Options.Count();
+       
         Garbagetruck_Options = Garbagetruck_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Capacity >= 0 &&
             x.Unloadrate >= 0);
 
-        var Transportbus_length = Transportbus_Options.Count();
+        
         Transportbus_Options = Transportbus_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Passengercapacity >= 0 &&
             x.Maintenancerange >= 0);
 
-        var Parkinghall_length = Parkinghall_Options.Count();
+        
         Parkinghall_Options = Parkinghall_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
@@ -610,7 +785,7 @@ public class WhitesharkCheatOverhaulOptions
             x.Noisepollution >= 0 &&
             x.Comfortfactor >= 0);
 
-        var Citypark_length = Citypark_Options.Count();
+        
         Citypark_Options = Citypark_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
@@ -623,7 +798,7 @@ public class WhitesharkCheatOverhaulOptions
             x.Waterconsumption >= 0 &&
             x.GarbageAccumulation >= 0);
 
-        var Wastewater_length = Wastewater_Options.Count();
+        
         Wastewater_Options = Wastewater_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.UpkeepCost >= 0 &&
@@ -635,7 +810,7 @@ public class WhitesharkCheatOverhaulOptions
             x.NoisePollution >= 0 &&
             x.ElectricityConsumption >= 0);
 
-        var IncinerationPlant_length = IncinerationPlant_Options.Count();
+        
         IncinerationPlant_Options = IncinerationPlant_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.UpkeepCost >= 0 &&
@@ -646,7 +821,7 @@ public class WhitesharkCheatOverhaulOptions
             x.Garbagecapacity >= 0 &&
             x.Vehiclecapacity >= 0);
 
-        var Healthcare_length = Healthcare_Options.Count();
+        
         Healthcare_Options = Healthcare_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.UpkeepCost >= 0 &&
@@ -661,5 +836,77 @@ public class WhitesharkCheatOverhaulOptions
             x.Range >= 0 &&
             x.Capacity >= 0 &&
             x.Magnitude >= 0);
+
+        Postoffice_Options = Postoffice_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Noisepollution >= 0 &&
+            x.Mailstoragecapacity >= 0 &&
+            x.Mailboxcapacity >= 0 &&
+            x.Postvancapacity >= 0 &&
+            x.Range >= 0 &&
+            x.Capacity >= 0 &&
+            x.Magnitude >= 0);
+
+        Cemetery_Options = Cemetery_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Hearsecapacity >= 0 &&
+            x.Storagecapacity >= 0 &&
+            x.Efficiency >= 0);
+
+        Crematorium_Options = Crematorium_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Hearsecapacity >= 0 &&
+            x.Storagecapacity >= 0 &&
+            x.Airpollution >= 0 &&
+            x.Noisepollution >= 0 &&
+            x.Processingrate >= 0);
+
+        Windturbine_Options = Windturbine_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Production >= 0 &&
+            x.Maximumwind >= 0 &&
+            x.Noisepollution >= 0);
+
+        Emergencybattery_Options = Emergencybattery_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Capacity >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Poweroutput >= 0 &&
+            x.Noisepollution >= 0);
+
+        Geothermalpowerplant_Options = Geothermalpowerplant_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Production >= 0 &&
+            x.Maximumgroundwater >= 0 &&
+            x.AirPollution >= 0 &&
+            x.GroundPollution >= 0 &&
+            x.NoisePollution >= 0);
+
+        Solarpowerstation_Options = Solarpowerstation_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Production >= 0 &&
+            x.Poweroutput >= 0 &&
+            x.Capacity >= 0 &&
+            x.NoisePollution >= 0);
     }
 }

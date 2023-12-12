@@ -28,6 +28,13 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, WastewaterOptions> WastewaterOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, IncinerationPlantOptions> IncinerationPlantOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, HealthcareOptions> HealthcareOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, PostofficeOptions> PostofficeOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, CemeteryOptions> CemeteryOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, CrematoriumOptions> CrematoriumOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, WindturbineOptions> WindturbineOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, EmergencybatteryOptions> EmergencybatteryOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, GeothermalpowerplantOptions> GeothermalpowerplantOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, SolarpowerstationOptions> SolarpowerstationOptions { get; private set; } = null!;
 
 
     private void Awake()
@@ -62,7 +69,13 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.WastewaterOptions = options.GetWastewaterDictionary();
         WhitesharkCheatOverhaul.IncinerationPlantOptions = options.GetIncinerationPlantDictionary();
         WhitesharkCheatOverhaul.HealthcareOptions = options.GetHealthcareDictionary();
-
+        WhitesharkCheatOverhaul.PostofficeOptions = options.GetPostofficeDictionary();
+        WhitesharkCheatOverhaul.CemeteryOptions = options.GetCemeteryDictionary();
+        WhitesharkCheatOverhaul.CrematoriumOptions = options.GetCrematoriumDictionary();
+        WhitesharkCheatOverhaul.WindturbineOptions = options.GetWindturbineDictionary();
+        WhitesharkCheatOverhaul.EmergencybatteryOptions = options.GetEmergencybatteryDictionary();
+        WhitesharkCheatOverhaul.GeothermalpowerplantOptions = options.GetGeothermalpowerplantDictionary();
+        WhitesharkCheatOverhaul.SolarpowerstationOptions = options.GetSolarpowerstationDictionary();
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
 
