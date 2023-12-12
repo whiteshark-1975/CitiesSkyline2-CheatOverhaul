@@ -1372,7 +1372,7 @@ public class WhitesharkCheatOverhaulOptions
             x.Wellbeing >= 0 &&
             x.Radius >= 0 &&
             x.Attractiveness >= 0 &&
-            x.CityImportcost >= 0 &&
+            x.CityImportcost <= 0 &&
             x.CityAttractiveness >= 0 &&
             x.Noisepollution >= 0);
 
