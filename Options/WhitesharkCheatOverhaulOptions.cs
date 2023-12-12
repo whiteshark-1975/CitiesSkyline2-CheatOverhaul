@@ -753,8 +753,100 @@ public class WhitesharkCheatOverhaulOptions
                 Noisepollution = 0,
                 Attractiveness = 250
             }
-        }
+        },
 
+        PostVan_Options = new List<PostVanOptions>
+        {
+            new PostVanOptions
+            {
+                Name = "EU_PostVan01",
+                MailCapacity = 80000
+                
+            },
+            new PostVanOptions
+            {
+                Name = "NA_PostVan01",
+                MailCapacity = 80000
+
+            }
+        },
+
+        SignatureOfficebuilding_Options = new List<SignatureOfficebuildingOptions>
+        {
+            new SignatureOfficebuildingOptions
+            {
+                Name = "OfficeHighSignature01",
+                Attractiveness = 250,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityOfficeEfficency = 10,
+                CityUniversityInterest = 10,
+                CityUniversityGraduation = 10,
+                Noisepollution = 0
+
+            },
+            new SignatureOfficebuildingOptions
+            {
+                Name = "OfficeHighSignature02",
+                Attractiveness = 250,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityOfficeEfficency = 10,
+                CityUniversityInterest = 10,
+                CityUniversityGraduation = 10,
+                Noisepollution = 0
+
+            },
+            new SignatureOfficebuildingOptions
+            {
+                Name = "OfficeHighSignature03",
+                Attractiveness = 250,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityOfficeEfficency = 10,
+                CityUniversityInterest = 10,
+                CityUniversityGraduation = 10,
+                Noisepollution = 0
+
+            },
+            new SignatureOfficebuildingOptions
+            {
+                Name = "OfficeLowSignature01",
+                Attractiveness = 250,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityOfficeEfficency = 10,
+                CityUniversityInterest = 10,
+                CityUniversityGraduation = 10,
+                Noisepollution = 0
+
+            },
+            new SignatureOfficebuildingOptions
+            {
+                Name = "OfficeLowSignature02",
+                Attractiveness = 250,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityOfficeEfficency = 10,
+                CityUniversityInterest = 10,
+                CityUniversityGraduation = 10,
+                Noisepollution = 0
+
+            },
+            new SignatureOfficebuildingOptions
+            {
+                Name = "OfficeLowSignature03",
+                Attractiveness = 250,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityOfficeEfficency = 10,
+                CityUniversityInterest = 10,
+                CityUniversityGraduation = 10,
+                Noisepollution = 0
+
+            }
+
+        }
 
     };
 
@@ -779,6 +871,14 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<SolarpowerstationOptions> Solarpowerstation_Options { get; set; }
     public IEnumerable<SignatureResidentialbuildingOptions> SignatureResidentialbuilding_Options { get; set; }
     public IEnumerable<SignatureCommercialbuildingOptions> SignatureCommercialbuilding_Options { get; set; }
+    public IEnumerable<PostVanOptions> PostVan_Options { get; set; }
+    public IEnumerable<SignatureOfficebuildingOptions> SignatureOfficebuilding_Options { get; set; }
+
+
+
+
+
+
 
 
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
@@ -969,6 +1069,24 @@ public class WhitesharkCheatOverhaulOptions
             SignatureCommercialbuildingdict.Add(SignatureCommercialbuilding_option.Name, SignatureCommercialbuilding_option);
         }
         return SignatureCommercialbuildingdict;
+    }
+    public IReadOnlyDictionary<string, PostVanOptions> GetPostVanDictionary()
+    {
+        var PostVandict = new Dictionary<string, PostVanOptions>();
+        foreach (var PostVan_option in PostVan_Options)
+        {
+            PostVandict.Add(PostVan_option.Name, PostVan_option);
+        }
+        return PostVandict;
+    }
+    public IReadOnlyDictionary<string, SignatureOfficebuildingOptions> GetSignatureOfficebuildingDictionary()
+    {
+        var SignatureOfficebuildingdict = new Dictionary<string, SignatureOfficebuildingOptions>();
+        foreach (var SignatureOfficebuilding_option in SignatureOfficebuilding_Options)
+        {
+            SignatureOfficebuildingdict.Add(SignatureOfficebuilding_option.Name, SignatureOfficebuilding_option);
+        }
+        return SignatureOfficebuildingdict;
     }
 
 
@@ -1182,6 +1300,20 @@ public class WhitesharkCheatOverhaulOptions
             x.Attractiveness >= 0 &&
             x.CityImportcost >= 0 &&
             x.CityAttractiveness >= 0 &&
+            x.Noisepollution >= 0);
+
+        PostVan_Options = PostVan_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.MailCapacity >= 0);
+
+        SignatureOfficebuilding_Options = SignatureOfficebuilding_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Wellbeing >= 0 &&
+            x.Radius >= 0 &&
+            x.Attractiveness >= 0 &&
+            x.CityOfficeEfficency >= 0 &&
+            x.CityUniversityGraduation >= 0 &&
+            x.CityUniversityInterest >= 0 &&
             x.Noisepollution >= 0);
     }
 }

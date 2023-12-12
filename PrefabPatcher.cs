@@ -376,6 +376,36 @@ public static class PrefabPatcher
             CityAttractionEffect.m_Delta = SignatureCommercialbuildingoverrides.CityAttractiveness;
         }
 
+        if (WhitesharkCheatOverhaul.PostVanOptions.TryGetValue(prefab.name, out var PostVanoverrides))
+        {
+            var MailComponent = prefab.GetComponent<Game.Prefabs.PostVan>();
+            MailComponent.m_MailCapacity = PostVanoverrides.MailCapacity;
+
+            
+        }
+
+        if (WhitesharkCheatOverhaul.SignatureOfficebuildingOptions.TryGetValue(prefab.name, out var SignatureOfficebuildingoverrides))
+        {
+            var AttractivenessComponent = prefab.GetComponent<Attraction>();
+            AttractivenessComponent.m_Attractiveness = SignatureOfficebuildingoverrides.Attractiveness;
+
+            var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
+            PollutionComponent.m_NoisePollution = SignatureOfficebuildingoverrides.Noisepollution;
+
+            var EffectsComponent = prefab.GetComponent<Game.Prefabs.LocalEffects>();
+            var WellbeingEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.Wellbeing);
+            WellbeingEffect.m_Delta = SignatureOfficebuildingoverrides.Wellbeing;
+            WellbeingEffect.m_Radius = SignatureOfficebuildingoverrides.Radius;
+
+            var CityEffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+            var CityOfficeEfficencyEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeEfficiency);
+            var CityUniversityInterestEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityInterest);
+            var CityUniversityGraduationEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityGraduation);
+            CityOfficeEfficencyEffect.m_Delta = SignatureOfficebuildingoverrides.CityOfficeEfficency;
+            CityUniversityInterestEffect.m_Delta = SignatureOfficebuildingoverrides.CityUniversityInterest;
+            CityUniversityGraduationEffect.m_Delta = SignatureOfficebuildingoverrides.CityUniversityGraduation;
+        }
+
         return true;
     }
 }

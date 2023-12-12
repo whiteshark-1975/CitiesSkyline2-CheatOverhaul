@@ -11,7 +11,7 @@ using Wayz.CS2;
 
 namespace WhitesharkCheatOverhaul;
 
-[BepInPlugin("WhitesharkCheatOverhaul", "WhitesharkCheatOverhaul", "0.3.16")]
+[BepInPlugin("WhitesharkCheatOverhaul", "WhitesharkCheatOverhaul", "0.3.17")]
 public class WhitesharkCheatOverhaul : BaseUnityPlugin
 {
     public static ManualLogSource GameLogger = null!;
@@ -37,8 +37,8 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, SolarpowerstationOptions> SolarpowerstationOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, SignatureResidentialbuildingOptions> SignatureResidentialbuildingOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, SignatureCommercialbuildingOptions> SignatureCommercialbuildingOptions { get; private set; } = null!;
-
-
+    public static IReadOnlyDictionary<string, PostVanOptions> PostVanOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, SignatureOfficebuildingOptions> SignatureOfficebuildingOptions { get; private set; } = null!;
 
 
     private void Awake()
@@ -82,6 +82,8 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.SolarpowerstationOptions = options.GetSolarpowerstationDictionary();
         WhitesharkCheatOverhaul.SignatureResidentialbuildingOptions = options.GetSignatureResidentialbuildingDictionary();
         WhitesharkCheatOverhaul.SignatureCommercialbuildingOptions = options.GetSignatureCommercialbuildingDictionary();
+        WhitesharkCheatOverhaul.PostVanOptions = options.GetPostVanDictionary();
+        WhitesharkCheatOverhaul.SignatureOfficebuildingOptions = options.GetSignatureOfficebuildingDictionary();
 
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
