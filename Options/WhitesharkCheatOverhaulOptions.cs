@@ -854,9 +854,9 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "EU_MixedSignature01",
                 Attractiveness = 250,
-                Wellbeing = 0,
-                Radius = 0,
-                CityAttractiveness = 0,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityAttractiveness = 250,
                 Noisepollution = 0
 
             },
@@ -864,9 +864,9 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "EU_MixedSignature02",
                 Attractiveness = 250,
-                Wellbeing = 0,
-                Radius = 0,
-                CityAttractiveness = 0,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityAttractiveness = 250,
                 Noisepollution = 0
 
             },
@@ -874,9 +874,9 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "EU_MixedSignature03",
                 Attractiveness = 250,
-                Wellbeing = 0,
-                Radius = 0,
-                CityAttractiveness = 0,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityAttractiveness = 250,
                 Noisepollution = 0
 
             },
@@ -884,9 +884,9 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "NA_MixedSignature01",
                 Attractiveness = 250,
-                Wellbeing = 0,
-                Radius = 0,
-                CityAttractiveness = 0,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityAttractiveness = 250,
                 Noisepollution = 0
 
             },
@@ -894,9 +894,9 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "NA_MixedSignature02",
                 Attractiveness = 250,
-                Wellbeing = 0,
-                Radius = 0,
-                CityAttractiveness = 0,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityAttractiveness = 250,
                 Noisepollution = 0
 
             },
@@ -904,9 +904,9 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "NA_MixedSignature03",
                 Attractiveness = 250,
-                Wellbeing = 0,
-                Radius = 0,
-                CityAttractiveness = 0,
+                Wellbeing = 250,
+                Radius = 3000,
+                CityAttractiveness = 250,
                 Noisepollution = 0
 
             }
