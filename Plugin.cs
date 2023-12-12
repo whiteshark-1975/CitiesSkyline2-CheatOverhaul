@@ -39,7 +39,7 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, SignatureCommercialbuildingOptions> SignatureCommercialbuildingOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, PostVanOptions> PostVanOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, SignatureOfficebuildingOptions> SignatureOfficebuildingOptions { get; private set; } = null!;
-
+    public static IReadOnlyDictionary<string, SignatureMixedbuildingOptions> SignatureMixedbuildingOptions { get; private set; } = null!;
 
     private void Awake()
     {
@@ -84,7 +84,7 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.SignatureCommercialbuildingOptions = options.GetSignatureCommercialbuildingDictionary();
         WhitesharkCheatOverhaul.PostVanOptions = options.GetPostVanDictionary();
         WhitesharkCheatOverhaul.SignatureOfficebuildingOptions = options.GetSignatureOfficebuildingDictionary();
-
+        WhitesharkCheatOverhaul.SignatureMixedbuildingOptions = options.GetSignatureMixedbuildingDictionary();
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
 

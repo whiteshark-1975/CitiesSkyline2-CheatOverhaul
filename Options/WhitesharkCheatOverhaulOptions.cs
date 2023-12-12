@@ -846,6 +846,70 @@ public class WhitesharkCheatOverhaulOptions
 
             }
 
+        },
+
+        SignatureMixedbuilding_Options = new List<SignatureMixedbuildingOptions>
+        {
+            new SignatureMixedbuildingOptions
+            {
+                Name = "EU_MixedSignature01",
+                Attractiveness = 250,
+                Wellbeing = 0,
+                Radius = 0,
+                CityAttractiveness = 0,
+                Noisepollution = 0
+
+            },
+            new SignatureMixedbuildingOptions
+            {
+                Name = "EU_MixedSignature02",
+                Attractiveness = 250,
+                Wellbeing = 0,
+                Radius = 0,
+                CityAttractiveness = 0,
+                Noisepollution = 0
+
+            },
+            new SignatureMixedbuildingOptions
+            {
+                Name = "EU_MixedSignature03",
+                Attractiveness = 250,
+                Wellbeing = 0,
+                Radius = 0,
+                CityAttractiveness = 0,
+                Noisepollution = 0
+
+            },
+            new SignatureMixedbuildingOptions
+            {
+                Name = "NA_MixedSignature01",
+                Attractiveness = 250,
+                Wellbeing = 0,
+                Radius = 0,
+                CityAttractiveness = 0,
+                Noisepollution = 0
+
+            },
+            new SignatureMixedbuildingOptions
+            {
+                Name = "NA_MixedSignature02",
+                Attractiveness = 250,
+                Wellbeing = 0,
+                Radius = 0,
+                CityAttractiveness = 0,
+                Noisepollution = 0
+
+            },
+            new SignatureMixedbuildingOptions
+            {
+                Name = "NA_MixedSignature03",
+                Attractiveness = 250,
+                Wellbeing = 0,
+                Radius = 0,
+                CityAttractiveness = 0,
+                Noisepollution = 0
+
+            }
         }
 
     };
@@ -873,6 +937,7 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<SignatureCommercialbuildingOptions> SignatureCommercialbuilding_Options { get; set; }
     public IEnumerable<PostVanOptions> PostVan_Options { get; set; }
     public IEnumerable<SignatureOfficebuildingOptions> SignatureOfficebuilding_Options { get; set; }
+    public IEnumerable<SignatureMixedbuildingOptions> SignatureMixedbuilding_Options { get; set; }
 
 
 
@@ -1087,6 +1152,15 @@ public class WhitesharkCheatOverhaulOptions
             SignatureOfficebuildingdict.Add(SignatureOfficebuilding_option.Name, SignatureOfficebuilding_option);
         }
         return SignatureOfficebuildingdict;
+    }
+    public IReadOnlyDictionary<string, SignatureMixedbuildingOptions> GetSignatureMixedbuildingDictionary()
+    {
+        var SignatureMixedbuildingdict = new Dictionary<string, SignatureMixedbuildingOptions>();
+        foreach (var SignatureMixedbuilding_option in SignatureMixedbuilding_Options)
+        {
+            SignatureMixedbuildingdict.Add(SignatureMixedbuilding_option.Name, SignatureMixedbuilding_option);
+        }
+        return SignatureMixedbuildingdict;
     }
 
 
@@ -1314,6 +1388,16 @@ public class WhitesharkCheatOverhaulOptions
             x.CityOfficeEfficency >= 0 &&
             x.CityUniversityGraduation >= 0 &&
             x.CityUniversityInterest >= 0 &&
+            x.Noisepollution >= 0);
+
+        SignatureMixedbuilding_Options = SignatureMixedbuilding_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Wellbeing >= 0 &&
+            x.Radius >= 0 &&
+            x.Attractiveness >= 0 &&
+            x.Wellbeing >= 0 &&
+            x.Radius >= 0 &&
+            x.CityAttractiveness >= 0 &&
             x.Noisepollution >= 0);
     }
 }

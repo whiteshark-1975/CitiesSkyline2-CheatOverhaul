@@ -406,6 +406,25 @@ public static class PrefabPatcher
             CityUniversityGraduationEffect.m_Delta = SignatureOfficebuildingoverrides.CityUniversityGraduation;
         }
 
+        if (WhitesharkCheatOverhaul.SignatureMixedbuildingOptions.TryGetValue(prefab.name, out var SignatureMixedbuildingoverrides))
+        {
+            var AttractivenessComponent = prefab.GetComponent<Attraction>();
+            AttractivenessComponent.m_Attractiveness = SignatureMixedbuildingoverrides.Attractiveness;
+
+            var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
+            PollutionComponent.m_NoisePollution = SignatureMixedbuildingoverrides.Noisepollution;
+
+            var EffectsComponent = prefab.GetComponent<Game.Prefabs.LocalEffects>();
+            var WellbeingEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.Wellbeing);
+            WellbeingEffect.m_Delta = SignatureMixedbuildingoverrides.Wellbeing;
+            WellbeingEffect.m_Radius = SignatureMixedbuildingoverrides.Radius;
+
+            var CityEffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+            var CityAttractivenessEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.Attractiveness);
+            CityAttractivenessEffect.m_Delta = SignatureMixedbuildingoverrides.CityAttractiveness;
+            
+        }
+
         return true;
     }
 }
