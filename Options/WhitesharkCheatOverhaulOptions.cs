@@ -639,7 +639,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -649,7 +649,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -659,7 +659,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -669,7 +669,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -679,7 +679,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -689,7 +689,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -699,7 +699,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -709,7 +709,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -719,7 +719,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -729,7 +729,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -739,7 +739,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             },
@@ -749,7 +749,7 @@ public class WhitesharkCheatOverhaulOptions
                 Wellbeing = 250,
                 Radius = 10000,
                 CityAttractiveness = 250,
-                CityImportcost = 0,
+                CityImportcost = -0.50f,
                 Noisepollution = 0,
                 Attractiveness = 250
             }
