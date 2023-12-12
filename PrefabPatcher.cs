@@ -1,5 +1,6 @@
 ﻿using Game.Audio.Radio;
 using Game.Buildings;
+using Game.City;
 using Game.Modding;
 using Game.Prefabs;
 using Game.Simulation;
@@ -228,7 +229,8 @@ public static class PrefabPatcher
             PostofficeComponent.m_MailBoxCapacity = Postofficeoverrides.Mailboxcapacity;
             PostofficeComponent.m_PostVanCapacity = Postofficeoverrides.Postvancapacity;
             PostofficeComponent.m_MailStorageCapacity = Postofficeoverrides.Mailstoragecapacity;
-            
+            PostofficeComponent.m_PostTruckCapacity = Postofficeoverrides.PostTruckscapacity;
+
 
             var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
             CoverageComponent.m_Range = Postofficeoverrides.Range;
@@ -354,8 +356,25 @@ public static class PrefabPatcher
 
         }
 
+        if (WhitesharkCheatOverhaul.SignatureCommercialbuildingOptions.TryGetValue(prefab.name, out var SignatureCommercialbuildingoverrides))
+        {
+            var AttractivenessComponent = prefab.GetComponent<Attraction>();
+            AttractivenessComponent.m_Attractiveness = SignatureCommercialbuildingoverrides.Attractiveness;
 
+            var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
+            PollutionComponent.m_NoisePollution = SignatureCommercialbuildingoverrides.Noisepollution;
 
+            var EffectsComponent = prefab.GetComponent<Game.Prefabs.LocalEffects>();
+            var WellbeingEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.Wellbeing);
+            WellbeingEffect.m_Delta = SignatureCommercialbuildingoverrides.Wellbeing;
+            WellbeingEffect.m_Radius = SignatureCommercialbuildingoverrides.Radius;
+
+            var CityEffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+            var CityimportEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.ImportCost);
+            var CityAttractionEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.Attractiveness);
+            CityimportEffect.m_Delta = SignatureCommercialbuildingoverrides.CityImportcost;
+            CityAttractionEffect.m_Delta = SignatureCommercialbuildingoverrides.CityAttractiveness;
+        }
 
         return true;
     }

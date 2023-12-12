@@ -7,6 +7,7 @@ public class PostofficeOptions
     public int Mailstoragecapacity { get; set; }
     public int Mailboxcapacity { get; set; }
     public int Postvancapacity { get; set; }
+    public int PostTruckscapacity { get; set; }
     public int Upkeep { get; set; }
     public int GarbageAccumulation { get; set; }
     public int Electricityconsumption { get; set; }

@@ -422,6 +422,7 @@ public class WhitesharkCheatOverhaulOptions
                 Noisepollution = 0,
                 Mailboxcapacity = 3000,
                 Postvancapacity = 50,
+                PostTruckscapacity = 25,
                 Mailstoragecapacity = 1000000,
                 Capacity = 100000,
                 Range = 30000,
@@ -628,7 +629,133 @@ public class WhitesharkCheatOverhaulOptions
                 Radius = 5000
             }
 
+        },
+
+        SignatureCommercialbuilding_Options = new List<SignatureCommercialbuildingOptions>
+        {
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "EU_CommercialLowSignature01",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "EU_CommercialLowSignature02",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "EU_CommercialLowSignature03",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "NA_CommercialLowSignature01",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "NA_CommercialLowSignature02",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "NA_CommercialLowSignature03",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "EU_CommercialHighSignature01",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "EU_CommercialHighSignature02",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "EU_CommercialHighSignature03",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "NA_CommercialHighSignature01",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "NA_CommercialHighSignature02",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            },
+            new SignatureCommercialbuildingOptions
+            {
+                Name = "NA_CommercialHighSignature03",
+                Wellbeing = 250,
+                Radius = 10000,
+                CityAttractiveness = 250,
+                CityImportcost = 0,
+                Noisepollution = 0,
+                Attractiveness = 250
+            }
         }
+
+
     };
 
     public IEnumerable<SchoolOptions> School_Options { get; set; }
@@ -651,7 +778,7 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<GeothermalpowerplantOptions> Geothermalpowerplant_Options { get; set; }
     public IEnumerable<SolarpowerstationOptions> Solarpowerstation_Options { get; set; }
     public IEnumerable<SignatureResidentialbuildingOptions> SignatureResidentialbuilding_Options { get; set; }
-
+    public IEnumerable<SignatureCommercialbuildingOptions> SignatureCommercialbuilding_Options { get; set; }
 
 
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
@@ -834,6 +961,15 @@ public class WhitesharkCheatOverhaulOptions
         }
         return SignatureResidentialbuildingdict;
     }
+    public IReadOnlyDictionary<string, SignatureCommercialbuildingOptions> GetSignatureCommercialbuildingDictionary()
+    {
+        var SignatureCommercialbuildingdict = new Dictionary<string, SignatureCommercialbuildingOptions>();
+        foreach (var SignatureCommercialbuilding_option in SignatureCommercialbuilding_Options)
+        {
+            SignatureCommercialbuildingdict.Add(SignatureCommercialbuilding_option.Name, SignatureCommercialbuilding_option);
+        }
+        return SignatureCommercialbuildingdict;
+    }
 
 
     public void RemoveBadEntires()
@@ -971,6 +1107,7 @@ public class WhitesharkCheatOverhaulOptions
             x.Mailstoragecapacity >= 0 &&
             x.Mailboxcapacity >= 0 &&
             x.Postvancapacity >= 0 &&
+            x.PostTruckscapacity >= 0 &&
             x.Range >= 0 &&
             x.Capacity >= 0 &&
             x.Magnitude >= 0);
@@ -1037,5 +1174,14 @@ public class WhitesharkCheatOverhaulOptions
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Wellbeing >= 0 &&
             x.Radius >= 0);
+
+        SignatureCommercialbuilding_Options = SignatureCommercialbuilding_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Wellbeing >= 0 &&
+            x.Radius >= 0 &&
+            x.Attractiveness >= 0 &&
+            x.CityImportcost >= 0 &&
+            x.CityAttractiveness >= 0 &&
+            x.Noisepollution >= 0);
     }
 }

@@ -36,6 +36,10 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, GeothermalpowerplantOptions> GeothermalpowerplantOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, SolarpowerstationOptions> SolarpowerstationOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, SignatureResidentialbuildingOptions> SignatureResidentialbuildingOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, SignatureCommercialbuildingOptions> SignatureCommercialbuildingOptions { get; private set; } = null!;
+
+
+
 
     private void Awake()
     {
@@ -77,6 +81,7 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.GeothermalpowerplantOptions = options.GetGeothermalpowerplantDictionary();
         WhitesharkCheatOverhaul.SolarpowerstationOptions = options.GetSolarpowerstationDictionary();
         WhitesharkCheatOverhaul.SignatureResidentialbuildingOptions = options.GetSignatureResidentialbuildingDictionary();
+        WhitesharkCheatOverhaul.SignatureCommercialbuildingOptions = options.GetSignatureCommercialbuildingDictionary();
 
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
