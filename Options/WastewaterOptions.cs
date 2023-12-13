@@ -6,7 +6,7 @@ public class WastewaterOptions
 
     public int UpkeepCost { get; set; }
     public int Capacity { get; set; }
-    public int Purification { get; set; }
+    public float Purification { get; set; }
     public int GarbageAccumulation { get; set; }
     public int GroundPollution { get; set; }
     public int AirPollution { get; set; }

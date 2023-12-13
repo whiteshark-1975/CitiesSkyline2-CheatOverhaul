@@ -16,48 +16,48 @@ public class WhitesharkCheatOverhaulOptions
             new SchoolOptions
             {
                 Name = "ElementarySchool01",
-                UpkeepCost = 50,
+                UpkeepCost = 2500,
                 AirPollution = 0,
                 GroundPollution = 0,
-                NoisePollution = 0,
-                GarbageAccumulation = 0,
-                Waterconsumption = 0,
-                Electricityconsumption = 0
+                NoisePollution = 7500,
+                GarbageAccumulation = 1900,
+                Waterconsumption = 1500,
+                Electricityconsumption = 1000
             },
             new SchoolOptions
             {
                 Name = "HighSchool01",
-                UpkeepCost = 50,
+                UpkeepCost = 45000,
                 AirPollution = 0,
                 GroundPollution = 0,
-                NoisePollution = 0,
-                GarbageAccumulation = 0,
-                Waterconsumption = 0,
-                Electricityconsumption = 0
+                NoisePollution = 7500,
+                GarbageAccumulation = 1300,
+                Waterconsumption = 1500,
+                Electricityconsumption = 1500
 
             },
             new SchoolOptions
             {
                 Name = "College01",
-                UpkeepCost = 50,
+                UpkeepCost = 150000,
                 AirPollution = 0,
                 GroundPollution = 0,
-                NoisePollution = 0,
-                GarbageAccumulation = 0,
-                Waterconsumption = 0,
-                Electricityconsumption = 0
+                NoisePollution = 10000,
+                GarbageAccumulation = 2400,
+                Waterconsumption = 1500,
+                Electricityconsumption = 2000
 
             },
             new SchoolOptions
             {
                 Name = "University01",
-                UpkeepCost = 50,
+                UpkeepCost = 200000,
                 AirPollution = 0,
                 GroundPollution = 0,
-                NoisePollution = 0,
-                GarbageAccumulation = 0,
-                Waterconsumption = 0,
-                Electricityconsumption = 0
+                NoisePollution = 10000,
+                GarbageAccumulation = 2400,
+                Waterconsumption = 3000,
+                Electricityconsumption = 3000
 
             }
         },
@@ -67,46 +67,46 @@ public class WhitesharkCheatOverhaulOptions
             new PowerplantOptions
             {
                 Name = "GasPowerPlant01",
-                UpkeepCost = 50,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0,
-                AirPollution = 0,
-                GroundPollution = 0,
-                NoisePollution = 0,
-                Production = 10000000
+                UpkeepCost = 600000,
+                Waterconsumption = 48000,
+                GarbageAccumulation = 30000,
+                AirPollution = 10000,
+                GroundPollution = 10000,
+                NoisePollution = 10000,
+                Production = 2500000
             },
             new PowerplantOptions
             {
                 Name = "CoalPowerPlant01",
-                UpkeepCost = 50,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0,
-                AirPollution = 0,
-                GroundPollution = 0,
-                NoisePollution = 0,
-                Production = 10000000
+                UpkeepCost = 15000,
+                Waterconsumption = 60000,
+                GarbageAccumulation = 50000,
+                AirPollution = 100000,
+                GroundPollution = 100000,
+                NoisePollution = 100000,
+                Production = 3000000
             },
             new PowerplantOptions
             {
                 Name = "NuclearPowerPlant01",
-                UpkeepCost = 50,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0,
+                UpkeepCost = 1000000,
+                Waterconsumption = 400000,
+                GarbageAccumulation = 40000,
                 AirPollution = 0,
                 GroundPollution = 0,
-                NoisePollution = 0,
-                Production = 10000000
+                NoisePollution = 150000,
+                Production = 7500000
             },
             new PowerplantOptions
             {
                 Name = "SmallCoalPowerPlant01",
-                UpkeepCost = 50,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0,
-                AirPollution = 0,
-                GroundPollution = 0,
-                NoisePollution = 0,
-                Production = 10000000
+                UpkeepCost = 10000,
+                Waterconsumption = 15000,
+                GarbageAccumulation = 25000,
+                AirPollution = 30000,
+                GroundPollution = 30000,
+                NoisePollution = 30000,
+                Production = 200000
             }
         },
 
@@ -115,40 +115,40 @@ public class WhitesharkCheatOverhaulOptions
             new WaterpumpOptions
             {
                 Name = "WaterPumpingStation01",
-                UpkeepCost = 50,
-                Capacity = 1000000,
-                GarbageAccumulation = 0,
-                ElectricityConsumption = 0,
-                NoisePollution =0
+                UpkeepCost = 10000,
+                Capacity = 100000,
+                GarbageAccumulation = 12500,
+                ElectricityConsumption = 3000,
+                NoisePollution =5000
             },
             new WaterpumpOptions
             {
                 Name = "GroundwaterPumpingStation01",
-                UpkeepCost = 50,
-                Capacity = 1000000,
-                GarbageAccumulation = 0,
-                ElectricityConsumption = 0,
-                NoisePollution =0
+                UpkeepCost = 20000,
+                Capacity = 75000,
+                GarbageAccumulation = 10000,
+                ElectricityConsumption = 3000,
+                NoisePollution =5000
 
             },
             new WaterpumpOptions
             {
                 Name = "DesalinationPlant01",
-                UpkeepCost = 50,
+                UpkeepCost = 95000,
                 Capacity = 1000000,
-                GarbageAccumulation = 0,
-                ElectricityConsumption = 0,
-                NoisePollution = 0
+                GarbageAccumulation = 62500,
+                ElectricityConsumption = 3000,
+                NoisePollution = 25000
 
             },
             new WaterpumpOptions
             {
                 Name = "WaterTower01",
-                UpkeepCost = 50,
-                Capacity = 1000000,
+                UpkeepCost = 30000,
+                Capacity = 30000,
                 GarbageAccumulation = 0,
                 ElectricityConsumption = 0,
-                NoisePollution = 0
+                NoisePollution = 2500
 
             }
         },
@@ -158,9 +158,9 @@ public class WhitesharkCheatOverhaulOptions
             new TransformerstationOptions
             {
                 Name = "TransformerStation01",
-                UpkeepCost = 50,
-                GarbageAccumulation = 0,
-                NoisePollution = 0
+                UpkeepCost = 6000,
+                GarbageAccumulation = 100,
+                NoisePollution = 5000
             }
         },
 
@@ -169,13 +169,13 @@ public class WhitesharkCheatOverhaulOptions
             new ServerfarmOptions
             {
                 Name = "ServerFarm01",
-                UpkeepCost = 50,
-                Electricityconsumption = 0,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0,
-                Range = 12500,
-                Capacity = 200000,
-                NoisePollution = 0
+                UpkeepCost = 50000,
+                Electricityconsumption = 20000,
+                Waterconsumption = 10000,
+                GarbageAccumulation = 3000,
+                Range = 2500,
+                Capacity = 20000,
+                NoisePollution = 20000
             }
         },
 
@@ -184,8 +184,8 @@ public class WhitesharkCheatOverhaulOptions
             new GarbagetruckOptions
             {
                 Name = "GarbageTruck01",
-                Capacity = 80000,
-                Unloadrate = 10000
+                Capacity = 20000,
+                Unloadrate = 4000
             }
         },
 
@@ -194,56 +194,56 @@ public class WhitesharkCheatOverhaulOptions
             new TransportbusOptions
             {
                 Name = "Bus01",
-                Passengercapacity = 1000,
-                Maintenancerange = 10000
+                Passengercapacity = 80,
+                Maintenancerange = 200
             },
             new TransportbusOptions
             {
                 Name = "Bus02",
-                Passengercapacity = 1000,
-                Maintenancerange = 10000
+                Passengercapacity = 80,
+                Maintenancerange = 250
             },
             new TransportbusOptions
             {
                 Name = "Bus03",
-                Passengercapacity = 1000,
-                Maintenancerange = 10000
+                Passengercapacity = 80,
+                Maintenancerange = 200
             },
             new TransportbusOptions
             {
                 Name = "TrainPassengerCar01",
-                Passengercapacity = 1000,
-                Maintenancerange = 10000
+                Passengercapacity = 120,
+                Maintenancerange = 1000
             },
             new TransportbusOptions
             {
                 Name = "TrainPassengerEngine01",
-                Passengercapacity = 1000,
-                Maintenancerange = 10000
+                Passengercapacity = 120,
+                Maintenancerange = 1000
             },
             new TransportbusOptions
             {
                 Name = "SubwayCar01",
-                Passengercapacity = 1000,
-                Maintenancerange = 10000
+                Passengercapacity = 150,
+                Maintenancerange = 850
             },
             new TransportbusOptions
             {
                 Name = "SubwayEngine01",
-                Passengercapacity = 1000,
-                Maintenancerange = 10000
+                Passengercapacity = 120,
+                Maintenancerange = 850
             },
             new TransportbusOptions
             {
                 Name = "TramCar01",
-                Passengercapacity = 1000,
-                Maintenancerange = 10000
+                Passengercapacity = 80,
+                Maintenancerange = 600
             },
             new TransportbusOptions
             {
                 Name = "TramEngine01",
-                Passengercapacity = 1000,
-                Maintenancerange = 10000
+                Passengercapacity = 80,
+                Maintenancerange = 600
             }
         },
 
@@ -252,24 +252,24 @@ public class WhitesharkCheatOverhaulOptions
             new ParkinghallOptions
             {
                 Name = "ParkingHall01",
-                Upkeep = 50,
-                GarageCapacity = 1000,
-                Comfortfactor = 1,
-                Electricityconsumption = 0,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0,
-                Noisepollution = 0
+                Upkeep = 30000,
+                GarageCapacity = 0,
+                Comfortfactor = 0.6f,
+                Electricityconsumption = 2400,
+                Waterconsumption = 2000,
+                GarbageAccumulation = 1600,
+                Noisepollution = 2500
             },
             new ParkinghallOptions
             {
                 Name = "ParkingHall02",
-                Upkeep = 50,
-                GarageCapacity = 1000,
-                Comfortfactor = 1,
-                Electricityconsumption = 0,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0,
-                Noisepollution = 0
+                Upkeep = 40000,
+                GarageCapacity = 100,
+                Comfortfactor = 0.65f,
+                Electricityconsumption = 3000,
+                Waterconsumption = 2000,
+                GarbageAccumulation = 2000,
+                Noisepollution = 2500
             }
         },
 
@@ -278,56 +278,56 @@ public class WhitesharkCheatOverhaulOptions
             new CityparkOptions
             {
                 Name = "CityPark01",
-                Upkeep = 50,
-                Range = 100000,
-                Capacity = 20000,
-                Magnitude = 50,
-                Attractiveness = 50000,
-                Efficiency = 50,
-                Electricityconsumption = 0,
+                Upkeep = 2000,
+                Range = 2500,
+                Capacity = 800,
+                Magnitude = 10,
+                Attractiveness = 1,
+                Efficiency = 1,
+                Electricityconsumption = 500,
                 Waterconsumption = 0,
-                GarbageAccumulation = 0
+                GarbageAccumulation = 100
                 
 },
             new CityparkOptions
             {
                 Name = "CityPark02",
-                Upkeep = 50,
-                Range = 100000,
-                Capacity = 20000,
-                Magnitude = 50,
-                Attractiveness = 50000,
-                Efficiency = 50,
-                Electricityconsumption = 0,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0
+                Upkeep = 4000,
+                Range = 4000,
+                Capacity = 1200,
+                Magnitude = 10,
+                Attractiveness = 5,
+                Efficiency = 2,
+                Electricityconsumption = 750,
+                Waterconsumption = 500,
+                GarbageAccumulation = 200
             },
             new CityparkOptions
             {
                 Name = "CityPark03",
-                Upkeep = 50,
-                Range = 100000,
-                Capacity = 20000,
-                Magnitude = 50,
-                Attractiveness = 50000,
-                Efficiency = 50,
-                Electricityconsumption = 0,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0
+                Upkeep = 8500,
+                Range = 3000,
+                Capacity = 1600,
+                Magnitude = 14,
+                Attractiveness = 10,
+                Efficiency = 3,
+                Electricityconsumption = 10000,
+                Waterconsumption = 750,
+                GarbageAccumulation = 300
 
 },
             new CityparkOptions
             {
                 Name = "CityPark04",
-                Upkeep = 50,
-                Range = 100000,
-                Capacity = 20000,
-                Magnitude = 50,
-                Attractiveness = 50000,
-                Efficiency = 50,
-                Electricityconsumption = 0,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0
+                Upkeep = 12500,
+                Range = 4000,
+                Capacity = 2000,
+                Magnitude = 14,
+                Attractiveness = 15,
+                Efficiency = 5,
+                Electricityconsumption = 1500,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 400
             }
         },
 
@@ -336,25 +336,25 @@ public class WhitesharkCheatOverhaulOptions
             new WastewaterOptions
             {
                 Name = "WastewaterTreatmentPlant01",
-                UpkeepCost = 50,
-                Capacity = 10000000,
-                Purification = 1,
-                GarbageAccumulation = 0,
-                GroundPollution = 0,
-                AirPollution = 0,
-                NoisePollution = 0,
-                ElectricityConsumption = 0
+                UpkeepCost = 120000,
+                Capacity = 400000,
+                Purification = 0.5f,
+                GarbageAccumulation = 50000,
+                GroundPollution = 7500,
+                AirPollution = 7500,
+                NoisePollution = 15000,
+                ElectricityConsumption = 3000
             },
             new WastewaterOptions
             {
                 Name = "SewageOutlet01",
-                UpkeepCost = 50,
-                Capacity = 1000000,
-                Purification = 1,
+                UpkeepCost = 20000,
+                Capacity = 100000,
+                Purification = 0,
                 GarbageAccumulation = 0,
                 GroundPollution = 0,
-                AirPollution = 0,
-                NoisePollution = 0,
+                AirPollution = 5000,
+                NoisePollution = 5000,
                 ElectricityConsumption = 0
             }
         },
@@ -364,13 +364,13 @@ public class WhitesharkCheatOverhaulOptions
             new IncinerationPlantOptions
             {
                 Name = "IncinerationPlant01",
-                UpkeepCost = 50,
-                Waterconsumption = 0,
-                GroundPollution = 0,
-                AirPollution = 0,
-                NoisePollution = 0,
+                UpkeepCost = 210000,
+                Waterconsumption = 25000,
+                GroundPollution = 40000,
+                AirPollution = 40000,
+                NoisePollution = 40000,
                 Garbagecapacity = 3000000,
-                Vehiclecapacity = 100
+                Vehiclecapacity = 50
             }
         },
 
@@ -379,33 +379,33 @@ public class WhitesharkCheatOverhaulOptions
             new HealthcareOptions
             {
                 Name = "MedicalClinic01",
-                UpkeepCost = 50,
-                Waterconsumption = 0,
-                Electricityconsumption = 0,
-                GarbageAccumulation = 0,
+                UpkeepCost = 40000,
+                Waterconsumption = 1000,
+                Electricityconsumption = 2500,
+                GarbageAccumulation = 1900,
                 NoisePollution = 0,
-                Ambulancecapacity = 50,
-                Helicoptercapacity = 25,
-                Patientcapacity = 10000,
-                Treatmentbonus = 30,
-                Capacity = 100000,
-                Range = 30000,
-                Magnitude = 10
+                Ambulancecapacity = 5,
+                Helicoptercapacity = 0,
+                Patientcapacity = 100,
+                Treatmentbonus = 15,
+                Capacity = 15000,
+                Range = 5000,
+                Magnitude = 5
             },
             new HealthcareOptions
             {
                 Name = "Hospital01",
-                UpkeepCost = 50,
-                Waterconsumption = 0,
-                Electricityconsumption = 0,
-                GarbageAccumulation = 0,
+                UpkeepCost = 450000,
+                Waterconsumption = 5000,
+                Electricityconsumption = 10000,
+                GarbageAccumulation = 9400,
                 NoisePollution = 0,
-                Ambulancecapacity = 50,
-                Helicoptercapacity = 25,
-                Patientcapacity = 10000,
+                Ambulancecapacity = 30,
+                Helicoptercapacity = 0,
+                Patientcapacity = 500,
                 Treatmentbonus = 30,
-                Capacity = 100000,
-                Range = 30000,
+                Capacity = 50000,
+                Range = 7500,
                 Magnitude = 10
             }
         },
@@ -415,18 +415,18 @@ public class WhitesharkCheatOverhaulOptions
             new PostofficeOptions
             {
                 Name = "PostOffice01",
-                Upkeep = 50,
-                Waterconsumption = 0,
-                Electricityconsumption = 0,
-                GarbageAccumulation = 0,
-                Noisepollution = 0,
-                Mailboxcapacity = 3000,
-                Postvancapacity = 50,
-                PostTruckscapacity = 25,
-                Mailstoragecapacity = 1000000,
-                Capacity = 100000,
-                Range = 30000,
-                Magnitude = 10
+                Upkeep = 45000,
+                Waterconsumption = 1000,
+                Electricityconsumption = 500,
+                GarbageAccumulation = 1900,
+                Noisepollution = 5000,
+                Mailboxcapacity = 500,
+                Postvancapacity = 20,
+                PostTruckscapacity = 0,
+                Mailstoragecapacity = 100000,
+                Capacity = 15000,
+                Range = 2000,
+                Magnitude = 2
             }
         },
 
@@ -435,13 +435,13 @@ public class WhitesharkCheatOverhaulOptions
             new CemeteryOptions
             {
                 Name = "Cemetery01",
-                Upkeep = 50,
-                Waterconsumption = 0,
-                Electricityconsumption = 0,
-                GarbageAccumulation = 0,
-                Hearsecapacity = 50,
-                Storagecapacity = 100000,
-                Efficiency = 10
+                Upkeep = 55000,
+                Waterconsumption = 2000,
+                Electricityconsumption = 800,
+                GarbageAccumulation = 700,
+                Hearsecapacity = 15,
+                Storagecapacity = 5000,
+                Efficiency = 3
             }
         },
 
@@ -450,15 +450,15 @@ public class WhitesharkCheatOverhaulOptions
             new CrematoriumOptions
             {
                 Name = "Crematorium01",
-                Upkeep = 50,
-                Waterconsumption = 0,
-                Electricityconsumption = 0,
-                GarbageAccumulation = 0,
-                Hearsecapacity = 50,
-                Storagecapacity = 100000,
+                Upkeep = 45000,
+                Waterconsumption = 500,
+                Electricityconsumption = 1300,
+                GarbageAccumulation = 6300,
+                Hearsecapacity = 10,
+                Storagecapacity = 20,
                 Processingrate = 100,
-                Airpollution = 0,
-                Noisepollution = 0
+                Airpollution = 2500,
+                Noisepollution = 5000
             }
         },
 
@@ -467,10 +467,10 @@ public class WhitesharkCheatOverhaulOptions
             new WindturbineOptions
             {
                 Name = "WindTurbine01",
-                Upkeep = 50,
-                Production = 100000,
-                Maximumwind = 1,
-                Noisepollution = 0
+                Upkeep = 15000,
+                Production = 50000,
+                Maximumwind = 0.4f,
+                Noisepollution = 20000
             }
         },
 
@@ -479,12 +479,12 @@ public class WhitesharkCheatOverhaulOptions
             new EmergencybatteryOptions
             {
                 Name = "EmergencyBatteryStation01",
-                Upkeep = 50,
-                Capacity = 1000000,
-                Poweroutput = 400000,
-                Noisepollution = 0,
-                GarbageAccumulation = 0,
-                Waterconsumption = 0
+                Upkeep = 50000,
+                Capacity = 5000000,
+                Poweroutput = 2000000,
+                Noisepollution = 10000,
+                GarbageAccumulation = 15000,
+                Waterconsumption = 5000
             }
         },
 
@@ -493,13 +493,13 @@ public class WhitesharkCheatOverhaulOptions
             new GeothermalpowerplantOptions
             {
                 Name = "GeothermalPowerPlant01",
-                Upkeep = 50,
-                Production = 1000000,
-                Maximumgroundwater = 400,
-                GarbageAccumulation = 0,
-                AirPollution = 0,
-                GroundPollution = 0,
-                NoisePollution = 0
+                Upkeep = 300000,
+                Production = 1500000,
+                Maximumgroundwater = 4000,
+                GarbageAccumulation = 25000,
+                AirPollution = 15000,
+                GroundPollution = 15000,
+                NoisePollution = 20000
             }
         },
 
@@ -508,13 +508,13 @@ public class WhitesharkCheatOverhaulOptions
             new SolarpowerstationOptions
             {
                 Name = "SolarPowerStation01",
-                Upkeep = 50,
-                Waterconsumption = 0,
-                GarbageAccumulation = 0,
-                Production = 1000000,
-                Poweroutput = 400000,
-                Capacity = 1000000,
-                NoisePollution = 0
+                Upkeep = 300000,
+                Waterconsumption = 36000,
+                GarbageAccumulation = 30000,
+                Production = 2000000,
+                Poweroutput = 150000,
+                Capacity = 500000,
+                NoisePollution = 50000
             }
         },
 
@@ -523,110 +523,110 @@ public class WhitesharkCheatOverhaulOptions
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialLowSignature01",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 2,
+                Radius = 500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialLowSignature02",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 4,
+                Radius = 1000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialLowSignature03",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 6,
+                Radius = 1500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialLowSignature01",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 2,
+                Radius = 500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialLowSignature02",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 4,
+                Radius = 1000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialLowSignature03",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 6,
+                Radius = 1500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialMediumSignature01",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 4,
+                Radius = 1000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialMediumSignature02",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 8,
+                Radius = 2000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialMediumSignature03",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 10,
+                Radius = 2500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialMediumSignature01",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 4,
+                Radius = 1000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialMediumSignature02",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 8,
+                Radius = 2000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialMediumSignature03",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 10,
+                Radius = 2500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialHighSignature01",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 6,
+                Radius = 1500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialHighSignature02",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 10,
+                Radius = 2500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialHighSignature03",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 12,
+                Radius = 3000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialHighSignature01",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 6,
+                Radius = 1500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialHighSignature02",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 10,
+                Radius = 2500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialHighSignature03",
-                Wellbeing = 1000,
-                Radius = 5000
+                Wellbeing = 12,
+                Radius = 3000
             }
 
         },
@@ -636,122 +636,122 @@ public class WhitesharkCheatOverhaulOptions
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialLowSignature01",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 3,
+                Radius = 500,
+                CityAttractiveness = 0.005f,
+                CityImportcost = -0.005f,
+                Noisepollution = 1000,
+                Attractiveness = 5
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialLowSignature02",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 3,
+                Radius = 1000,
+                CityAttractiveness = 0.005f,
+                CityImportcost = -0.005f,
+                Noisepollution = 4000,
+                Attractiveness = 10
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialLowSignature03",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 3,
+                Radius = 1500,
+                CityAttractiveness = 0.005f,
+                CityImportcost = -0.005f,
+                Noisepollution = 7000,
+                Attractiveness = 15
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialLowSignature01",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 3,
+                Radius = 500,
+                CityAttractiveness = 0.005f,
+                CityImportcost = -0.005f,
+                Noisepollution = 1000,
+                Attractiveness = 5
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialLowSignature02",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 3,
+                Radius = 1000,
+                CityAttractiveness = 0.005f,
+                CityImportcost = -0.005f,
+                Noisepollution = 2000,
+                Attractiveness = 10
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialLowSignature03",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 3,
+                Radius = 1500,
+                CityAttractiveness = 0.005f,
+                CityImportcost = -0.005f,
+                Noisepollution = 4000,
+                Attractiveness = 15
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialHighSignature01",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 5,
+                Radius = 1000,
+                CityAttractiveness = 0.010f,
+                CityImportcost = -0.010f,
+                Noisepollution = 3000,
+                Attractiveness = 10
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialHighSignature02",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 5,
+                Radius = 1500,
+                CityAttractiveness = 0.010f,
+                CityImportcost = -0.010f,
+                Noisepollution = 4000,
+                Attractiveness = 20
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialHighSignature03",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 5,
+                Radius = 2000,
+                CityAttractiveness = 0.010f,
+                CityImportcost = -0.010f,
+                Noisepollution = 5000,
+                Attractiveness = 30
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialHighSignature01",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 5,
+                Radius = 1000,
+                CityAttractiveness = 0.010f,
+                CityImportcost = -0.010f,
+                Noisepollution = 3000,
+                Attractiveness = 10
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialHighSignature02",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 5,
+                Radius = 1500,
+                CityAttractiveness = 0.010f,
+                CityImportcost = -0.010f,
+                Noisepollution = 4000,
+                Attractiveness = 20
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialHighSignature03",
-                Wellbeing = 250,
-                Radius = 10000,
-                CityAttractiveness = 250,
-                CityImportcost = -0.50f,
-                Noisepollution = 0,
-                Attractiveness = 250
+                Wellbeing = 5,
+                Radius = 2000,
+                CityAttractiveness = 0.010f,
+                CityImportcost = -0.010f,
+                Noisepollution = 5000,
+                Attractiveness = 30
             }
         },
 
@@ -760,13 +760,13 @@ public class WhitesharkCheatOverhaulOptions
             new PostVanOptions
             {
                 Name = "EU_PostVan01",
-                MailCapacity = 80000
+                MailCapacity = 2000
                 
             },
             new PostVanOptions
             {
                 Name = "NA_PostVan01",
-                MailCapacity = 80000
+                MailCapacity = 2000
 
             }
         },
@@ -776,73 +776,73 @@ public class WhitesharkCheatOverhaulOptions
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeHighSignature01",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityOfficeEfficency = 10,
-                CityUniversityInterest = 10,
-                CityUniversityGraduation = 10,
-                Noisepollution = 0
+                Attractiveness = 10,
+                Wellbeing = 5,
+                Radius = 1000,
+                CityOfficeEfficency = 0.020f,
+                CityUniversityInterest = 0.050f,
+                CityUniversityGraduation = 0.010f,
+                Noisepollution = 3000
 
             },
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeHighSignature02",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityOfficeEfficency = 10,
-                CityUniversityInterest = 10,
-                CityUniversityGraduation = 10,
-                Noisepollution = 0
+                Attractiveness = 20,
+                Wellbeing = 5,
+                Radius = 1500,
+                CityOfficeEfficency = 0.020f,
+                CityUniversityInterest = 0.050f,
+                CityUniversityGraduation = 0.010f,
+                Noisepollution = 1000
 
             },
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeHighSignature03",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityOfficeEfficency = 10,
-                CityUniversityInterest = 10,
-                CityUniversityGraduation = 10,
-                Noisepollution = 0
+                Attractiveness = 30,
+                Wellbeing = 5,
+                Radius = 2000,
+                CityOfficeEfficency = 0.020f,
+                CityUniversityInterest = 0.050f,
+                CityUniversityGraduation = 0.010f,
+                Noisepollution = 5000
 
             },
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeLowSignature01",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityOfficeEfficency = 10,
-                CityUniversityInterest = 10,
-                CityUniversityGraduation = 10,
-                Noisepollution = 0
+                Attractiveness = 5,
+                Wellbeing = 5,
+                Radius = 500,
+                CityOfficeEfficency = 0.010f,
+                CityUniversityInterest = 0.050f,
+                CityUniversityGraduation = 0.010f,
+                Noisepollution = 3000
 
             },
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeLowSignature02",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityOfficeEfficency = 10,
-                CityUniversityInterest = 10,
-                CityUniversityGraduation = 10,
-                Noisepollution = 0
+                Attractiveness = 10,
+                Wellbeing = 5,
+                Radius = 1000,
+                CityOfficeEfficency = 0.010f,
+                CityUniversityInterest = 0.050f,
+                CityUniversityGraduation = 0.010f,
+                Noisepollution = 2000
 
             },
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeLowSignature03",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityOfficeEfficency = 10,
-                CityUniversityInterest = 10,
-                CityUniversityGraduation = 10,
-                Noisepollution = 0
+                Attractiveness = 15,
+                Wellbeing = 5,
+                Radius = 1500,
+                CityOfficeEfficency = 0.010f,
+                CityUniversityInterest = 0.050f,
+                CityUniversityGraduation = 0.010f,
+                Noisepollution = 3000
 
             }
 
@@ -853,61 +853,61 @@ public class WhitesharkCheatOverhaulOptions
             new SignatureMixedbuildingOptions
             {
                 Name = "EU_MixedSignature01",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityAttractiveness = 250,
-                Noisepollution = 0
+                Attractiveness = 5,
+                Wellbeing = 4,
+                Radius = 750,
+                CityAttractiveness = 0.010f,
+                Noisepollution = 1500
 
             },
             new SignatureMixedbuildingOptions
             {
                 Name = "EU_MixedSignature02",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityAttractiveness = 250,
-                Noisepollution = 0
+                Attractiveness = 10,
+                Wellbeing = 8,
+                Radius = 1250,
+                CityAttractiveness = 0.010f,
+                Noisepollution = 1500
 
             },
             new SignatureMixedbuildingOptions
             {
                 Name = "EU_MixedSignature03",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityAttractiveness = 250,
-                Noisepollution = 0
+                Attractiveness = 15,
+                Wellbeing = 10,
+                Radius = 2000,
+                CityAttractiveness = 0.010f,
+                Noisepollution = 1500
 
             },
             new SignatureMixedbuildingOptions
             {
                 Name = "NA_MixedSignature01",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityAttractiveness = 250,
-                Noisepollution = 0
+                Attractiveness = 5,
+                Wellbeing = 4,
+                Radius = 750,
+                CityAttractiveness = 0.010f,
+                Noisepollution = 1500
 
             },
             new SignatureMixedbuildingOptions
             {
                 Name = "NA_MixedSignature02",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityAttractiveness = 250,
-                Noisepollution = 0
+                Attractiveness = 10,
+                Wellbeing = 8,
+                Radius = 1250,
+                CityAttractiveness = 0.010f,
+                Noisepollution = 1500
 
             },
             new SignatureMixedbuildingOptions
             {
                 Name = "NA_MixedSignature03",
-                Attractiveness = 250,
-                Wellbeing = 250,
-                Radius = 3000,
-                CityAttractiveness = 250,
-                Noisepollution = 0
+                Attractiveness = 15,
+                Wellbeing = 10,
+                Radius = 1500,
+                CityAttractiveness = 0.010f,
+                Noisepollution = 1500
 
             }
         }
