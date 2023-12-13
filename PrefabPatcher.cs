@@ -397,6 +397,12 @@ public static class PrefabPatcher
             WellbeingEffect.m_Delta = SignatureOfficebuildingoverrides.Wellbeing;
             WellbeingEffect.m_Radius = SignatureOfficebuildingoverrides.Radius;
 
+                if (SignatureOfficebuildingOptions.CrimeAccumulation.)
+                var CrimeAccumulationEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.CrimeAccumulation);
+                CrimeAccumulationEffect.m_Delta = SignatureOfficebuildingoverrides.CrimeAccumulation;
+                CrimeAccumulationEffect.m_Radius = SignatureOfficebuildingoverrides.CrimeRadius;
+            
+            
             var CityEffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
             var CityOfficeEfficencyEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeEfficiency);
             var CityUniversityInterestEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityInterest);

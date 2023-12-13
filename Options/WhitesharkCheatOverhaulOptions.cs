@@ -815,6 +815,8 @@ public class WhitesharkCheatOverhaulOptions
                 Attractiveness = 5,
                 Wellbeing = 5,
                 Radius = 500,
+                CrimeAccumulation = -2f,
+                CrimeRadius = 500,
                 CityOfficeEfficency = 0.010f,
                 CityUniversityInterest = 0.050f,
                 CityUniversityGraduation = 0.010f,
@@ -1385,6 +1387,8 @@ public class WhitesharkCheatOverhaulOptions
             x.Wellbeing >= 0 &&
             x.Radius >= 0 &&
             x.Attractiveness >= 0 &&
+            x.CrimeAccumulation <= 0 &&
+            x.CrimeRadius >= 0 &&
             x.CityOfficeEfficency >= 0 &&
             x.CityUniversityGraduation >= 0 &&
             x.CityUniversityInterest >= 0 &&
