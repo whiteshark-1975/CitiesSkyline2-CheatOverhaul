@@ -455,6 +455,30 @@ public static class PrefabPatcher
             
         }
 
+        if (WhitesharkCheatOverhaul.FireStationOptions.TryGetValue(prefab.name, out var FireStationverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = FireStationverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = FireStationverrides.ElectricityConsumption;
+            ServiceComponent.m_WaterConsumption = FireStationverrides.WaterConsumption;
+            ServiceComponent.m_GarbageAccumulation = FireStationverrides.GarbageAccumulation;
+                        
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_NoisePollution = FireStationverrides.Noisepollution;
+
+            var FireStationComponent = prefab.GetComponent<Game.Prefabs.FireStation>();
+            FireStationComponent.m_FireEngineCapacity = FireStationverrides.FireEngineCapacity;
+            FireStationComponent.m_FireHelicopterCapacity = FireStationverrides.FireHelicopterCapacity;
+            FireStationComponent.m_VehicleEfficiency = FireStationverrides.VehicleEfficiency;
+            FireStationComponent.m_DisasterResponseCapacity = FireStationverrides.DisasterResponseCapacity;
+
+            var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
+            CoverageComponent.m_Range = FireStationverrides.Range;
+            CoverageComponent.m_Capacity = FireStationverrides.Capacity;
+            CoverageComponent.m_Magnitude = FireStationverrides.Magnitude;
+
+        }
         return true;
     }
 }

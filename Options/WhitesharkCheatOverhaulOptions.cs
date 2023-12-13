@@ -1,9 +1,13 @@
-﻿using Game.Simulation;
+﻿using Game.Buildings;
+using Game.Simulation;
 using Game.UI.InGame;
+using Game.Vehicles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using UnityEngine.InputSystem.Utilities;
+using static Colossal.AssetPipeline.Importers.DidimoImporter.DidimoData;
 
 namespace WhitesharkCheatOverhaul;
 
@@ -965,8 +969,45 @@ public class WhitesharkCheatOverhaulOptions
                 Noisepollution = 1500
 
             }
-        }
+        },
 
+        FireStation_Options = new List<FireStationOptions>
+        {
+            new FireStationOptions
+            {
+                Name = "FireStation01",
+                Upkeep = 235000,
+                ElectricityConsumption = 3500,
+                WaterConsumption = 5000,
+                GarbageAccumulation = 3200,
+                Noisepollution = 7500,
+                FireEngineCapacity = 10,
+                FireHelicopterCapacity = 0,
+                VehicleEfficiency = 1,
+                DisasterResponseCapacity = 0,
+                Range = 10000,
+                Capacity = 100000,
+                Magnitude = 10
+
+            },
+            new FireStationOptions
+            {
+                Name = "FireHouse01",
+                Upkeep = 20000,
+                ElectricityConsumption = 1000,
+                WaterConsumption = 1000,
+                GarbageAccumulation = 700,
+                Noisepollution = 5000,
+                FireEngineCapacity = 4,
+                FireHelicopterCapacity = 0,
+                VehicleEfficiency = 1,
+                DisasterResponseCapacity = 0,
+                Range = 5000,
+                Capacity = 25000,
+                Magnitude = 5
+
+            }
+        }
     };
 
     public IEnumerable<SchoolOptions> School_Options { get; set; }
@@ -993,7 +1034,7 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<PostVanOptions> PostVan_Options { get; set; }
     public IEnumerable<SignatureOfficebuildingOptions> SignatureOfficebuilding_Options { get; set; }
     public IEnumerable<SignatureMixedbuildingOptions> SignatureMixedbuilding_Options { get; set; }
-
+    public IEnumerable<FireStationOptions> FireStation_Options { get; set; }
 
 
 
@@ -1216,6 +1257,15 @@ public class WhitesharkCheatOverhaulOptions
             SignatureMixedbuildingdict.Add(SignatureMixedbuilding_option.Name, SignatureMixedbuilding_option);
         }
         return SignatureMixedbuildingdict;
+    }
+    public IReadOnlyDictionary<string, FireStationOptions> GetFireStationDictionary()
+    {
+        var FireStationdict = new Dictionary<string, FireStationOptions>();
+        foreach (var FireStation_option in FireStation_Options)
+        {
+            FireStationdict.Add(FireStation_option.Name, FireStation_option);
+        }
+        return FireStationdict;
     }
 
 
@@ -1463,5 +1513,21 @@ public class WhitesharkCheatOverhaulOptions
             x.Radius >= 0 &&
             x.CityAttractiveness >= 0 &&
             x.Noisepollution >= 0);
+
+        FireStation_Options = FireStation_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Noisepollution >= 0 &&
+            x.FireEngineCapacity >= 0 &&
+            x.FireHelicopterCapacity >= 0 &&
+            x.VehicleEfficiency >= 0 &&
+            x.DisasterResponseCapacity >= 0 &&
+            x.Range >= 0 &&
+            x.Capacity >= 0 &&
+            x.Magnitude >= 0);
+
     }
 }
