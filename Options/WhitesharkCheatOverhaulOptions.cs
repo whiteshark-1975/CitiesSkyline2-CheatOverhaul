@@ -364,15 +364,68 @@ public class WhitesharkCheatOverhaulOptions
             new IncinerationPlantOptions
             {
                 Name = "IncinerationPlant01",
+                Garbagecapacity = 3000000,
+                Vehiclecapacity = 50,
+                Transportcapacity = 1,
+                Processingspeed = 3000000,
+                Electricityproduction = 0,
+                Productionperunit = 7.5f,
+                ProductionCapacity = 400000,
                 UpkeepCost = 210000,
                 Waterconsumption = 25000,
                 GroundPollution = 40000,
                 AirPollution = 40000,
-                NoisePollution = 40000,
-                Garbagecapacity = 3000000,
-                Vehiclecapacity = 50
+                NoisePollution = 40000                
+
+            },
+
+            new IncinerationPlantOptions
+            {
+                Name = "Landfill01",
+                Garbagecapacity = 20000,
+                Vehiclecapacity = 20,
+                Transportcapacity = 1,
+                Processingspeed = 100000,
+                UpkeepCost = 30000,
+                Electricityconsumption = 1000,
+                Waterconsumption = 2500,
+                GroundPollution = 20000,
+                AirPollution = 20000,
+                NoisePollution = 40000
+            },
+
+            new IncinerationPlantOptions
+            {
+                Name = "RecyclingCenter01",
+                Garbagecapacity = 1500000,
+                Vehiclecapacity = 15,
+                Transportcapacity = 1,
+                Processingspeed = 1,
+                UpkeepCost = 1500000,
+                Electricityconsumption = 2500,
+                Waterconsumption = 10000,
+                GroundPollution = 10000,
+                AirPollution = 5000,
+                NoisePollution = 15000
+            },
+
+            new IncinerationPlantOptions
+            {
+                Name = "HazardousWasteProcessingSite01",
+                Garbagecapacity = 50000000,
+                Vehiclecapacity = 250,
+                Transportcapacity = 1,
+                Processingspeed = 50000000,
+                UpkeepCost = 450000,
+                Electricityconsumption = 15000,
+                Waterconsumption = 25000,
+                CityIndustrialGroundPollution = -0.15f,
+                GroundPollution = 50000,
+                AirPollution = 50000,
+                NoisePollution = 50000
             }
         },
+    
 
         Healthcare_Options = new List<HealthcareOptions>
         {
@@ -1268,12 +1321,19 @@ public class WhitesharkCheatOverhaulOptions
         IncinerationPlant_Options = IncinerationPlant_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.UpkeepCost >= 0 &&
+            x.Garbagecapacity >= 0 &&
+            x.Vehiclecapacity >= 0 &&
+            x.Transportcapacity >= 0 &&
+            x.Processingspeed >= 0 &&
+            x.Electricityproduction >= 0 &&
+            x.Productionperunit >= 0 &&
+            x.ProductionCapacity >= 0 &&
             x.Waterconsumption >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.CityIndustrialGroundPollution <= 0 &&
             x.GroundPollution >= 0 &&
             x.AirPollution >= 0 &&
-            x.NoisePollution >= 0 &&
-            x.Garbagecapacity >= 0 &&
-            x.Vehiclecapacity >= 0);
+            x.NoisePollution >= 0);
 
         
         Healthcare_Options = Healthcare_Options.Where(

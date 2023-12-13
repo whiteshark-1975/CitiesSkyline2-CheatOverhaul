@@ -179,18 +179,40 @@ public static class PrefabPatcher
         if (WhitesharkCheatOverhaul.IncinerationPlantOptions.TryGetValue(prefab.name, out var IncinerationPlantoverrides))
         {
 
+            var GarbageComponent = prefab.GetComponent<Game.Prefabs.GarbageFacility>();
+            GarbageComponent.m_GarbageCapacity = IncinerationPlantoverrides.Garbagecapacity;
+            GarbageComponent.m_VehicleCapacity = IncinerationPlantoverrides.Vehiclecapacity;
+            GarbageComponent.m_TransportCapacity = IncinerationPlantoverrides.Transportcapacity;
+            GarbageComponent.m_ProcessingSpeed = IncinerationPlantoverrides.Processingspeed;
+
+            if (prefab.name == "IncinerationPlant01")
+            {
+                var PowerComponent = prefab.GetComponent<Game.Prefabs.PowerPlant>();
+                PowerComponent.m_ElectricityProduction = IncinerationPlantoverrides.Electricityproduction;
+
+                var GarbagePowerComponent = prefab.GetComponent<Game.Prefabs.GarbagePowered>();
+                GarbagePowerComponent.m_ProductionPerUnit = IncinerationPlantoverrides.Productionperunit;
+                GarbagePowerComponent.m_Capacity = IncinerationPlantoverrides.ProductionCapacity;
+               
+            }
+            
             var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
             ServiceComponent.m_Upkeep = IncinerationPlantoverrides.UpkeepCost;
             ServiceComponent.m_WaterConsumption = IncinerationPlantoverrides.Waterconsumption;
+            ServiceComponent.m_ElectricityConsumption = IncinerationPlantoverrides.Electricityconsumption;
 
             var PollutionComponent = prefab.GetComponent<Pollution>();
             PollutionComponent.m_NoisePollution = IncinerationPlantoverrides.NoisePollution;
             PollutionComponent.m_AirPollution = IncinerationPlantoverrides.AirPollution;
             PollutionComponent.m_GroundPollution = IncinerationPlantoverrides.GroundPollution;
 
-            var GarbageComponent = prefab.GetComponent<Game.Prefabs.GarbageFacility>();
-            GarbageComponent.m_GarbageCapacity = IncinerationPlantoverrides.Garbagecapacity;
-            GarbageComponent.m_VehicleCapacity = IncinerationPlantoverrides.Vehiclecapacity;
+            if (prefab.name == "HazardousWasteProcessingSite01")
+            {
+                var CityEffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+                var CityEfficencyEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialGroundPollution);
+                CityEfficencyEffect.m_Delta = IncinerationPlantoverrides.CityIndustrialGroundPollution;
+
+            }
 
         }
 
