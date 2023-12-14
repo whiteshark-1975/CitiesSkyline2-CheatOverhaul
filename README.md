@@ -1,16 +1,32 @@
 ## Modded Assets For Cities Skylines II
-* School_Options
-* Powerplant_Options
-* Waterpump_Options
-* Transformerstation_Options
-* Serverfarm_Options
-* Garbagetruck_Options
-* Transportbus_Options
-* Parkinghall_Options
-* Citypark_Options
-* Wastewater_Options
-* IncinerationPlant_Options
-* Healthcare_Options
+* SchoolOptions
+* PowerplantOptions
+* WaterpumpOptions
+* TransformerstationOptions
+* ServerfarmOptions
+* GarbagetruckOptions
+* TransportbusOptions
+* ParkinghallOptions
+* CityparkOptions
+* WastewaterOptions
+* IncinerationPlantOptions
+* HealthcareOptions
+* PostofficeOptions
+* CemeteryOptions
+* CrematoriumOptions
+* WindturbineOptions
+* EmergencybatteryOptions
+* GeothermalpowerplantOptions
+* SolarpowerstationOptions
+* SignatureResidentialbuildingOptions
+* SignatureCommercialbuildingOptions
+* PostVanOptions
+* SignatureOfficebuildingOptions
+* SignatureMixedbuildingOptions
+* FireStationOptions
+* FireHelicopterDepotOptions
+* FirewatchTowerOptions
+* PoliceStationOptions
 
 ## A setting File will be created at 1st run.
 Location for settingsfile:
