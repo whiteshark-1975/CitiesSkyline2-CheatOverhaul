@@ -1,3 +1,8 @@
+## DO NOT ADD CONFIG TO THE FILE ONLY THE VALUES IN THE FILE CAN BE EDITED.
+
+* Should you have messed up please delete the settingsfile and the mod will create a new file on next startup.
+* On future update of the mod you also gonna need to delete the settings file so a new file can be written.
+
 ## Modded Assets For Cities Skylines II
 * SchoolOptions
 * PowerplantOptions
