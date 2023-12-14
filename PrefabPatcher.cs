@@ -479,6 +479,42 @@ public static class PrefabPatcher
             CoverageComponent.m_Magnitude = FireStationverrides.Magnitude;
 
         }
+        if (WhitesharkCheatOverhaul.FireHelicopterDepotOptions.TryGetValue(prefab.name, out var FireHelicopterDepotonverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = FireHelicopterDepotonverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = FireHelicopterDepotonverrides.ElectricityConsumption;
+            ServiceComponent.m_WaterConsumption = FireHelicopterDepotonverrides.WaterConsumption;
+            ServiceComponent.m_GarbageAccumulation = FireHelicopterDepotonverrides.GarbageAccumulation;
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_NoisePollution = FireHelicopterDepotonverrides.Noisepollution;
+
+            var FireStationComponent = prefab.GetComponent<Game.Prefabs.FireStation>();
+            FireStationComponent.m_FireEngineCapacity = FireHelicopterDepotonverrides.FireEngineCapacity;
+            FireStationComponent.m_FireHelicopterCapacity = FireHelicopterDepotonverrides.FireHelicopterCapacity;
+            FireStationComponent.m_VehicleEfficiency = FireHelicopterDepotonverrides.VehicleEfficiency;
+            FireStationComponent.m_DisasterResponseCapacity = FireHelicopterDepotonverrides.DisasterResponseCapacity;
+
+        }
+
+        if (WhitesharkCheatOverhaul.FirewatchTowerOptions.TryGetValue(prefab.name, out var FirewatchToweronverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = FirewatchToweronverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = FirewatchToweronverrides.ElectricityConsumption;
+
+            var EffectsComponent = prefab.GetComponent<Game.Prefabs.LocalEffects>();
+            var ForestFireResponseEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.ForestFireResponseTime);
+            ForestFireResponseEffect.m_Delta = FirewatchToweronverrides.ForestFireResponseTime;
+            ForestFireResponseEffect.m_Radius = FirewatchToweronverrides.ForestResponseRadius;
+            var ForestFireHazardEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.ForestFireHazard);
+            ForestFireHazardEffect.m_Delta = FirewatchToweronverrides.ForestFireHazard;
+            ForestFireHazardEffect.m_Radius = FirewatchToweronverrides.ForestFireHazardRadius;
+
+        }
         return true;
     }
 }

@@ -1007,6 +1007,39 @@ public class WhitesharkCheatOverhaulOptions
                 Magnitude = 5
 
             }
+        },
+
+        FireHelicopterDepot_Options = new List<FireHelicopterDepotOptions>
+        {
+            new FireHelicopterDepotOptions
+            {
+                Name = "FireHelicopterDepot01",
+                Upkeep = 145000,
+                ElectricityConsumption = 16000,
+                WaterConsumption = 4000,
+                GarbageAccumulation = 5300,
+                Noisepollution = 25000,
+                FireEngineCapacity = 0,
+                FireHelicopterCapacity = 5,
+                VehicleEfficiency = 1,
+                DisasterResponseCapacity = 0
+             
+            }
+        },
+
+        FirewatchTower_Options = new List<FirewatchTowerOptions>
+        {
+            new FirewatchTowerOptions
+            {
+                Name = "FirewatchtTower01",
+                Upkeep = 25000,
+                ElectricityConsumption = 500,
+                ForestFireResponseTime = -0.8f,
+                ForestResponseRadius = 1000f,
+                ForestFireHazard = -0.1f,
+                ForestFireHazardRadius = 1000f
+
+            }
         }
     };
 
@@ -1035,8 +1068,8 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<SignatureOfficebuildingOptions> SignatureOfficebuilding_Options { get; set; }
     public IEnumerable<SignatureMixedbuildingOptions> SignatureMixedbuilding_Options { get; set; }
     public IEnumerable<FireStationOptions> FireStation_Options { get; set; }
-
-
+    public IEnumerable<FireHelicopterDepotOptions> FireHelicopterDepot_Options { get; set; }
+    public IEnumerable<FirewatchTowerOptions> FirewatchTower_Options { get; set; }
 
 
 
@@ -1266,6 +1299,24 @@ public class WhitesharkCheatOverhaulOptions
             FireStationdict.Add(FireStation_option.Name, FireStation_option);
         }
         return FireStationdict;
+    }
+    public IReadOnlyDictionary<string, FireHelicopterDepotOptions> GetFireHelicopterDepotDictionary()
+    {
+        var FireHelicopterDepotdict = new Dictionary<string, FireHelicopterDepotOptions>();
+        foreach (var FireHelicopterDepot_option in FireHelicopterDepot_Options)
+        {
+            FireHelicopterDepotdict.Add(FireHelicopterDepot_option.Name, FireHelicopterDepot_option);
+        }
+        return FireHelicopterDepotdict;
+    }
+    public IReadOnlyDictionary<string, FirewatchTowerOptions> GetFirewatchTowerDictionary()
+    {
+        var FirewatchTowerdict = new Dictionary<string, FirewatchTowerOptions>();
+        foreach (var FirewatchTower_option in FirewatchTower_Options)
+        {
+            FirewatchTowerdict.Add(FirewatchTower_option.Name, FirewatchTower_option);
+        }
+        return FirewatchTowerdict;
     }
 
 
@@ -1528,6 +1579,27 @@ public class WhitesharkCheatOverhaulOptions
             x.Range >= 0 &&
             x.Capacity >= 0 &&
             x.Magnitude >= 0);
+
+        FireHelicopterDepot_Options = FireHelicopterDepot_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Noisepollution >= 0 &&
+            x.FireEngineCapacity >= 0 &&
+            x.FireHelicopterCapacity >= 0 &&
+            x.VehicleEfficiency >= 0 &&
+            x.DisasterResponseCapacity >= 0);
+
+        FirewatchTower_Options = FirewatchTower_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.ForestFireResponseTime <= 0 &&
+            x.ForestResponseRadius >= 0 &&
+            x.ForestFireHazard <= 0 &&
+            x.ForestFireHazardRadius >= 0);
 
     }
 }
