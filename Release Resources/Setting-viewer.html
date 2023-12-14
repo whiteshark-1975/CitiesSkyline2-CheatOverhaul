@@ -1,28 +1,3158 @@
 <!DOCTYPE html>
-<html>
 <head>
-<style>
+    <style>
 
-table, td {
-  color: #FFFFFF;
-  background-color: black;
-  border: 1px solid red;
-}
-.td_head {
-  
-  font-weight: bold;
-}
-.td_head2 {
-  color: #FFFFFF;
-  background-color: black;
-  text-align: center;
-  border: 3px solid green;
-  font-size: 30px;
-}
-</style>
+        table, td {
+            color: #FFFFFF;
+            background-color: black;
+            border: 1px solid red;
+        }
+
+        .td_head {
+            font-weight: bold;
+        }
+
+        .td_head2 {
+            color: #FFFFFF;
+            background-color: black;
+            text-align: center;
+            border: 3px solid green;
+            font-size: 30px;
+        }
+    </style>
 </head>
-<body>
 
-<h2>WhitesharkCheatOverhaul 3.17 Settings Overview</h2>
-
-<tbody><tr><td colspan="2"><div class="td_head">School_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head2">Name</div></td><td><div class="td_head">UpkeepCost</div></td><td><div class="td_head">AirPollution</div></td><td><div class="td_head">GroundPollution</div></td><td><div class="td_head">NoisePollution</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">Electricityconsumption</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">ElementarySchool01</div></td><td class="td_row_even"><div class="td_row_even">2500</div></td><td class="td_row_even"><div class="td_row_even">0</div></td><td class="td_row_even"><div class="td_row_even">0</div></td><td class="td_row_even"><div class="td_row_even">7500</div></td><td class="td_row_even"><div class="td_row_even">1900</div></td><td class="td_row_even"><div class="td_row_even">1500</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">HighSchool01</div></td><td class="td_row_odd"><div class="td_row_odd">45000</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">7500</div></td><td class="td_row_odd"><div class="td_row_odd">1300</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">College01</div></td><td class="td_row_even"><div class="td_row_even">150000</div></td><td class="td_row_even"><div class="td_row_even">0</div></td><td class="td_row_even"><div class="td_row_even">0</div></td><td class="td_row_even"><div class="td_row_even">10000</div></td><td class="td_row_even"><div class="td_row_even">2400</div></td><td class="td_row_even"><div class="td_row_even">1500</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">University01</div></td><td class="td_row_odd"><div class="td_row_odd">200000</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">10000</div></td><td class="td_row_odd"><div class="td_row_odd">2400</div></td><td class="td_row_odd"><div class="td_row_odd">3000</div></td><td class="td_row_odd"><div class="td_row_odd">3000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Powerplant_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">UpkeepCost</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">AirPollution</div></td><td><div class="td_head">GroundPollution</div></td><td><div class="td_head">NoisePollution</div></td><td><div class="td_head">Production</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">GasPowerPlant01</div></td><td class="td_row_even"><div class="td_row_even">600000</div></td><td class="td_row_even"><div class="td_row_even">48000</div></td><td class="td_row_even"><div class="td_row_even">30000</div></td><td class="td_row_even"><div class="td_row_even">10000</div></td><td class="td_row_even"><div class="td_row_even">10000</div></td><td class="td_row_even"><div class="td_row_even">10000</div></td><td class="td_row_even"><div class="td_row_even">2500000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">CoalPowerPlant01</div></td><td class="td_row_odd"><div class="td_row_odd">15000</div></td><td class="td_row_odd"><div class="td_row_odd">60000</div></td><td class="td_row_odd"><div class="td_row_odd">50000</div></td><td class="td_row_odd"><div class="td_row_odd">100000</div></td><td class="td_row_odd"><div class="td_row_odd">100000</div></td><td class="td_row_odd"><div class="td_row_odd">100000</div></td><td class="td_row_odd"><div class="td_row_odd">3000000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">NuclearPowerPlant01</div></td><td class="td_row_even"><div class="td_row_even">1000000</div></td><td class="td_row_even"><div class="td_row_even">400000</div></td><td class="td_row_even"><div class="td_row_even">40000</div></td><td class="td_row_even"><div class="td_row_even">0</div></td><td class="td_row_even"><div class="td_row_even">0</div></td><td class="td_row_even"><div class="td_row_even">150000</div></td><td class="td_row_even"><div class="td_row_even">7500000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">SmallCoalPowerPlant01</div></td><td class="td_row_odd"><div class="td_row_odd">10000</div></td><td class="td_row_odd"><div class="td_row_odd">15000</div></td><td class="td_row_odd"><div class="td_row_odd">25000</div></td><td class="td_row_odd"><div class="td_row_odd">30000</div></td><td class="td_row_odd"><div class="td_row_odd">30000</div></td><td class="td_row_odd"><div class="td_row_odd">30000</div></td><td class="td_row_odd"><div class="td_row_odd">200000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Waterpump_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">UpkeepCost</div></td><td><div class="td_head">Capacity</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">ElectricityConsumption</div></td><td><div class="td_head">NoisePollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">WaterPumpingStation01</div></td><td class="td_row_even"><div class="td_row_even">10000</div></td><td class="td_row_even"><div class="td_row_even">100000</div></td><td class="td_row_even"><div class="td_row_even">12500</div></td><td class="td_row_even"><div class="td_row_even">3000</div></td><td class="td_row_even"><div class="td_row_even">5000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">GroundwaterPumpingStation01</div></td><td class="td_row_odd"><div class="td_row_odd">20000</div></td><td class="td_row_odd"><div class="td_row_odd">75000</div></td><td class="td_row_odd"><div class="td_row_odd">10000</div></td><td class="td_row_odd"><div class="td_row_odd">3000</div></td><td class="td_row_odd"><div class="td_row_odd">5000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">DesalinationPlant01</div></td><td class="td_row_even"><div class="td_row_even">95000</div></td><td class="td_row_even"><div class="td_row_even">1000000</div></td><td class="td_row_even"><div class="td_row_even">62500</div></td><td class="td_row_even"><div class="td_row_even">3000</div></td><td class="td_row_even"><div class="td_row_even">25000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">WaterTower01</div></td><td class="td_row_odd"><div class="td_row_odd">30000</div></td><td class="td_row_odd"><div class="td_row_odd">30000</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">2500</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Transformerstation_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">UpkeepCost</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">NoisePollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">TransformerStation01</div></td><td class="td_row_even"><div class="td_row_even">6000</div></td><td class="td_row_even"><div class="td_row_even">100</div></td><td class="td_row_even"><div class="td_row_even">5000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Serverfarm_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">UpkeepCost</div></td><td><div class="td_head">Electricityconsumption</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">Range</div></td><td><div class="td_head">Capacity</div></td><td><div class="td_head">NoisePollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">ServerFarm01</div></td><td class="td_row_even"><div class="td_row_even">50000</div></td><td class="td_row_even"><div class="td_row_even">20000</div></td><td class="td_row_even"><div class="td_row_even">10000</div></td><td class="td_row_even"><div class="td_row_even">3000</div></td><td class="td_row_even"><div class="td_row_even">2500</div></td><td class="td_row_even"><div class="td_row_even">20000</div></td><td class="td_row_even"><div class="td_row_even">20000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Garbagetruck_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Capacity</div></td><td><div class="td_head">Unloadrate</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">GarbageTruck01</div></td><td class="td_row_even"><div class="td_row_even">20000</div></td><td class="td_row_even"><div class="td_row_even">4000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Transportbus_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Passengercapacity</div></td><td><div class="td_head">Maintenancerange</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">Bus01</div></td><td class="td_row_even"><div class="td_row_even">80</div></td><td class="td_row_even"><div class="td_row_even">200</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">Bus02</div></td><td class="td_row_odd"><div class="td_row_odd">80</div></td><td class="td_row_odd"><div class="td_row_odd">250</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">Bus03</div></td><td class="td_row_even"><div class="td_row_even">80</div></td><td class="td_row_even"><div class="td_row_even">200</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">TrainPassengerCar01</div></td><td class="td_row_odd"><div class="td_row_odd">120</div></td><td class="td_row_odd"><div class="td_row_odd">1000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">TrainPassengerEngine01</div></td><td class="td_row_even"><div class="td_row_even">120</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">SubwayCar01</div></td><td class="td_row_odd"><div class="td_row_odd">150</div></td><td class="td_row_odd"><div class="td_row_odd">850</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">SubwayEngine01</div></td><td class="td_row_even"><div class="td_row_even">120</div></td><td class="td_row_even"><div class="td_row_even">850</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">TramCar01</div></td><td class="td_row_odd"><div class="td_row_odd">80</div></td><td class="td_row_odd"><div class="td_row_odd">600</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">TramEngine01</div></td><td class="td_row_even"><div class="td_row_even">80</div></td><td class="td_row_even"><div class="td_row_even">600</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Parkinghall_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">GarageCapacity</div></td><td><div class="td_head">Comfortfactor</div></td><td><div class="td_head">Electricityconsumption</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">Noisepollution</div></td><td><div class="td_head">Upkeep</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">ParkingHall01</div></td><td class="td_row_even"><div class="td_row_even">320</div></td><td class="td_row_even"><div class="td_row_even">0.6</div></td><td class="td_row_even"><div class="td_row_even">2400</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td><td class="td_row_even"><div class="td_row_even">1600</div></td><td class="td_row_even"><div class="td_row_even">2500</div></td><td class="td_row_even"><div class="td_row_even">30000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">ParkingHall02</div></td><td class="td_row_odd"><div class="td_row_odd">100</div></td><td class="td_row_odd"><div class="td_row_odd">0.65</div></td><td class="td_row_odd"><div class="td_row_odd">3000</div></td><td class="td_row_odd"><div class="td_row_odd">2000</div></td><td class="td_row_odd"><div class="td_row_odd">2000</div></td><td class="td_row_odd"><div class="td_row_odd">2500</div></td><td class="td_row_odd"><div class="td_row_odd">40000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Citypark_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Range</div></td><td><div class="td_head">Capacity</div></td><td><div class="td_head">Magnitude</div></td><td><div class="td_head">Attractiveness</div></td><td><div class="td_head">Electricityconsumption</div></td><td><div class="td_head">Efficiency</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">Upkeep</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">CityPark01</div></td><td class="td_row_even"><div class="td_row_even">2500</div></td><td class="td_row_even"><div class="td_row_even">800</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">1</div></td><td class="td_row_even"><div class="td_row_even">500</div></td><td class="td_row_even"><div class="td_row_even">1</div></td><td class="td_row_even"><div class="td_row_even">0</div></td><td class="td_row_even"><div class="td_row_even">100</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">CityPark02</div></td><td class="td_row_odd"><div class="td_row_odd">4000</div></td><td class="td_row_odd"><div class="td_row_odd">1200</div></td><td class="td_row_odd"><div class="td_row_odd">10</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">750</div></td><td class="td_row_odd"><div class="td_row_odd">2</div></td><td class="td_row_odd"><div class="td_row_odd">500</div></td><td class="td_row_odd"><div class="td_row_odd">200</div></td><td class="td_row_odd"><div class="td_row_odd">4000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">CityPark03</div></td><td class="td_row_even"><div class="td_row_even">3000</div></td><td class="td_row_even"><div class="td_row_even">1600</div></td><td class="td_row_even"><div class="td_row_even">14</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">10000</div></td><td class="td_row_even"><div class="td_row_even">3</div></td><td class="td_row_even"><div class="td_row_even">750</div></td><td class="td_row_even"><div class="td_row_even">300</div></td><td class="td_row_even"><div class="td_row_even">8500</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">CityPark04</div></td><td class="td_row_odd"><div class="td_row_odd">4000</div></td><td class="td_row_odd"><div class="td_row_odd">2000</div></td><td class="td_row_odd"><div class="td_row_odd">14</div></td><td class="td_row_odd"><div class="td_row_odd">15</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">1000</div></td><td class="td_row_odd"><div class="td_row_odd">400</div></td><td class="td_row_odd"><div class="td_row_odd">12500</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Wastewater_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">UpkeepCost</div></td><td><div class="td_head">Capacity</div></td><td><div class="td_head">Purification</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">GroundPollution</div></td><td><div class="td_head">AirPollution</div></td><td><div class="td_head">NoisePollution</div></td><td><div class="td_head">ElectricityConsumption</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">WastewaterTreatmentPlant01</div></td><td class="td_row_even"><div class="td_row_even">120000</div></td><td class="td_row_even"><div class="td_row_even">400000</div></td><td class="td_row_even"><div class="td_row_even">0.5</div></td><td class="td_row_even"><div class="td_row_even">50000</div></td><td class="td_row_even"><div class="td_row_even">7500</div></td><td class="td_row_even"><div class="td_row_even">7500</div></td><td class="td_row_even"><div class="td_row_even">15000</div></td><td class="td_row_even"><div class="td_row_even">3000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">SewageOutlet01</div></td><td class="td_row_odd"><div class="td_row_odd">20000</div></td><td class="td_row_odd"><div class="td_row_odd">100000</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">5000</div></td><td class="td_row_odd"><div class="td_row_odd">5000</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">IncinerationPlant_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">UpkeepCost</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">AirPollution</div></td><td><div class="td_head">GroundPollution</div></td><td><div class="td_head">NoisePollution</div></td><td><div class="td_head">Garbagecapacity</div></td><td><div class="td_head">Vehiclecapacity</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">IncinerationPlant01</div></td><td class="td_row_even"><div class="td_row_even">210000</div></td><td class="td_row_even"><div class="td_row_even">25000</div></td><td class="td_row_even"><div class="td_row_even">40000</div></td><td class="td_row_even"><div class="td_row_even">40000</div></td><td class="td_row_even"><div class="td_row_even">40000</div></td><td class="td_row_even"><div class="td_row_even">3000000</div></td><td class="td_row_even"><div class="td_row_even">50</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Healthcare_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">UpkeepCost</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">Electricityconsumption</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">NoisePollution</div></td><td><div class="td_head">Ambulancecapacity</div></td><td><div class="td_head">Helicoptercapacity</div></td><td><div class="td_head">Patientcapacity</div></td><td><div class="td_head">Treatmentbonus</div></td><td><div class="td_head">Capacity</div></td><td><div class="td_head">Range</div></td><td><div class="td_head">Magnitude</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">MedicalClinic01</div></td><td class="td_row_even"><div class="td_row_even">40000</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td><td class="td_row_even"><div class="td_row_even">2500</div></td><td class="td_row_even"><div class="td_row_even">1900</div></td><td class="td_row_even"><div class="td_row_even">0</div></td><td class="td_row_even"><div class="td_row_even">5</div></td><td class="td_row_even"><div class="td_row_even">0</div></td><td class="td_row_even"><div class="td_row_even">100</div></td><td class="td_row_even"><div class="td_row_even">15</div></td><td class="td_row_even"><div class="td_row_even">15000</div></td><td class="td_row_even"><div class="td_row_even">5000</div></td><td class="td_row_even"><div class="td_row_even">5</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">Hospital01</div></td><td class="td_row_odd"><div class="td_row_odd">450000</div></td><td class="td_row_odd"><div class="td_row_odd">5000</div></td><td class="td_row_odd"><div class="td_row_odd">10000</div></td><td class="td_row_odd"><div class="td_row_odd">9400</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">30</div></td><td class="td_row_odd"><div class="td_row_odd">0</div></td><td class="td_row_odd"><div class="td_row_odd">500</div></td><td class="td_row_odd"><div class="td_row_odd">30</div></td><td class="td_row_odd"><div class="td_row_odd">50000</div></td><td class="td_row_odd"><div class="td_row_odd">7500</div></td><td class="td_row_odd"><div class="td_row_odd">10</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Postoffice_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Mailstoragecapacity</div></td><td><div class="td_head">Mailboxcapacity</div></td><td><div class="td_head">Postvancapacity</div></td><td><div class="td_head">PostTruckscapacity</div></td><td><div class="td_head">Upkeep</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">Electricityconsumption</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">Range</div></td><td><div class="td_head">Capacity</div></td><td><div class="td_head">Magnitude</div></td><td><div class="td_head">Noisepollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">PostOffice01</div></td><td class="td_row_even"><div class="td_row_even">100000</div></td><td class="td_row_even"><div class="td_row_even">500</div></td><td class="td_row_even"><div class="td_row_even">20</div></td><td class="td_row_even"><div class="td_row_even">0</div></td><td class="td_row_even"><div class="td_row_even">45000</div></td><td class="td_row_even"><div class="td_row_even">1900</div></td><td class="td_row_even"><div class="td_row_even">500</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td><td class="td_row_even"><div class="td_row_even">15000</div></td><td class="td_row_even"><div class="td_row_even">2</div></td><td class="td_row_even"><div class="td_row_even">5000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Cemetery_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Upkeep</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">Electricityconsumption</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">Hearsecapacity</div></td><td><div class="td_head">Storagecapacity</div></td><td><div class="td_head">Efficiency</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">Cemetery01</div></td><td class="td_row_even"><div class="td_row_even">55000</div></td><td class="td_row_even"><div class="td_row_even">700</div></td><td class="td_row_even"><div class="td_row_even">800</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td><td class="td_row_even"><div class="td_row_even">15</div></td><td class="td_row_even"><div class="td_row_even">5000</div></td><td class="td_row_even"><div class="td_row_even">3</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Crematorium_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Upkeep</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">Electricityconsumption</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">Hearsecapacity</div></td><td><div class="td_head">Storagecapacity</div></td><td><div class="td_head">Processingrate</div></td><td><div class="td_head">Airpollution</div></td><td><div class="td_head">Noisepollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">Crematorium01</div></td><td class="td_row_even"><div class="td_row_even">45000</div></td><td class="td_row_even"><div class="td_row_even">6300</div></td><td class="td_row_even"><div class="td_row_even">1300</div></td><td class="td_row_even"><div class="td_row_even">500</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">20</div></td><td class="td_row_even"><div class="td_row_even">100</div></td><td class="td_row_even"><div class="td_row_even">2500</div></td><td class="td_row_even"><div class="td_row_even">5000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Windturbine_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Upkeep</div></td><td><div class="td_head">Maximumwind</div></td><td><div class="td_head">Production</div></td><td><div class="td_head">Noisepollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">WindTurbine01</div></td><td class="td_row_even"><div class="td_row_even">15000</div></td><td class="td_row_even"><div class="td_row_even">0.4</div></td><td class="td_row_even"><div class="td_row_even">50000</div></td><td class="td_row_even"><div class="td_row_even">20000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Emergencybattery_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Upkeep</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">Poweroutput</div></td><td><div class="td_head">Capacity</div></td><td><div class="td_head">Noisepollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EmergencyBatteryStation01</div></td><td class="td_row_even"><div class="td_row_even">50000</div></td><td class="td_row_even"><div class="td_row_even">15000</div></td><td class="td_row_even"><div class="td_row_even">5000</div></td><td class="td_row_even"><div class="td_row_even">2000000</div></td><td class="td_row_even"><div class="td_row_even">5000000</div></td><td class="td_row_even"><div class="td_row_even">10000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Geothermalpowerplant_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Upkeep</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">Production</div></td><td><div class="td_head">Maximumgroundwater</div></td><td><div class="td_head">AirPollution</div></td><td><div class="td_head">GroundPollution</div></td><td><div class="td_head">NoisePollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">GeothermalPowerPlant01</div></td><td class="td_row_even"><div class="td_row_even">300000</div></td><td class="td_row_even"><div class="td_row_even">25000</div></td><td class="td_row_even"><div class="td_row_even">1500000</div></td><td class="td_row_even"><div class="td_row_even">4000</div></td><td class="td_row_even"><div class="td_row_even">15000</div></td><td class="td_row_even"><div class="td_row_even">15000</div></td><td class="td_row_even"><div class="td_row_even">20000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">Solarpowerstation_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Upkeep</div></td><td><div class="td_head">Waterconsumption</div></td><td><div class="td_head">GarbageAccumulation</div></td><td><div class="td_head">Production</div></td><td><div class="td_head">Poweroutput</div></td><td><div class="td_head">Capacity</div></td><td><div class="td_head">NoisePollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">SolarPowerStation01</div></td><td class="td_row_even"><div class="td_row_even">300000</div></td><td class="td_row_even"><div class="td_row_even">36000</div></td><td class="td_row_even"><div class="td_row_even">30000</div></td><td class="td_row_even"><div class="td_row_even">2000000</div></td><td class="td_row_even"><div class="td_row_even">150000</div></td><td class="td_row_even"><div class="td_row_even">500000</div></td><td class="td_row_even"><div class="td_row_even">50000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">SignatureResidentialbuilding_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Wellbeing</div></td><td><div class="td_head">Radius</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_ResidentialLowSignature01</div></td><td class="td_row_even"><div class="td_row_even">2</div></td><td class="td_row_even"><div class="td_row_even">500</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">EU_ResidentialLowSignature02</div></td><td class="td_row_odd"><div class="td_row_odd">4</div></td><td class="td_row_odd"><div class="td_row_odd">1000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_ResidentialLowSignature03</div></td><td class="td_row_even"><div class="td_row_even">6</div></td><td class="td_row_even"><div class="td_row_even">1500</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_ResidentialLowSignature01</div></td><td class="td_row_odd"><div class="td_row_odd">2</div></td><td class="td_row_odd"><div class="td_row_odd">500</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">NA_ResidentialLowSignature02</div></td><td class="td_row_even"><div class="td_row_even">4</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_ResidentialLowSignature03</div></td><td class="td_row_odd"><div class="td_row_odd">6</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_ResidentialMediumSignature01</div></td><td class="td_row_even"><div class="td_row_even">4</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">EU_ResidentialMediumSignature02</div></td><td class="td_row_odd"><div class="td_row_odd">8</div></td><td class="td_row_odd"><div class="td_row_odd">2000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_ResidentialMediumSignature03</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">2500</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_ResidentialMediumSignature01</div></td><td class="td_row_odd"><div class="td_row_odd">4</div></td><td class="td_row_odd"><div class="td_row_odd">1000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">NA_ResidentialMediumSignature02</div></td><td class="td_row_even"><div class="td_row_even">8</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_ResidentialMediumSignature03</div></td><td class="td_row_odd"><div class="td_row_odd">10</div></td><td class="td_row_odd"><div class="td_row_odd">2500</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_ResidentialHighSignature01</div></td><td class="td_row_even"><div class="td_row_even">6</div></td><td class="td_row_even"><div class="td_row_even">1500</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">EU_ResidentialHighSignature02</div></td><td class="td_row_odd"><div class="td_row_odd">10</div></td><td class="td_row_odd"><div class="td_row_odd">2500</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_ResidentialHighSignature03</div></td><td class="td_row_even"><div class="td_row_even">12</div></td><td class="td_row_even"><div class="td_row_even">3000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_ResidentialHighSignature01</div></td><td class="td_row_odd"><div class="td_row_odd">6</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">NA_ResidentialHighSignature02</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">2500</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_ResidentialHighSignature03</div></td><td class="td_row_odd"><div class="td_row_odd">12</div></td><td class="td_row_odd"><div class="td_row_odd">3000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">SignatureCommercialbuilding_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Attractiveness</div></td><td><div class="td_head">Wellbeing</div></td><td><div class="td_head">Radius</div></td><td><div class="td_head">CityImportcost</div></td><td><div class="td_head">CityAttractiveness</div></td><td><div class="td_head">Noisepollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_CommercialLowSignature01</div></td><td class="td_row_even"><div class="td_row_even">5</div></td><td class="td_row_even"><div class="td_row_even">3</div></td><td class="td_row_even"><div class="td_row_even">500</div></td><td class="td_row_even"><div class="td_row_even">-0.005</div></td><td class="td_row_even"><div class="td_row_even">0.005</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">EU_CommercialLowSignature02</div></td><td class="td_row_odd"><div class="td_row_odd">10</div></td><td class="td_row_odd"><div class="td_row_odd">3</div></td><td class="td_row_odd"><div class="td_row_odd">1000</div></td><td class="td_row_odd"><div class="td_row_odd">-0.15</div></td><td class="td_row_odd"><div class="td_row_odd">0.005</div></td><td class="td_row_odd"><div class="td_row_odd">4000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_CommercialLowSignature03</div></td><td class="td_row_even"><div class="td_row_even">15</div></td><td class="td_row_even"><div class="td_row_even">3</div></td><td class="td_row_even"><div class="td_row_even">1500</div></td><td class="td_row_even"><div class="td_row_even">-0.005</div></td><td class="td_row_even"><div class="td_row_even">0.005</div></td><td class="td_row_even"><div class="td_row_even">7000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_CommercialLowSignature01</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">3</div></td><td class="td_row_odd"><div class="td_row_odd">500</div></td><td class="td_row_odd"><div class="td_row_odd">-0.005</div></td><td class="td_row_odd"><div class="td_row_odd">0.005</div></td><td class="td_row_odd"><div class="td_row_odd">1000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">NA_CommercialLowSignature02</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">3</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td><td class="td_row_even"><div class="td_row_even">-0.005</div></td><td class="td_row_even"><div class="td_row_even">0.005</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_CommercialLowSignature03</div></td><td class="td_row_odd"><div class="td_row_odd">15</div></td><td class="td_row_odd"><div class="td_row_odd">3</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td><td class="td_row_odd"><div class="td_row_odd">-0.005</div></td><td class="td_row_odd"><div class="td_row_odd">0.005</div></td><td class="td_row_odd"><div class="td_row_odd">4000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_CommercialHighSignature01</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">5</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td><td class="td_row_even"><div class="td_row_even">-0.01</div></td><td class="td_row_even"><div class="td_row_even">0.01</div></td><td class="td_row_even"><div class="td_row_even">3000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">EU_CommercialHighSignature02</div></td><td class="td_row_odd"><div class="td_row_odd">20</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td><td class="td_row_odd"><div class="td_row_odd">-0.01</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">4000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_CommercialHighSignature03</div></td><td class="td_row_even"><div class="td_row_even">30</div></td><td class="td_row_even"><div class="td_row_even">5</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td><td class="td_row_even"><div class="td_row_even">-0.01</div></td><td class="td_row_even"><div class="td_row_even">0.01</div></td><td class="td_row_even"><div class="td_row_even">5000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_CommercialHighSignature01</div></td><td class="td_row_odd"><div class="td_row_odd">10</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">1000</div></td><td class="td_row_odd"><div class="td_row_odd">-0.01</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">3000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">NA_CommercialHighSignature02</div></td><td class="td_row_even"><div class="td_row_even">20</div></td><td class="td_row_even"><div class="td_row_even">5</div></td><td class="td_row_even"><div class="td_row_even">1500</div></td><td class="td_row_even"><div class="td_row_even">-0.01</div></td><td class="td_row_even"><div class="td_row_even">0.01</div></td><td class="td_row_even"><div class="td_row_even">4000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_CommercialHighSignature03</div></td><td class="td_row_odd"><div class="td_row_odd">30</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">2000</div></td><td class="td_row_odd"><div class="td_row_odd">-0.01</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">5000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">PostVan_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">MailCapacity</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_PostVan01</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_PostVan01</div></td><td class="td_row_odd"><div class="td_row_odd">2000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">SignatureOfficebuilding_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Attractiveness</div></td><td><div class="td_head">Wellbeing</div></td><td><div class="td_head">Radius</div></td><td><div class="td_head">CityOfficeEfficency</div></td><td><div class="td_head">CityUniversityInterest</div></td><td><div class="td_head">CityUniversityGraduation</div></td><td><div class="td_head">Noisepollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">OfficeHighSignature01</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">5</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td><td class="td_row_even"><div class="td_row_even">0.02</div></td><td class="td_row_even"><div class="td_row_even">0.05</div></td><td class="td_row_even"><div class="td_row_even">0.01</div></td><td class="td_row_even"><div class="td_row_even">3000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">OfficeHighSignature02</div></td><td class="td_row_odd"><div class="td_row_odd">20</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td><td class="td_row_odd"><div class="td_row_odd">0.02</div></td><td class="td_row_odd"><div class="td_row_odd">0.05</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">1000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">OfficeHighSignature03</div></td><td class="td_row_even"><div class="td_row_even">30</div></td><td class="td_row_even"><div class="td_row_even">5</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td><td class="td_row_even"><div class="td_row_even">0.02</div></td><td class="td_row_even"><div class="td_row_even">0.05</div></td><td class="td_row_even"><div class="td_row_even">0.01</div></td><td class="td_row_even"><div class="td_row_even">5000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">OfficeLowSignature01</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">500</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">0.05</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">3000</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">OfficeLowSignature02</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">5</div></td><td class="td_row_even"><div class="td_row_even">1000</div></td><td class="td_row_even"><div class="td_row_even">0.01</div></td><td class="td_row_even"><div class="td_row_even">0.05</div></td><td class="td_row_even"><div class="td_row_even">0.01</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">OfficeLowSignature03</div></td><td class="td_row_odd"><div class="td_row_odd">15</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">0.05</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">3000</div></td></tr></tbody></table></td></tr><tr><td colspan="2"><div class="td_head2">SignatureMixedbuilding_Options</div><table style="width:100%"><tbody><tr><td><div class="td_head">Name</div></td><td><div class="td_head">Attractiveness</div></td><td><div class="td_head">Wellbeing</div></td><td><div class="td_head">Radius</div></td><td><div class="td_head">CityAttractiveness</div></td><td><div class="td_head">Noisepollution</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_MixedSignature01</div></td><td class="td_row_even"><div class="td_row_even">5</div></td><td class="td_row_even"><div class="td_row_even">4</div></td><td class="td_row_even"><div class="td_row_even">750</div></td><td class="td_row_even"><div class="td_row_even">0.01</div></td><td class="td_row_even"><div class="td_row_even">1500</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">EU_MixedSignature02</div></td><td class="td_row_odd"><div class="td_row_odd">10</div></td><td class="td_row_odd"><div class="td_row_odd">8</div></td><td class="td_row_odd"><div class="td_row_odd">1250</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">EU_MixedSignature03</div></td><td class="td_row_even"><div class="td_row_even">15</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">2000</div></td><td class="td_row_even"><div class="td_row_even">0.01</div></td><td class="td_row_even"><div class="td_row_even">1500</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_MixedSignature01</div></td><td class="td_row_odd"><div class="td_row_odd">5</div></td><td class="td_row_odd"><div class="td_row_odd">4</div></td><td class="td_row_odd"><div class="td_row_odd">750</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td></tr><tr><td class="td_row_even"><div class="td_row_even">NA_MixedSignature02</div></td><td class="td_row_even"><div class="td_row_even">10</div></td><td class="td_row_even"><div class="td_row_even">8</div></td><td class="td_row_even"><div class="td_row_even">1250</div></td><td class="td_row_even"><div class="td_row_even">0.01</div></td><td class="td_row_even"><div class="td_row_even">1500</div></td></tr><tr><td class="td_row_odd"><div class="td_row_odd">NA_MixedSignature03</div></td><td class="td_row_odd"><div class="td_row_odd">15</div></td><td class="td_row_odd"><div class="td_row_odd">10</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td><td class="td_row_odd"><div class="td_row_odd">0.01</div></td><td class="td_row_odd"><div class="td_row_odd">1500</div></td></tr></tbody></table></td></tr></tbody>
+    <tbody>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">School_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">UpkeepCost</div>
+                            </td>
+                            <td>
+                                <div class="td_head">AirPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GroundPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">NoisePollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Electricityconsumption</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">ElementarySchool01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">7500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1900</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">HighSchool01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">45000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">7500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1300</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">College01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">150000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2400</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">University01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">200000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2400</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Powerplant_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">UpkeepCost</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">AirPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GroundPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">NoisePollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Production</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">GasPowerPlant01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">600000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">48000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">30000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">CoalPowerPlant01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">15000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">60000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">50000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">100000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">100000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">100000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3000000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">NuclearPowerPlant01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">400000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">40000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">150000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">7500000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">SmallCoalPowerPlant01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">15000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">25000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">30000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">30000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">30000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">200000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Waterpump_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">UpkeepCost</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ElectricityConsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">NoisePollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">WaterPumpingStation01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">100000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">12500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">GroundwaterPumpingStation01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">20000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">75000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">DesalinationPlant01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">95000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">62500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">25000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">WaterTower01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">30000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">30000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2500</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Transformerstation_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">UpkeepCost</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">NoisePollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">TransformerStation01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">6000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">100</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Serverfarm_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">UpkeepCost</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Electricityconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Range</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">NoisePollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">ServerFarm01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">50000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Garbagetruck_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Unloadrate</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">GarbageTruck01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">4000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Transportbus_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Passengercapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Maintenancerange</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">Bus01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">80</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">200</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">Bus02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">80</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">250</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">Bus03</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">80</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">200</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">TrainPassengerCar01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">120</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">TrainPassengerEngine01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">120</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">SubwayCar01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">150</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">850</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">SubwayEngine01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">120</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">850</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">TramCar01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">80</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">600</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">TramEngine01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">80</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">600</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Parkinghall_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarageCapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Comfortfactor</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Electricityconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">ParkingHall01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.6</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2400</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1600</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">30000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">ParkingHall02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">100</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.65</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">40000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Citypark_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Range</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Magnitude</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Attractiveness</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Electricityconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Efficiency</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">CityPark01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">800</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">100</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">CityPark02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1200</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">750</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">200</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">CityPark03</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1600</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">14</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">750</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">300</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">8500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">CityPark04</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">14</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">15</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">400</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">12500</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Wastewater_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">UpkeepCost</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Purification</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GroundPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">AirPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">NoisePollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ElectricityConsumption</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">WastewaterTreatmentPlant01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">120000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">400000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">50000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">7500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">7500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">SewageOutlet01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">20000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">100000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">IncinerationPlant_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">UpkeepCost</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Electricityconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Garbagecapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Vehiclecapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Transportcapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Processingspeed</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Electricityproduction</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Productionperunit</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ProductionCapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">CityIndustrialGroundPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">AirPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GroundPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">NoisePollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">IncinerationPlant01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">210000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">25000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3000000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">50</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3000000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">7.5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">400000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">40000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">40000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">40000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">Landfill01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">30000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">20000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">20</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">100000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">20000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">20000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">40000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">RecyclingCenter01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">HazardousWasteProcessingSite01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">450000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">15000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">25000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">50000000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">250</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">50000000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">-0.15</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">50000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">50000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">50000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Healthcare_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">UpkeepCost</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Electricityconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">NoisePollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Ambulancecapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Helicoptercapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Patientcapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Treatmentbonus</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Range</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Magnitude</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">MedicalClinic01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">40000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1900</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">100</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">Hospital01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">450000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">9400</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">30</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">30</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">50000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">7500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Postoffice_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Mailstoragecapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Mailboxcapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Postvancapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">PostTruckscapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Electricityconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Range</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Magnitude</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">PostOffice01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">100000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">45000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1900</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Cemetery_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Electricityconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Hearsecapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Storagecapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Efficiency</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">Cemetery01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">55000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">700</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">800</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Crematorium_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Electricityconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Hearsecapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Storagecapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Processingrate</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Airpollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">Crematorium01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">45000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">6300</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1300</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">100</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Windturbine_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Maximumwind</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Production</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">WindTurbine01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.4</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">50000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Emergencybattery_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Poweroutput</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EmergencyBatteryStation01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">50000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Geothermalpowerplant_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Production</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Maximumgroundwater</div>
+                            </td>
+                            <td>
+                                <div class="td_head">AirPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GroundPollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">NoisePollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">GeothermalPowerPlant01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">300000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">25000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">4000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">Solarpowerstation_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Waterconsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Production</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Poweroutput</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">NoisePollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">SolarPowerStation01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">300000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">36000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">30000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">150000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">500000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">50000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">SignatureResidentialbuilding_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Wellbeing</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Radius</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_ResidentialLowSignature01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">EU_ResidentialLowSignature02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_ResidentialLowSignature03</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">6</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_ResidentialLowSignature01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">NA_ResidentialLowSignature02</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">4</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_ResidentialLowSignature03</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">6</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_ResidentialMediumSignature01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">4</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">EU_ResidentialMediumSignature02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">8</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_ResidentialMediumSignature03</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_ResidentialMediumSignature01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">NA_ResidentialMediumSignature02</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">8</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_ResidentialMediumSignature03</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_ResidentialHighSignature01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">6</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">EU_ResidentialHighSignature02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_ResidentialHighSignature03</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">12</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_ResidentialHighSignature01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">6</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">NA_ResidentialHighSignature02</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_ResidentialHighSignature03</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">12</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">SignatureCommercialbuilding_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Attractiveness</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Wellbeing</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Radius</div>
+                            </td>
+                            <td>
+                                <div class="td_head">CityImportcost</div>
+                            </td>
+                            <td>
+                                <div class="td_head">CityAttractiveness</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_CommercialLowSignature01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">-0.005</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.005</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">EU_CommercialLowSignature02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">-0.005</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.005</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_CommercialLowSignature03</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">-0.005</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.005</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">7000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_CommercialLowSignature01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">-0.005</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.005</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">NA_CommercialLowSignature02</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">-0.005</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.005</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_CommercialLowSignature03</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">15</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">-0.005</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.005</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_CommercialHighSignature01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">-0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">EU_CommercialHighSignature02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">20</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">-0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_CommercialHighSignature03</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">30</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">-0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_CommercialHighSignature01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">-0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">NA_CommercialHighSignature02</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">-0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">4000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_CommercialHighSignature03</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">30</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">-0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">PostVan_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">MailCapacity</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_PostVan01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_PostVan01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">SignatureOfficebuilding_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Attractiveness</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Wellbeing</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Radius</div>
+                            </td>
+                            <td>
+                                <div class="td_head">CrimeAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">CrimeRadius</div>
+                            </td>
+                            <td>
+                                <div class="td_head">CityOfficeEfficency</div>
+                            </td>
+                            <td>
+                                <div class="td_head">CityUniversityInterest</div>
+                            </td>
+                            <td>
+                                <div class="td_head">CityUniversityGraduation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">OfficeHighSignature01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.02</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.05</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">OfficeHighSignature02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">20</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.05</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">OfficeHighSignature03</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">30</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.02</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.05</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">OfficeLowSignature01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">-2</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.05</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">OfficeLowSignature02</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.05</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">OfficeLowSignature03</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">15</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.05</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">3000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">SignatureMixedbuilding_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Attractiveness</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Wellbeing</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Radius</div>
+                            </td>
+                            <td>
+                                <div class="td_head">CityAttractiveness</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_MixedSignature01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">4</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">750</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">EU_MixedSignature02</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">8</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1250</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">EU_MixedSignature03</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">15</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_MixedSignature01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">750</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">NA_MixedSignature02</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">8</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1250</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0.01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1500</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">NA_MixedSignature03</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">15</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">10</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0.01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1500</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">FireStation_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ElectricityConsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">WaterConsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">FireEngineCapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">FireHelicopterCapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">VehicleEfficiency</div>
+                            </td>
+                            <td>
+                                <div class="td_head">DisasterResponseCapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Range</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Magnitude</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">FireStation01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">235000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3200</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">7500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">100000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">FireHouse01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">20000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">700</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">25000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">FireHelicopterDepot_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ElectricityConsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">WaterConsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                            <td>
+                                <div class="td_head">FireEngineCapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">FireHelicopterCapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">VehicleEfficiency</div>
+                            </td>
+                            <td>
+                                <div class="td_head">DisasterResponseCapacity</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">FireHelicopterDepot01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">145000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">16000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">4000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5300</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">25000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">5</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">FirewatchTower_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ElectricityConsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ForestFireResponseTime</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ForestResponseRadius</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ForestFireHazard</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ForestFireHazardRadius</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">FirewatchtTower01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">25000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">-0.8</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">-0.1</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">1000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="td_head2">PoliceStation_Options</div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="td_head">Name</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Upkeep</div>
+                            </td>
+                            <td>
+                                <div class="td_head">ElectricityConsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">WaterConsumption</div>
+                            </td>
+                            <td>
+                                <div class="td_head">GarbageAccumulation</div>
+                            </td>
+                            <td>
+                                <div class="td_head">PatrolCarCapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">PoliceHelicopterCapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">JailCapacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Range</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Capacity</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Magnitude</div>
+                            </td>
+                            <td>
+                                <div class="td_head">Noisepollution</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_even">
+                                <div class="td_row_even">PoliceHeadquarters01</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">310000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">2500</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">3200</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">0</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">100</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">10000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">100000</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">8</div>
+                            </td>
+                            <td class="td_row_even">
+                                <div class="td_row_even">20000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">PoliceStation01</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">38000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">2000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">1000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">700</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">6</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">0</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">25</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">20000</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">4</div>
+                            </td>
+                            <td class="td_row_odd">
+                                <div class="td_row_odd">5000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
