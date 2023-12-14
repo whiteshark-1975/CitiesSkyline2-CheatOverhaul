@@ -1040,7 +1040,44 @@ public class WhitesharkCheatOverhaulOptions
                 ForestFireHazardRadius = 1000f
 
             }
-        }
+        },
+
+        PoliceStation_Options = new List<PoliceStationOptions>
+        {
+            new PoliceStationOptions
+            {
+                Name = "PoliceHeadquarters01",
+                Upkeep = 310000,
+                ElectricityConsumption = 3500,
+                WaterConsumption = 2500,
+                GarbageAccumulation = 3200,
+                Noisepollution = 20000,
+                PatrolCarCapacity = 20,
+                PoliceHelicopterCapacity = 0,
+                JailCapacity = 100,
+                Range = 10000,
+                Capacity = 100000,
+                Magnitude = 8
+
+            },
+
+            new PoliceStationOptions
+            {
+                Name = "PoliceStation01",
+                Upkeep = 38000,
+                ElectricityConsumption = 2000,
+                WaterConsumption = 1000,
+                GarbageAccumulation = 700,
+                Noisepollution = 5000,
+                PatrolCarCapacity = 6,
+                PoliceHelicopterCapacity = 0,
+                JailCapacity = 25,
+                Range = 5000,
+                Capacity = 20000,
+                Magnitude = 4
+
+            }
+        },
     };
 
     public IEnumerable<SchoolOptions> School_Options { get; set; }
@@ -1070,7 +1107,7 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<FireStationOptions> FireStation_Options { get; set; }
     public IEnumerable<FireHelicopterDepotOptions> FireHelicopterDepot_Options { get; set; }
     public IEnumerable<FirewatchTowerOptions> FirewatchTower_Options { get; set; }
-
+    public IEnumerable<PoliceStationOptions> PoliceStation_Options { get; set; }
 
 
 
@@ -1318,9 +1355,16 @@ public class WhitesharkCheatOverhaulOptions
         }
         return FirewatchTowerdict;
     }
-
-
-    public void RemoveBadEntires()
+    public IReadOnlyDictionary<string, PoliceStationOptions> GetPoliceStationDictionary()
+    {
+        var PoliceStationdict = new Dictionary<string, PoliceStationOptions>();
+        foreach (var PoliceStation_option in PoliceStation_Options)
+        {
+            PoliceStationdict.Add(PoliceStation_option.Name, PoliceStation_option);
+        }
+        return PoliceStationdict;
+    }
+        public void RemoveBadEntires()
     {
          School_Options = School_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) && 
@@ -1601,5 +1645,19 @@ public class WhitesharkCheatOverhaulOptions
             x.ForestFireHazard <= 0 &&
             x.ForestFireHazardRadius >= 0);
 
+        PoliceStation_Options = PoliceStation_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.PatrolCarCapacity >= 0 &&
+            x.PoliceHelicopterCapacity >= 0 &&
+            x.JailCapacity >= 0 &&
+            x.Range >= 0 &&
+            x.Capacity >= 0 &&
+            x.Magnitude >= 0 &&
+            x.Noisepollution >= 0);
+        
     }
 }

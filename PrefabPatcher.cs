@@ -515,6 +515,31 @@ public static class PrefabPatcher
             ForestFireHazardEffect.m_Radius = FirewatchToweronverrides.ForestFireHazardRadius;
 
         }
+
+        if (WhitesharkCheatOverhaul.PoliceStationOptions.TryGetValue(prefab.name, out var PoliceStationverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = PoliceStationverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = PoliceStationverrides.ElectricityConsumption;
+            ServiceComponent.m_WaterConsumption = PoliceStationverrides.WaterConsumption;
+            ServiceComponent.m_GarbageAccumulation = PoliceStationverrides.GarbageAccumulation;
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_NoisePollution = PoliceStationverrides.Noisepollution;
+
+            var PoliceStationComponent = prefab.GetComponent<Game.Prefabs.PoliceStation>();
+            PoliceStationComponent.m_PatrolCarCapacity = PoliceStationverrides.PatrolCarCapacity;
+            PoliceStationComponent.m_PoliceHelicopterCapacity = PoliceStationverrides.PoliceHelicopterCapacity;
+            PoliceStationComponent.m_JailCapacity = PoliceStationverrides.JailCapacity;
+
+
+            var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
+            CoverageComponent.m_Range = PoliceStationverrides.Range;
+            CoverageComponent.m_Capacity = PoliceStationverrides.Capacity;
+            CoverageComponent.m_Magnitude = PoliceStationverrides.Magnitude;
+
+        }
         return true;
     }
 }
