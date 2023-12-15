@@ -33,6 +33,19 @@
 * FireHelicopterDepotOptions
 * FirewatchTowerOptions
 * PoliceStationOptions
+* PrisonOptions
+* DiseaseControlCenterOptions
+* HeathResearchInstituteOptions
+* RadioTelescopeOptions
+* GeologicalResearchCenterOptions
+* TechnicalUniversityOptions
+* EarlyDisasterWarningSystemOptions
+* WelfareOfficeOptions
+* CityHallOptions
+* LargeEmergencyShelterOptions
+* CentralBankOptions
+* MedicalUniversityOptions
+* LargeHadronColliderOptions
 
 ## A setting File will be created at 1st run.
 Location for settingsfile:

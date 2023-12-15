@@ -26,3 +26,16 @@
  FireHelicopterDepotOptions
  FirewatchTowerOptions
  PoliceStationOptions
+ PrisonOptions
+ DiseaseControlCenterOptions
+ HeathResearchInstituteOptions
+ RadioTelescopeOptions
+ GeologicalResearchCenterOptions
+ TechnicalUniversityOptions
+ EarlyDisasterWarningSystemOptions
+ WelfareOfficeOptions
+ CityHallOptions
+ LargeEmergencyShelterOptions
+ CentralBankOptions
+ MedicalUniversityOptions
+ LargeHadronColliderOptions
