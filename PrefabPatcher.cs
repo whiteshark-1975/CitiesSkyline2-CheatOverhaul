@@ -706,7 +706,7 @@ public static class PrefabPatcher
             var LoanEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.LoanInterest);
             LoanEffect.m_Delta = CityHalloverrides.CityLoanIntrest;
             var ImportEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.ImportCost);
-            LoanEffect.m_Delta = CityHalloverrides.CityImportCost;
+            ImportEffect.m_Delta = CityHalloverrides.CityImportCost;
 
         }
 
@@ -743,9 +743,9 @@ public static class PrefabPatcher
             var LoanEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.LoanInterest);
             LoanEffect.m_Delta = CentralBankoverrides.CityLoanIntrest;
             var ImportEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.ImportCost);
-            LoanEffect.m_Delta = CentralBankoverrides.CityImportCost;
+            ImportEffect.m_Delta = CentralBankoverrides.CityImportCost;
             var ExportEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.ExportCost);
-            LoanEffect.m_Delta = CentralBankoverrides.CityExportCost;
+            ExportEffect.m_Delta = CentralBankoverrides.CityExportCost;
 
         }
 

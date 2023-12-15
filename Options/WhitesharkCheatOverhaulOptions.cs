@@ -1221,7 +1221,7 @@ public class WhitesharkCheatOverhaulOptions
                 Electricityconsumption = 3500,
                 Waterconsumption = 1000,
                 GarbageAccumulation = 2500,
-                CityLoanIntrest = -1f,
+                CityLoanIntrest = -0.01f,
                 CityImportCost = -0.02f
                 
             }
@@ -1256,7 +1256,7 @@ public class WhitesharkCheatOverhaulOptions
                 Electricityconsumption = 15000,
                 Waterconsumption = 5000,
                 GarbageAccumulation = 15700,
-                CityLoanIntrest = -2f,
+                CityLoanIntrest = -0.02f,
                 CityImportCost = -0.05f,
                 CityExportCost = 0.05f
 
