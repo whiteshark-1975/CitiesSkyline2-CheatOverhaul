@@ -44,10 +44,21 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, FireHelicopterDepotOptions> FireHelicopterDepotOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, FirewatchTowerOptions> FirewatchTowerOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, PoliceStationOptions> PoliceStationOptions { get; private set; } = null!;
-
-
-
-
+    public static IReadOnlyDictionary<string, PrisonOptions> PrisonOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, DiseaseControlCenterOptions> DiseaseControlCenterOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, HeathResearchInstituteOptions> HeathResearchInstituteOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, RadioTelescopeOptions> RadioTelescopeOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, GeologicalResearchCenterOptions> GeologicalResearchCenterOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, TechnicalUniversityOptions> TechnicalUniversityOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, EarlyDisasterWarningSystemOptions> EarlyDisasterWarningSystemOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, WelfareOfficeOptions> WelfareOfficeOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, CityHallOptions> CityHallOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, LargeEmergencyShelterOptions> LargeEmergencyShelterOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, CentralBankOptions> CentralBankOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, MedicalUniversityOptions> MedicalUniversityOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, LargeHadronColliderOptions> LargeHadronColliderOptions { get; private set; } = null!;
+        
+     
 
 
     private void Awake()
@@ -98,6 +109,20 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.FireHelicopterDepotOptions = options.GetFireHelicopterDepotDictionary();
         WhitesharkCheatOverhaul.FirewatchTowerOptions = options.GetFirewatchTowerDictionary();
         WhitesharkCheatOverhaul.PoliceStationOptions = options.GetPoliceStationDictionary();
+        WhitesharkCheatOverhaul.PrisonOptions = options.GetPrisonDictionary();
+        WhitesharkCheatOverhaul.DiseaseControlCenterOptions = options.GetDiseaseControlCenterDictionary();
+        WhitesharkCheatOverhaul.HeathResearchInstituteOptions = options.GetHeathResearchInstituteDictionary();
+        WhitesharkCheatOverhaul.RadioTelescopeOptions = options.GetRadioTelescopeDictionary();
+        WhitesharkCheatOverhaul.GeologicalResearchCenterOptions = options.GetGeologicalResearchCenterDictionary();
+        WhitesharkCheatOverhaul.TechnicalUniversityOptions = options.GetTechnicalUniversityDictionary();
+        WhitesharkCheatOverhaul.EarlyDisasterWarningSystemOptions = options.GetEarlyDisasterWarningSystemDictionary();
+        WhitesharkCheatOverhaul.WelfareOfficeOptions = options.GetWelfareOfficeDictionary();
+        WhitesharkCheatOverhaul.CityHallOptions = options.GetCityHallDictionary();
+        WhitesharkCheatOverhaul.LargeEmergencyShelterOptions = options.GetLargeEmergencyShelterDictionary();
+        WhitesharkCheatOverhaul.CentralBankOptions = options.GetCentralBankDictionary();
+        WhitesharkCheatOverhaul.MedicalUniversityOptions = options.GetMedicalUniversityDictionary();
+        WhitesharkCheatOverhaul.LargeHadronColliderOptions = options.GetLargeHadronColliderDictionary();
+
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
 

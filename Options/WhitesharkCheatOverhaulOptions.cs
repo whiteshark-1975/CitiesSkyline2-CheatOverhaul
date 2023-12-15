@@ -1071,6 +1071,236 @@ public class WhitesharkCheatOverhaulOptions
 
             }
         },
+
+        Prison_Options = new List<PrisonOptions>
+        {
+            new PrisonOptions
+            {
+                Name = "Prison01",
+                UpkeepCost = 200000,
+                Electricityconsumption = 3500,
+                Waterconsumption = 5000,
+                GarbageAccumulation = 6300,
+                NoisePollution = 40000,
+                PrisonVanCapacity = 10,
+                PrisonerCapacity = 500,
+                CrimeAccumulation = -5f,
+                CrimeAccumlationRadius = 800
+
+            }
+
+            
+        },
+
+        DiseaseControlCenter_Options = new List<DiseaseControlCenterOptions>
+        {
+            new DiseaseControlCenterOptions
+            {
+                Name = "DiseaseControlCenter01",
+                Upkeep = 350000,
+                Electricityconsumption = 10000,
+                Waterconsumption = 5000,
+                GarbageAccumulation = 4700,
+                AmbulanceCapacity = 15,
+                MedicalHelicopterCapacity = 2,
+                PatientCapacity = 250,
+                TreatmentBonus = 45,
+                CityDiseaseprobability = -0.25f,
+                CityPollutionhealthAffect = -0.25f
+                
+            }
+
+        },
+
+        HeathResearchInstitute_Options = new List<HeathResearchInstituteOptions>
+        {
+            new HeathResearchInstituteOptions
+            {
+                Name = "HeathResearchInstitute01",
+                Upkeep = 160000,
+                Electricityconsumption = 10000,
+                Waterconsumption = 5000,
+                GarbageAccumulation = 18800,
+                CityDiseaseprobability = -0.1f,
+                CityParkEntertainment = 0.1f
+
+            }
+
+        },
+
+        RadioTelescope_Options = new List<RadioTelescopeOptions>
+        {
+            new RadioTelescopeOptions
+            {
+                Name = "RadioTelescope01",
+                Upkeep = 200000,
+                Electricityconsumption = 3500,
+                Waterconsumption = 5000,
+                GarbageAccumulation = 6300,
+                CityUniversityGraduation = 5f
+
+            }
+
+        },
+        GeologicalResearchCenter_Options = new List<GeologicalResearchCenterOptions>
+        {
+            new GeologicalResearchCenterOptions
+            {
+                Name = "GeologicalResearchCenter01",
+                Upkeep = 230000,
+                Electricityconsumption = 3500,
+                Waterconsumption = 10000,
+                GarbageAccumulation = 3800,
+                Noisepollution = 15000,
+                CityOreResourceAmmount = 2f,
+                CityOilResourceAmmount = 2f,
+                CityCollegegraduation = 3f
+
+            }
+
+        },
+
+        TechnicalUniversity_Options = new List<TechnicalUniversityOptions>
+        {
+            new TechnicalUniversityOptions
+            {
+                Name = "TechnicalUniversity01",
+                Upkeep = 160000,
+                Electricityconsumption = 10000,
+                Waterconsumption = 2500,
+                GarbageAccumulation = 2900,
+                StudentCapacity = 1500,
+                NoisePollution = 10000,
+                CityIndustrialEfficiency = 0.1f,
+                CityOfficeEfficiency = 0.1f
+
+            }
+
+        },
+
+        EarlyDisasterWarningSystem_Options = new List<EarlyDisasterWarningSystemOptions>
+        {
+            new EarlyDisasterWarningSystemOptions
+            {
+                Name = "EarlyDisasterWarningSystem01",
+                Upkeep = 240000,
+                Electricityconsumption = 15000,
+                Waterconsumption = 7500,
+                GarbageAccumulation = 6300,
+                CityDisasterWarningTime = 360f,
+                CityDisasterDamageRate = 0.2f
+
+            }
+
+        },
+
+        WelfareOffice_Options = new List<WelfareOfficeOptions>
+        {
+            new WelfareOfficeOptions
+            {
+                Name = "WelfareOffice01",
+                Upkeep = 45000,
+                Electricityconsumption = 1500,
+                Waterconsumption = 100,
+                GarbageAccumulation = 3200,
+                Range = 4000,
+                Capacity = 20000,
+                Magnitude = 12,
+                NoisePollution = 10000
+
+            }
+
+        },
+
+        CityHall_Options = new List<CityHallOptions>
+        {
+            new CityHallOptions
+            {
+                Name = "CityHall01",
+                Upkeep = 160000,
+                Electricityconsumption = 3500,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 2500,
+                CityLoanIntrest = -1f,
+                CityImportCost = -0.02f
+                
+            }
+
+        },
+
+        LargeEmergencyShelter_Options = new List<LargeEmergencyShelterOptions>
+        {
+            new LargeEmergencyShelterOptions
+            {
+                Name = "LargeEmergencyShelter01",
+                Upkeep = 60000,
+                Electricityconsumption = 15000,
+                Waterconsumption = 5000,
+                GarbageAccumulation = 15700,
+                ShelterCapacity = 25000,
+                VehicleCapacity = 20,
+                Range = 3000,
+                Capacity= 50000,
+                Magnitude = 10
+
+            }
+
+        },
+
+        CentralBank_Options = new List<CentralBankOptions>
+        {
+            new CentralBankOptions
+            {
+                Name = "CentralBank01",
+                Upkeep = 60000,
+                Electricityconsumption = 15000,
+                Waterconsumption = 5000,
+                GarbageAccumulation = 15700,
+                CityLoanIntrest = -2f,
+                CityImportCost = -0.05f,
+                CityExportCost = 0.05f
+
+            }
+
+        },
+
+        MedicalUniversity_Options = new List<MedicalUniversityOptions>
+        {
+            new MedicalUniversityOptions
+            {
+                Name = "MedicalUniversity01",
+                Upkeep = 240000,
+                Electricityconsumption = 8000,
+                Waterconsumption = 2500,
+                GarbageAccumulation = 2900,
+                StudentCapacity = 1500,
+                NoisePollution = 10000,
+                CityRecoverFailChange = -0.25f,
+                CityHospitalEfficiency = 0.1f
+
+            }
+
+        },
+
+        LargeHadronCollider_Options = new List<LargeHadronColliderOptions>
+        {
+            new LargeHadronColliderOptions
+            {
+                Name = "LargeHadronCollider01",
+                Upkeep = 400000,
+                Electricityconsumption = 100000,
+                Waterconsumption = 250000,
+                GarbageAccumulation = 18800,
+                CityUniversityInterest = 0.15f,
+                CityOfficeSoftwareDemand = 0.2f,
+                CityIndustrialElectronicDemand = 0.2f,
+                CityOfficeSoftwareEfficiency = 0.05f,
+                CityIndustrialElectronicEfficiency = 0.05f
+                
+            }
+
+        }
+
     };
 
     public IEnumerable<SchoolOptions> School_Options { get; set; }
@@ -1101,8 +1331,20 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<FireHelicopterDepotOptions> FireHelicopterDepot_Options { get; set; }
     public IEnumerable<FirewatchTowerOptions> FirewatchTower_Options { get; set; }
     public IEnumerable<PoliceStationOptions> PoliceStation_Options { get; set; }
-
-
+    public IEnumerable<PrisonOptions> Prison_Options { get; set; }
+    public IEnumerable<DiseaseControlCenterOptions> DiseaseControlCenter_Options { get; set; }
+    public IEnumerable<HeathResearchInstituteOptions> HeathResearchInstitute_Options { get; set; }
+    public IEnumerable<RadioTelescopeOptions> RadioTelescope_Options { get; set; }
+    public IEnumerable<GeologicalResearchCenterOptions> GeologicalResearchCenter_Options { get; set; }
+    public IEnumerable<TechnicalUniversityOptions> TechnicalUniversity_Options { get; set; }
+    public IEnumerable<EarlyDisasterWarningSystemOptions> EarlyDisasterWarningSystem_Options { get; set; }
+    public IEnumerable<WelfareOfficeOptions> WelfareOffice_Options { get; set; }
+    public IEnumerable<CityHallOptions> CityHall_Options { get; set; }
+    public IEnumerable<LargeEmergencyShelterOptions> LargeEmergencyShelter_Options { get; set; }
+    public IEnumerable<CentralBankOptions> CentralBank_Options { get; set; }
+    public IEnumerable<MedicalUniversityOptions> MedicalUniversity_Options { get; set; }
+    public IEnumerable<LargeHadronColliderOptions> LargeHadronCollider_Options { get; set; }
+    
 
 
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
@@ -1357,7 +1599,130 @@ public class WhitesharkCheatOverhaulOptions
         }
         return PoliceStationdict;
     }
-        public void RemoveBadEntires()
+    public IReadOnlyDictionary<string, PrisonOptions> GetPrisonDictionary()
+    {
+        var Prisondict = new Dictionary<string, PrisonOptions>();
+        foreach (var Prison_option in Prison_Options)
+        {
+            Prisondict.Add(Prison_option.Name, Prison_option);
+        }
+        return Prisondict;
+    }
+    public IReadOnlyDictionary<string, DiseaseControlCenterOptions> GetDiseaseControlCenterDictionary()
+    {
+        var DiseaseControlCenterdict = new Dictionary<string, DiseaseControlCenterOptions>();
+        foreach (var DiseaseControlCenter_option in DiseaseControlCenter_Options)
+        {
+            DiseaseControlCenterdict.Add(DiseaseControlCenter_option.Name, DiseaseControlCenter_option);
+        }
+        return DiseaseControlCenterdict;
+    }
+    public IReadOnlyDictionary<string, HeathResearchInstituteOptions> GetHeathResearchInstituteDictionary()
+    {
+        var HeathResearchInstitutedict = new Dictionary<string, HeathResearchInstituteOptions>();
+        foreach (var HeathResearchInstitute_option in HeathResearchInstitute_Options)
+        {
+            HeathResearchInstitutedict.Add(HeathResearchInstitute_option.Name, HeathResearchInstitute_option);
+        }
+        return HeathResearchInstitutedict;
+    }
+    public IReadOnlyDictionary<string, RadioTelescopeOptions> GetRadioTelescopeDictionary()
+    {
+        var RadioTelescopedict = new Dictionary<string, RadioTelescopeOptions>();
+        foreach (var RadioTelescope_option in RadioTelescope_Options)
+        {
+            RadioTelescopedict.Add(RadioTelescope_option.Name, RadioTelescope_option);
+        }
+        return RadioTelescopedict;
+    }
+    public IReadOnlyDictionary<string, GeologicalResearchCenterOptions> GetGeologicalResearchCenterDictionary()
+    {
+        var GeologicalResearchCenterdict = new Dictionary<string, GeologicalResearchCenterOptions>();
+        foreach (var GeologicalResearchCenter_option in GeologicalResearchCenter_Options)
+        {
+            GeologicalResearchCenterdict.Add(GeologicalResearchCenter_option.Name, GeologicalResearchCenter_option);
+        }
+        return GeologicalResearchCenterdict;
+    }
+    public IReadOnlyDictionary<string, TechnicalUniversityOptions> GetTechnicalUniversityDictionary()
+    {
+        var TechnicalUniversitydict = new Dictionary<string, TechnicalUniversityOptions>();
+        foreach (var TechnicalUniversity_option in TechnicalUniversity_Options)
+        {
+            TechnicalUniversitydict.Add(TechnicalUniversity_option.Name, TechnicalUniversity_option);
+        }
+        return TechnicalUniversitydict;
+    }
+    public IReadOnlyDictionary<string, EarlyDisasterWarningSystemOptions> GetEarlyDisasterWarningSystemDictionary()
+    {
+        var EarlyDisasterWarningSystemdict = new Dictionary<string, EarlyDisasterWarningSystemOptions>();
+        foreach (var EarlyDisasterWarningSystem_option in EarlyDisasterWarningSystem_Options)
+        {
+            EarlyDisasterWarningSystemdict.Add(EarlyDisasterWarningSystem_option.Name, EarlyDisasterWarningSystem_option);
+        }
+        return EarlyDisasterWarningSystemdict;
+    }
+    public IReadOnlyDictionary<string, WelfareOfficeOptions> GetWelfareOfficeDictionary()
+    {
+        var WelfareOfficedict = new Dictionary<string, WelfareOfficeOptions>();
+        foreach (var WelfareOffice_option in WelfareOffice_Options)
+        {
+            WelfareOfficedict.Add(WelfareOffice_option.Name, WelfareOffice_option);
+        }
+        return WelfareOfficedict;
+    }
+    public IReadOnlyDictionary<string, CityHallOptions> GetCityHallDictionary()
+    {
+        var CityHalldict = new Dictionary<string, CityHallOptions>();
+        foreach (var CityHall_option in CityHall_Options)
+        {
+            CityHalldict.Add(CityHall_option.Name, CityHall_option);
+        }
+        return CityHalldict;
+    }
+    public IReadOnlyDictionary<string, LargeEmergencyShelterOptions> GetLargeEmergencyShelterDictionary()
+    {
+        var LargeEmergencyShelterdict = new Dictionary<string, LargeEmergencyShelterOptions>();
+        foreach (var LargeEmergencyShelter_option in LargeEmergencyShelter_Options)
+        {
+            LargeEmergencyShelterdict.Add(LargeEmergencyShelter_option.Name, LargeEmergencyShelter_option);
+        }
+        return LargeEmergencyShelterdict;
+    }
+    public IReadOnlyDictionary<string, CentralBankOptions> GetCentralBankDictionary()
+    {
+        var CentralBankdict = new Dictionary<string, CentralBankOptions>();
+        foreach (var CentralBank_option in CentralBank_Options)
+        {
+            CentralBankdict.Add(CentralBank_option.Name, CentralBank_option);
+        }
+        return CentralBankdict;
+    }
+    public IReadOnlyDictionary<string, MedicalUniversityOptions> GetMedicalUniversityDictionary()
+    {
+        var MedicalUniversitydict = new Dictionary<string, MedicalUniversityOptions>();
+        foreach (var MedicalUniversity_option in MedicalUniversity_Options)
+        {
+            MedicalUniversitydict.Add(MedicalUniversity_option.Name, MedicalUniversity_option);
+        }
+        return MedicalUniversitydict;
+    }
+    public IReadOnlyDictionary<string, LargeHadronColliderOptions> GetLargeHadronColliderDictionary()
+    {
+        var LargeHadronColliderdict = new Dictionary<string, LargeHadronColliderOptions>();
+        foreach (var LargeHadronCollider_option in LargeHadronCollider_Options)
+        {
+            LargeHadronColliderdict.Add(LargeHadronCollider_option.Name, LargeHadronCollider_option);
+        }
+        return LargeHadronColliderdict;
+    }
+    
+
+
+
+
+
+    public void RemoveBadEntires()
     {
          School_Options = School_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) && 
@@ -1651,6 +2016,144 @@ public class WhitesharkCheatOverhaulOptions
             x.Capacity >= 0 &&
             x.Magnitude >= 0 &&
             x.Noisepollution >= 0);
-        
+
+        Prison_Options = Prison_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.UpkeepCost >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.PrisonVanCapacity >= 0 &&
+            x.PrisonerCapacity >= 0 &&
+            x.CrimeAccumulation <= 0 &&
+            x.CrimeAccumlationRadius >= 0 &&
+            x.NoisePollution >= 0);
+
+        DiseaseControlCenter_Options = DiseaseControlCenter_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.AmbulanceCapacity >= 0 &&
+            x.MedicalHelicopterCapacity >= 0 &&
+            x.PatientCapacity >= 0 &&
+            x.TreatmentBonus >= 0 &&
+            x.CityDiseaseprobability <= 0 &&
+            x.CityPollutionhealthAffect <= 0);
+
+        HeathResearchInstitute_Options = HeathResearchInstitute_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.CityDiseaseprobability <= 0 &&
+            x.CityParkEntertainment >= 0);
+
+        RadioTelescope_Options = RadioTelescope_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.CityUniversityGraduation >= 0);
+
+        GeologicalResearchCenter_Options = GeologicalResearchCenter_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Noisepollution >= 0 &&
+            x.CityOreResourceAmmount >= 0 &&
+            x.CityOilResourceAmmount >= 0 &&
+            x.CityCollegegraduation >= 0);
+
+        TechnicalUniversity_Options = TechnicalUniversity_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.StudentCapacity >= 0 &&
+            x.NoisePollution >= 0 &&
+            x.CityIndustrialEfficiency >= 0 &&
+            x.CityOfficeEfficiency >= 0);
+
+        EarlyDisasterWarningSystem_Options = EarlyDisasterWarningSystem_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.CityDisasterWarningTime >= 0 &&
+            x.CityDisasterDamageRate <= 0);
+
+        WelfareOffice_Options = WelfareOffice_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Range >= 0 &&
+            x.Capacity >= 0 &&
+            x.Magnitude >= 0 &&
+            x.NoisePollution >= 0);
+
+        CityHall_Options = CityHall_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.CityLoanIntrest <= 0 &&
+            x.CityImportCost <= 0);
+
+        LargeEmergencyShelter_Options = LargeEmergencyShelter_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.ShelterCapacity >= 0 &&
+            x.VehicleCapacity >= 0 &&
+            x.Range >= 0 &&
+            x.Capacity >= 0 &&
+            x.Magnitude >= 0);
+
+        CentralBank_Options = CentralBank_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.CityLoanIntrest <= 0 &&
+            x.CityImportCost <= 0 &&
+            x.CityExportCost >= 0);
+
+        MedicalUniversity_Options = MedicalUniversity_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.StudentCapacity >= 0 &&
+            x.NoisePollution >= 0 &&
+            x.CityRecoverFailChange <= 0 &&
+            x.CityHospitalEfficiency >= 0);
+
+        LargeHadronCollider_Options = LargeHadronCollider_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.CityUniversityInterest >= 0 &&
+            x.CityOfficeSoftwareDemand >= 0 &&
+            x.CityIndustrialElectronicDemand >= 0 &&
+            x.CityOfficeSoftwareEfficiency >= 0 &&
+            x.CityIndustrialElectronicEfficiency >= 0);
+               
     }
 }
