@@ -39,3 +39,6 @@
  CentralBankOptions
  MedicalUniversityOptions
  LargeHadronColliderOptions
+ PublicTransportStopsOptions
+ PublicTransportDepotsOptions
+ PublicTransportStationsOptions
