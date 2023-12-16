@@ -33,6 +33,9 @@
 * FireHelicopterDepotOptions
 * FirewatchTowerOptions
 * PoliceStationOptions
+* PublicTransportStopsOptions
+* PublicTransportDepotsOptions
+* PublicTransportStationsOptions
 
 ## A setting File will be created at 1st run.
 Location for settingsfile:
