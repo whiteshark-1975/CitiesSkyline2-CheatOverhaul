@@ -795,7 +795,66 @@ public static class PrefabPatcher
 
         }
 
+        if (WhitesharkCheatOverhaul.PublicTransportStopsOptions.TryGetValue(prefab.name, out var PublicTransportStopsoverrides))
+        {
 
+            var StopComponent = prefab.GetComponent<TransportStop>();
+            StopComponent.m_EnterDistance = PublicTransportStopsoverrides.EnterDistance;
+            StopComponent.m_ExitDistance = PublicTransportStopsoverrides.ExitDistance;
+            StopComponent.m_AccessDistance = PublicTransportStopsoverrides.AccessDistance;
+            StopComponent.m_BoardingTime = PublicTransportStopsoverrides.BoardingTime;
+            StopComponent.m_ComfortFactor = PublicTransportStopsoverrides.ComfortFactor;
+            StopComponent.m_LoadingFactor = PublicTransportStopsoverrides.LoadingFactor;
+
+        }
+
+        if (WhitesharkCheatOverhaul.PublicTransportDepotsOptions.TryGetValue(prefab.name, out var PublicTransportDepotssoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = PublicTransportDepotssoverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = PublicTransportDepotssoverrides.Electricityconsumption;
+            ServiceComponent.m_WaterConsumption = PublicTransportDepotssoverrides.Waterconsumption;
+            ServiceComponent.m_GarbageAccumulation = PublicTransportDepotssoverrides.GarbageAccumulation;
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_NoisePollution = PublicTransportDepotssoverrides.NoisePollution;
+            PollutionComponent.m_AirPollution = PublicTransportDepotssoverrides.AirPollution;
+
+            var DepotsComponent = prefab.GetComponent<Game.Prefabs.TransportDepot>();
+            DepotsComponent.m_VehicleCapacity = PublicTransportDepotssoverrides.VehicleCapacity;
+            DepotsComponent.m_MaintenanceDuration = PublicTransportDepotssoverrides.MaintenanceDuration;
+
+        }
+
+        if (WhitesharkCheatOverhaul.PublicTransportStationsOptions.TryGetValue(prefab.name, out var PublicTransportStationssoverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = PublicTransportStationssoverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = PublicTransportStationssoverrides.Electricityconsumption;
+            ServiceComponent.m_WaterConsumption = PublicTransportStationssoverrides.Waterconsumption;
+            ServiceComponent.m_GarbageAccumulation = PublicTransportStationssoverrides.GarbageAccumulation;
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_NoisePollution = PublicTransportStationssoverrides.NoisePollution;
+
+            if (prefab.name == "CargoTrainTerminal01" || prefab.name == "CargoHarbor01")
+            {
+                var StorageComponent = prefab.GetComponent<Game.Prefabs.StorageLimit>();
+                StorageComponent.storageLimit = PublicTransportStationssoverrides.StorageLimit;
+
+                var CargoTransportComponent = prefab.GetComponent<Game.Prefabs.CargoTransportStation>();
+                CargoTransportComponent.transports = PublicTransportStationssoverrides.Transports;
+
+            }
+            if (prefab.name != "CargoTrainTerminal01" && prefab.name != "CargoHarbor01")
+            {
+                var TransportComponent = prefab.GetComponent<Game.Prefabs.TransportStation>();
+                TransportComponent.m_ComfortFactor = PublicTransportStationssoverrides.ComfortFactor;
+            }
+
+        }
 
 
 

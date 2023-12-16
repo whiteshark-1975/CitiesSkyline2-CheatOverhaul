@@ -423,7 +423,6 @@ public class WhitesharkCheatOverhaulOptions
             }
         },
     
-
         Healthcare_Options = new List<HealthcareOptions>
         {
             new HealthcareOptions
@@ -1142,6 +1141,7 @@ public class WhitesharkCheatOverhaulOptions
             }
 
         },
+
         GeologicalResearchCenter_Options = new List<GeologicalResearchCenterOptions>
         {
             new GeologicalResearchCenterOptions
@@ -1299,8 +1299,268 @@ public class WhitesharkCheatOverhaulOptions
                 
             }
 
-        }
+        },
 
+        PublicTransportStops_Options = new List<PublicTransportStopsOptions>
+        {
+            new PublicTransportStopsOptions
+            {
+                Name = "EU_BusStop01",
+                EnterDistance = 10f,
+                ExitDistance = 7f,
+                AccessDistance = 4f,
+                BoardingTime = 1.5f,
+                ComfortFactor = 0.1f,
+                LoadingFactor = 0
+
+            },
+            new PublicTransportStopsOptions
+            {
+                Name = "EU_BusStop02",
+                EnterDistance = 10f,
+                ExitDistance = 7f,
+                AccessDistance = 6f,
+                BoardingTime = 1f,
+                ComfortFactor = 0.4f,
+                LoadingFactor = 0
+
+            },
+            new PublicTransportStopsOptions
+            {
+                Name = "NA_BusStop01",
+                EnterDistance = 10f,
+                ExitDistance = 7f,
+                AccessDistance = 4f,
+                BoardingTime = 1.5f,
+                ComfortFactor = 0.1f,
+                LoadingFactor = 0
+
+            },
+            new PublicTransportStopsOptions
+            {
+                Name = "NA_BusStop02",
+                EnterDistance = 10f,
+                ExitDistance = 7f,
+                AccessDistance = 6f,
+                BoardingTime = 1f,
+                ComfortFactor = 0.4f,
+                LoadingFactor = 0
+
+            },
+            new PublicTransportStopsOptions
+            {
+                Name = "EU_TaxiStop01",
+                EnterDistance = 20f,
+                ExitDistance = 4f,
+                AccessDistance = 2f,
+                BoardingTime = 15f,
+                ComfortFactor = 0.1f,
+                LoadingFactor = 0
+
+            },
+            new PublicTransportStopsOptions
+            {
+                Name = "EU_TaxiStop02",
+                EnterDistance = 20f,
+                ExitDistance = 4f,
+                AccessDistance = 3f,
+                BoardingTime = 10f,
+                ComfortFactor = 0.4f,
+                LoadingFactor = 0
+
+            },
+            new PublicTransportStopsOptions
+            {
+                Name = "NA_TaxiStop01",
+                EnterDistance = 20f,
+                ExitDistance = 4f,
+                AccessDistance = 2f,
+                BoardingTime = 15f,
+                ComfortFactor = 0.1f,
+                LoadingFactor = 0
+
+            },
+            new PublicTransportStopsOptions
+            {
+                Name = "NA_TaxiStop02",
+                EnterDistance = 20f,
+                ExitDistance = 4f,
+                AccessDistance = 3f,
+                BoardingTime = 10f,
+                ComfortFactor = 0.4f,
+                LoadingFactor = 0
+
+            },
+            new PublicTransportStopsOptions
+            {
+                Name = "EU_TramStop01",
+                EnterDistance = 0f,
+                ExitDistance = 0f,
+                AccessDistance = 13f,
+                BoardingTime = 0.6f,
+                ComfortFactor = 0.1f,
+                LoadingFactor = 0
+
+            },
+            new PublicTransportStopsOptions
+            {
+                Name = "NA_TramStop01",
+                EnterDistance = 0f,
+                ExitDistance = 0f,
+                AccessDistance = 13f,
+                BoardingTime = 0.6f,
+                ComfortFactor = 0.1f,
+                LoadingFactor = 0
+
+            }
+
+        },
+
+        PublicTransportDepots_Options = new List<PublicTransportDepotsOptions>
+        {
+            new PublicTransportDepotsOptions
+            {
+                Name = "BusDepot01",
+                Upkeep = 62000,
+                Electricityconsumption = 2000,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 700,
+                AirPollution = 2500,
+                NoisePollution = 10000,
+                VehicleCapacity = 25,
+                MaintenanceDuration = 0.01f
+            },
+            new PublicTransportDepotsOptions
+            {
+                Name = "TaxiDepot01",
+                Upkeep = 28000,
+                Electricityconsumption = 1500,
+                Waterconsumption = 500,
+                GarbageAccumulation = 700,
+                AirPollution = 0,
+                NoisePollution = 5000,
+                VehicleCapacity = 20,
+                MaintenanceDuration = 0.007f
+            },
+            new PublicTransportDepotsOptions
+            {
+                Name = "RailYard01",
+                Upkeep = 30000,
+                Electricityconsumption = 7000,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 1000,
+                AirPollution = 0,
+                NoisePollution = 30000,
+                VehicleCapacity = 10,
+                MaintenanceDuration = 0.014f
+            },
+            new PublicTransportDepotsOptions
+            {
+                Name = "TramDepot01",
+                Upkeep = 23000,
+                Electricityconsumption = 5000,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 800,
+                AirPollution = 0,
+                NoisePollution = 15000,
+                VehicleCapacity = 10,
+                MaintenanceDuration = 0.014f
+            },
+            new PublicTransportDepotsOptions
+            {
+                Name = "SubwayYard01",
+                Upkeep = 48000,
+                Electricityconsumption = 8000,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 1000,
+                AirPollution = 0,
+                NoisePollution = 25000,
+                VehicleCapacity = 10,
+                MaintenanceDuration = 0.014f
+            }
+        },
+        PublicTransportStations_Options = new List<PublicTransportStationsOptions>
+        {
+            new PublicTransportStationsOptions
+            {
+                Name = "BusStation01",
+                Upkeep = 56000,
+                Electricityconsumption = 2500,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 700,
+                NoisePollution = 10000,
+                ComfortFactor = 0.5f
+
+            },
+            new PublicTransportStationsOptions
+            {
+                Name = "TrainStation01",
+                Upkeep = 23000,
+                Electricityconsumption = 5000,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 600,
+                NoisePollution = 15000,
+                ComfortFactor = 0.5f
+
+            },
+            new PublicTransportStationsOptions
+            {
+                Name = "CargoTrainTerminal01",
+                Upkeep = 30000,
+                Electricityconsumption = 11600,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 1600,
+                NoisePollution = 25000,
+                StorageLimit = 15500000,
+                Transports = 16
+
+            },
+            new PublicTransportStationsOptions
+            {
+                Name = "SubwayStation01",
+                Upkeep = 10000,
+                Electricityconsumption = 5000,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 500,
+                NoisePollution = 5000,
+                ComfortFactor = 0.5f
+
+            },
+            new PublicTransportStationsOptions
+            {
+                Name = "SubwayStation02",
+                Upkeep = 10000,
+                Electricityconsumption = 8000,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 500,
+                NoisePollution = 10000,
+                ComfortFactor = 0.5f
+
+            },
+            new PublicTransportStationsOptions
+            {
+                Name = "Harbor01",
+                Upkeep = 60000,
+                Electricityconsumption = 16000,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 3200,
+                NoisePollution = 25000,
+                ComfortFactor = 0.5f
+
+            },
+            new PublicTransportStationsOptions
+            {
+                Name = "CargoHarbor01",
+                Upkeep = 67000,
+                Electricityconsumption = 25000,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 6300,
+                NoisePollution = 100000,
+                StorageLimit = 15500000,
+                Transports = 24
+
+            }
+        }
     };
 
     public IEnumerable<SchoolOptions> School_Options { get; set; }
@@ -1344,7 +1604,17 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<CentralBankOptions> CentralBank_Options { get; set; }
     public IEnumerable<MedicalUniversityOptions> MedicalUniversity_Options { get; set; }
     public IEnumerable<LargeHadronColliderOptions> LargeHadronCollider_Options { get; set; }
-    
+    public IEnumerable<PublicTransportStopsOptions> PublicTransportStops_Options { get; set; }
+    public IEnumerable<PublicTransportDepotsOptions> PublicTransportDepots_Options { get; set; }
+    public IEnumerable<PublicTransportStationsOptions> PublicTransportStations_Options { get; set; }
+
+
+
+
+
+
+
+
 
 
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
@@ -1716,7 +1986,33 @@ public class WhitesharkCheatOverhaulOptions
         }
         return LargeHadronColliderdict;
     }
-    
+    public IReadOnlyDictionary<string, PublicTransportStopsOptions> GetPublicTransportStopsDictionary()
+    {
+        var PublicTransportStopsdict = new Dictionary<string, PublicTransportStopsOptions>();
+        foreach (var PublicTransportStops_option in PublicTransportStops_Options)
+        {
+            PublicTransportStopsdict.Add(PublicTransportStops_option.Name, PublicTransportStops_option);
+        }
+        return PublicTransportStopsdict;
+    }
+    public IReadOnlyDictionary<string, PublicTransportDepotsOptions> GetPublicTransportDepotsDictionary()
+    {
+        var PublicTransportDepotsdict = new Dictionary<string, PublicTransportDepotsOptions>();
+        foreach (var PublicTransportDepots_option in PublicTransportDepots_Options)
+        {
+            PublicTransportDepotsdict.Add(PublicTransportDepots_option.Name, PublicTransportDepots_option);
+        }
+        return PublicTransportDepotsdict;
+    }
+    public IReadOnlyDictionary<string, PublicTransportStationsOptions> GetPublicTransportStationsDictionary()
+    {
+        var PublicTransportStationsdict = new Dictionary<string, PublicTransportStationsOptions>();
+        foreach (var PublicTransportStations_option in PublicTransportStations_Options)
+        {
+            PublicTransportStationsdict.Add(PublicTransportStations_option.Name, PublicTransportStations_option);
+        }
+        return PublicTransportStationsdict;
+    }
 
 
 
@@ -2154,6 +2450,37 @@ public class WhitesharkCheatOverhaulOptions
             x.CityIndustrialElectronicDemand >= 0 &&
             x.CityOfficeSoftwareEfficiency >= 0 &&
             x.CityIndustrialElectronicEfficiency >= 0);
-               
+
+        PublicTransportStops_Options = PublicTransportStops_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.EnterDistance >= 0 &&
+            x.ExitDistance >= 0 &&
+            x.AccessDistance >= 0 &&
+            x.BoardingTime >= 0 &&
+            x.ComfortFactor >= 0 &&
+            x.LoadingFactor >= 0);
+
+        PublicTransportDepots_Options = PublicTransportDepots_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.AirPollution >= 0 &&
+            x.NoisePollution >= 0 &&
+            x.VehicleCapacity >= 0 &&
+            x.MaintenanceDuration >= 0);
+
+        PublicTransportStations_Options = PublicTransportStations_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.NoisePollution >= 0 &&
+            x.StorageLimit >= 0 &&
+            x.Transports >= 0 &&
+            x.ComfortFactor >= 0);
+
     }
 }

@@ -57,8 +57,10 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, CentralBankOptions> CentralBankOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, MedicalUniversityOptions> MedicalUniversityOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, LargeHadronColliderOptions> LargeHadronColliderOptions { get; private set; } = null!;
-        
-     
+    public static IReadOnlyDictionary<string, PublicTransportStopsOptions> PublicTransportStopsOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, PublicTransportDepotsOptions> PublicTransportDepotsOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, PublicTransportStationsOptions> PublicTransportStationsOptions { get; private set; } = null!;
+
 
 
     private void Awake()
@@ -122,7 +124,9 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.CentralBankOptions = options.GetCentralBankDictionary();
         WhitesharkCheatOverhaul.MedicalUniversityOptions = options.GetMedicalUniversityDictionary();
         WhitesharkCheatOverhaul.LargeHadronColliderOptions = options.GetLargeHadronColliderDictionary();
-
+        WhitesharkCheatOverhaul.PublicTransportStopsOptions = options.GetPublicTransportStopsDictionary();
+        WhitesharkCheatOverhaul.PublicTransportDepotsOptions = options.GetPublicTransportDepotsDictionary();
+        WhitesharkCheatOverhaul.PublicTransportStationsOptions = options.GetPublicTransportStationsDictionary();
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
 
