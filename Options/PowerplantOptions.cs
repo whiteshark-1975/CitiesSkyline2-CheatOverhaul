@@ -11,4 +11,5 @@ public class PowerplantOptions
     public int GroundPollution { get; set; }
     public int NoisePollution { get; set; }
     public int Production { get; set; }
+    public float modifier { get; set; }
 }

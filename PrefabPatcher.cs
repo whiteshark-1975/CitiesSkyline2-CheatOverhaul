@@ -30,7 +30,6 @@ public static class PrefabPatcher
 
         if (WhitesharkCheatOverhaul.PowerplantOptions.TryGetValue(prefab.name, out var Powerplantoverrides))
         {
-            
                 var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
                 ServiceComponent.m_Upkeep = Powerplantoverrides.UpkeepCost;
                 ServiceComponent.m_GarbageAccumulation = Powerplantoverrides.GarbageAccumulation;
@@ -855,18 +854,6 @@ public static class PrefabPatcher
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         return true;

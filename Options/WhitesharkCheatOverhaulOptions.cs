@@ -81,7 +81,8 @@ public class WhitesharkCheatOverhaulOptions
                 AirPollution = 100000,
                 GroundPollution = 100000,
                 NoisePollution = 100000,
-                Production = 3000000
+                Production = 3000000,
+                modifier = 0f
             },
             new PowerplantOptions
             {
