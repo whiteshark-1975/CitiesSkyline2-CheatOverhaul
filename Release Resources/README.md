@@ -49,6 +49,8 @@
 * PublicTransportStopsOptions
 * PublicTransportDepotsOptions
 * PublicTransportStationsOptions
+* AirportOptions
+* SpaceCenterOptions
 
 ## A setting File will be created at 1st run.
 Location for settingsfile:

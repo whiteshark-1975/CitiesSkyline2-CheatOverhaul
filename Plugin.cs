@@ -60,6 +60,8 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, PublicTransportStopsOptions> PublicTransportStopsOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, PublicTransportDepotsOptions> PublicTransportDepotsOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, PublicTransportStationsOptions> PublicTransportStationsOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, AirportOptions> AirportOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, SpaceCenterOptions> SpaceCenterOptions { get; private set; } = null!;
 
 
 
@@ -127,6 +129,10 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.PublicTransportStopsOptions = options.GetPublicTransportStopsDictionary();
         WhitesharkCheatOverhaul.PublicTransportDepotsOptions = options.GetPublicTransportDepotsDictionary();
         WhitesharkCheatOverhaul.PublicTransportStationsOptions = options.GetPublicTransportStationsDictionary();
+        WhitesharkCheatOverhaul.AirportOptions = options.GetAirportDictionary();
+        WhitesharkCheatOverhaul.SpaceCenterOptions = options.GetSpaceCenterDictionary();
+
+
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
 

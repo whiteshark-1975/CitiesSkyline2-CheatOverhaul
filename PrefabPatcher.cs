@@ -132,8 +132,8 @@ public static class PrefabPatcher
 
             var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
             ServiceComponent.m_Upkeep = Cityparkoverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = Cityparkoverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = Cityparkoverrides.Waterconsumption;
+            ServiceComponent.m_ElectricityConsumption = Cityparkoverrides.ElectricityConsumption;
+            ServiceComponent.m_WaterConsumption = Cityparkoverrides.WaterConsumption;
             ServiceComponent.m_GarbageAccumulation = Cityparkoverrides.GarbageAccumulation;
 
             var CoverageComponent = prefab.GetComponent<ServiceCoverage>();
@@ -855,7 +855,86 @@ public static class PrefabPatcher
 
         }
 
+        if (WhitesharkCheatOverhaul.AirportOptions.TryGetValue(prefab.name, out var Airportoverrides))
+        {
 
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Airportoverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = Airportoverrides.Electricityconsumption;
+            ServiceComponent.m_WaterConsumption = Airportoverrides.Waterconsumption;
+            ServiceComponent.m_GarbageAccumulation = Airportoverrides.GarbageAccumulation;
+
+            if (prefab.name == "InternationalAirport01")
+            {
+                var StorageComponent = prefab.GetComponent<Game.Prefabs.StorageLimit>();
+                StorageComponent.storageLimit = Airportoverrides.StorageLimit;
+
+                var UniversityComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+                var UniversityEffect = UniversityComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityInterest);
+                UniversityEffect.m_Delta = Airportoverrides.UniversityInterest;
+
+                var OfficeSoftwareComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+                var OfficeSoftwareEffect = OfficeSoftwareComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareDemand);
+                OfficeSoftwareEffect.m_Delta = Airportoverrides.OfficeSoftwareDemand;
+
+            }
+
+            var CargoTransportComponent = prefab.GetComponent<Game.Prefabs.CargoTransportStation>();
+            CargoTransportComponent.transports = Airportoverrides.Transports;
+
+            var ComfortComponent = prefab.GetComponent<Game.Prefabs.TransportStation>();
+            ComfortComponent.m_ComfortFactor = Airportoverrides.ComfortFactor;
+
+            var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+            var AttractionEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.Attractiveness);
+            AttractionEffect.m_Delta = Airportoverrides.Attractiveness;
+
+            if (prefab.name == "Airport01")
+            {
+                var OfficeComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+                var OfficeEfficiencyEffect = OfficeComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeEfficiency);
+                OfficeEfficiencyEffect.m_Delta = Airportoverrides.OfficeEfficiency;
+
+            }
+
+        }
+
+        if (WhitesharkCheatOverhaul.SpaceCenterOptions.TryGetValue(prefab.name, out var SpaceCenteroverrides))
+        {
+
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = SpaceCenteroverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = SpaceCenteroverrides.Electricityconsumption;
+            ServiceComponent.m_WaterConsumption = SpaceCenteroverrides.Waterconsumption;
+            ServiceComponent.m_GarbageAccumulation = SpaceCenteroverrides.GarbageAccumulation;
+
+            var TransportComponent = prefab.GetComponent<Game.Prefabs.TransportDepot>();
+            TransportComponent.m_VehicleCapacity = SpaceCenteroverrides.VehicleCapacity;
+            TransportComponent.m_ProductionDuration = SpaceCenteroverrides.ProductionDuration;
+
+            var AttractionComponent = prefab.GetComponent<Game.Prefabs.Attraction>();
+            AttractionComponent.m_Attractiveness = SpaceCenteroverrides.Attractiveness;
+
+            var UniversityComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+            var UniversityEffect = UniversityComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityInterest);
+            UniversityEffect.m_Delta = SpaceCenteroverrides.UniversityInterest;
+
+            var OfficeSoftwareComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+            var OfficeSoftwareEffect = OfficeSoftwareComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareDemand);
+            OfficeSoftwareEffect.m_Delta = SpaceCenteroverrides.OfficeSoftwareDemand;
+
+            var IndustrialComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+            var IndustrialEffect = IndustrialComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialElectronicsDemand);
+            IndustrialEffect.m_Delta = SpaceCenteroverrides.IndustrialElectronicsDemand;
+
+            var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+            var AttractionEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.Attractiveness);
+            AttractionEffect.m_Delta = SpaceCenteroverrides.Attractiveness;
+
+            var LeisureComponent = prefab.GetComponent<Game.Prefabs.LeisureProvider>();
+            LeisureComponent.m_Efficiency = SpaceCenteroverrides.LeisureEfficiency;
+
+        }
         return true;
     }
 }

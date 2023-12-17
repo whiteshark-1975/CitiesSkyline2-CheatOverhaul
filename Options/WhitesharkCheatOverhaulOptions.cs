@@ -277,56 +277,287 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "CityPark01",
                 Upkeep = 2000,
+                ElectricityConsumption = 500,
+                WaterConsumption = 0,
+                GarbageAccumulation = 100,
                 Range = 2500,
                 Capacity = 800,
                 Magnitude = 10,
                 Attractiveness = 1,
-                Efficiency = 1,
-                Electricityconsumption = 500,
-                Waterconsumption = 0,
-                GarbageAccumulation = 100
-                
-},
+                Efficiency = 1
+
+            },
+
             new CityparkOptions
             {
                 Name = "CityPark02",
                 Upkeep = 4000,
+                ElectricityConsumption = 750,
+                WaterConsumption = 500,
+                GarbageAccumulation = 200,
                 Range = 4000,
                 Capacity = 1200,
                 Magnitude = 10,
                 Attractiveness = 5,
-                Efficiency = 2,
-                Electricityconsumption = 750,
-                Waterconsumption = 500,
-                GarbageAccumulation = 200
-            },
-            new CityparkOptions
-            {
-                Name = "CityPark03",
-                Upkeep = 8500,
-                Range = 3000,
-                Capacity = 1600,
-                Magnitude = 14,
-                Attractiveness = 10,
-                Efficiency = 3,
-                Electricityconsumption = 10000,
-                Waterconsumption = 750,
-                GarbageAccumulation = 300
+                Efficiency = 2
 
-},
+            },
+
             new CityparkOptions
             {
-                Name = "CityPark04",
-                Upkeep = 12500,
-                Range = 4000,
-                Capacity = 2000,
-                Magnitude = 14,
-                Attractiveness = 15,
-                Efficiency = 5,
-                Electricityconsumption = 1500,
-                Waterconsumption = 1000,
-                GarbageAccumulation = 400
+            Name = "Playground01",
+            Upkeep = 1000,
+            ElectricityConsumption = 250,
+            WaterConsumption = 0,
+            GarbageAccumulation = 200,
+            Range = 2000,
+            Capacity = 600,
+            Magnitude = 10,
+            Attractiveness = 1,
+            Efficiency = 2
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "DogPark01",
+            Upkeep = 2000,
+            ElectricityConsumption = 250,
+            WaterConsumption = 0,
+            GarbageAccumulation = 200,
+            Range = 3500,
+            Capacity = 800,
+            Magnitude = 10,
+            Attractiveness = 1,
+            Efficiency = 2
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "CampireSite01",
+            Upkeep = 6000,
+            ElectricityConsumption = 0,
+            WaterConsumption = 0,
+            GarbageAccumulation = 400,
+            Range = 6000,
+            Capacity = 1600,
+            Magnitude = 10,
+            Attractiveness = 10,
+            Efficiency = 5
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "CityPark03",
+            Upkeep = 8500,
+            ElectricityConsumption = 10000,
+            WaterConsumption = 750,
+            GarbageAccumulation = 300,
+            Range = 3000,
+            Capacity = 1600,
+            Magnitude = 14,
+            Attractiveness = 10,
+            Efficiency = 3
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "CityPark04",
+            Upkeep = 12500,
+            ElectricityConsumption = 1500,
+            WaterConsumption = 1000,
+            GarbageAccumulation = 400,
+            Range = 4000,
+            Capacity = 2000,
+            Magnitude = 14,
+            Attractiveness = 15,
+            Efficiency = 5
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "Playground02",
+            Upkeep = 2500,
+            ElectricityConsumption = 500,
+            WaterConsumption = 0,
+            GarbageAccumulation = 400,
+            Range = 2500,
+            Capacity = 800,
+            Magnitude = 14,
+            Attractiveness = 5,
+            Efficiency = 5
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "TennisCourt01",
+            Upkeep = 2500,
+            ElectricityConsumption = 500,
+            WaterConsumption = 0,
+            GarbageAccumulation = 400,
+            Range = 3500,
+            Capacity = 800,
+            Magnitude = 14,
+            Attractiveness = 5,
+            Efficiency = 5
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "GymPark01",
+            Upkeep = 3000,
+            ElectricityConsumption = 500,
+            WaterConsumption = 0,
+            GarbageAccumulation = 400,
+            Range = 3500,
+            Capacity = 1000,
+            Magnitude = 10,
+            Attractiveness = 5,
+            Efficiency = 5
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "SkatePark01",
+            Upkeep = 3000,
+            ElectricityConsumption = 500,
+            WaterConsumption = 0,
+            GarbageAccumulation = 400,
+            Range = 3500,
+            Capacity = 1000,
+            Magnitude = 10,
+            Attractiveness = 5,
+            Efficiency = 5
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "BasketballCourt01",
+            Upkeep = 2500,
+            ElectricityConsumption = 510,
+            WaterConsumption = 0,
+            GarbageAccumulation = 400,
+            Range = 3500,
+            Capacity = 800,
+            Magnitude = 14,
+            Attractiveness = 5,
+            Efficiency = 5
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "AmericanFootballField01",
+            Upkeep = 30000,
+            ElectricityConsumption = 2500,
+            WaterConsumption = 0,
+            GarbageAccumulation = 1500,
+            Range = 4000,
+            Capacity = 4000,
+            Magnitude = 16,
+            Attractiveness = 25,
+            Efficiency = 25
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "FootballField01",
+            Upkeep = 30000,
+            ElectricityConsumption = 2510,
+            WaterConsumption = 0,
+            GarbageAccumulation = 1500,
+            Range = 4000,
+            Capacity = 4000,
+            Magnitude = 16,
+            Attractiveness = 25,
+            Efficiency = 20
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "CommunityPool01",
+            Upkeep = 16000,
+            ElectricityConsumption = 3000,
+            WaterConsumption = 10000,
+            GarbageAccumulation = 1500,
+            Range = 3500,
+            Capacity = 2000,
+            Magnitude = 16,
+            Attractiveness = 15,
+            Efficiency = 20
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "ObservationTower01",
+            Upkeep = 320000,
+            ElectricityConsumption = 3500,
+            WaterConsumption = 5000,
+            GarbageAccumulation = 5700,
+            Range = 7500,
+            Capacity = 6000,
+            Magnitude = 18,
+            Attractiveness = 40,
+            Efficiency = 75
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "BronzeStatue01",
+            Upkeep = 320000,
+            ElectricityConsumption = 3000,
+            WaterConsumption = 1000,
+            GarbageAccumulation = 1900,
+            Range = 5000,
+            Capacity = 5000,
+            Magnitude = 16,
+            Attractiveness = 50,
+            Efficiency = 25
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "WaterPark01",
+            Upkeep = 80000,
+            ElectricityConsumption = 15000,
+            WaterConsumption = 20000,
+            GarbageAccumulation = 1900,
+            Range = 5000,
+            Capacity = 3000,
+            Magnitude = 16,
+            Attractiveness = 75,
+            Efficiency = 25
+
+            },
+
+            new CityparkOptions
+            {
+            Name = "OldCastle01",
+            Upkeep = 480000,
+            ElectricityConsumption = 1000,
+            WaterConsumption = 1000,
+            GarbageAccumulation = 1500,
+            Range = 7500,
+            Capacity = 4000,
+            Magnitude = 16,
+            Attractiveness = 85,
+            Efficiency = 20
+
             }
+
         },
 
         Wastewater_Options = new List<WastewaterOptions>
@@ -1480,6 +1711,7 @@ public class WhitesharkCheatOverhaulOptions
                 MaintenanceDuration = 0.014f
             }
         },
+
         PublicTransportStations_Options = new List<PublicTransportStationsOptions>
         {
             new PublicTransportStationsOptions
@@ -1561,7 +1793,60 @@ public class WhitesharkCheatOverhaulOptions
                 Transports = 24
 
             }
+        },
+
+        Airport_Options = new List<AirportOptions>
+        {
+            new AirportOptions
+            {
+                Name = "Airport01",
+                Upkeep = 100000,
+                Electricityconsumption = 30000,
+                Waterconsumption = 5000,
+                GarbageAccumulation = 6300,
+                Transports = 8,
+                ComfortFactor = 0.5f,
+                Attractiveness = 0.05f,
+                OfficeEfficiency = 0.03f
+
+            },
+            new AirportOptions
+            {
+                Name = "InternationalAirport01",
+                Upkeep = 100000,
+                Electricityconsumption = 60000,
+                Waterconsumption = 10000,
+                GarbageAccumulation = 31300,
+                Transports = 8,
+                ComfortFactor = 0.9f,
+                Attractiveness = 0.1f,
+                UniversityInterest = 0.1f,
+                OfficeSoftwareDemand = 0.1f
+
+            }
+        },
+
+        SpaceCenter_Options = new List<SpaceCenterOptions>
+        {
+            new SpaceCenterOptions
+            {
+                Name = "SpaceCenter01",
+                Upkeep = 480000,
+                Electricityconsumption = 80000,
+                Waterconsumption = 20000,
+                GarbageAccumulation = 46900,
+                Attractiveness = 200,
+                CityAttractiveness = 0.1f,
+                UniversityInterest = 0.1f,
+                OfficeSoftwareDemand = 0.1f,
+                IndustrialElectronicsDemand = 0.1f,
+                LeisureEfficiency = 60,
+                VehicleCapacity = 1,
+                ProductionDuration = 0.01f
+
+            }
         }
+
     };
 
     public IEnumerable<SchoolOptions> School_Options { get; set; }
@@ -1608,13 +1893,8 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<PublicTransportStopsOptions> PublicTransportStops_Options { get; set; }
     public IEnumerable<PublicTransportDepotsOptions> PublicTransportDepots_Options { get; set; }
     public IEnumerable<PublicTransportStationsOptions> PublicTransportStations_Options { get; set; }
-
-
-
-
-
-
-
+    public IEnumerable<AirportOptions> Airport_Options { get; set; }
+    public IEnumerable<SpaceCenterOptions> SpaceCenter_Options { get; set; }
 
 
 
@@ -1673,6 +1953,7 @@ public class WhitesharkCheatOverhaulOptions
         return Garbagetruckdict;
     }
     public IReadOnlyDictionary<string, TransportbusOptions> GetTransportbusDictionary()
+
     {
         var Transportbusdict = new Dictionary<string, TransportbusOptions>();
         foreach (var Transportbus_option in Transportbus_Options)
@@ -2014,7 +2295,24 @@ public class WhitesharkCheatOverhaulOptions
         }
         return PublicTransportStationsdict;
     }
-
+    public IReadOnlyDictionary<string, AirportOptions> GetAirportDictionary()
+    {
+        var Airportdict = new Dictionary<string, AirportOptions>();
+        foreach (var Airport_option in Airport_Options)
+        {
+            Airportdict.Add(Airport_option.Name, Airport_option);
+        }
+        return Airportdict;
+    }
+    public IReadOnlyDictionary<string, SpaceCenterOptions> GetSpaceCenterDictionary()
+    {
+        var SpaceCenterdict = new Dictionary<string, SpaceCenterOptions>();
+        foreach (var SpaceCenter_option in SpaceCenter_Options)
+        {
+            SpaceCenterdict.Add(SpaceCenter_option.Name, SpaceCenter_option);
+        }
+        return SpaceCenterdict;
+    }
 
 
 
@@ -2101,8 +2399,8 @@ public class WhitesharkCheatOverhaulOptions
             x.Magnitude >= 0 &&
             x.Efficiency >= 0 &&
             x.Attractiveness >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0);
 
         
@@ -2482,6 +2780,35 @@ public class WhitesharkCheatOverhaulOptions
             x.StorageLimit >= 0 &&
             x.Transports >= 0 &&
             x.ComfortFactor >= 0);
+
+        Airport_Options = Airport_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.StorageLimit >= 0 &&
+            x.Transports >= 0 &&
+            x.ComfortFactor >= 0 &&
+            x.Attractiveness >= 0 &&
+            x.OfficeEfficiency >= 0 &&
+            x.UniversityInterest >= 0 &&
+            x.OfficeSoftwareDemand >= 0);
+
+        SpaceCenter_Options = SpaceCenter_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Attractiveness >= 0 &&
+            x.CityAttractiveness >= 0 &&
+            x.UniversityInterest >= 0 &&
+            x.IndustrialElectronicsDemand >= 0 &&
+            x.OfficeSoftwareDemand >= 0 &&
+            x.VehicleCapacity >= 0 &&
+            x.ProductionDuration >= 0 &&
+            x.LeisureEfficiency >= 0);
 
     }
 }
