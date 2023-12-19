@@ -70,8 +70,52 @@ public class WhitesharkCheatOverhaulOptions
                 AirPollution = 10000,
                 GroundPollution = 10000,
                 NoisePollution = 10000,
-                Production = 2500000
+                Production = 2500000,
+                Storage = 5000
             },
+
+            new PowerplantOptions
+            {
+                Name = "GasPowerPlant01 Additional Turbine",
+                UpkeepCost = 200000,
+                Waterconsumption = 24000,
+                GarbageAccumulation = 6000,
+                AirPollution = 3000,
+                GroundPollution = 3000,
+                NoisePollution = 3000,
+                Production = 1000000
+            },
+
+            new PowerplantOptions
+            {
+                Name = "GasPowerPlant01 Advanced Furnace",
+                UpkeepCost = 80000,
+                Waterconsumption = 0,
+                GarbageAccumulation = 0
+            },
+
+
+            new PowerplantOptions
+            {
+                Name = "GasPowerPlant01 Exhaust Filter",
+                UpkeepCost = 100000,
+                Waterconsumption = 0,
+                GarbageAccumulation = 7500,
+                
+            },
+
+            new PowerplantOptions
+            {
+                Name = "GasPowerPlant01 Fuel Storage Extention",
+                UpkeepCost = 150000,
+                Waterconsumption = 0,
+                GarbageAccumulation = 6000,
+                AirPollution = 5000,
+                GroundPollution = 5000,
+                NoisePollution = 5000,
+                Storage = 2500
+            },
+
             new PowerplantOptions
             {
                 Name = "CoalPowerPlant01",
@@ -82,8 +126,51 @@ public class WhitesharkCheatOverhaulOptions
                 GroundPollution = 100000,
                 NoisePollution = 100000,
                 Production = 3000000,
-                modifier = 0f
+                Storage = 500000
+                
             },
+
+            new PowerplantOptions
+            {
+                Name = "CoalPowerPlant01 Additional Turbine Building",
+                UpkeepCost = 50000,
+                Waterconsumption = 30000,
+                GarbageAccumulation = 10000,
+                AirPollution = 50000,
+                GroundPollution = 50000,
+                NoisePollution = 50000,
+                Production = 1000000,
+            },
+
+            new PowerplantOptions
+            {
+                Name = "CoalPowerPlant01 Exhaust Filter",
+                UpkeepCost = 50000,
+                Waterconsumption = 0,
+                GarbageAccumulation = 12500
+
+            },
+            new PowerplantOptions
+            {
+                Name = "CoalPowerPlant01 Advanced Furnace",
+                UpkeepCost = 60000,
+                Waterconsumption = 0,
+                GarbageAccumulation = 0
+
+            },
+
+            new PowerplantOptions
+            {
+                Name = "CoalPowerPlant01 Coal Storage Yard",
+                UpkeepCost = 25000,
+                GarbageAccumulation = 10000,
+                AirPollution = 25000,
+                GroundPollution = 25000,
+                NoisePollution = 25000,
+                Storage = 2500000
+
+            },
+
             new PowerplantOptions
             {
                 Name = "NuclearPowerPlant01",
@@ -174,7 +261,58 @@ public class WhitesharkCheatOverhaulOptions
                 Range = 2500,
                 Capacity = 20000,
                 NoisePollution = 20000
+            },
+
+            new ServerfarmOptions
+            {
+                Name = "SatelliteUplink01",
+                UpkeepCost = 320000,
+                Electricityconsumption = 5000,
+                Waterconsumption = 500,
+                GarbageAccumulation = 5000,
+                Range = 0,
+                Capacity = 0,
+                NoisePollution = 5000,
+                CityEntertainment = 50f,
+                CityTelecomCapacity = 0.2f,
+                CityAttractiveness = 0.1f
+            },
+
+            new ServerfarmOptions
+            {
+                Name = "TelecomTower01",
+                UpkeepCost = 95000,
+                Electricityconsumption = 5000,
+                Waterconsumption = 1000,
+                GarbageAccumulation = 0,
+                Range = 5000,
+                Capacity = 15000,
+                NoisePollution = 10000
+            },
+            new ServerfarmOptions
+            {
+                Name = "ServerFarm01 Fiber Optic Cable",
+                UpkeepCost = 10000,
+                Electricityconsumption = 10000,
+                Waterconsumption = 0,
+                GarbageAccumulation = 0,
+                Range = 500,
+                Capacity = 0,
+                
+            },
+            new ServerfarmOptions
+            {
+                Name = "ServerFarm01 Server Upgrade",
+                UpkeepCost = 20000,
+                Electricityconsumption = 10000,
+                Waterconsumption = 2500,
+                GarbageAccumulation = 1000,
+                Range = 0,
+                Capacity = 10000,
+
+               
             }
+
         },
 
         Garbagetruck_Options = new List<GarbagetruckOptions>
@@ -707,8 +845,104 @@ public class WhitesharkCheatOverhaulOptions
                 Mailstoragecapacity = 100000,
                 Capacity = 15000,
                 Range = 2000,
-                Magnitude = 2
+                Magnitude = 2,
+                SortingRate = 0
+
+            },
+
+            new PostofficeOptions
+            {
+                Name = "PostOffice01 Post Van Garage",
+                Upkeep = 6000,
+                Waterconsumption = 250,
+                Electricityconsumption = 350,
+                GarbageAccumulation = 900,
+                Noisepollution = 2500,
+                Mailboxcapacity = 0,
+                Postvancapacity = 10,
+                PostTruckscapacity = 0,
+                Mailstoragecapacity = 0,
+                SortingRate = 0
+
+            },
+            
+            new PostofficeOptions
+            {
+                Name = "PostOffice01 Mail Storage Extention",
+                Upkeep = 5000,
+                Waterconsumption = 0,
+                Electricityconsumption = 350,
+                GarbageAccumulation = 400,
+                Noisepollution = 2500,
+                Mailboxcapacity = 0,
+                Postvancapacity = 0,
+                PostTruckscapacity = 0,
+                Mailstoragecapacity = 25000,
+                SortingRate = 0
+
+            },
+
+            new PostofficeOptions
+            {
+                Name = "PostSortingFacility01",
+                Upkeep = 80000,
+                Waterconsumption = 2500,
+                Electricityconsumption = 8000,
+                GarbageAccumulation = 9000,
+                Noisepollution = 20000,
+                Mailboxcapacity = 0,
+                Postvancapacity = 0,
+                PostTruckscapacity = 5,
+                Mailstoragecapacity = 500000,
+                SortingRate = 50000
+
+            },
+            new PostofficeOptions
+            {
+                Name = "PostSortingFacility01 Extra Loading Ramp",
+                Upkeep = 10000,
+                Waterconsumption = 0,
+                Electricityconsumption = 0,
+                GarbageAccumulation = 1800,
+                Noisepollution = 5000,
+                Mailboxcapacity = 0,
+                Postvancapacity = 0,
+                PostTruckscapacity = 5,
+                Mailstoragecapacity = 0,
+                SortingRate = 0
+
+            },
+            new PostofficeOptions
+            {
+                Name = "PostSortingFacility01 Automated Sorting",
+                Upkeep = 80000,
+                Waterconsumption = 2500,
+                Electricityconsumption = 8000,
+                GarbageAccumulation = 9000,
+                Mailboxcapacity = 0,
+                Postvancapacity = 0,
+                PostTruckscapacity = 5,
+                Mailstoragecapacity = 500000,
+                SortingRate = 50000
+
+            },
+
+            new PostofficeOptions
+            {
+                Name = "PostSortingFacility01 Mail Storage Extention",
+                Upkeep = 10000,
+                Waterconsumption = 0,
+                Electricityconsumption = 1500,
+                GarbageAccumulation = 1800,
+                Noisepollution = 5000,
+                Mailboxcapacity = 0,
+                Postvancapacity = 0,
+                PostTruckscapacity = 5,
+                Mailstoragecapacity = 250000,
+                SortingRate = 0
+
             }
+
         },
 
         Cemetery_Options = new List<CemeteryOptions>
@@ -1845,7 +2079,61 @@ public class WhitesharkCheatOverhaulOptions
                 ProductionDuration = 0.01f
 
             }
-        }
+        },
+
+        PostMailbox_Options = new List<PostMailboxOptions>
+        {
+            new PostMailboxOptions
+            {
+                Name = "PostMailbox01",
+                Mailcapacity = 1000,
+                ComfortFactor = 0f,
+                Range = 1000f,
+                Capacity = 2000f,
+                Magnitude = 1f
+
+            }
+        },
+
+        RadioMast_Options = new List<RadioMastOptions>
+        {
+            new RadioMastOptions
+            {
+                Name = "RadioMast01",
+                Upkeep = 5000,
+                Electricityconsumption = 2500,
+                Range = 1000,
+                NetworkCapacity = 2000,
+                NoisePollution = 2500
+
+            },
+
+            new RadioMastOptions
+            {
+                Name = "RadioMast01 Bandwidth Increase",
+                Upkeep = 3000,
+                Electricityconsumption = 1500,
+                Range = 0,
+                NetworkCapacity = 1500
+             
+
+            },
+
+            new RadioMastOptions
+            {
+                Name = "RadioMast01 Wireless Network Antenna",
+                Upkeep = 1500,
+                Electricityconsumption = 1500,
+                Range = 250,
+                NetworkCapacity = 1500
+
+            }
+
+        },
+
+
+
+
 
     };
 
@@ -1895,6 +2183,31 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<PublicTransportStationsOptions> PublicTransportStations_Options { get; set; }
     public IEnumerable<AirportOptions> Airport_Options { get; set; }
     public IEnumerable<SpaceCenterOptions> SpaceCenter_Options { get; set; }
+    public IEnumerable<PostMailboxOptions> PostMailbox_Options { get; set; }
+    public IEnumerable<RadioMastOptions> RadioMast_Options { get; set; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2313,8 +2626,25 @@ public class WhitesharkCheatOverhaulOptions
         }
         return SpaceCenterdict;
     }
+    public IReadOnlyDictionary<string, PostMailboxOptions> GetPostMailboxDictionary()
+    {
+        var PostMailboxdict = new Dictionary<string, PostMailboxOptions>();
+        foreach (var PostMailbox_option in PostMailbox_Options)
+        {
+            PostMailboxdict.Add(PostMailbox_option.Name, PostMailbox_option);
+        }
+        return PostMailboxdict;
+    }
 
-
+    public IReadOnlyDictionary<string, RadioMastOptions> GetRadioMastDictionary()
+    {
+        var RadioMastdict = new Dictionary<string, RadioMastOptions>();
+        foreach (var RadioMast_option in RadioMast_Options)
+        {
+            RadioMastdict.Add(RadioMast_option.Name, RadioMast_option);
+        }
+        return RadioMastdict;
+    }
 
 
     public void RemoveBadEntires()
@@ -2338,6 +2668,7 @@ public class WhitesharkCheatOverhaulOptions
             x.AirPollution >= 0 &&
             x.GroundPollution >= 0 &&
             x.NoisePollution >= 0 &&
+            x.Storage >= 0 &&
             x.Production >= 0);
 
         
@@ -2365,6 +2696,9 @@ public class WhitesharkCheatOverhaulOptions
             x.GarbageAccumulation >= 0 &&
             x.Range >= 0 &&
             x.Capacity >= 0 &&
+            x.CityEntertainment >= 0 &&
+            x.CityTelecomCapacity >= 0 &&
+            x.CityAttractiveness >= 0 &&
             x.NoisePollution >= 0);
 
        
@@ -2462,6 +2796,7 @@ public class WhitesharkCheatOverhaulOptions
             x.PostTruckscapacity >= 0 &&
             x.Range >= 0 &&
             x.Capacity >= 0 &&
+            x.SortingRate >= 0 &&
             x.Magnitude >= 0);
 
         Cemetery_Options = Cemetery_Options.Where(
@@ -2810,5 +3145,22 @@ public class WhitesharkCheatOverhaulOptions
             x.ProductionDuration >= 0 &&
             x.LeisureEfficiency >= 0);
 
+        PostMailbox_Options = PostMailbox_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Mailcapacity >= 0 &&
+            x.ComfortFactor >= 0 &&
+            x.Range >= 0 &&
+            x.Capacity >= 0 &&
+            x.Magnitude >= 0);
+
+        RadioMast_Options = RadioMast_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.Upkeep >= 0 &&
+            x.Electricityconsumption >= 0 &&
+            x.Waterconsumption >= 0 &&
+            x.GarbageAccumulation >= 0 &&
+            x.Range >= 0 &&
+            x.NetworkCapacity >= 0 &&
+            x.NoisePollution >= 0);
     }
 }

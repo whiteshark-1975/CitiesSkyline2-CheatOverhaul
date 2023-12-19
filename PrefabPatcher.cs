@@ -1,4 +1,5 @@
-﻿using Game.Buildings;
+﻿using Game.Areas;
+using Game.Buildings;
 using Game.City;
 using Game.Prefabs;
 using HarmonyLib;
@@ -14,36 +15,62 @@ public static class PrefabPatcher
     {
         if (WhitesharkCheatOverhaul.SchoolOptions.TryGetValue(prefab.name, out var Schooloverrides))
         {
-            
-                var costComponent = prefab.GetComponent<ServiceConsumption>();
-                costComponent.m_Upkeep = Schooloverrides.UpkeepCost;
-                costComponent.m_GarbageAccumulation = Schooloverrides.GarbageAccumulation;
-                costComponent.m_WaterConsumption = Schooloverrides.Waterconsumption;
-                costComponent.m_ElectricityConsumption = Schooloverrides.Electricityconsumption;
 
-                var PollutionComponent = prefab.GetComponent<Pollution>();
-                PollutionComponent.m_AirPollution = Schooloverrides.AirPollution;
-                PollutionComponent.m_GroundPollution = Schooloverrides.GroundPollution;
-                PollutionComponent.m_NoisePollution = Schooloverrides.NoisePollution;
-                   
+            var costComponent = prefab.GetComponent<ServiceConsumption>();
+            costComponent.m_Upkeep = Schooloverrides.UpkeepCost;
+            costComponent.m_GarbageAccumulation = Schooloverrides.GarbageAccumulation;
+            costComponent.m_WaterConsumption = Schooloverrides.Waterconsumption;
+            costComponent.m_ElectricityConsumption = Schooloverrides.Electricityconsumption;
+
+            var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_AirPollution = Schooloverrides.AirPollution;
+            PollutionComponent.m_GroundPollution = Schooloverrides.GroundPollution;
+            PollutionComponent.m_NoisePollution = Schooloverrides.NoisePollution;
+
         }
 
         if (WhitesharkCheatOverhaul.PowerplantOptions.TryGetValue(prefab.name, out var Powerplantoverrides))
         {
-                var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-                ServiceComponent.m_Upkeep = Powerplantoverrides.UpkeepCost;
-                ServiceComponent.m_GarbageAccumulation = Powerplantoverrides.GarbageAccumulation;
-                ServiceComponent.m_WaterConsumption = Powerplantoverrides.Waterconsumption;
-          
-            
-                var PollutionComponent = prefab.GetComponent<Pollution>();
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = Powerplantoverrides.UpkeepCost;
+            ServiceComponent.m_GarbageAccumulation = Powerplantoverrides.GarbageAccumulation;
+            ServiceComponent.m_WaterConsumption = Powerplantoverrides.Waterconsumption;
+
+            if (
+                prefab.name != "GasPowerPlant01 Advanced Furnace" &&
+                prefab.name != "GasPowerPlant01 Exhaust Filter" &&
+                prefab.name != "CoalPowerPlant01 Advanced Furnace" &&
+                prefab.name != "CoalPowerPlant01 Exhaust Filter"
+                )
+            {
+                var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
                 PollutionComponent.m_AirPollution = Powerplantoverrides.AirPollution;
                 PollutionComponent.m_GroundPollution = Powerplantoverrides.GroundPollution;
                 PollutionComponent.m_NoisePollution = Powerplantoverrides.NoisePollution;
-           
+            }
+            if (
+                prefab.name != "GasPowerPlant01 Advanced Furnace" &&
+                prefab.name != "GasPowerPlant01 Exhaust Filter" &&
+                prefab.name != "GasPowerPlant01 Fuel Storage Extention" &&
+                prefab.name != "CoalPowerPlant01 Advanced Furnace" &&
+                prefab.name != "CoalPowerPlant01 Exhaust Filter" &&
+                prefab.name != "CoalPowerPlant01 Coal Storage Yard"
+                )
+            {
                 var ProductionComponent = prefab.GetComponent<PowerPlant>();
                 ProductionComponent.m_ElectricityProduction = Powerplantoverrides.Production;
-            
+            }
+            if (
+                prefab.name == "GasPowerPlant01 Fuel Storage Extention" || 
+                prefab.name == "GasPowerPlant01" || 
+                prefab.name == "CoalPowerPlant01" ||
+                prefab.name == "CoalPowerPlant01 Coal Storage Yard"
+                )
+            {
+                var StorageComponent = prefab.GetComponent<Game.Prefabs.StorageLimit>();
+                StorageComponent.storageLimit = Powerplantoverrides.Storage;
+            }
+
         }
       
         if (WhitesharkCheatOverhaul.WaterpumpOptions.TryGetValue(prefab.name, out var Waterpumpoverrides))
@@ -87,8 +114,26 @@ public static class PrefabPatcher
             TelecomComponent.m_Range = Serverfarmoverrides.Range;
             TelecomComponent.m_NetworkCapacity = Serverfarmoverrides.Capacity;
 
-            var PollutionComponent = prefab.GetComponent<Pollution>();
-            PollutionComponent.m_NoisePollution = Serverfarmoverrides.NoisePollution;
+            if (prefab.name == "ServerFarm01" || prefab.name == "SatelliteUplink01")
+            {
+                var PollutionComponent = prefab.GetComponent<Pollution>();
+                PollutionComponent.m_NoisePollution = Serverfarmoverrides.NoisePollution;
+            }
+            if (prefab.name == "SatelliteUplink01")
+            {
+                var EnternainmentComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+                var EnternainmentEffect = EnternainmentComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.Entertainment);
+                EnternainmentEffect.m_Delta = Serverfarmoverrides.CityEntertainment;
+
+                var CityTelecomComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+                var TelecomEffect = CityTelecomComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.TelecomCapacity);
+                TelecomEffect.m_Delta = Serverfarmoverrides.CityTelecomCapacity;
+
+                var CityAttractivenessComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+                var CityAttractivenessEffect = CityAttractivenessComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.Attractiveness);
+                CityAttractivenessEffect.m_Delta = Serverfarmoverrides.CityAttractiveness;
+
+            }
 
         }
 
@@ -233,27 +278,38 @@ public static class PrefabPatcher
 
         if (WhitesharkCheatOverhaul.PostofficeOptions.TryGetValue(prefab.name, out var Postofficeoverrides))
         {
+      
+                var ServiceComponent = prefab.GetComponent<Game.Prefabs.ServiceConsumption>();
+                ServiceComponent.m_Upkeep = Postofficeoverrides.Upkeep;
+                ServiceComponent.m_WaterConsumption = Postofficeoverrides.Waterconsumption;
+                ServiceComponent.m_ElectricityConsumption = Postofficeoverrides.Electricityconsumption;
+                ServiceComponent.m_GarbageAccumulation = Postofficeoverrides.GarbageAccumulation;
 
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = Postofficeoverrides.Upkeep;
-            ServiceComponent.m_WaterConsumption = Postofficeoverrides.Waterconsumption;
-            ServiceComponent.m_ElectricityConsumption = Postofficeoverrides.Electricityconsumption;
-            ServiceComponent.m_GarbageAccumulation = Postofficeoverrides.GarbageAccumulation;
-
-            var PostofficeComponent = prefab.GetComponent<Game.Prefabs.PostFacility>();
-            PostofficeComponent.m_MailBoxCapacity = Postofficeoverrides.Mailboxcapacity;
-            PostofficeComponent.m_PostVanCapacity = Postofficeoverrides.Postvancapacity;
-            PostofficeComponent.m_MailStorageCapacity = Postofficeoverrides.Mailstoragecapacity;
-            PostofficeComponent.m_PostTruckCapacity = Postofficeoverrides.PostTruckscapacity;
+          
+                var PostofficeComponent = prefab.GetComponent<Game.Prefabs.PostFacility>();
+                PostofficeComponent.m_MailBoxCapacity = Postofficeoverrides.Mailboxcapacity;
+                PostofficeComponent.m_PostVanCapacity = Postofficeoverrides.Postvancapacity;
+                PostofficeComponent.m_MailStorageCapacity = Postofficeoverrides.Mailstoragecapacity;
+                PostofficeComponent.m_PostTruckCapacity = Postofficeoverrides.PostTruckscapacity;
+                PostofficeComponent.m_SortingRate = Postofficeoverrides.SortingRate;
 
 
-            var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
-            CoverageComponent.m_Range = Postofficeoverrides.Range;
-            CoverageComponent.m_Capacity = Postofficeoverrides.Capacity;
-            CoverageComponent.m_Magnitude = Postofficeoverrides.Magnitude;
-
-            var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
-            PollutionComponent.m_NoisePollution = Postofficeoverrides.Noisepollution;
+                if (prefab.name == "PostOffice01")
+                {
+                    var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
+                    CoverageComponent.m_Range = Postofficeoverrides.Range;
+                    CoverageComponent.m_Capacity = Postofficeoverrides.Capacity;
+                    CoverageComponent.m_Magnitude = Postofficeoverrides.Magnitude;
+                }
+            
+            if (
+                prefab.name != "PostSortingFacility01 Automated Sorting"
+                )
+            {
+                var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
+                PollutionComponent.m_NoisePollution = Postofficeoverrides.Noisepollution;
+            }   
+            
         }
 
         if (WhitesharkCheatOverhaul.CemeteryOptions.TryGetValue(prefab.name, out var Cemeteryoverrides))
@@ -783,12 +839,16 @@ public static class PrefabPatcher
             var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
             var UniversityEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityInterest);
             UniversityEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
+            
             var OfficeSoftwareDemandEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareDemand);
             OfficeSoftwareDemandEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
+           
             var IndustrialElectronicDemandEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialElectronicsDemand);
             IndustrialElectronicDemandEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
+            
             var OfficeSoftwareEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareEfficiency);
             OfficeSoftwareEfficiencyEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
+           
             var IndustrialElectronicEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialElectronicsEfficiency);
             IndustrialElectronicEfficiencyEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
 
@@ -935,6 +995,55 @@ public static class PrefabPatcher
             LeisureComponent.m_Efficiency = SpaceCenteroverrides.LeisureEfficiency;
 
         }
+
+        if (WhitesharkCheatOverhaul.PostMailboxOptions.TryGetValue(prefab.name, out var PostMailboxoverrides))
+        {
+
+            var MailboxComponent = prefab.GetComponent<MailBox>();
+            MailboxComponent.m_MailCapacity = PostMailboxoverrides.Mailcapacity;
+            MailboxComponent.m_ComfortFactor = PostMailboxoverrides.ComfortFactor;
+
+            var CoverageComponent = prefab.GetComponent<ServiceCoverage>();
+            CoverageComponent.m_Range = PostMailboxoverrides.Range;
+            CoverageComponent.m_Capacity = PostMailboxoverrides.Capacity;
+            CoverageComponent.m_Magnitude = PostMailboxoverrides.Magnitude;
+
+        }
+
+        if (WhitesharkCheatOverhaul.RadioMastOptions.TryGetValue(prefab.name, out var RadioMastoverrides))
+        {
+            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
+            ServiceComponent.m_Upkeep = RadioMastoverrides.Upkeep;
+            ServiceComponent.m_ElectricityConsumption = RadioMastoverrides.Electricityconsumption;
+            ServiceComponent.m_WaterConsumption = RadioMastoverrides.Waterconsumption;
+            ServiceComponent.m_GarbageAccumulation = RadioMastoverrides.GarbageAccumulation;
+
+
+            var RadioMastComponent = prefab.GetComponent<Game.Prefabs.TelecomFacility>();
+            RadioMastComponent.m_Range = RadioMastoverrides.Range;
+            RadioMastComponent.m_NetworkCapacity = RadioMastoverrides.NetworkCapacity;
+
+            if (prefab.name == "RadioMast01")
+            {
+                var PollutionComponent = prefab.GetComponent<Pollution>();
+            PollutionComponent.m_NoisePollution = RadioMastoverrides.NoisePollution;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         return true;
     }
 }

@@ -16,5 +16,6 @@ public class PostofficeOptions
     public int Capacity { get; set; }
     public int Magnitude { get; set; }
     public int Noisepollution { get; set; }
+    public int SortingRate { get; set; }
 
 }
