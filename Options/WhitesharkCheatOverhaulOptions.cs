@@ -8,7 +8,7 @@ public class WhitesharkCheatOverhaulOptions
 {
     public static WhitesharkCheatOverhaulOptions Default => new WhitesharkCheatOverhaulOptions
     {
-        Version = 1,
+        Version = 323,
         School_Options = new List<SchoolOptions>
         {
             new SchoolOptions
@@ -224,6 +224,29 @@ public class WhitesharkCheatOverhaulOptions
                 NoisePollution =5000
 
             },
+
+            new WaterpumpOptions
+            {
+                Name = "GroundwaterPumpingStation01 Advanced Filtering System",
+                UpkeepCost = 11000,
+                Capacity = 0,
+                GarbageAccumulation = 2500,
+                ElectricityConsumption = 1000,
+                Purification = 0.5f
+
+            },
+
+            new WaterpumpOptions
+            {
+                Name = "GroundwaterPumpingStation01 Extra Pump",
+                UpkeepCost = 7000,
+                Capacity = 37500,
+                GarbageAccumulation = 2000,
+                ElectricityConsumption = 500,
+                NoisePollution =2500
+
+            },
+
             new WaterpumpOptions
             {
                 Name = "DesalinationPlant01",
@@ -2194,29 +2217,6 @@ public class WhitesharkCheatOverhaulOptions
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
     {
         var schooldict = new Dictionary<string, SchoolOptions>();
@@ -2683,6 +2683,7 @@ public class WhitesharkCheatOverhaulOptions
             x.Capacity >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.ElectricityConsumption >= 0 &&
+            x.Purification >= 0 &&
             x.NoisePollution >= 0);
 
         
@@ -3174,28 +3175,13 @@ public class WhitesharkCheatOverhaulOptions
         var initialVersion = Version;
         if (Version == 0)
         {
-            string[] addedpowerplant = ["GasPowerPlant01"];
-            foreach (var Powerplant in addedpowerplant)
-            {
-                if (Powerplant_Options.Any(o => o.Name == Powerplant)) continue;
-
-                Powerplant_Options = Powerplant_Options.Append(new PowerplantOptions
-                {
-                    Name = Powerplant,
-                    UpkeepCost = 655555
-
-                });
-            }
-            Powerplant_Options = Powerplant_Options.OrderBy(x => x.Name);
-            
             string[] addedwaterpump = ["WaterPumpingStation01 Extra Pump"];
             foreach (var Waterpump in addedwaterpump)
             {
-                if (Waterpump_Options.Any(o => o.Name == Waterpump)) continue;
-
+                if (Waterpump_Options.Any(o => o.Name == "WaterPumpingStation01 Extra Pump")) continue;
                 Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
                 {
-                    Name = Waterpump,
+                    Name = "WaterPumpingStation01 Extra Pump",
                     UpkeepCost = 7000,
                     Capacity = 50000,
                     GarbageAccumulation = 2500,
@@ -3203,10 +3189,53 @@ public class WhitesharkCheatOverhaulOptions
                     NoisePollution = 2500
 
                 });
+
+                Waterpump_Options = Waterpump_Options.OrderBy(x => x.Name);
+                Version = 322;
+            }
+        }
+
+        if (Version == 322)
+        {
+            string[] addedwaterpump1 = ["GroundwaterPumpingStation01 Advanced Filtering System"];
+            foreach (var Waterpump1 in addedwaterpump1)
+            {
+                if (Waterpump_Options.Any(o => o.Name == "GroundwaterPumpingStation01 Advanced Filtering System")) continue;
+
+                Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
+                {
+                    Name = Waterpump1,
+                    UpkeepCost = 11000,
+                    Capacity = 0,
+                    GarbageAccumulation = 2500,
+                    ElectricityConsumption = 1000,
+                    Purification = 0.5f
+
+                });
+            }
+
+            string[] addedwaterpump2 = ["GroundwaterPumpingStation01 Extra Pump"];
+            foreach (var Waterpump2 in addedwaterpump2)
+            {
+                if (Waterpump_Options.Any(o => o.Name == "GroundwaterPumpingStation01 Extra Pump")) continue;
+
+
+                Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
+                {
+                    Name = Waterpump2,
+                    UpkeepCost = 7000,
+                    Capacity = 375000,
+                    GarbageAccumulation = 2000,
+                    ElectricityConsumption = 500,
+                    NoisePollution = 2500,
+
+                });
             }
             Waterpump_Options = Waterpump_Options.OrderBy(x => x.Name);
-            Version = 1;
+            Version = 323;
         }
         return Version - initialVersion;
+
     }
+    
 }

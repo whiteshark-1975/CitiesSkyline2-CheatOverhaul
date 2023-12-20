@@ -1,7 +1,7 @@
 ## DO NOT ADD CONFIG TO THE FILE ONLY THE VALUES IN THE FILE CAN BE EDITED.
-
+* NEW UPDATE METHOD YOU DO NOT NEED TO DELETE your settings file after this new update.
+* NEXT update all your settings will remain and only the new items will be added to your settings file.
 * Should you have messed up please delete the settingsfile and the mod will create a new file on next startup.
-* On future update of the mod you also gonna need to delete the settings file so a new file can be written.
 * \AppData\LocalLow\Colossal Order\Cities Skylines II\ModSettings\WhitesharkCheatOverhaul\settings.json
 
 ## Modded Assets For Cities Skylines II

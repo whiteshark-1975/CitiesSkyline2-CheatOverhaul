@@ -80,11 +80,20 @@ public static class PrefabPatcher
             ServiceComponent.m_GarbageAccumulation = Waterpumpoverrides.GarbageAccumulation;
             ServiceComponent.m_ElectricityConsumption = Waterpumpoverrides.ElectricityConsumption;
 
-            var PollutionComponent = prefab.GetComponent<Pollution>();
-            PollutionComponent.m_NoisePollution = Waterpumpoverrides.NoisePollution;
-
+            if (prefab.name != "GroundwaterPumpingStation01 Advanced Filtering System")
+            {
+                var PollutionComponent = prefab.GetComponent<Pollution>();
+                PollutionComponent.m_NoisePollution = Waterpumpoverrides.NoisePollution;
+            }
+            
             var PumpComponent = prefab.GetComponent<Game.Prefabs.WaterPumpingStation>();
             PumpComponent.m_Capacity = Waterpumpoverrides.Capacity;
+
+            if(prefab.name == "GroundwaterPumpingStation01 Advanced Filtering System")
+            {
+                var PurificationComponent = prefab.GetComponent<Game.Prefabs.WaterPumpingStation>();
+                PurificationComponent.m_Purification = Waterpumpoverrides.Purification;
+            }
 
         }
 

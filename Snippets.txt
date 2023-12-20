@@ -1,0 +1,94 @@
+1-level deep
+=============
+	var TelecomComponent = prefab.GetComponent<Game.Prefabs.TelecomFacility>();
+	TelecomComponent.m_Range = Serverfarmoverrides.Range;
+	TelecomComponent.m_NetworkCapacity = Serverfarmoverrides.Capacity;
+
+2-Level deep
+==============
+    var EnternainmentComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+    var EnternainmentEffect = EnternainmentComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.Entertainment);
+    EnternainmentEffect.m_Delta = Serverfarmoverrides.CityEntertainment;
+	
+	
+Updating
+===================
+if (Version == 2)
+{
+    string[] pumpsToIncreaseTo100k = ["WaterPumpingStation01"];
+    foreach (var Waterpump in pumpsToIncreaseTo100k)
+    {
+        var pumpToChange = Waterpump_Options.FirstOrDefault(p => p.Name == Waterpump);
+        if (pumpToChange == default) continue;
+
+        if(pumpToChange.Capacity != OLD_DEFAULT_VALUE_HERE) continue;
+        
+        pumpToChange.Capacity = 100000;
+    }
+    Version = 3;
+}
+
+
+public int UpdateToLatestVersion()
+{
+    var initialVersion = Version;
+    if (Version == 0)
+    {           
+        string[] addedwaterpump = ["WaterPumpingStation01 Extra Pump"];
+        foreach (var Waterpump in addedwaterpump)
+        {
+            if (Waterpump_Options.Any(o => o.Name == Waterpump)) continue;
+
+            Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
+            {
+                Name = Waterpump,
+                UpkeepCost = 7000,
+                Capacity = 50000,
+                GarbageAccumulation = 2500,
+                ElectricityConsumption = 1000,
+                NoisePollution = 2500
+
+            });
+        }
+        Waterpump_Options = Waterpump_Options.OrderBy(x => x.Name);
+        Version = 1;
+    }
+Changing Existing Value on stat
+================================	
+    if (Version == 1)
+    {
+       string[] addedwaterpump = ["WaterPumpingStation01 somer nex extention"];
+        foreach (var Waterpump in addedwaterpump)
+        {
+            if (Waterpump_Options.Any(o => o.Name == Waterpump)) continue;
+
+            Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
+            {
+                Name = Waterpump,
+                UpkeepCost = 7000,
+                Capacity = 50000,
+                GarbageAccumulation = 2500,
+                ElectricityConsumption = 1000,
+                NoisePollution = 2500
+
+            });
+        }
+        Waterpump_Options = Waterpump_Options.OrderBy(x => x.Name);
+        Version = 2;
+    }
+	if (Version == 2)
+{
+Addiing NEW stat
+=============== 
+ string[] pumpsToIncreaseTo100k = ["WaterPumpingStation01"];
+    foreach (var Waterpump in pumpsToIncreaseTo100k)
+    {
+        var pumpToChange = Waterpump_Options.FirstOrDefault(p => p.Name == Waterpump);
+        if (pumpToChange == default) continue;
+
+        if(pumpToChange.NEW_STAT_HERE != 0) continue; // this line is optional
+        
+        pumpToChange.NEW_STAT_HERE = 100000;
+    }
+    Version = 3;
+}

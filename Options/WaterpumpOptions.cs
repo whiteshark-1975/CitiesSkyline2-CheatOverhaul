@@ -9,4 +9,6 @@ public class WaterpumpOptions
     public int GarbageAccumulation { get; set; }
     public int ElectricityConsumption { get; set; }
     public int NoisePollution { get; set; }
+    public float Purification  { get; set; }
+
 }
