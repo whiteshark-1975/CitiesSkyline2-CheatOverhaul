@@ -11,7 +11,7 @@ using Wayz.CS2;
 
 namespace WhitesharkCheatOverhaul;
 
-[BepInPlugin("WhitesharkCheatOverhaul", "WhitesharkCheatOverhaul", "0.3.19")]
+[BepInPlugin("WhitesharkCheatOverhaul", "WhitesharkCheatOverhaul", "0.3.22")]
 public class WhitesharkCheatOverhaul : BaseUnityPlugin
 {
     public static ManualLogSource GameLogger = null!;
@@ -83,8 +83,20 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
             }
         }
 
-        options.RemoveBadEntires();
-        
+        // update the settings to the latest version, and save to file if they were updated
+        if (options.UpdateToLatestVersion() > 0)
+        {
+            try
+            {
+                WayzSettingsManager.SaveSettings("WhitesharkCheatOverhaul", "settings", options);
+            }
+            catch
+            {
+                Logger.LogWarning("Failed to save updated config to settings file, using in-memory updated config.");
+            }
+        }
+
+
         WhitesharkCheatOverhaul.SchoolOptions = options.GetSchoolDictionary();
         WhitesharkCheatOverhaul.PowerplantOptions = options.GetPowerplantDictionary();
         WhitesharkCheatOverhaul.WaterpumpOptions = options.GetWaterpumpDictionary();

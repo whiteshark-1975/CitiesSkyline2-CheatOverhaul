@@ -8,12 +8,12 @@ public class WhitesharkCheatOverhaulOptions
 {
     public static WhitesharkCheatOverhaulOptions Default => new WhitesharkCheatOverhaulOptions
     {
+        Version = 1,
         School_Options = new List<SchoolOptions>
         {
             new SchoolOptions
             {
                 Name = "ElementarySchool01",
-                UpkeepCost = 2500,
                 AirPollution = 0,
                 GroundPollution = 0,
                 NoisePollution = 7500,
@@ -24,7 +24,6 @@ public class WhitesharkCheatOverhaulOptions
             new SchoolOptions
             {
                 Name = "HighSchool01",
-                UpkeepCost = 45000,
                 AirPollution = 0,
                 GroundPollution = 0,
                 NoisePollution = 7500,
@@ -36,7 +35,6 @@ public class WhitesharkCheatOverhaulOptions
             new SchoolOptions
             {
                 Name = "College01",
-                UpkeepCost = 150000,
                 AirPollution = 0,
                 GroundPollution = 0,
                 NoisePollution = 10000,
@@ -48,7 +46,6 @@ public class WhitesharkCheatOverhaulOptions
             new SchoolOptions
             {
                 Name = "University01",
-                UpkeepCost = 200000,
                 AirPollution = 0,
                 GroundPollution = 0,
                 NoisePollution = 10000,
@@ -64,7 +61,7 @@ public class WhitesharkCheatOverhaulOptions
             new PowerplantOptions
             {
                 Name = "GasPowerPlant01",
-                UpkeepCost = 600000,
+                UpkeepCost = 655555,
                 Waterconsumption = 48000,
                 GarbageAccumulation = 30000,
                 AirPollution = 10000,
@@ -200,12 +197,23 @@ public class WhitesharkCheatOverhaulOptions
             new WaterpumpOptions
             {
                 Name = "WaterPumpingStation01",
-                UpkeepCost = 10000,
+                UpkeepCost = 60000,
                 Capacity = 100000,
                 GarbageAccumulation = 12500,
                 ElectricityConsumption = 3000,
                 NoisePollution =5000
             },
+
+            new WaterpumpOptions
+            {
+                Name = "WaterPumpingStation01 Extra Pump",
+                UpkeepCost = 7000,
+                Capacity = 50000,
+                GarbageAccumulation = 2500,
+                ElectricityConsumption = 1000,
+                NoisePollution =2500
+            },
+
             new WaterpumpOptions
             {
                 Name = "GroundwaterPumpingStation01",
@@ -2129,62 +2137,60 @@ public class WhitesharkCheatOverhaulOptions
 
             }
 
-        },
-
-
-
-
+        }
 
     };
 
-    public IEnumerable<SchoolOptions> School_Options { get; set; }
-    public IEnumerable<PowerplantOptions> Powerplant_Options { get; set; }
-    public IEnumerable<WaterpumpOptions> Waterpump_Options { get; set; }
-    public IEnumerable<TransformerstationOptions> Transformerstation_Options { get; set; }
-    public IEnumerable<ServerfarmOptions> Serverfarm_Options { get; set; }
-    public IEnumerable<GarbagetruckOptions> Garbagetruck_Options { get; set; }
-    public IEnumerable<TransportbusOptions> Transportbus_Options { get; set; }
-    public IEnumerable<ParkinghallOptions> Parkinghall_Options { get; set; }
-    public IEnumerable<CityparkOptions> Citypark_Options { get; set; }
-    public IEnumerable<WastewaterOptions> Wastewater_Options { get; set; }
-    public IEnumerable<IncinerationPlantOptions> IncinerationPlant_Options { get; set; }
-    public IEnumerable<HealthcareOptions> Healthcare_Options { get; set; }
-    public IEnumerable<PostofficeOptions> Postoffice_Options { get; set; }
-    public IEnumerable<CemeteryOptions> Cemetery_Options { get; set; }
-    public IEnumerable<CrematoriumOptions> Crematorium_Options { get; set; }
-    public IEnumerable<WindturbineOptions> Windturbine_Options { get; set; }
-    public IEnumerable<EmergencybatteryOptions> Emergencybattery_Options { get; set; }
-    public IEnumerable<GeothermalpowerplantOptions> Geothermalpowerplant_Options { get; set; }
-    public IEnumerable<SolarpowerstationOptions> Solarpowerstation_Options { get; set; }
-    public IEnumerable<SignatureResidentialbuildingOptions> SignatureResidentialbuilding_Options { get; set; }
-    public IEnumerable<SignatureCommercialbuildingOptions> SignatureCommercialbuilding_Options { get; set; }
-    public IEnumerable<PostVanOptions> PostVan_Options { get; set; }
-    public IEnumerable<SignatureOfficebuildingOptions> SignatureOfficebuilding_Options { get; set; }
-    public IEnumerable<SignatureMixedbuildingOptions> SignatureMixedbuilding_Options { get; set; }
-    public IEnumerable<FireStationOptions> FireStation_Options { get; set; }
-    public IEnumerable<FireHelicopterDepotOptions> FireHelicopterDepot_Options { get; set; }
-    public IEnumerable<FirewatchTowerOptions> FirewatchTower_Options { get; set; }
-    public IEnumerable<PoliceStationOptions> PoliceStation_Options { get; set; }
-    public IEnumerable<PrisonOptions> Prison_Options { get; set; }
-    public IEnumerable<DiseaseControlCenterOptions> DiseaseControlCenter_Options { get; set; }
-    public IEnumerable<HeathResearchInstituteOptions> HeathResearchInstitute_Options { get; set; }
-    public IEnumerable<RadioTelescopeOptions> RadioTelescope_Options { get; set; }
-    public IEnumerable<GeologicalResearchCenterOptions> GeologicalResearchCenter_Options { get; set; }
-    public IEnumerable<TechnicalUniversityOptions> TechnicalUniversity_Options { get; set; }
-    public IEnumerable<EarlyDisasterWarningSystemOptions> EarlyDisasterWarningSystem_Options { get; set; }
-    public IEnumerable<WelfareOfficeOptions> WelfareOffice_Options { get; set; }
-    public IEnumerable<CityHallOptions> CityHall_Options { get; set; }
-    public IEnumerable<LargeEmergencyShelterOptions> LargeEmergencyShelter_Options { get; set; }
-    public IEnumerable<CentralBankOptions> CentralBank_Options { get; set; }
-    public IEnumerable<MedicalUniversityOptions> MedicalUniversity_Options { get; set; }
-    public IEnumerable<LargeHadronColliderOptions> LargeHadronCollider_Options { get; set; }
-    public IEnumerable<PublicTransportStopsOptions> PublicTransportStops_Options { get; set; }
-    public IEnumerable<PublicTransportDepotsOptions> PublicTransportDepots_Options { get; set; }
-    public IEnumerable<PublicTransportStationsOptions> PublicTransportStations_Options { get; set; }
-    public IEnumerable<AirportOptions> Airport_Options { get; set; }
-    public IEnumerable<SpaceCenterOptions> SpaceCenter_Options { get; set; }
-    public IEnumerable<PostMailboxOptions> PostMailbox_Options { get; set; }
-    public IEnumerable<RadioMastOptions> RadioMast_Options { get; set; }
+    public int Version { get; set; }
+
+    public IEnumerable<SchoolOptions> School_Options { get; set; } = new List<SchoolOptions>();
+    public IEnumerable<PowerplantOptions> Powerplant_Options { get; set; } = new List<PowerplantOptions>();
+    public IEnumerable<WaterpumpOptions> Waterpump_Options { get; set; } = new List <WaterpumpOptions>();
+    public IEnumerable<TransformerstationOptions> Transformerstation_Options { get; set; } = new List<TransformerstationOptions> ();
+    public IEnumerable<ServerfarmOptions> Serverfarm_Options { get; set; } = new List<ServerfarmOptions>();
+    public IEnumerable<GarbagetruckOptions> Garbagetruck_Options { get; set; } = new List<GarbagetruckOptions>();
+    public IEnumerable<TransportbusOptions> Transportbus_Options { get; set; } = new List<TransportbusOptions>();
+    public IEnumerable<ParkinghallOptions> Parkinghall_Options { get; set; } = new List<ParkinghallOptions>();
+    public IEnumerable<CityparkOptions> Citypark_Options { get; set; } = new List<CityparkOptions>();
+    public IEnumerable<WastewaterOptions> Wastewater_Options { get; set; } = new List<WastewaterOptions>();
+    public IEnumerable<IncinerationPlantOptions> IncinerationPlant_Options { get; set; } = new List<IncinerationPlantOptions>();
+    public IEnumerable<HealthcareOptions> Healthcare_Options { get; set; } = new List<HealthcareOptions>();
+    public IEnumerable<PostofficeOptions> Postoffice_Options { get; set; } = new List<PostofficeOptions>();
+    public IEnumerable<CemeteryOptions> Cemetery_Options { get; set; } = new List<CemeteryOptions>();
+    public IEnumerable<CrematoriumOptions> Crematorium_Options { get; set; } = new List<CrematoriumOptions>();
+    public IEnumerable<WindturbineOptions> Windturbine_Options { get; set; } = new List<WindturbineOptions>();
+    public IEnumerable<EmergencybatteryOptions> Emergencybattery_Options { get; set; } = new List<EmergencybatteryOptions>();
+    public IEnumerable<GeothermalpowerplantOptions> Geothermalpowerplant_Options { get; set; } = new List<GeothermalpowerplantOptions>();
+    public IEnumerable<SolarpowerstationOptions> Solarpowerstation_Options { get; set; } = new List<SolarpowerstationOptions>();
+    public IEnumerable<SignatureResidentialbuildingOptions> SignatureResidentialbuilding_Options { get; set; } = new List<SignatureResidentialbuildingOptions>();
+    public IEnumerable<SignatureCommercialbuildingOptions> SignatureCommercialbuilding_Options { get; set; } = new List<SignatureCommercialbuildingOptions>();
+    public IEnumerable<PostVanOptions> PostVan_Options { get; set; } = new List<PostVanOptions>();
+    public IEnumerable<SignatureOfficebuildingOptions> SignatureOfficebuilding_Options { get; set; } = new List<SignatureOfficebuildingOptions>();
+    public IEnumerable<SignatureMixedbuildingOptions> SignatureMixedbuilding_Options { get; set; } = new List<SignatureMixedbuildingOptions>();
+    public IEnumerable<FireStationOptions> FireStation_Options { get; set; } = new List<FireStationOptions>();
+    public IEnumerable<FireHelicopterDepotOptions> FireHelicopterDepot_Options { get; set; } = new List<FireHelicopterDepotOptions>();
+    public IEnumerable<FirewatchTowerOptions> FirewatchTower_Options { get; set; } = new List<FirewatchTowerOptions>();
+    public IEnumerable<PoliceStationOptions> PoliceStation_Options { get; set; } = new List<PoliceStationOptions>();
+    public IEnumerable<PrisonOptions> Prison_Options { get; set; } = new List<PrisonOptions>();
+    public IEnumerable<DiseaseControlCenterOptions> DiseaseControlCenter_Options { get; set; } = new List<DiseaseControlCenterOptions>();
+    public IEnumerable<HeathResearchInstituteOptions> HeathResearchInstitute_Options { get; set; } = new List<HeathResearchInstituteOptions>();
+    public IEnumerable<RadioTelescopeOptions> RadioTelescope_Options { get; set; } = new List<RadioTelescopeOptions>();
+    public IEnumerable<GeologicalResearchCenterOptions> GeologicalResearchCenter_Options { get; set; } = new List<GeologicalResearchCenterOptions>();
+    public IEnumerable<TechnicalUniversityOptions> TechnicalUniversity_Options { get; set; } = new List<TechnicalUniversityOptions>();
+    public IEnumerable<EarlyDisasterWarningSystemOptions> EarlyDisasterWarningSystem_Options { get; set; } = new List<EarlyDisasterWarningSystemOptions>();
+    public IEnumerable<WelfareOfficeOptions> WelfareOffice_Options { get; set; } = new List<WelfareOfficeOptions>();
+    public IEnumerable<CityHallOptions> CityHall_Options { get; set; } = new List<CityHallOptions>();
+    public IEnumerable<LargeEmergencyShelterOptions> LargeEmergencyShelter_Options { get; set; } = new List<LargeEmergencyShelterOptions>();
+    public IEnumerable<CentralBankOptions> CentralBank_Options { get; set; } = new List<CentralBankOptions>();
+    public IEnumerable<MedicalUniversityOptions> MedicalUniversity_Options { get; set; } = new List<MedicalUniversityOptions>();
+    public IEnumerable<LargeHadronColliderOptions> LargeHadronCollider_Options { get; set; } = new List<LargeHadronColliderOptions>();
+    public IEnumerable<PublicTransportStopsOptions> PublicTransportStops_Options { get; set; } = new List<PublicTransportStopsOptions>();
+    public IEnumerable<PublicTransportDepotsOptions> PublicTransportDepots_Options { get; set; } = new List<PublicTransportDepotsOptions>();
+    public IEnumerable<PublicTransportStationsOptions> PublicTransportStations_Options { get; set; } = new List<PublicTransportStationsOptions>();
+    public IEnumerable<AirportOptions> Airport_Options { get; set; } = new List<AirportOptions>();
+    public IEnumerable<SpaceCenterOptions> SpaceCenter_Options { get; set; } = new List<SpaceCenterOptions>();
+    public IEnumerable<PostMailboxOptions> PostMailbox_Options { get; set; } = new List<PostMailboxOptions>();
+    public IEnumerable<RadioMastOptions> RadioMast_Options { get; set; } = new List<RadioMastOptions>();
 
 
 
@@ -2651,7 +2657,6 @@ public class WhitesharkCheatOverhaulOptions
     {
          School_Options = School_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) && 
-            x.UpkeepCost >= 0 &&
             x.AirPollution >= 0 &&
             x.GroundPollution >= 0 &&
             x.NoisePollution >= 0 &&
@@ -3162,5 +3167,46 @@ public class WhitesharkCheatOverhaulOptions
             x.Range >= 0 &&
             x.NetworkCapacity >= 0 &&
             x.NoisePollution >= 0);
+    }
+
+    public int UpdateToLatestVersion()
+    {
+        var initialVersion = Version;
+        if (Version == 0)
+        {
+            string[] addedpowerplant = ["GasPowerPlant01"];
+            foreach (var Powerplant in addedpowerplant)
+            {
+                if (Powerplant_Options.Any(o => o.Name == Powerplant)) continue;
+
+                Powerplant_Options = Powerplant_Options.Append(new PowerplantOptions
+                {
+                    Name = Powerplant,
+                    UpkeepCost = 655555
+
+                });
+            }
+            Powerplant_Options = Powerplant_Options.OrderBy(x => x.Name);
+            
+            string[] addedwaterpump = ["WaterPumpingStation01 Extra Pump"];
+            foreach (var Waterpump in addedwaterpump)
+            {
+                if (Waterpump_Options.Any(o => o.Name == Waterpump)) continue;
+
+                Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
+                {
+                    Name = Waterpump,
+                    UpkeepCost = 7000,
+                    Capacity = 50000,
+                    GarbageAccumulation = 2500,
+                    ElectricityConsumption = 1000,
+                    NoisePollution = 2500
+
+                });
+            }
+            Waterpump_Options = Waterpump_Options.OrderBy(x => x.Name);
+            Version = 1;
+        }
+        return Version - initialVersion;
     }
 }

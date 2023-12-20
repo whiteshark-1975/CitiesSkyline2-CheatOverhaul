@@ -4,7 +4,6 @@ public class SchoolOptions
 {
     public string Name { get; set; } = null!;
 
-    public int UpkeepCost { get; set; }
     public int AirPollution { get; set; }
     public int GroundPollution { get; set; }
     public int NoisePollution { get; set; }

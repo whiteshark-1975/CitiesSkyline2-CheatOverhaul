@@ -17,7 +17,6 @@ public static class PrefabPatcher
         {
 
             var costComponent = prefab.GetComponent<ServiceConsumption>();
-            costComponent.m_Upkeep = Schooloverrides.UpkeepCost;
             costComponent.m_GarbageAccumulation = Schooloverrides.GarbageAccumulation;
             costComponent.m_WaterConsumption = Schooloverrides.Waterconsumption;
             costComponent.m_ElectricityConsumption = Schooloverrides.Electricityconsumption;

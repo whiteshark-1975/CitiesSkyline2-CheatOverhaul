@@ -8,7 +8,7 @@
       https://api.nuget.org/v3/index.json;
       https://nuget.bepinex.dev/v3/index.json;
     </RestoreAdditionalProjectSources>
-    <Version>0.3.19</Version>
+    <Version>0.3.22</Version>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -21,6 +21,9 @@
 	</PropertyGroup>
   
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(Cities2_Location)\Cities2_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Colossal.AssetPipeline">
       <HintPath>$(Cities2_Location)\Cities2_Data\Managed\Colossal.AssetPipeline.dll</HintPath>
       <Private>False</Private>
@@ -421,8 +424,7 @@
     <PackageReference Include="BepInEx.Unity.Mono" Version="6.0.0-be.*" IncludeAssets="compile" Condition="$(BepInEx6)" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
     <PackageReference Include="HarmonyX" Version="2.10.2" />
-    <PackageReference Include="Wayz.CS2.Lib" Version="0.2.1" />
-	</ItemGroup>
+  	</ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="true">
     <Exec Command="if not exist &quot;$(Cities2_Location)\BepInEx\plugins\$(ProjectName)&quot; mkdir &quot;$(Cities2_Location)\BepInEx\plugins\$(ProjectName)&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)0Harmony.dll&quot; &quot;$(Cities2_Location)\BepInEx\plugins\$(ProjectName)\0Harmony.dll&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)$(ProjectName).dll&quot; &quot;$(Cities2_Location)\BepInEx\plugins\$(ProjectName)\$(ProjectName).dll&quot;" />
