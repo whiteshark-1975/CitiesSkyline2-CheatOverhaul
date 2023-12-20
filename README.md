@@ -6,10 +6,10 @@
 
 ## Modded Assets For Cities Skylines II
 * SchoolOptions
-* PowerplantOptions(complete)
-* WaterpumpOptions(complete)
+* PowerplantOptions - (complete)
+* WaterpumpOptions - (complete)
 * TransformerstationOptions
-* ServerfarmOptions(complete)
+* ServerfarmOptions - (complete)
 * GarbagetruckOptions
 * TransportbusOptions
 * ParkinghallOptions
@@ -17,34 +17,30 @@
 * WastewaterOptions
 * IncinerationPlantOptions
 * HealthcareOptions
-* PostofficeOptions(complete)
+* PostofficeOptions - (complete)
 * CemeteryOptions
 * CrematoriumOptions
 * WindturbineOptions
 * EmergencybatteryOptions
 * GeothermalpowerplantOptions
 * SolarpowerstationOptions
-* SignatureResidentialbuildingOptions(complete)
-* SignatureCommercialbuildingOptions(complete)
-* PostVanOptions(complete)
-* SignatureOfficebuildingOptions(complete)
-* SignatureMixedbuildingOptions(complete)
+* SignatureResidentialbuildingOptions - (complete)
+* SignatureCommercialbuildingOptions - (complete)
+* PostVanOptions - (complete)
+* SignatureOfficebuildingOptions - (complete)
+* SignatureMixedbuildingOptions - (complete)
 * FireStationOptions
 * FireHelicopterDepotOptions
 * FirewatchTowerOptions
 * PoliceStationOptions
-* PublicTransportStopsOptions(complete)
+* PublicTransportStopsOptions - (complete)
 * PublicTransportDepotsOptions
 * PublicTransportStationsOptions
 * AirportOptions
 * SpaceCenter_Options
-* RadioMastOptions(complete)
-* PostMailboxOptions(complete)
-* Added Upgrades for Powerplant.(complete)
-* Added Upgrades for WaterPumps.(complete)
-* Added Upgrades for RadioMast.(complete)
-* Added Upgrades for PostOffice.(complete)
-* Added Upgrades ServerFarm.(complete)
+* RadioMastOptions - (complete)
+* PostMailboxOptions - (complete)
+
 
 ## A setting File will be created at 1st run.
 Location for settingsfile:
