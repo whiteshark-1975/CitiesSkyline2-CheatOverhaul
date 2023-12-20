@@ -6,10 +6,10 @@
 
 ## Modded Assets For Cities Skylines II
 * SchoolOptions
-* PowerplantOptions
-* WaterpumpOptions
+* PowerplantOptions(complete)
+* WaterpumpOptions(complete)
 * TransformerstationOptions
-* ServerfarmOptions
+* ServerfarmOptions(complete)
 * GarbagetruckOptions
 * TransportbusOptions
 * ParkinghallOptions
@@ -17,29 +17,34 @@
 * WastewaterOptions
 * IncinerationPlantOptions
 * HealthcareOptions
-* PostofficeOptions
+* PostofficeOptions(complete)
 * CemeteryOptions
 * CrematoriumOptions
 * WindturbineOptions
 * EmergencybatteryOptions
 * GeothermalpowerplantOptions
 * SolarpowerstationOptions
-* SignatureResidentialbuildingOptions
-* SignatureCommercialbuildingOptions
-* PostVanOptions
-* SignatureOfficebuildingOptions
-* SignatureMixedbuildingOptions
+* SignatureResidentialbuildingOptions(complete)
+* SignatureCommercialbuildingOptions(complete)
+* PostVanOptions(complete)
+* SignatureOfficebuildingOptions(complete)
+* SignatureMixedbuildingOptions(complete)
 * FireStationOptions
 * FireHelicopterDepotOptions
 * FirewatchTowerOptions
 * PoliceStationOptions
-* PublicTransportStopsOptions
+* PublicTransportStopsOptions(complete)
 * PublicTransportDepotsOptions
 * PublicTransportStationsOptions
 * AirportOptions
 * SpaceCenter_Options
-* RadioMastOptions
-* PostMailboxOptions
+* RadioMastOptions(complete)
+* PostMailboxOptions(complete)
+* Added Upgrades for Powerplant.(complete)
+* Added Upgrades for WaterPumps.(complete)
+* Added Upgrades for RadioMast.(complete)
+* Added Upgrades for PostOffice.(complete)
+* Added Upgrades ServerFarm.(complete)
 
 ## A setting File will be created at 1st run.
 Location for settingsfile:
