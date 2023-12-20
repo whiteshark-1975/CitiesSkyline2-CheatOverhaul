@@ -1,7 +1,7 @@
 ## DO NOT ADD CONFIG TO THE FILE ONLY THE VALUES IN THE FILE CAN BE EDITED.
-
+* If you Installed 0.3.20 you will not be required to delete your setting file anymore in future releseases.
 * Should you have messed up please delete the settingsfile and the mod will create a new file on next startup.
-* On future update of the mod you also gonna need to delete the settings file so a new file can be written.
+* On update from release before 0.3.20 of the mod you also gonna need to delete the settings file so a new file can be written.
 * \AppData\LocalLow\Colossal Order\Cities Skylines II\ModSettings\WhitesharkCheatOverhaul\settings.json
 
 ## Modded Assets For Cities Skylines II
@@ -36,7 +36,11 @@
 * PublicTransportStopsOptions
 * PublicTransportDepotsOptions
 * PublicTransportStationsOptions
-.....
+* AirportOptions
+* SpaceCenter_Options
+* RadioMastOptions
+* PostMailboxOptions
+
 ## A setting File will be created at 1st run.
 Location for settingsfile:
 * \AppData\LocalLow\Colossal Order\Cities Skylines II\ModSettings\WhitesharkCheatOverhaul\settings.json
