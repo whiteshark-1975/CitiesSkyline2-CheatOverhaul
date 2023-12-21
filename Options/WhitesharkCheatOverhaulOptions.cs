@@ -3175,10 +3175,7 @@ public class WhitesharkCheatOverhaulOptions
         var initialVersion = Version;
         if (Version == 0)
         {
-            string[] addedwaterpump = ["WaterPumpingStation01 Extra Pump"];
-            foreach (var Waterpump in addedwaterpump)
-            {
-                if (Waterpump_Options.Any(o => o.Name == "WaterPumpingStation01 Extra Pump")) continue;
+                if (!Waterpump_Options.Any(o => o.Name == "WaterPumpingStation01 Extra Pump"))
                 Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
                 {
                     Name = "WaterPumpingStation01 Extra Pump",
@@ -3191,20 +3188,18 @@ public class WhitesharkCheatOverhaulOptions
                 });
 
                 Waterpump_Options = Waterpump_Options.OrderBy(x => x.Name);
-                Version = 322;
-            }
+                
+            
+            Version = 322;
         }
 
         if (Version == 322)
         {
-            string[] addedwaterpump1 = ["GroundwaterPumpingStation01 Advanced Filtering System"];
-            foreach (var Waterpump1 in addedwaterpump1)
-            {
-                if (Waterpump_Options.Any(o => o.Name == "GroundwaterPumpingStation01 Advanced Filtering System")) continue;
 
+                if (!Waterpump_Options.Any(o => o.Name == "GroundwaterPumpingStation01 Advanced Filtering System"))
                 Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
                 {
-                    Name = Waterpump1,
+                    Name = "GroundwaterPumpingStation01 Advanced Filtering System",
                     UpkeepCost = 11000,
                     Capacity = 0,
                     GarbageAccumulation = 2500,
@@ -3212,17 +3207,13 @@ public class WhitesharkCheatOverhaulOptions
                     Purification = 0.5f
 
                 });
-            }
+            
 
-            string[] addedwaterpump2 = ["GroundwaterPumpingStation01 Extra Pump"];
-            foreach (var Waterpump2 in addedwaterpump2)
-            {
-                if (Waterpump_Options.Any(o => o.Name == "GroundwaterPumpingStation01 Extra Pump")) continue;
-
-
+                       
+                if (!Waterpump_Options.Any(o => o.Name == "GroundwaterPumpingStation01 Extra Pump"))
                 Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
                 {
-                    Name = Waterpump2,
+                    Name = "GroundwaterPumpingStation01 Extra Pump",
                     UpkeepCost = 7000,
                     Capacity = 375000,
                     GarbageAccumulation = 2000,
@@ -3230,10 +3221,11 @@ public class WhitesharkCheatOverhaulOptions
                     NoisePollution = 2500,
 
                 });
-            }
+            
             Waterpump_Options = Waterpump_Options.OrderBy(x => x.Name);
             Version = 323;
         }
+        
         return Version - initialVersion;
 
     }
