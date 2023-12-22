@@ -969,6 +969,35 @@ public class WhitesharkCheatOverhaulOptions
                 Range = 5000,
                 Magnitude = 5
             },
+
+            new HealthcareOptions
+            {
+                Name = "MedicalClinic01 Ambulance Depot",
+                UpkeepCost = 7000,
+                Waterconsumption = 250,
+                Electricityconsumption = 500,
+                GarbageAccumulation = 400,
+                Ambulancecapacity = 5,
+                Helicoptercapacity = 0,
+                Patientcapacity = 0,
+                Treatmentbonus = 0
+                
+            },
+
+            new HealthcareOptions
+            {
+                Name = "MedicalClinic01 Extention Wing",
+                UpkeepCost = 25000,
+                Waterconsumption = 500,
+                Electricityconsumption = 1000,
+                GarbageAccumulation = 700,
+                Ambulancecapacity = 0,
+                Helicoptercapacity = 0,
+                Patientcapacity = 25,
+                Treatmentbonus = 0
+
+            },
+
             new HealthcareOptions
             {
                 Name = "Hospital01",
@@ -984,6 +1013,48 @@ public class WhitesharkCheatOverhaulOptions
                 Capacity = 50000,
                 Range = 7500,
                 Magnitude = 10
+            },
+
+            new HealthcareOptions
+            {
+                Name = "Hospital01 Helipad",
+                UpkeepCost = 35000,
+                Waterconsumption = 250,
+                Electricityconsumption = 1000,
+                GarbageAccumulation = 1000,
+                Ambulancecapacity = 0,
+                Helicoptercapacity = 1,
+                Patientcapacity = 0,
+                Treatmentbonus = 0
+                
+            },
+
+            new HealthcareOptions
+            {
+                Name = "Hospital01 Special Ward",
+                UpkeepCost = 100000,
+                Waterconsumption = 2500,
+                Electricityconsumption = 2000,
+                GarbageAccumulation = 3200,
+                Ambulancecapacity = 0,
+                Helicoptercapacity = 0,
+                Patientcapacity = 0,
+                Treatmentbonus = 0
+                
+            },
+
+            new HealthcareOptions
+            {
+                Name = "Hospital01 Trauma Center",
+                UpkeepCost = 80000,
+                Waterconsumption = 2500,
+                Electricityconsumption = 2000,
+                GarbageAccumulation = 3200,
+                Ambulancecapacity = 0,
+                Helicoptercapacity = 0,
+                Patientcapacity = 0,
+                Treatmentbonus = 15
+                
             }
         },
         
@@ -2287,7 +2358,136 @@ public class WhitesharkCheatOverhaulOptions
 
             }
 
-        }
+        },
+
+        DeliveryTruck_Options = new List<DeliveryTruckOptions>
+        {
+            new DeliveryTruckOptions
+            {
+                Name = "CoalTruck01",
+                CargoCapacity = 20000,
+                CostToDrive = 150
+            },
+
+            new DeliveryTruckOptions
+            {
+                Name = "OilTruck01",
+                CargoCapacity = 20000,
+                CostToDrive = 150
+            }
+        },
+
+        MaintenanceVehicles_Options = new List<MaintenanceVehiclesOptions>
+        {
+            new MaintenanceVehiclesOptions
+            {
+                Name = "ParkMaintenanceVehicle01",
+                MaintenanceCapacity = 1000,
+                MaintenanceRate = 200
+            },
+
+            new MaintenanceVehiclesOptions
+            {
+                Name = "RoadMaintenanceVehicle01",
+                MaintenanceCapacity = 1000,
+                MaintenanceRate = 200
+            }
+        },
+
+        FireEngine_Options = new List<FireEngineOptions>
+        {
+            new FireEngineOptions
+            {
+                Name = "EU_Firetruck01",
+                ExtinguishingRate = 7,
+                ExtinguishingSpread = 20,
+                ExtinguishingCapacity = 0,
+                DestroyedClearDuration = 10
+            },
+
+            new FireEngineOptions
+            {
+                Name = "NA_Firetruck01",
+                ExtinguishingRate = 7,
+                ExtinguishingSpread = 20,
+                ExtinguishingCapacity = 0,
+                DestroyedClearDuration = 10
+            }
+        },
+
+        PoliceCar_Options = new List<PoliceCarOptions>
+        {
+            new PoliceCarOptions
+            {
+                Name = "EU_PoliceVehicle01",
+                CriminalCapacity = 2,
+                CrimeReductionRate = 5000
+            },
+
+            new PoliceCarOptions
+            {
+                Name = "EU_PoliceVehicle02",
+                CriminalCapacity = 2,
+                CrimeReductionRate = 10000
+            },
+
+            new PoliceCarOptions
+            {
+                Name = "NA_PoliceVehicle01",
+                CriminalCapacity = 2,
+                CrimeReductionRate = 5000
+            },
+
+            new PoliceCarOptions
+            {
+                Name = "NA_PoliceVehicle02",
+                CriminalCapacity = 2,
+                CrimeReductionRate = 10000
+            },
+
+            new PoliceCarOptions
+            {
+                Name = "AdministrationVehicle01",
+                CriminalCapacity = 2,
+                CrimeReductionRate = 0
+            }
+
+        },
+
+        OutsideConnection_Options = new List<OutsideConnectionOptions>
+        {
+            new OutsideConnectionOptions
+            {
+                Name = "Road Outside Connection - Twoway",
+                StorageLimit = 62000000,
+                StudentCapacity = 10000,
+                GraduationModifier = 0,
+                AmbulanceCapacity = 30,
+                MedicalHelicopterCapacity = 0,
+                PatientCapacity = 500,
+                TreatmentBonus = 12,
+                GarbageCapacity = 100000,
+                GarbageVehicleCapacity = 10,
+                GarbageTransportCapacity = 0,
+                GarbageProcessingSpeed = 0,
+                FireEngineCapacity = 10,
+                FireHelicopterCapacity = 0,
+                DisasterResponseCapacity = 10,
+                FireVehicleEfficiency = 1,
+                PolicePatrolCarCapacity = 10,
+                PoliceHelicopterCapacity = 0,
+                JailCapacity = 1000,
+                HearseCapacity = 10,
+                DeathStorageCapacity = 500,
+                DeathProcessingrate = 100000,
+                TaxiVehicleCapacity = 50,
+                TaximaintenanceDuration = 0.007f,
+                TrafficSpawnerRate = 0.3f
+
+            }
+
+        },
+
 
     };
 
@@ -2341,7 +2541,11 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<SpaceCenterOptions> SpaceCenter_Options { get; set; } = new List<SpaceCenterOptions>();
     public IEnumerable<PostMailboxOptions> PostMailbox_Options { get; set; } = new List<PostMailboxOptions>();
     public IEnumerable<RadioMastOptions> RadioMast_Options { get; set; } = new List<RadioMastOptions>();
-
+    public IEnumerable<DeliveryTruckOptions> DeliveryTruck_Options { get; set; } = new List<DeliveryTruckOptions>();
+    public IEnumerable<MaintenanceVehiclesOptions> MaintenanceVehicles_Options { get; set; } = new List<MaintenanceVehiclesOptions>();
+    public IEnumerable<FireEngineOptions> FireEngine_Options { get; set; } = new List<FireEngineOptions>();
+    public IEnumerable<PoliceCarOptions> PoliceCar_Options { get; set; } = new List<PoliceCarOptions>();
+    public IEnumerable<OutsideConnectionOptions> OutsideConnection_Options { get; set; } = new List<OutsideConnectionOptions>();
 
 
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
@@ -2768,7 +2972,6 @@ public class WhitesharkCheatOverhaulOptions
         }
         return PostMailboxdict;
     }
-
     public IReadOnlyDictionary<string, RadioMastOptions> GetRadioMastDictionary()
     {
         var RadioMastdict = new Dictionary<string, RadioMastOptions>();
@@ -2778,6 +2981,54 @@ public class WhitesharkCheatOverhaulOptions
         }
         return RadioMastdict;
     }
+    public IReadOnlyDictionary<string, DeliveryTruckOptions> GetDeliveryTruckDictionary()
+    {
+        var DeliveryTruckdict = new Dictionary<string, DeliveryTruckOptions>();
+        foreach (var DeliveryTruck_option in DeliveryTruck_Options)
+        {
+            DeliveryTruckdict.Add(DeliveryTruck_option.Name, DeliveryTruck_option);
+        }
+        return DeliveryTruckdict;
+    }
+    public IReadOnlyDictionary<string, MaintenanceVehiclesOptions> GetMaintenanceVehiclesDictionary()
+    {
+        var MaintenanceVehiclesdict = new Dictionary<string, MaintenanceVehiclesOptions>();
+        foreach (var MaintenanceVehicles_option in MaintenanceVehicles_Options)
+        {
+            MaintenanceVehiclesdict.Add(MaintenanceVehicles_option.Name, MaintenanceVehicles_option);
+        }
+        return MaintenanceVehiclesdict;
+    }
+    public IReadOnlyDictionary<string, FireEngineOptions> GetFireEngineDictionary()
+    {
+        var FireEnginedict = new Dictionary<string, FireEngineOptions>();
+        foreach (var FireEngine_option in FireEngine_Options)
+        {
+            FireEnginedict.Add(FireEngine_option.Name, FireEngine_option);
+        }
+        return FireEnginedict;
+    }
+    public IReadOnlyDictionary<string, PoliceCarOptions> GetPoliceCarDictionary()
+    {
+        var PoliceCardict = new Dictionary<string, PoliceCarOptions>();
+        foreach (var PoliceCar_option in PoliceCar_Options)
+        {
+            PoliceCardict.Add(PoliceCar_option.Name, PoliceCar_option);
+        }
+        return PoliceCardict;
+    }
+
+    public IReadOnlyDictionary<string, OutsideConnectionOptions> GetOutsideConnectionDictionary()
+    {
+        var OutsideConnectiondict = new Dictionary<string, OutsideConnectionOptions>();
+        foreach (var OutsideConnection_option in OutsideConnection_Options)
+        {
+            OutsideConnectiondict.Add(OutsideConnection_option.Name, OutsideConnection_option);
+        }
+        return OutsideConnectiondict;
+    }
+
+
 
 
     public void RemoveBadEntires()
@@ -3295,6 +3546,56 @@ public class WhitesharkCheatOverhaulOptions
             x.Range >= 0 &&
             x.NetworkCapacity >= 0 &&
             x.NoisePollution >= 0);
+
+        DeliveryTruck_Options = DeliveryTruck_Options.Where(
+            x => !string.IsNullOrEmpty(x.Name) &&
+            x.CargoCapacity >= 0 &&
+            x.CostToDrive >= 0);
+
+        MaintenanceVehicles_Options = MaintenanceVehicles_Options.Where(
+        x => !string.IsNullOrEmpty(x.Name) &&
+        x.MaintenanceCapacity >= 0 &&
+        x.MaintenanceRate >= 0);
+
+        FireEngine_Options = FireEngine_Options.Where(
+        x => !string.IsNullOrEmpty(x.Name) &&
+        x.ExtinguishingRate >= 0 &&
+        x.ExtinguishingSpread >= 0 &&
+        x.ExtinguishingCapacity >= 0 &&
+        x.DestroyedClearDuration >= 0);
+
+        PoliceCar_Options = PoliceCar_Options.Where(
+        x => !string.IsNullOrEmpty(x.Name) &&
+        x.CriminalCapacity >= 0 &&
+        x.CrimeReductionRate >= 0);
+
+        OutsideConnection_Options = OutsideConnection_Options.Where(
+        x => !string.IsNullOrEmpty(x.Name) &&
+        x.StorageLimit >= 0 &&
+        x.StudentCapacity >= 0 &&
+        x.GraduationModifier >= 0 &&
+        x.AmbulanceCapacity >= 0 &&
+        x.MedicalHelicopterCapacity >= 0 &&
+        x.PatientCapacity >= 0 &&
+        x.TreatmentBonus >= 0 &&
+        x.GarbageCapacity >= 0 &&
+        x.GarbageVehicleCapacity >= 0 &&
+        x.GarbageTransportCapacity >= 0 &&
+        x.GarbageProcessingSpeed >= 0 &&
+        x.FireEngineCapacity >= 0 &&
+        x.FireHelicopterCapacity >= 0 &&
+        x.DisasterResponseCapacity >= 0 &&
+        x.PolicePatrolCarCapacity >= 0 &&
+        x.PoliceHelicopterCapacity >= 0 &&
+        x.JailCapacity >= 0 &&
+        x.HearseCapacity >= 0 &&
+        x.DeathStorageCapacity >= 0 &&
+        x.DeathProcessingrate >= 0 &&
+        x.TaxiVehicleCapacity >= 0 &&
+        x.TaximaintenanceDuration >= 0 &&
+        x.TrafficSpawnerRate >= 0);
+
+
     }
 
     public int UpdateToLatestVersion()
@@ -3452,8 +3753,227 @@ public class WhitesharkCheatOverhaulOptions
 
             Version = 324;
         }
+        if (Version == 324)
+        {
+            if (!Healthcare_Options.Any(o => o.Name == "MedicalClinic01 Ambulance Depot"))
+                Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
+                {
+                    Name = "MedicalClinic01 Ambulance Depot",
+                    UpkeepCost = 7000,
+                    Waterconsumption = 250,
+                    Electricityconsumption = 500,
+                    GarbageAccumulation = 400,
+                    Ambulancecapacity = 5,
+                    Helicoptercapacity = 0,
+                    Patientcapacity = 0,
+                    Treatmentbonus = 0
 
-             
+                });
+
+            if (!Healthcare_Options.Any(o => o.Name == "MedicalClinic01 Extention Wing"))
+                Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
+                {
+                    Name = "MedicalClinic01 Extention Wing",
+                    UpkeepCost = 25000,
+                    Waterconsumption = 500,
+                    Electricityconsumption = 1000,
+                    GarbageAccumulation = 700,
+                    Ambulancecapacity = 0,
+                    Helicoptercapacity = 0,
+                    Patientcapacity = 25,
+                    Treatmentbonus = 0
+
+                });
+
+            if (!Healthcare_Options.Any(o => o.Name == "Hospital01 Helipad"))
+                Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
+                {
+                    Name = "Hospital01 Helipad",
+                    UpkeepCost = 35000,
+                    Waterconsumption = 250,
+                    Electricityconsumption = 1000,
+                    GarbageAccumulation = 1000,
+                    Ambulancecapacity = 0,
+                    Helicoptercapacity = 1,
+                    Patientcapacity = 0,
+                    Treatmentbonus = 0
+
+                });
+
+            if (!Healthcare_Options.Any(o => o.Name == "Hospital01 Special Ward"))
+                Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
+                {
+                    Name = "Hospital01 Special Ward",
+                    UpkeepCost = 100000,
+                    Waterconsumption = 2500,
+                    Electricityconsumption = 2000,
+                    GarbageAccumulation = 3200,
+                    Ambulancecapacity = 0,
+                    Helicoptercapacity = 0,
+                    Patientcapacity = 0,
+                    Treatmentbonus = 0
+
+                });
+
+            if (!Healthcare_Options.Any(o => o.Name == "Hospital01 Trauma Center"))
+                Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
+                {
+                    Name = "Hospital01 Trauma Center",
+                    UpkeepCost = 80000,
+                    Waterconsumption = 2500,
+                    Electricityconsumption = 2000,
+                    GarbageAccumulation = 3200,
+                    Ambulancecapacity = 0,
+                    Helicoptercapacity = 0,
+                    Patientcapacity = 0,
+                    Treatmentbonus = 15
+
+                });
+
+            if (!DeliveryTruck_Options.Any(o => o.Name == "CoalTruck01"))
+                DeliveryTruck_Options = DeliveryTruck_Options.Append(new DeliveryTruckOptions
+                {
+                    Name = "CoalTruck01",
+                    CargoCapacity = 20000,
+                    CostToDrive = 150
+
+                });
+
+            if (!DeliveryTruck_Options.Any(o => o.Name == "OilTruck01"))
+                DeliveryTruck_Options = DeliveryTruck_Options.Append(new DeliveryTruckOptions
+                {
+                    Name = "OilTruck01",
+                    CargoCapacity = 20000,
+                    CostToDrive = 150
+
+                });
+
+            if (!MaintenanceVehicles_Options.Any(o => o.Name == "ParkMaintenanceVehicle01"))
+                MaintenanceVehicles_Options = MaintenanceVehicles_Options.Append(new MaintenanceVehiclesOptions
+                {
+                    Name = "ParkMaintenanceVehicle01",
+                    MaintenanceCapacity = 1000,
+                    MaintenanceRate = 200
+
+                });
+
+            if (!MaintenanceVehicles_Options.Any(o => o.Name == "RoadMaintenanceVehicle01"))
+                MaintenanceVehicles_Options = MaintenanceVehicles_Options.Append(new MaintenanceVehiclesOptions
+                {
+                    Name = "RoadMaintenanceVehicle01",
+                    MaintenanceCapacity = 1000,
+                    MaintenanceRate = 200
+
+                });
+
+            if (!FireEngine_Options.Any(o => o.Name == "EU_Firetruck01"))
+                FireEngine_Options = FireEngine_Options.Append(new FireEngineOptions
+                {
+                    Name = "EU_Firetruck01",
+                    ExtinguishingRate = 7,
+                    ExtinguishingSpread = 20,
+                    ExtinguishingCapacity = 0,
+                    DestroyedClearDuration = 10
+
+                });
+
+            if (!FireEngine_Options.Any(o => o.Name == "NA_Firetruck01"))
+                FireEngine_Options = FireEngine_Options.Append(new FireEngineOptions
+                {
+                    Name = "NA_Firetruck01",
+                    ExtinguishingRate = 7,
+                    ExtinguishingSpread = 20,
+                    ExtinguishingCapacity = 0,
+                    DestroyedClearDuration = 10
+
+                });
+
+            if (!PoliceCar_Options.Any(o => o.Name == "EU_PoliceVehicle01"))
+                PoliceCar_Options = PoliceCar_Options.Append(new PoliceCarOptions
+                {
+                    Name = "EU_PoliceVehicle01",
+                    CriminalCapacity = 2,
+                    CrimeReductionRate = 5000
+
+                });
+
+            if (!PoliceCar_Options.Any(o => o.Name == "EU_PoliceVehicle02"))
+                PoliceCar_Options = PoliceCar_Options.Append(new PoliceCarOptions
+                {
+                    Name = "EU_PoliceVehicle02",
+                    CriminalCapacity = 2,
+                    CrimeReductionRate = 10000
+
+                });
+
+            if (!PoliceCar_Options.Any(o => o.Name == "NA_PoliceVehicle01"))
+                PoliceCar_Options = PoliceCar_Options.Append(new PoliceCarOptions
+                {
+                    Name = "NA_PoliceVehicle01",
+                    CriminalCapacity = 2,
+                    CrimeReductionRate = 5000
+
+                });
+
+            if (!PoliceCar_Options.Any(o => o.Name == "NA_PoliceVehicle02"))
+                PoliceCar_Options = PoliceCar_Options.Append(new PoliceCarOptions
+                {
+                    Name = "NA_PoliceVehicle02",
+                    CriminalCapacity = 2,
+                    CrimeReductionRate = 10000
+
+                });
+
+            if (!PoliceCar_Options.Any(o => o.Name == "AdministrationVehicle01"))
+                PoliceCar_Options = PoliceCar_Options.Append(new PoliceCarOptions
+                {
+                    Name = "AdministrationVehicle01",
+                    CriminalCapacity = 2,
+                    CrimeReductionRate = 0
+
+                });
+
+            if (!OutsideConnection_Options.Any(o => o.Name == "Road Outside Connection - Twoway"))
+                OutsideConnection_Options = OutsideConnection_Options.Append(new OutsideConnectionOptions
+                {
+                    Name = "Road Outside Connection - Twoway",
+                    StorageLimit = 62000000,
+                    StudentCapacity = 10000,
+                    GraduationModifier = 0f,
+                    AmbulanceCapacity = 30,
+                    MedicalHelicopterCapacity = 0,
+                    PatientCapacity = 500,
+                    TreatmentBonus = 12,
+                    GarbageCapacity = 100000,
+                    GarbageVehicleCapacity = 10,
+                    GarbageTransportCapacity = 0,
+                    GarbageProcessingSpeed = 0,
+                    FireEngineCapacity = 10,
+                    FireHelicopterCapacity = 0,
+                    DisasterResponseCapacity = 10,
+                    FireVehicleEfficiency = 1f,
+                    PolicePatrolCarCapacity = 10,
+                    PoliceHelicopterCapacity = 0,
+                    JailCapacity = 1000,
+                    HearseCapacity = 10,
+                    DeathStorageCapacity = 500,
+                    DeathProcessingrate = 100000f,
+                    TaxiVehicleCapacity = 50,
+                    TaximaintenanceDuration = 0.007f,
+                    TrafficSpawnerRate = 0.3f
+
+                });
+
+            Healthcare_Options = Healthcare_Options.OrderBy(x => x.Name);
+            DeliveryTruck_Options = DeliveryTruck_Options.OrderBy(x => x.Name);
+            MaintenanceVehicles_Options = MaintenanceVehicles_Options.OrderBy(x => x.Name);
+            FireEngine_Options = FireEngine_Options.OrderBy(x => x.Name);
+            PoliceCar_Options = PoliceCar_Options.OrderBy(x => x.Name);
+            OutsideConnection_Options = OutsideConnection_Options.OrderBy(x => x.Name);
+
+            Version = 325;
+        }
+
         return Version - initialVersion;
 
     }

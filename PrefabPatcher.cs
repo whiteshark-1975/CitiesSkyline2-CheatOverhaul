@@ -279,12 +279,13 @@ public static class PrefabPatcher
             HospitalComponent.m_MedicalHelicopterCapacity = Healthcareoverrides.Helicoptercapacity;
             HospitalComponent.m_PatientCapacity = Healthcareoverrides.Patientcapacity;
             HospitalComponent.m_TreatmentBonus = Healthcareoverrides.Treatmentbonus;
-
-            var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
-            CoverageComponent.m_Range = Healthcareoverrides.Range;
-            CoverageComponent.m_Capacity = Healthcareoverrides.Capacity;
-            CoverageComponent.m_Magnitude = Healthcareoverrides.Magnitude;
-
+            if (prefab.name == "MedicalClinic01" || prefab.name == "Hospital01")
+            {
+                var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
+                CoverageComponent.m_Range = Healthcareoverrides.Range;
+                CoverageComponent.m_Capacity = Healthcareoverrides.Capacity;
+                CoverageComponent.m_Magnitude = Healthcareoverrides.Magnitude;
+            }
         }
 
         if (WhitesharkCheatOverhaul.PostofficeOptions.TryGetValue(prefab.name, out var Postofficeoverrides))
@@ -1042,18 +1043,93 @@ public static class PrefabPatcher
 
         }
 
+        if (WhitesharkCheatOverhaul.DeliveryTruckOptions.TryGetValue(prefab.name, out var DeliveryTruckoverrides))
+        {
+
+            var DeliveryTruckComponent = prefab.GetComponent<Game.Prefabs.DeliveryTruck>();
+            DeliveryTruckComponent.m_CargoCapacity = DeliveryTruckoverrides.CargoCapacity;
+            DeliveryTruckComponent.m_CostToDrive = DeliveryTruckoverrides.CostToDrive;
+
+        }
+
+        if (WhitesharkCheatOverhaul.MaintenanceVehiclesOptions.TryGetValue(prefab.name, out var MaintenanceVehiclesoverrides))
+        {
+
+            var MaintenanceVehicleComponent = prefab.GetComponent<Game.Prefabs.MaintenanceVehicle>();
+            MaintenanceVehicleComponent.m_MaintenanceCapacity = MaintenanceVehiclesoverrides.MaintenanceCapacity;
+            MaintenanceVehicleComponent.m_MaintenanceRate = MaintenanceVehiclesoverrides.MaintenanceRate;
+
+        }
+
+        if (WhitesharkCheatOverhaul.FireEngineOptions.TryGetValue(prefab.name, out var FireEngineoverrides))
+        {
+
+            var FireEngineComponent = prefab.GetComponent<Game.Prefabs.FireEngine>();
+            FireEngineComponent.m_ExtinguishingCapacity = FireEngineoverrides.ExtinguishingCapacity;
+            FireEngineComponent.m_ExtinguishingRate = FireEngineoverrides.ExtinguishingRate;
+            FireEngineComponent.m_ExtinguishingSpread = FireEngineoverrides.ExtinguishingSpread;
+            FireEngineComponent.m_DestroyedClearDuration = FireEngineoverrides.DestroyedClearDuration;
+
+        }
+
+        if (WhitesharkCheatOverhaul.PoliceCarOptions.TryGetValue(prefab.name, out var PoliceCaroverrides))
+        {
+
+            var PoliceCarComponent = prefab.GetComponent<Game.Prefabs.PoliceCar>();
+            PoliceCarComponent.m_CriminalCapacity = PoliceCaroverrides.CriminalCapacity;
+            PoliceCarComponent.m_CrimeReductionRate = PoliceCaroverrides.CrimeReductionRate;
+           
+        }
+
+        if (WhitesharkCheatOverhaul.OutsideConnectionOptions.TryGetValue(prefab.name, out var OutsideConnectionoverrides))
+        {
+
+            var StorageComponent = prefab.GetComponent<Game.Prefabs.StorageLimit>();
+            StorageComponent.storageLimit = OutsideConnectionoverrides.StorageLimit;
+
+            var SchoolComponent = prefab.GetComponent<Game.Prefabs.School>();
+            SchoolComponent.m_StudentCapacity = OutsideConnectionoverrides.StudentCapacity;
+            SchoolComponent.m_GraduationModifier = OutsideConnectionoverrides.GraduationModifier;
+
+            var HospitalComponent = prefab.GetComponent<Game.Prefabs.Hospital>();
+            HospitalComponent.m_AmbulanceCapacity = OutsideConnectionoverrides.AmbulanceCapacity;
+            HospitalComponent.m_MedicalHelicopterCapacity = OutsideConnectionoverrides.MedicalHelicopterCapacity;
+            HospitalComponent.m_PatientCapacity = OutsideConnectionoverrides.PatientCapacity;
+            HospitalComponent.m_TreatmentBonus = OutsideConnectionoverrides.TreatmentBonus;
+
+            var GarbageComponent = prefab.GetComponent<Game.Prefabs.GarbageFacility>();
+            GarbageComponent.m_GarbageCapacity = OutsideConnectionoverrides.GarbageCapacity;
+            GarbageComponent.m_VehicleCapacity = OutsideConnectionoverrides.GarbageVehicleCapacity;
+            GarbageComponent.m_TransportCapacity = OutsideConnectionoverrides.GarbageTransportCapacity;
+            GarbageComponent.m_ProcessingSpeed = OutsideConnectionoverrides.GarbageProcessingSpeed;
+
+            var FirestationComponent = prefab.GetComponent<Game.Prefabs.FireStation>();
+            FirestationComponent.m_FireEngineCapacity = OutsideConnectionoverrides.FireEngineCapacity;
+            FirestationComponent.m_FireHelicopterCapacity = OutsideConnectionoverrides.FireHelicopterCapacity;
+            FirestationComponent.m_DisasterResponseCapacity = OutsideConnectionoverrides.DisasterResponseCapacity;
+            FirestationComponent.m_VehicleEfficiency = OutsideConnectionoverrides.FireVehicleEfficiency;
+
+            var PoliceStationComponent = prefab.GetComponent<Game.Prefabs.PoliceStation>();
+            PoliceStationComponent.m_PatrolCarCapacity = OutsideConnectionoverrides.PolicePatrolCarCapacity;
+            PoliceStationComponent.m_PoliceHelicopterCapacity = OutsideConnectionoverrides.PoliceHelicopterCapacity;
+            PoliceStationComponent.m_JailCapacity = OutsideConnectionoverrides.JailCapacity;
+
+            var CemeteryComponent = prefab.GetComponent<Game.Prefabs.DeathcareFacility>();
+            CemeteryComponent.m_HearseCapacity = OutsideConnectionoverrides.HearseCapacity;
+            CemeteryComponent.m_StorageCapacity = OutsideConnectionoverrides.DeathStorageCapacity;
+            CemeteryComponent.m_ProcessingRate = OutsideConnectionoverrides.DeathProcessingrate;
+
+            var DepotsComponent = prefab.GetComponent<Game.Prefabs.TransportDepot>();
+            DepotsComponent.m_VehicleCapacity = OutsideConnectionoverrides.TaxiVehicleCapacity;
+            DepotsComponent.m_MaintenanceDuration = OutsideConnectionoverrides.TaximaintenanceDuration;
+
+            var TrafficspawnerComponent = prefab.GetComponent<Game.Prefabs.TrafficSpawner>();
+            TrafficspawnerComponent.m_SpawnRate = OutsideConnectionoverrides.TrafficSpawnerRate;
+
+        }
 
 
-
-
-
-
-
-
-
-
-
-
+        
 
         return true;
     }

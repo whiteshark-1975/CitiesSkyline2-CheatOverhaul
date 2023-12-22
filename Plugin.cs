@@ -64,6 +64,12 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, SpaceCenterOptions> SpaceCenterOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, PostMailboxOptions> PostMailboxOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, RadioMastOptions> RadioMastOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, DeliveryTruckOptions> DeliveryTruckOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, MaintenanceVehiclesOptions> MaintenanceVehiclesOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, FireEngineOptions> FireEngineOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, PoliceCarOptions> PoliceCarOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, OutsideConnectionOptions> OutsideConnectionOptions { get; private set; } = null!;
+
 
     private void Awake()
     {
@@ -145,6 +151,15 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.SpaceCenterOptions = options.GetSpaceCenterDictionary();
         WhitesharkCheatOverhaul.PostMailboxOptions = options.GetPostMailboxDictionary();
         WhitesharkCheatOverhaul.RadioMastOptions = options.GetRadioMastDictionary();
+        WhitesharkCheatOverhaul.DeliveryTruckOptions = options.GetDeliveryTruckDictionary();
+        WhitesharkCheatOverhaul.MaintenanceVehiclesOptions = options.GetMaintenanceVehiclesDictionary();
+        WhitesharkCheatOverhaul.FireEngineOptions = options.GetFireEngineDictionary();
+        WhitesharkCheatOverhaul.PoliceCarOptions = options.GetPoliceCarDictionary();
+        WhitesharkCheatOverhaul.OutsideConnectionOptions = options.GetOutsideConnectionDictionary();
+
+
+
+        
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
 

@@ -1,8 +1,8 @@
 {
   "name": "Whiteshark_Cheat_Overhaul",
-  "version_number": "0.3.24",
+  "version_number": "0.3.25",
   "website_url": "https://github.com/whiteshark-1975/CitiesSkyline2-CheatOverhaul",
-  "description": "Add a wide range of cheated settings, mainly to limit the ammount of buildings or vehicles needed. The mod comes now with a settings file. Added NEW UPDATE METHOD. Please Read the README.",
+  "description": "Add a wide range of cheated settings, mainly to limit the ammount of buildings or vehicles needed. The mod comes now with a settings file. After v0.3.23 you dont need to delete the settingsfile.",
   "dependencies": [
     "BepInEx-BepInExPack-5.4.2100"
   ]
