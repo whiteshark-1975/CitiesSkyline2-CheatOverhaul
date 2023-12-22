@@ -1,46 +1,58 @@
 ## DO NOT ADD CONFIG TO THE FILE ONLY THE VALUES IN THE FILE CAN BE EDITED.
-* NEW UPDATE METHOD YOU DO NOT NEED TO DELETE your settings file after this new update.
+* NEW UPDATE METHOD YOU DO NOT NEED TO DELETE your settings file after using 0.3.23
 * NEXT update all your settings will remain and only the new items will be added to your settings file.
 * Should you have messed up please delete the settingsfile and the mod will create a new file on next startup.
 * \AppData\LocalLow\Colossal Order\Cities Skylines II\ModSettings\WhitesharkCheatOverhaul\settings.json
 
 ## Modded Assets For Cities Skylines II
 * SchoolOptions
-* PowerplantOptions - (complete)
-* WaterpumpOptions - (complete)
-* TransformerstationOptions
-* ServerfarmOptions - (complete)
-* GarbagetruckOptions
-* TransportbusOptions
-* ParkinghallOptions
-* CityparkOptions
-* WastewaterOptions
+* PowerplantOptions - Upgrades Completed 
+* WaterpumpOptions - Upgrades Completed 
+* TransformerstationOptions - Upgrades Completed 
+* ServerfarmOptions - Upgrades Completed 
+* GarbagetruckOptions - Upgrades Completed 
+* TransportbusOptions - Upgrades Completed 
+* ParkinghallOptions - Upgrades Completed 
+* CityparkOptions - Upgrades Completed 
+* WastewaterOptions - Upgrades Completed 
 * IncinerationPlantOptions
 * HealthcareOptions
-* PostofficeOptions - (complete)
+* PostofficeOptions - Upgrades Completed 
 * CemeteryOptions
 * CrematoriumOptions
 * WindturbineOptions
 * EmergencybatteryOptions
 * GeothermalpowerplantOptions
 * SolarpowerstationOptions
-* SignatureResidentialbuildingOptions - (complete)
-* SignatureCommercialbuildingOptions - (complete)
-* PostVanOptions - (complete)
-* SignatureOfficebuildingOptions - (complete)
-* SignatureMixedbuildingOptions - (complete)
+* SignatureResidentialbuildingOptions - Upgrades Completed 
+* SignatureCommercialbuildingOptions - Upgrades Completed 
+* PostVanOptions - Upgrades Completed 
+* SignatureOfficebuildingOptions - Upgrades Completed 
+* SignatureMixedbuildingOptions - Upgrades Completed 
 * FireStationOptions
 * FireHelicopterDepotOptions
 * FirewatchTowerOptions
 * PoliceStationOptions
-* PublicTransportStopsOptions - (complete)
+* PrisonOptions
+* DiseaseControlCenterOptions
+* HeathResearchInstituteOptions
+* RadioTelescopeOptions
+* GeologicalResearchCenterOptions
+* TechnicalUniversityOptions
+* EarlyDisasterWarningSystemOptions
+* WelfareOfficeOptions
+* CityHallOptions
+* LargeEmergencyShelterOptions
+* CentralBankOptions
+* MedicalUniversityOptions
+* LargeHadronColliderOptions
+* PublicTransportStopsOptions - Upgrades Completed 
 * PublicTransportDepotsOptions
 * PublicTransportStationsOptions
 * AirportOptions
-* SpaceCenter_Options
-* RadioMastOptions - (complete)
-* PostMailboxOptions - (complete)
-
+* SpaceCenterOptions
+* RadioMastOptions - Upgrades Completed 
+* PostMailboxOptions - Upgrades Completed 
 
 ## A setting File will be created at 1st run.
 Location for settingsfile:

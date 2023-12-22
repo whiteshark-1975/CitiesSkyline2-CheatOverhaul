@@ -176,8 +176,11 @@ public static class PrefabPatcher
             ServiceComponent.m_WaterConsumption = Parkinghalloverrides.Waterconsumption;
             ServiceComponent.m_GarbageAccumulation = Parkinghalloverrides.GarbageAccumulation;
 
-            var PollutionComponent = prefab.GetComponent<Pollution>();
-            PollutionComponent.m_NoisePollution = Parkinghalloverrides.Noisepollution;
+            if (prefab.name != "ParkingHall01 Car Wash")
+            {
+                var PollutionComponent = prefab.GetComponent<Pollution>();
+                PollutionComponent.m_NoisePollution = Parkinghalloverrides.Noisepollution;
+            }  
         }
 
         if (WhitesharkCheatOverhaul.CityparkOptions.TryGetValue(prefab.name, out var Cityparkoverrides))

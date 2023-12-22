@@ -6,29 +6,29 @@
 
 ## Modded Assets For Cities Skylines II
 * SchoolOptions
-* PowerplantOptions
-* WaterpumpOptions
-* TransformerstationOptions
-* ServerfarmOptions
-* GarbagetruckOptions
-* TransportbusOptions
-* ParkinghallOptions
-* CityparkOptions
-* WastewaterOptions
+* PowerplantOptions - Upgrades Completed 
+* WaterpumpOptions - Upgrades Completed 
+* TransformerstationOptions - Upgrades Completed 
+* ServerfarmOptions - Upgrades Completed 
+* GarbagetruckOptions - Upgrades Completed 
+* TransportbusOptions - Upgrades Completed 
+* ParkinghallOptions - Upgrades Completed 
+* CityparkOptions - Upgrades Completed 
+* WastewaterOptions - Upgrades Completed 
 * IncinerationPlantOptions
 * HealthcareOptions
-* PostofficeOptions
+* PostofficeOptions - Upgrades Completed 
 * CemeteryOptions
 * CrematoriumOptions
 * WindturbineOptions
 * EmergencybatteryOptions
 * GeothermalpowerplantOptions
 * SolarpowerstationOptions
-* SignatureResidentialbuildingOptions
-* SignatureCommercialbuildingOptions
-* PostVanOptions
-* SignatureOfficebuildingOptions
-* SignatureMixedbuildingOptions
+* SignatureResidentialbuildingOptions - Upgrades Completed 
+* SignatureCommercialbuildingOptions - Upgrades Completed 
+* PostVanOptions - Upgrades Completed 
+* SignatureOfficebuildingOptions - Upgrades Completed 
+* SignatureMixedbuildingOptions - Upgrades Completed 
 * FireStationOptions
 * FireHelicopterDepotOptions
 * FirewatchTowerOptions
@@ -46,11 +46,13 @@
 * CentralBankOptions
 * MedicalUniversityOptions
 * LargeHadronColliderOptions
-* PublicTransportStopsOptions
+* PublicTransportStopsOptions - Upgrades Completed 
 * PublicTransportDepotsOptions
 * PublicTransportStationsOptions
 * AirportOptions
 * SpaceCenterOptions
+* RadioMastOptions - Upgrades Completed 
+* PostMailboxOptions - Upgrades Completed 
 
 ## A setting File will be created at 1st run.
 Location for settingsfile:

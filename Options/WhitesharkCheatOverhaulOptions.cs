@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Colossal.OdinSerializer.Utilities;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.InputSystem.Utilities;
 
@@ -418,6 +419,54 @@ public class WhitesharkCheatOverhaulOptions
         {
             new ParkinghallOptions
             {
+                Name = "ParkingLot01",
+                Upkeep = 2200,
+                GarageCapacity = 0,
+                Comfortfactor = 0.5f,
+                Electricityconsumption = 200,
+                Waterconsumption = 0,
+                GarbageAccumulation = 200,
+                Noisepollution = 2500
+            },
+
+            new ParkinghallOptions
+            {
+                Name = "ParkingLot02",
+                Upkeep = 3000,
+                GarageCapacity = 0,
+                Comfortfactor = 0.5f,
+                Electricityconsumption = 300,
+                Waterconsumption = 0,
+                GarbageAccumulation = 300,
+                Noisepollution = 2500
+            },
+
+            new ParkinghallOptions
+            {
+                Name = "ParkingLot03",
+                Upkeep = 7000,
+                GarageCapacity = 0,
+                Comfortfactor = 0.5f,
+                Electricityconsumption = 700,
+                Waterconsumption = 0,
+                GarbageAccumulation = 700,
+                Noisepollution = 5000
+            },
+
+            new ParkinghallOptions
+            {
+                Name = "ParkingLot04",
+                Upkeep = 16000,
+                GarageCapacity = 0,
+                Comfortfactor = 0.5f,
+                Electricityconsumption = 1600,
+                Waterconsumption = 0,
+                GarbageAccumulation = 1700,
+                Noisepollution = 5000
+            },
+
+            new ParkinghallOptions
+            {
                 Name = "ParkingHall01",
                 Upkeep = 30000,
                 GarageCapacity = 0,
@@ -427,6 +476,19 @@ public class WhitesharkCheatOverhaulOptions
                 GarbageAccumulation = 1600,
                 Noisepollution = 2500
             },
+
+            new ParkinghallOptions
+            {
+                Name = "ParkingHall01 Car Wash",
+                Upkeep = 5000,
+                GarageCapacity = 0,
+                Comfortfactor = 0.1f,
+                Electricityconsumption = 2400,
+                Waterconsumption = 2000,
+                GarbageAccumulation = 1600
+                
+            },
+
             new ParkinghallOptions
             {
                 Name = "ParkingHall02",
@@ -436,6 +498,18 @@ public class WhitesharkCheatOverhaulOptions
                 Electricityconsumption = 3000,
                 Waterconsumption = 2000,
                 GarbageAccumulation = 2000,
+                Noisepollution = 2500
+            },
+
+            new ParkinghallOptions
+            {
+                Name = "AutomatedParkingBuilding01",
+                Upkeep = 130000,
+                GarageCapacity = 416,
+                Comfortfactor = 0.750f,
+                Electricityconsumption = 7000,
+                Waterconsumption = 3000,
+                GarbageAccumulation = 2500,
                 Noisepollution = 2500
             }
         },
@@ -743,15 +817,68 @@ public class WhitesharkCheatOverhaulOptions
                 NoisePollution = 15000,
                 ElectricityConsumption = 3000
             },
+
+            new WastewaterOptions
+            {
+                Name = "WastewaterTreatmentPlant01 Advanced Filtering System",
+                UpkeepCost = 20000,
+                Capacity = 0,
+                Purification = 0.1f,
+                GarbageAccumulation = 12500,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 0,
+                ElectricityConsumption = 2000
+            },
+
+            new WastewaterOptions
+            {
+                Name = "WastewaterTreatmentPlant01 Extra Processing Unit",
+                UpkeepCost = 40000,
+                Capacity = 100000,
+                Purification = 0f,
+                GarbageAccumulation = 10000,
+                GroundPollution = 2500,
+                AirPollution = 2500,
+                NoisePollution = 7500,
+                ElectricityConsumption = 1000
+            },
+
             new WastewaterOptions
             {
                 Name = "SewageOutlet01",
                 UpkeepCost = 20000,
                 Capacity = 100000,
-                Purification = 0,
+                Purification = 0f,
                 GarbageAccumulation = 0,
                 GroundPollution = 0,
                 AirPollution = 5000,
+                NoisePollution = 5000,
+                ElectricityConsumption = 0
+            },
+
+            new WastewaterOptions
+            {
+                Name = "SewageOutlet01 Chemical Purification",
+                UpkeepCost = 4000,
+                Capacity = 0,
+                Purification = 0.25f,
+                GarbageAccumulation = 0,
+                GroundPollution = 0,
+                AirPollution = 2500,
+                NoisePollution = 5000,
+                ElectricityConsumption = 0
+            },
+
+            new WastewaterOptions
+            {
+                Name = "SewageOutlet01 Extra Settling Tank",
+                UpkeepCost = 10000,
+                Capacity = 0,
+                Purification = 0.1f,
+                GarbageAccumulation = 0,
+                GroundPollution = 2500,
+                AirPollution = 2500,
                 NoisePollution = 5000,
                 ElectricityConsumption = 0
             }
@@ -3173,59 +3300,160 @@ public class WhitesharkCheatOverhaulOptions
     public int UpdateToLatestVersion()
     {
         var initialVersion = Version;
-        if (Version == 0)
+        if (Version == 323)
         {
-                if (!Waterpump_Options.Any(o => o.Name == "WaterPumpingStation01 Extra Pump"))
-                Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
+                if (!Wastewater_Options.Any(o => o.Name == "SewageOutlet01 Chemical Purification"))
+                Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
                 {
-                    Name = "WaterPumpingStation01 Extra Pump",
-                    UpkeepCost = 7000,
-                    Capacity = 50000,
-                    GarbageAccumulation = 2500,
-                    ElectricityConsumption = 1000,
-                    NoisePollution = 2500
-
-                });
-
-                Waterpump_Options = Waterpump_Options.OrderBy(x => x.Name);
-                
-            
-            Version = 322;
-        }
-
-        if (Version == 322)
-        {
-
-                if (!Waterpump_Options.Any(o => o.Name == "GroundwaterPumpingStation01 Advanced Filtering System"))
-                Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
-                {
-                    Name = "GroundwaterPumpingStation01 Advanced Filtering System",
-                    UpkeepCost = 11000,
+                    Name = "SewageOutlet01 Chemical Purification",
+                    UpkeepCost = 4000,
                     Capacity = 0,
-                    GarbageAccumulation = 2500,
-                    ElectricityConsumption = 1000,
-                    Purification = 0.5f
+                    Purification = 0.25f,
+                    GarbageAccumulation = 0,
+                    GroundPollution = 0,
+                    AirPollution = 2500,
+                    NoisePollution = 5000,
+                    ElectricityConsumption = 0
 
                 });
-            
 
-                       
-                if (!Waterpump_Options.Any(o => o.Name == "GroundwaterPumpingStation01 Extra Pump"))
-                Waterpump_Options = Waterpump_Options.Append(new WaterpumpOptions
+            if (!Wastewater_Options.Any(o => o.Name == "SewageOutlet01 Extra Settling Tank"))
+                Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
                 {
-                    Name = "GroundwaterPumpingStation01 Extra Pump",
-                    UpkeepCost = 7000,
-                    Capacity = 375000,
-                    GarbageAccumulation = 2000,
-                    ElectricityConsumption = 500,
-                    NoisePollution = 2500,
+                    Name = "SewageOutlet01 Extra Settling Tank",
+                    UpkeepCost = 10000,
+                    Capacity = 0,
+                    Purification = 0.1f,
+                    GarbageAccumulation = 0,
+                    GroundPollution = 2500,
+                    AirPollution = 2500,
+                    NoisePollution = 5000,
+                    ElectricityConsumption = 0
 
                 });
-            
-            Waterpump_Options = Waterpump_Options.OrderBy(x => x.Name);
-            Version = 323;
+
+            if (!Wastewater_Options.Any(o => o.Name == "WastewaterTreatmentPlant01 Advanced Filtering System"))
+                Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
+                {
+                    Name = "WastewaterTreatmentPlant01 Advanced Filtering System",
+                    UpkeepCost = 20000,
+                    Capacity = 0,
+                    Purification = 0.1f,
+                    GarbageAccumulation = 12500,
+                    GroundPollution = 0,
+                    AirPollution = 0,
+                    NoisePollution = 0,
+                    ElectricityConsumption = 2000
+
+                });
+
+            if (!Wastewater_Options.Any(o => o.Name == "WastewaterTreatmentPlant01 Extra Processing Unit"))
+                Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
+                {
+                    Name = "WastewaterTreatmentPlant01 Extra Processing Unit",
+                    UpkeepCost = 40000,
+                    Capacity = 100000,
+                    Purification = 0f,
+                    GarbageAccumulation = 10000,
+                    GroundPollution = 2500,
+                    AirPollution = 2500,
+                    NoisePollution = 7500,
+                    ElectricityConsumption = 1000
+
+                });
+
+            if (!Parkinghall_Options.Any(o => o.Name == "ParkingLot01"))
+                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
+                {
+                    Name = "ParkingLot01",
+                    Upkeep = 2200,
+                    GarageCapacity = 0,
+                    Comfortfactor = 0.5f,
+                    Electricityconsumption = 200,
+                    Waterconsumption = 0,
+                    GarbageAccumulation = 200,
+                    Noisepollution = 2500
+
+                });
+
+            if (!Parkinghall_Options.Any(o => o.Name == "ParkingLot02"))
+                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
+                {
+                    Name = "ParkingLot02",
+                    Upkeep = 3000,
+                    GarageCapacity = 0,
+                    Comfortfactor = 0.5f,
+                    Electricityconsumption = 300,
+                    Waterconsumption = 0,
+                    GarbageAccumulation = 300,
+                    Noisepollution = 2500
+
+                });
+
+            if (!Parkinghall_Options.Any(o => o.Name == "ParkingLot03"))
+                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
+                {
+                    Name = "ParkingLot03",
+                    Upkeep = 7000,
+                    GarageCapacity = 0,
+                    Comfortfactor = 0.5f,
+                    Electricityconsumption = 700,
+                    Waterconsumption = 0,
+                    GarbageAccumulation = 700,
+                    Noisepollution = 5000
+
+                });
+
+            if (!Parkinghall_Options.Any(o => o.Name == "ParkingLot04"))
+                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
+                {
+                    Name = "ParkingLot04",
+                    Upkeep = 16000,
+                    GarageCapacity = 0,
+                    Comfortfactor = 0.5f,
+                    Electricityconsumption = 1600,
+                    Waterconsumption = 0,
+                    GarbageAccumulation = 1700,
+                    Noisepollution = 5000
+
+                });
+
+            if (!Parkinghall_Options.Any(o => o.Name == "ParkingHall01 Car Wash"))
+                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
+                {
+                    Name = "ParkingHall01 Car Wash",
+                    Upkeep = 5000,
+                    GarageCapacity = 0,
+                    Comfortfactor = 0.1f,
+                    Electricityconsumption = 2400,
+                    Waterconsumption = 2000,
+                    GarbageAccumulation = 1600
+
+                });
+
+            if (!Parkinghall_Options.Any(o => o.Name == "AutomatedParkingBuilding01"))
+                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
+                {
+                    Name = "AutomatedParkingBuilding01",
+                    Upkeep = 130000,
+                    GarageCapacity = 416,
+                    Comfortfactor = 0.750f,
+                    Electricityconsumption = 7000,
+                    Waterconsumption = 3000,
+                    GarbageAccumulation = 2500,
+                    Noisepollution = 2500
+
+                });
+
+
+            Wastewater_Options = Wastewater_Options.OrderBy(x => x.Name);
+            Parkinghall_Options = Parkinghall_Options.OrderBy(x => x.Name);
+
+
+            Version = 324;
         }
-        
+
+             
         return Version - initialVersion;
 
     }
