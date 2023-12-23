@@ -330,64 +330,24 @@ public static class PrefabPatcher
             ModifyStats.ModifyCityRecoveryFailChange(prefab, MedicalUniversityOptions);
             ModifyStats.ModifyCityHospitalEfficiency(prefab, MedicalUniversityOptions);
         }
-
-        if (WhitesharkCheatOverhaul.LargeHadronColliderOptions.TryGetValue(prefab.name, out var LargeHadronCollideroverrides))
+        if (WhitesharkCheatOverhaul.LargeHadronColliderOptions.TryGetValue(prefab.name, out LargeHadronColliderOptions LargeHadronColliderOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = LargeHadronCollideroverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = LargeHadronCollideroverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = LargeHadronCollideroverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = LargeHadronCollideroverrides.GarbageAccumulation;
-
-            var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var UniversityEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityInterest);
-            UniversityEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
-            
-            var OfficeSoftwareDemandEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareDemand);
-            OfficeSoftwareDemandEffect.m_Delta = LargeHadronCollideroverrides.CityOfficeSoftwareDemand;
-           
-            var IndustrialElectronicDemandEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialElectronicsDemand);
-            IndustrialElectronicDemandEffect.m_Delta = LargeHadronCollideroverrides.CityIndustrialElectronicDemand;
-            
-            var OfficeSoftwareEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareEfficiency);
-            OfficeSoftwareEfficiencyEffect.m_Delta = LargeHadronCollideroverrides.CityOfficeSoftwareEfficiency;
-           
-            var IndustrialElectronicEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialElectronicsEfficiency);
-            IndustrialElectronicEfficiencyEffect.m_Delta = LargeHadronCollideroverrides.CityIndustrialElectronicEfficiency;
-
+            ModifyStats.ModifyServiceConsumption(prefab, LargeHadronColliderOptions);
+            ModifyStats.ModifyCityUniversityInterest(prefab, LargeHadronColliderOptions);
+            ModifyStats.ModifyCityOfficeSoftwareDemand(prefab, LargeHadronColliderOptions);
+            ModifyStats.ModifyCityOfficeSoftwareEfficiency(prefab, LargeHadronColliderOptions);
+            ModifyStats.ModifyCityIndustrialElectronicsDemand(prefab, LargeHadronColliderOptions);
+            ModifyStats.ModifyCityIndustrialElectronicsEfficiency(prefab, LargeHadronColliderOptions);
         }
-
-        if (WhitesharkCheatOverhaul.PublicTransportStopsOptions.TryGetValue(prefab.name, out var PublicTransportStopsoverrides))
+        if (WhitesharkCheatOverhaul.PublicTransportStopsOptions.TryGetValue(prefab.name, out PublicTransportStopsoverrides PublicTransportStopsoverrides))
         {
-
-            var StopComponent = prefab.GetComponent<TransportStop>();
-            StopComponent.m_EnterDistance = PublicTransportStopsoverrides.EnterDistance;
-            StopComponent.m_ExitDistance = PublicTransportStopsoverrides.ExitDistance;
-            StopComponent.m_AccessDistance = PublicTransportStopsoverrides.AccessDistance;
-            StopComponent.m_BoardingTime = PublicTransportStopsoverrides.BoardingTime;
-            StopComponent.m_ComfortFactor = PublicTransportStopsoverrides.ComfortFactor;
-            StopComponent.m_LoadingFactor = PublicTransportStopsoverrides.LoadingFactor;
-
+            ModifyStats.ModifyPublicTransportStops(prefab, PublicTransportStopsoverrides);
         }
-
-        if (WhitesharkCheatOverhaul.PublicTransportDepotsOptions.TryGetValue(prefab.name, out var PublicTransportDepotssoverrides))
+        if (WhitesharkCheatOverhaul.PublicTransportDepotsOptions.TryGetValue(prefab.name, out PublicTransportDepotsOptions PublicTransportDepotsOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = PublicTransportDepotssoverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = PublicTransportDepotssoverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = PublicTransportDepotssoverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = PublicTransportDepotssoverrides.GarbageAccumulation;
-
-            var PollutionComponent = prefab.GetComponent<Pollution>();
-            PollutionComponent.m_NoisePollution = PublicTransportDepotssoverrides.NoisePollution;
-            PollutionComponent.m_AirPollution = PublicTransportDepotssoverrides.AirPollution;
-
-            var DepotsComponent = prefab.GetComponent<Game.Prefabs.TransportDepot>();
-            DepotsComponent.m_VehicleCapacity = PublicTransportDepotssoverrides.VehicleCapacity;
-            DepotsComponent.m_MaintenanceDuration = PublicTransportDepotssoverrides.MaintenanceDuration;
-
+            ModifyStats.ModifyServiceConsumption(prefab, PublicTransportDepotsOptions);
+            ModifyStats.ModifyPollution(prefab, PublicTransportDepotsOptions);
+            ModifyStats.ModifyPublicTransportDepot(prefab, PublicTransportDepotsOptions);
         }
 
         if (WhitesharkCheatOverhaul.PublicTransportStationsOptions.TryGetValue(prefab.name, out var PublicTransportStationssoverrides))

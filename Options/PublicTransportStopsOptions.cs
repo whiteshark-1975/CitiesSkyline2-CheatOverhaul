@@ -1,7 +1,8 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class PublicTransportStopsOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    ITransportStopOptions
 {
     public string Name { get; set; } = null!;
 

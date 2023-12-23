@@ -339,11 +339,47 @@ public class ModifyStats
         var HospitalEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.HospitalEfficiency);
         HospitalEfficiencyEffect.m_Delta = options.CityHospitalEfficiency;
     }
-
-
-
-
-
+    public static void ModifyCityOfficeSoftwareDemand(PrefabBase prefab, ICityOfficeSoftwareDemand options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var OfficeSoftwareDemandEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareDemand);
+        OfficeSoftwareDemandEffect.m_Delta = options.CityOfficeSoftwareDemand;
+    }
+    public static void ModifyCityOfficeSoftwareEfficiency(PrefabBase prefab, ICityOfficeSoftwareEfficiency options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var OfficeSoftwareEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareEfficiency);
+        OfficeSoftwareEfficiencyEffect.m_Delta = options.CityOfficeSoftwareEfficiency;
+    }
+    public static void ModifyCityIndustrialElectronicsDemand(PrefabBase prefab, ICityIndustrialElectronicDemand options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var IndustrialElectronicDemandEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialElectronicsDemand);
+        IndustrialElectronicDemandEffect.m_Delta = options.CityIndustrialElectronicDemand;
+    }
+    public static void ModifyCityIndustrialElectronicsEfficiency(PrefabBase prefab, ICityIndustrialElectronicEfficiency options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var IndustrialElectronicEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialElectronicsEfficiency);
+        IndustrialElectronicEfficiencyEffect.m_Delta = options.CityIndustrialElectronicEfficiency;
+    }
+    public static void ModifyPublicTransportStops(PrefabBase prefab, ITransportStopOptions options)
+    {
+        var StopComponent = prefab.GetComponent<TransportStop>();
+        StopComponent.m_EnterDistance = options.EnterDistance;
+        StopComponent.m_ExitDistance = options.ExitDistance;
+        StopComponent.m_AccessDistance = options.AccessDistance;
+        StopComponent.m_BoardingTime = options.BoardingTime;
+        StopComponent.m_ComfortFactor = options.ComfortFactor;
+        StopComponent.m_LoadingFactor = options.LoadingFactor;
+    }
+    public static void ModifyPublicTransportDepot(PrefabBase prefab, ITransportDepotOptions options)
+    {
+        var DepotsComponent = prefab.GetComponent<Game.Prefabs.TransportDepot>();
+        DepotsComponent.m_VehicleCapacity = options.VehicleCapacity;
+        DepotsComponent.m_MaintenanceDuration = options.MaintenanceDuration;
+        DepotsComponent.m_ProductionDuration = options.ProductionDuration;
+    }
 
 
 
