@@ -1,7 +1,11 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class FireStationOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IServiceConsumptionOptions,
+    IPollutionOptions,
+    IFireStationOptions,
+    IServiceCoverageOptions
 {
     public string Name { get; set; } = null!;
 
@@ -9,13 +13,15 @@ public class FireStationOptions :
     public int ElectricityConsumption { get; set; }
     public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int Noisepollution { get; set; }
+    public int GroundPollution { get; set; }
+    public int AirPollution { get; set; }
+    public int NoisePollution { get; set; }
     public int FireEngineCapacity { get; set; }
     public int FireHelicopterCapacity { get; set; }
     public int VehicleEfficiency { get; set; }
     public int DisasterResponseCapacity { get; set;}
-    public int Range { get; set; }
-    public int Capacity { get; set; }
-    public int Magnitude { get; set; }
+    public int ServiceCoverageRange { get; set; }
+    public int ServiceCoverageCapacity { get; set; }
+    public int ServiceCoverageMagnitude { get; set; }
 
 }

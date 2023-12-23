@@ -1,7 +1,10 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class FireHelicopterDepotOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IServiceConsumptionOptions,
+    IPollutionOptions,
+    IFireStationOptions
 {
     public string Name { get; set; } = null!;
 
@@ -9,7 +12,9 @@ public class FireHelicopterDepotOptions :
     public int ElectricityConsumption { get; set; }
     public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int Noisepollution { get; set; }
+    public int GroundPollution { get; set; }
+    public int AirPollution { get; set; }
+    public int NoisePollution { get; set; }
     public int FireEngineCapacity { get; set; }
     public int FireHelicopterCapacity { get; set; }
     public int VehicleEfficiency { get; set; }

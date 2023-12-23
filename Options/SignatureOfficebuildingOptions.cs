@@ -1,17 +1,28 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class SignatureOfficebuildingOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IAttractionOptions,
+    IPollutionOptions,
+    ILocalWellbeing,
+    ILocalCrimeAccumulation,
+    ICityOfficeEfficiency,
+    ICityUniversityInterest,
+    ICityUniversityGraduation
+    
 {
     public string Name { get; set; } = null!;
 
     public int Attractiveness { get; set; }
-    public float Wellbeing { get; set; }
-    public float Radius { get; set; }
-    public float CrimeAccumulation { get; set; }
-    public float CrimeRadius { get; set; }
-    public float CityOfficeEfficency { get; set; }
+    public int GroundPollution { get; set; }
+    public int AirPollution { get; set; }
+    public int NoisePollution { get; set; }
+    public float LocalWellbeing { get; set; }
+    public float LocalWellbeingRadius { get; set; }
+    public float LocalCrimeAccumulation { get; set; }
+    public float LocalCrimeAccumulationRadius { get; set; }
+    public float CityOfficeEfficiency { get; set; }
     public float CityUniversityInterest { get; set; }
     public float CityUniversityGraduation { get; set; }
-    public int Noisepollution { get; set; }
+    
 }

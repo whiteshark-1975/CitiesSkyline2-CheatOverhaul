@@ -1,7 +1,8 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class PostVanOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IPostVanOptions
 {
     public string Name { get; set; } = null!;
 

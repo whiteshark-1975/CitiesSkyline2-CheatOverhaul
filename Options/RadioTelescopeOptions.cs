@@ -1,13 +1,15 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class RadioTelescopeOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IServiceConsumptionOptions,
+    ICityUniversityGraduation
 {
     public string Name { get; set; } = null!;
 
     public int Upkeep { get; set; }
-    public int Electricityconsumption { get; set; }
-    public int Waterconsumption { get; set; }
+    public int ElectricityConsumption { get; set; }
+    public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
     public float CityUniversityGraduation { get; set; }
 

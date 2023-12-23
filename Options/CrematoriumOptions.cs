@@ -1,19 +1,24 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class CrematoriumOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IServiceConsumptionOptions,
+    IPollutionOptions,
+    IDeathcareFacilityOptions
+    
 
 {
     public string Name { get; set; } = null!;
 
     public int Upkeep { get; set; }
+    public int ElectricityConsumption { get; set; }
+    public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int Electricityconsumption { get; set; }
-    public int Waterconsumption { get; set; }
-    public int Hearsecapacity { get; set; }
-    public int Storagecapacity { get; set; }
-    public int Processingrate { get; set; }
-    public int Airpollution { get; set; }
-    public int Noisepollution { get; set; }
+    public int HearseCapacity { get; set; }
+    public int StorageCapacity { get; set; }
+    public int ProcessingRate { get; set; }
+    public int GroundPollution { get; set; }
+    public int AirPollution { get; set; }
+    public int NoisePollution { get; set; }
 
 }

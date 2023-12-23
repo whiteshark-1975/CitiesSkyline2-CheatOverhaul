@@ -1,7 +1,11 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class PoliceStationOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IServiceConsumptionOptions,
+    IPollutionOptions,
+    IPoliceStationOptions,
+    IServiceCoverageOptions
 {
     public string Name { get; set; } = null!;
 
@@ -9,12 +13,15 @@ public class PoliceStationOptions :
     public int ElectricityConsumption { get; set; }
     public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
+    public int GroundPollution { get; set; }
+    public int AirPollution { get; set; }
+    public int NoisePollution { get; set; }
     public int PatrolCarCapacity { get; set; }
     public int PoliceHelicopterCapacity { get; set; }
     public int JailCapacity { get; set; }
-    public int Range { get; set; }
-    public int Capacity { get; set; }
-    public int Magnitude { get; set; }
-    public int Noisepollution { get; set; }
+    public int ServiceCoverageRange { get; set; }
+    public int ServiceCoverageCapacity { get; set; }
+    public int ServiceCoverageMagnitude { get; set; }
+    
     
 }

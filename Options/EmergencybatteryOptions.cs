@@ -1,15 +1,22 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class EmergencybatteryOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IServiceConsumptionOptions,
+    IPollutionOptions,
+    IBatteryOptions
 {
     public string Name { get; set; } = null!;
 
     public int Upkeep { get; set; }
+    public int ElectricityConsumption { get; set; }
+    public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int Waterconsumption { get; set; }
-    public int Poweroutput { get; set; }
-    public int Capacity { get; set; }
-    public int Noisepollution { get; set; }
+    public int GroundPollution { get; set; }
+    public int AirPollution { get; set; }
+    public int NoisePollution { get; set; }
+    public int PowerOutput { get; set; }
+    public int BatteryCapacity { get; set; }
+    
 
 }

@@ -1,4 +1,5 @@
-﻿using Game.City;
+﻿using Game.Buildings;
+using Game.City;
 using Game.Prefabs;
 using System.Linq;
 
@@ -171,22 +172,132 @@ public class ModifyStats
         PostofficeComponent.m_PostTruckCapacity = options.PostTrucksCapacity;
         PostofficeComponent.m_SortingRate = options.SortingRate;
     }
+    public static void ModifyWindPowered(PrefabBase prefab, IWindPoweredOptions options)
+    {
+        var WindComponent = prefab.GetComponent<Game.Prefabs.WindPowered>();
+        WindComponent.m_Production = options.Production;
+        WindComponent.m_MaximumWind = options.MaximumWind;
+    }
+    public static void ModifyGroundwaterPowered(PrefabBase prefab, IGroundWaterPoweredOptions options)
+    {
+        var ProductionComponent = prefab.GetComponent<GroundWaterPowered>();
+        ProductionComponent.m_Production = options.Production;
+        ProductionComponent.m_MaximumGroundWater = options.MaximumGroundwater;
+    }
+    public static void ModifySolarPowered(PrefabBase prefab, ISolarPoweredOptions options)
+    {
+        var ProductionComponent = prefab.GetComponent<SolarPowered>();
+        ProductionComponent.m_Production = options.Production;
+    }
+    public static void ModifyLocalWellbeing(PrefabBase prefab, ILocalWellbeing options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.LocalEffects>();
+        var WellbeingEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.Wellbeing);
+        WellbeingEffect.m_Delta = options.LocalWellbeing;
+        WellbeingEffect.m_Radius = options.LocalWellbeingRadius;
+    }
+    public static void ModifyCityImportCost(PrefabBase prefab, ICityImportcost options)
+    {
+        var CityEffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var CityimportEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.ImportCost);
+        CityimportEffect.m_Delta = options.CityImportcost;
+        
+    }
+    public static void ModifyPostVan(PrefabBase prefab, IPostVanOptions options)
+    {
+        var MailComponent = prefab.GetComponent<Game.Prefabs.PostVan>();
+        MailComponent.m_MailCapacity = options.MailCapacity;
 
+    }
+    public static void ModifyLocalCrimeAccumulation(PrefabBase prefab, ILocalCrimeAccumulation options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.LocalEffects>();
+        var CrimeAccumulationEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.CrimeAccumulation);
+        CrimeAccumulationEffect.m_Delta = options.LocalCrimeAccumulation;
+        CrimeAccumulationEffect.m_Radius = options.LocalCrimeAccumulationRadius;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+    public static void ModifyCityOfficeEfficiency(PrefabBase prefab, ICityOfficeEfficiency options)
+    {
+        var CityEffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var CityOfficeEfficencyEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeEfficiency);
+        CityOfficeEfficencyEffect.m_Delta = options.CityOfficeEfficiency;
+    }
+    public static void ModifyCityUniversityInterest(PrefabBase prefab, ICityUniversityInterest options)
+    {
+        var CityEffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var CityOfficeEfficencyEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeEfficiency);
+        CityOfficeEfficencyEffect.m_Delta = options.CityUniversityInterest;
+    }
+    public static void ModifyCityUniversityGraduation(PrefabBase prefab, ICityUniversityGraduation options)
+    {
+        var CityEffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var CityUniversityGraduationEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityGraduation);
+        CityUniversityGraduationEffect.m_Delta = options.CityUniversityGraduation;
+    }
+    public static void ModifyLocalForestFireHazard(PrefabBase prefab, ILocalForestFireHazard options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.LocalEffects>();
+        var ForestFireHazardEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.ForestFireHazard);
+        ForestFireHazardEffect.m_Delta = options.LocalForestFireHazard;
+        ForestFireHazardEffect.m_Radius = options.LocalForestFireHazardRadius;
+    }
+    public static void ModifyLocalForestFireResponseTime(PrefabBase prefab, ILocalForestFireResponseTime options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.LocalEffects>();
+        var ForestFireResponseEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == LocalModifierType.ForestFireResponseTime);
+        ForestFireResponseEffect.m_Delta = options.LocalForestFireResponseTime;
+        ForestFireResponseEffect.m_Radius = options.LocalForestFireResponseTimeRadius;
+    }
+    public static void ModifyPoliceStation(PrefabBase prefab, IPoliceStationOptions options)
+    {
+        var PoliceStationComponent = prefab.GetComponent<Game.Prefabs.PoliceStation>();
+        PoliceStationComponent.m_PatrolCarCapacity = options.PatrolCarCapacity;
+        PoliceStationComponent.m_PoliceHelicopterCapacity = options.PoliceHelicopterCapacity;
+        PoliceStationComponent.m_JailCapacity = options.JailCapacity;
+    }
+    public static void ModifyPrison(PrefabBase prefab, IPrisonOptions options)
+    {
+        var PrisonComponent = prefab.GetComponent<Game.Prefabs.Prison>();
+        PrisonComponent.m_PrisonVanCapacity = options.PrisonVanCapacity;
+        PrisonComponent.m_PrisonerCapacity = options.PrisonerCapacity;
+    }
+    public static void ModifyCityDiseaseprobability(PrefabBase prefab, ICityDiseaseprobability options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var CityDiseaseEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.DiseaseProbability);
+        CityDiseaseEffect.m_Delta = options.CityDiseaseprobability;
+    }
+    public static void ModifyCityPollutionhealthAffect(PrefabBase prefab, ICityPollutionhealthAffect options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var CityPollutionEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.PollutionHealthAffect);
+        CityPollutionEffect.m_Delta = options.CityPollutionhealthAffect;
+    }
+    public static void ModifyCityParkEntertainment(PrefabBase prefab, ICityParkEntertainment options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var CityParkEntertainmentEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.ParkEntertainment);
+        CityParkEntertainmentEffect.m_Delta = options.CityParkEntertainment;
+    }
+    public static void ModifyCityOreResourceAmount(PrefabBase prefab, ICityOreResourceAmmount options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var CityOreAmmountEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OreResourceAmount);
+        CityOreAmmountEffect.m_Delta = options.CityOreResourceAmmount;
+    }
+    public static void ModifyCityOilResourceAmount(PrefabBase prefab, ICityOilResourceAmmount options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var CityOilAmmountEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OilResourceAmount);
+        CityOilAmmountEffect.m_Delta = options.CityOilResourceAmmount;
+    }
+    public static void ModifyCityOilResourceAmount(PrefabBase prefab, ICityOilResourceAmmount options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var CityOilAmmountEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OilResourceAmount);
+        CityOilAmmountEffect.m_Delta = options.CityOilResourceAmmount;
+    }
 
 
 

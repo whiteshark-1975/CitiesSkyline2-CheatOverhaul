@@ -1,13 +1,16 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class HeathResearchInstituteOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IServiceConsumptionOptions,
+    ICityDiseaseprobability,
+    ICityParkEntertainment
 {
     public string Name { get; set; } = null!;
 
     public int Upkeep { get; set; }
-    public int Electricityconsumption { get; set; }
-    public int Waterconsumption { get; set; }
+    public int ElectricityConsumption { get; set; }
+    public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
     public float CityDiseaseprobability { get; set; }
     public float CityParkEntertainment { get; set; }

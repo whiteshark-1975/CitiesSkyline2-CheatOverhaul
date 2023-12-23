@@ -1,10 +1,11 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class SignatureResidentialbuildingOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    ILocalWellbeing
 {
     public string Name { get; set; } = null!;
-    public float Wellbeing { get; set; }
-    public float Radius { get; set; }
+    public float LocalWellbeing { get; set; }
+    public float LocalWellbeingRadius { get; set; }
  
 }
