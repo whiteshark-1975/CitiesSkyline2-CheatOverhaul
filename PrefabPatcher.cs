@@ -853,16 +853,16 @@ public static class PrefabPatcher
             UniversityEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
             
             var OfficeSoftwareDemandEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareDemand);
-            OfficeSoftwareDemandEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
+            OfficeSoftwareDemandEffect.m_Delta = LargeHadronCollideroverrides.CityOfficeSoftwareDemand;
            
             var IndustrialElectronicDemandEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialElectronicsDemand);
-            IndustrialElectronicDemandEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
+            IndustrialElectronicDemandEffect.m_Delta = LargeHadronCollideroverrides.CityIndustrialElectronicDemand;
             
             var OfficeSoftwareEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareEfficiency);
-            OfficeSoftwareEfficiencyEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
+            OfficeSoftwareEfficiencyEffect.m_Delta = LargeHadronCollideroverrides.CityOfficeSoftwareEfficiency;
            
             var IndustrialElectronicEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialElectronicsEfficiency);
-            IndustrialElectronicEfficiencyEffect.m_Delta = LargeHadronCollideroverrides.CityUniversityInterest;
+            IndustrialElectronicEfficiencyEffect.m_Delta = LargeHadronCollideroverrides.CityIndustrialElectronicEfficiency;
 
         }
 
