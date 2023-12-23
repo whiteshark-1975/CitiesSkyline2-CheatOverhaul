@@ -12,9 +12,9 @@ public class HealthcareOptions :
     public int WaterConsumption { get; set; }
     public int ElectricityConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int ServiceCoverageCapacity { get; set; }
-    public int ServiceCoverageRange { get; set; }
-    public int ServiceCoverageMagnitude { get; set; }
+    public float ServiceCoverageCapacity { get; set; }
+    public float ServiceCoverageRange { get; set; }
+    public float ServiceCoverageMagnitude { get; set; }
     public int AmbulanceCapacity { get; set; }
     public int HelicopterCapacity { get; set; }
     public int PatientCapacity { get; set; }

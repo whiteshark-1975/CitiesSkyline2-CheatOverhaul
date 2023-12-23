@@ -19,8 +19,8 @@ public class WhitesharkCheatOverhaulOptions
                 GroundPollution = 0,
                 NoisePollution = 7500,
                 GarbageAccumulation = 1900,
-                Waterconsumption = 1500,
-                Electricityconsumption = 1000
+                WaterConsumption = 1500,
+                ElectricityConsumption = 1000
             },
             new SchoolOptions
             {
@@ -29,8 +29,8 @@ public class WhitesharkCheatOverhaulOptions
                 GroundPollution = 0,
                 NoisePollution = 7500,
                 GarbageAccumulation = 1300,
-                Waterconsumption = 1500,
-                Electricityconsumption = 1500
+                WaterConsumption = 1500,
+                ElectricityConsumption = 1500
 
             },
             new SchoolOptions
@@ -40,8 +40,8 @@ public class WhitesharkCheatOverhaulOptions
                 GroundPollution = 0,
                 NoisePollution = 10000,
                 GarbageAccumulation = 2400,
-                Waterconsumption = 1500,
-                Electricityconsumption = 2000
+                WaterConsumption = 1500,
+                ElectricityConsumption = 2000
 
             },
             new SchoolOptions
@@ -51,8 +51,8 @@ public class WhitesharkCheatOverhaulOptions
                 GroundPollution = 0,
                 NoisePollution = 10000,
                 GarbageAccumulation = 2400,
-                Waterconsumption = 3000,
-                Electricityconsumption = 3000
+                WaterConsumption = 3000,
+                ElectricityConsumption = 3000
 
             }
         },
@@ -62,33 +62,33 @@ public class WhitesharkCheatOverhaulOptions
             new PowerplantOptions
             {
                 Name = "GasPowerPlant01",
-                UpkeepCost = 655555,
-                Waterconsumption = 48000,
+                Upkeep = 655555,
+                WaterConsumption = 48000,
                 GarbageAccumulation = 30000,
                 AirPollution = 10000,
                 GroundPollution = 10000,
                 NoisePollution = 10000,
-                Production = 2500000,
-                Storage = 5000
+                ElectricityProduction = 2500000,
+                StorageLimit = 5000
             },
 
             new PowerplantOptions
             {
                 Name = "GasPowerPlant01 Additional Turbine",
-                UpkeepCost = 200000,
-                Waterconsumption = 24000,
+                Upkeep = 200000,
+                WaterConsumption = 24000,
                 GarbageAccumulation = 6000,
                 AirPollution = 3000,
                 GroundPollution = 3000,
                 NoisePollution = 3000,
-                Production = 1000000
+                ElectricityProduction = 1000000
             },
 
             new PowerplantOptions
             {
                 Name = "GasPowerPlant01 Advanced Furnace",
-                UpkeepCost = 80000,
-                Waterconsumption = 0,
+                Upkeep = 80000,
+                WaterConsumption = 0,
                 GarbageAccumulation = 0
             },
 
@@ -96,8 +96,8 @@ public class WhitesharkCheatOverhaulOptions
             new PowerplantOptions
             {
                 Name = "GasPowerPlant01 Exhaust Filter",
-                UpkeepCost = 100000,
-                Waterconsumption = 0,
+                Upkeep = 100000,
+                WaterConsumption = 0,
                 GarbageAccumulation = 7500,
                 
             },
@@ -105,54 +105,54 @@ public class WhitesharkCheatOverhaulOptions
             new PowerplantOptions
             {
                 Name = "GasPowerPlant01 Fuel Storage Extention",
-                UpkeepCost = 150000,
-                Waterconsumption = 0,
+                Upkeep = 150000,
+                WaterConsumption = 0,
                 GarbageAccumulation = 6000,
                 AirPollution = 5000,
                 GroundPollution = 5000,
                 NoisePollution = 5000,
-                Storage = 2500
+                StorageLimit = 2500
             },
 
             new PowerplantOptions
             {
                 Name = "CoalPowerPlant01",
-                UpkeepCost = 15000,
-                Waterconsumption = 60000,
+                Upkeep = 15000,
+                WaterConsumption = 60000,
                 GarbageAccumulation = 50000,
                 AirPollution = 100000,
                 GroundPollution = 100000,
                 NoisePollution = 100000,
-                Production = 3000000,
-                Storage = 500000
+                ElectricityProduction = 3000000,
+                StorageLimit = 500000
                 
             },
 
             new PowerplantOptions
             {
                 Name = "CoalPowerPlant01 Additional Turbine Building",
-                UpkeepCost = 50000,
-                Waterconsumption = 30000,
+                Upkeep = 50000,
+                WaterConsumption = 30000,
                 GarbageAccumulation = 10000,
                 AirPollution = 50000,
                 GroundPollution = 50000,
                 NoisePollution = 50000,
-                Production = 1000000,
+                ElectricityProduction = 1000000,
             },
 
             new PowerplantOptions
             {
                 Name = "CoalPowerPlant01 Exhaust Filter",
-                UpkeepCost = 50000,
-                Waterconsumption = 0,
+                Upkeep = 50000,
+                WaterConsumption = 0,
                 GarbageAccumulation = 12500
 
             },
             new PowerplantOptions
             {
                 Name = "CoalPowerPlant01 Advanced Furnace",
-                UpkeepCost = 60000,
-                Waterconsumption = 0,
+                Upkeep = 60000,
+                WaterConsumption = 0,
                 GarbageAccumulation = 0
 
             },
@@ -160,36 +160,36 @@ public class WhitesharkCheatOverhaulOptions
             new PowerplantOptions
             {
                 Name = "CoalPowerPlant01 Coal Storage Yard",
-                UpkeepCost = 25000,
+                Upkeep = 25000,
                 GarbageAccumulation = 10000,
                 AirPollution = 25000,
                 GroundPollution = 25000,
                 NoisePollution = 25000,
-                Storage = 2500000
+                StorageLimit = 2500000
 
             },
 
             new PowerplantOptions
             {
                 Name = "NuclearPowerPlant01",
-                UpkeepCost = 1000000,
-                Waterconsumption = 400000,
+                Upkeep = 1000000,
+                WaterConsumption = 400000,
                 GarbageAccumulation = 40000,
                 AirPollution = 0,
                 GroundPollution = 0,
                 NoisePollution = 150000,
-                Production = 7500000
+                ElectricityProduction = 7500000
             },
             new PowerplantOptions
             {
                 Name = "SmallCoalPowerPlant01",
-                UpkeepCost = 10000,
-                Waterconsumption = 15000,
+                Upkeep = 10000,
+                WaterConsumption = 15000,
                 GarbageAccumulation = 25000,
                 AirPollution = 30000,
                 GroundPollution = 30000,
                 NoisePollution = 30000,
-                Production = 200000
+                ElectricityProduction = 200000
             }
         },
 
@@ -198,8 +198,8 @@ public class WhitesharkCheatOverhaulOptions
             new WaterpumpOptions
             {
                 Name = "WaterPumpingStation01",
-                UpkeepCost = 60000,
-                Capacity = 100000,
+                Upkeep = 60000,
+                PumpCapacity = 100000,
                 GarbageAccumulation = 12500,
                 ElectricityConsumption = 3000,
                 NoisePollution =5000
@@ -208,8 +208,8 @@ public class WhitesharkCheatOverhaulOptions
             new WaterpumpOptions
             {
                 Name = "WaterPumpingStation01 Extra Pump",
-                UpkeepCost = 7000,
-                Capacity = 50000,
+                Upkeep = 7000,
+                PumpCapacity = 50000,
                 GarbageAccumulation = 2500,
                 ElectricityConsumption = 1000,
                 NoisePollution =2500
@@ -218,8 +218,8 @@ public class WhitesharkCheatOverhaulOptions
             new WaterpumpOptions
             {
                 Name = "GroundwaterPumpingStation01",
-                UpkeepCost = 20000,
-                Capacity = 75000,
+                Upkeep = 20000,
+                PumpCapacity = 75000,
                 GarbageAccumulation = 10000,
                 ElectricityConsumption = 3000,
                 NoisePollution =5000
@@ -229,8 +229,8 @@ public class WhitesharkCheatOverhaulOptions
             new WaterpumpOptions
             {
                 Name = "GroundwaterPumpingStation01 Advanced Filtering System",
-                UpkeepCost = 11000,
-                Capacity = 0,
+                Upkeep = 11000,
+                PumpCapacity = 0,
                 GarbageAccumulation = 2500,
                 ElectricityConsumption = 1000,
                 Purification = 0.5f
@@ -240,8 +240,8 @@ public class WhitesharkCheatOverhaulOptions
             new WaterpumpOptions
             {
                 Name = "GroundwaterPumpingStation01 Extra Pump",
-                UpkeepCost = 7000,
-                Capacity = 37500,
+                Upkeep = 7000,
+                PumpCapacity = 37500,
                 GarbageAccumulation = 2000,
                 ElectricityConsumption = 500,
                 NoisePollution =2500
@@ -251,8 +251,8 @@ public class WhitesharkCheatOverhaulOptions
             new WaterpumpOptions
             {
                 Name = "DesalinationPlant01",
-                UpkeepCost = 95000,
-                Capacity = 1000000,
+                Upkeep = 95000,
+                PumpCapacity = 1000000,
                 GarbageAccumulation = 62500,
                 ElectricityConsumption = 3000,
                 NoisePollution = 25000
@@ -261,8 +261,8 @@ public class WhitesharkCheatOverhaulOptions
             new WaterpumpOptions
             {
                 Name = "WaterTower01",
-                UpkeepCost = 30000,
-                Capacity = 30000,
+                Upkeep = 30000,
+                PumpCapacity = 30000,
                 GarbageAccumulation = 0,
                 ElectricityConsumption = 0,
                 NoisePollution = 2500
@@ -275,7 +275,7 @@ public class WhitesharkCheatOverhaulOptions
             new TransformerstationOptions
             {
                 Name = "TransformerStation01",
-                UpkeepCost = 6000,
+                Upkeep = 6000,
                 GarbageAccumulation = 100,
                 NoisePollution = 5000
             }
@@ -286,24 +286,24 @@ public class WhitesharkCheatOverhaulOptions
             new ServerfarmOptions
             {
                 Name = "ServerFarm01",
-                UpkeepCost = 50000,
-                Electricityconsumption = 20000,
-                Waterconsumption = 10000,
+                Upkeep = 50000,
+                ElectricityConsumption = 20000,
+                WaterConsumption = 10000,
                 GarbageAccumulation = 3000,
-                Range = 2500,
-                Capacity = 20000,
+                TelecomRange = 2500,
+                NetworkCapacity = 20000,
                 NoisePollution = 20000
             },
 
             new ServerfarmOptions
             {
                 Name = "SatelliteUplink01",
-                UpkeepCost = 320000,
-                Electricityconsumption = 5000,
-                Waterconsumption = 500,
+                Upkeep = 320000,
+                ElectricityConsumption = 5000,
+                WaterConsumption = 500,
                 GarbageAccumulation = 5000,
-                Range = 0,
-                Capacity = 0,
+                TelecomRange = 0,
+                NetworkCapacity = 0,
                 NoisePollution = 5000,
                 CityEntertainment = 50f,
                 CityTelecomCapacity = 0.2f,
@@ -313,34 +313,34 @@ public class WhitesharkCheatOverhaulOptions
             new ServerfarmOptions
             {
                 Name = "TelecomTower01",
-                UpkeepCost = 95000,
-                Electricityconsumption = 5000,
-                Waterconsumption = 1000,
+                Upkeep = 95000,
+                ElectricityConsumption = 5000,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 0,
-                Range = 5000,
-                Capacity = 15000,
+                TelecomRange = 5000,
+                NetworkCapacity = 15000,
                 NoisePollution = 10000
             },
             new ServerfarmOptions
             {
                 Name = "ServerFarm01 Fiber Optic Cable",
-                UpkeepCost = 10000,
-                Electricityconsumption = 10000,
-                Waterconsumption = 0,
+                Upkeep = 10000,
+                ElectricityConsumption = 10000,
+                WaterConsumption = 0,
                 GarbageAccumulation = 0,
-                Range = 500,
-                Capacity = 0,
+                TelecomRange = 500,
+                NetworkCapacity = 0,
                 
             },
             new ServerfarmOptions
             {
                 Name = "ServerFarm01 Server Upgrade",
-                UpkeepCost = 20000,
-                Electricityconsumption = 10000,
-                Waterconsumption = 2500,
+                Upkeep = 20000,
+                ElectricityConsumption = 10000,
+                WaterConsumption = 2500,
                 GarbageAccumulation = 1000,
-                Range = 0,
-                Capacity = 10000,
+                TelecomRange = 0,
+                NetworkCapacity = 10000,
 
                
             }
@@ -352,8 +352,8 @@ public class WhitesharkCheatOverhaulOptions
             new GarbagetruckOptions
             {
                 Name = "GarbageTruck01",
-                Capacity = 20000,
-                Unloadrate = 4000
+                GarbageTruckCapacity = 20000,
+                GarbageTruckUnloadRate = 4000
             }
         },
 
@@ -362,55 +362,55 @@ public class WhitesharkCheatOverhaulOptions
             new PublicTransportVehicleOptions
             {
                 Name = "Bus01",
-                Passengercapacity = 80,
+                PassengerCapacity = 80,
                 Maintenancerange = 200
             },
             new PublicTransportVehicleOptions
             {
                 Name = "Bus02",
-                Passengercapacity = 80,
+                PassengerCapacity = 80,
                 Maintenancerange = 250
             },
             new PublicTransportVehicleOptions
             {
                 Name = "Bus03",
-                Passengercapacity = 80,
+                PassengerCapacity = 80,
                 Maintenancerange = 200
             },
             new PublicTransportVehicleOptions
             {
                 Name = "TrainPassengerCar01",
-                Passengercapacity = 120,
+                PassengerCapacity = 120,
                 Maintenancerange = 1000
             },
             new PublicTransportVehicleOptions
             {
                 Name = "TrainPassengerEngine01",
-                Passengercapacity = 120,
+                PassengerCapacity = 120,
                 Maintenancerange = 1000
             },
             new PublicTransportVehicleOptions
             {
                 Name = "SubwayCar01",
-                Passengercapacity = 150,
+                PassengerCapacity = 150,
                 Maintenancerange = 850
             },
             new PublicTransportVehicleOptions
             {
                 Name = "SubwayEngine01",
-                Passengercapacity = 120,
+                PassengerCapacity = 120,
                 Maintenancerange = 850
             },
             new PublicTransportVehicleOptions
             {
                 Name = "TramCar01",
-                Passengercapacity = 80,
+                PassengerCapacity = 80,
                 Maintenancerange = 600
             },
             new PublicTransportVehicleOptions
             {
                 Name = "TramEngine01",
-                Passengercapacity = 80,
+                PassengerCapacity = 80,
                 Maintenancerange = 600
             }
         },
@@ -423,10 +423,10 @@ public class WhitesharkCheatOverhaulOptions
                 Upkeep = 2200,
                 GarageCapacity = 0,
                 Comfortfactor = 0.5f,
-                Electricityconsumption = 200,
-                Waterconsumption = 0,
+                ElectricityConsumption = 200,
+                WaterConsumption = 0,
                 GarbageAccumulation = 200,
-                Noisepollution = 2500
+                NoisePollution = 2500
             },
 
             new ParkinghallOptions
@@ -435,10 +435,10 @@ public class WhitesharkCheatOverhaulOptions
                 Upkeep = 3000,
                 GarageCapacity = 0,
                 Comfortfactor = 0.5f,
-                Electricityconsumption = 300,
-                Waterconsumption = 0,
+                ElectricityConsumption = 300,
+                WaterConsumption = 0,
                 GarbageAccumulation = 300,
-                Noisepollution = 2500
+                NoisePollution = 2500
             },
 
             new ParkinghallOptions
@@ -447,10 +447,10 @@ public class WhitesharkCheatOverhaulOptions
                 Upkeep = 7000,
                 GarageCapacity = 0,
                 Comfortfactor = 0.5f,
-                Electricityconsumption = 700,
-                Waterconsumption = 0,
+                ElectricityConsumption = 700,
+                WaterConsumption = 0,
                 GarbageAccumulation = 700,
-                Noisepollution = 5000
+                NoisePollution = 5000
             },
 
             new ParkinghallOptions
@@ -459,10 +459,10 @@ public class WhitesharkCheatOverhaulOptions
                 Upkeep = 16000,
                 GarageCapacity = 0,
                 Comfortfactor = 0.5f,
-                Electricityconsumption = 1600,
-                Waterconsumption = 0,
+                ElectricityConsumption = 1600,
+                WaterConsumption = 0,
                 GarbageAccumulation = 1700,
-                Noisepollution = 5000
+                NoisePollution = 5000
             },
 
             new ParkinghallOptions
@@ -471,10 +471,10 @@ public class WhitesharkCheatOverhaulOptions
                 Upkeep = 30000,
                 GarageCapacity = 0,
                 Comfortfactor = 0.6f,
-                Electricityconsumption = 2400,
-                Waterconsumption = 2000,
+                ElectricityConsumption = 2400,
+                WaterConsumption = 2000,
                 GarbageAccumulation = 1600,
-                Noisepollution = 2500
+                NoisePollution = 2500
             },
 
             new ParkinghallOptions
@@ -483,8 +483,8 @@ public class WhitesharkCheatOverhaulOptions
                 Upkeep = 5000,
                 GarageCapacity = 0,
                 Comfortfactor = 0.1f,
-                Electricityconsumption = 2400,
-                Waterconsumption = 2000,
+                ElectricityConsumption = 2400,
+                WaterConsumption = 2000,
                 GarbageAccumulation = 1600
                 
             },
@@ -495,10 +495,10 @@ public class WhitesharkCheatOverhaulOptions
                 Upkeep = 40000,
                 GarageCapacity = 100,
                 Comfortfactor = 0.65f,
-                Electricityconsumption = 3000,
-                Waterconsumption = 2000,
+                ElectricityConsumption = 3000,
+                WaterConsumption = 2000,
                 GarbageAccumulation = 2000,
-                Noisepollution = 2500
+                NoisePollution = 2500
             },
 
             new ParkinghallOptions
@@ -507,10 +507,10 @@ public class WhitesharkCheatOverhaulOptions
                 Upkeep = 130000,
                 GarageCapacity = 416,
                 Comfortfactor = 0.750f,
-                Electricityconsumption = 7000,
-                Waterconsumption = 3000,
+                ElectricityConsumption = 7000,
+                WaterConsumption = 3000,
                 GarbageAccumulation = 2500,
-                Noisepollution = 2500
+                NoisePollution = 2500
             }
         },
 
@@ -523,11 +523,11 @@ public class WhitesharkCheatOverhaulOptions
                 ElectricityConsumption = 500,
                 WaterConsumption = 0,
                 GarbageAccumulation = 100,
-                Range = 2500,
-                Capacity = 800,
-                Magnitude = 10,
+                ServiceCoverageRange = 2500,
+                ServiceCoverageCapacity = 800,
+                ServiceCoverageMagnitude = 10,
                 Attractiveness = 1,
-                Efficiency = 1
+                LeisureEfficiency = 1
 
             },
 
@@ -538,11 +538,11 @@ public class WhitesharkCheatOverhaulOptions
                 ElectricityConsumption = 750,
                 WaterConsumption = 500,
                 GarbageAccumulation = 200,
-                Range = 4000,
-                Capacity = 1200,
-                Magnitude = 10,
+                ServiceCoverageRange = 4000,
+                ServiceCoverageCapacity = 1200,
+                ServiceCoverageMagnitude = 10,
                 Attractiveness = 5,
-                Efficiency = 2
+                LeisureEfficiency = 2
 
             },
 
@@ -553,11 +553,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 250,
             WaterConsumption = 0,
             GarbageAccumulation = 200,
-            Range = 2000,
-            Capacity = 600,
-            Magnitude = 10,
+            ServiceCoverageRange = 2000,
+            ServiceCoverageCapacity = 600,
+            ServiceCoverageMagnitude = 10,
             Attractiveness = 1,
-            Efficiency = 2
+            LeisureEfficiency = 2
 
             },
 
@@ -568,11 +568,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 250,
             WaterConsumption = 0,
             GarbageAccumulation = 200,
-            Range = 3500,
-            Capacity = 800,
-            Magnitude = 10,
+            ServiceCoverageRange = 3500,
+            ServiceCoverageCapacity = 800,
+            ServiceCoverageMagnitude = 10,
             Attractiveness = 1,
-            Efficiency = 2
+            LeisureEfficiency = 2
 
             },
 
@@ -583,11 +583,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 0,
             WaterConsumption = 0,
             GarbageAccumulation = 400,
-            Range = 6000,
-            Capacity = 1600,
-            Magnitude = 10,
+            ServiceCoverageRange = 6000,
+            ServiceCoverageCapacity = 1600,
+            ServiceCoverageMagnitude = 10,
             Attractiveness = 10,
-            Efficiency = 5
+            LeisureEfficiency = 5
 
             },
 
@@ -598,11 +598,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 10000,
             WaterConsumption = 750,
             GarbageAccumulation = 300,
-            Range = 3000,
-            Capacity = 1600,
-            Magnitude = 14,
+            ServiceCoverageRange = 3000,
+            ServiceCoverageCapacity = 1600,
+            ServiceCoverageMagnitude = 14,
             Attractiveness = 10,
-            Efficiency = 3
+            LeisureEfficiency = 3
 
             },
 
@@ -613,11 +613,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 1500,
             WaterConsumption = 1000,
             GarbageAccumulation = 400,
-            Range = 4000,
-            Capacity = 2000,
-            Magnitude = 14,
+            ServiceCoverageRange = 4000,
+            ServiceCoverageCapacity = 2000,
+            ServiceCoverageMagnitude = 14,
             Attractiveness = 15,
-            Efficiency = 5
+            LeisureEfficiency = 5
 
             },
 
@@ -628,11 +628,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 500,
             WaterConsumption = 0,
             GarbageAccumulation = 400,
-            Range = 2500,
-            Capacity = 800,
-            Magnitude = 14,
+            ServiceCoverageRange = 2500,
+            ServiceCoverageCapacity = 800,
+            ServiceCoverageMagnitude = 14,
             Attractiveness = 5,
-            Efficiency = 5
+            LeisureEfficiency = 5
 
             },
 
@@ -643,11 +643,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 500,
             WaterConsumption = 0,
             GarbageAccumulation = 400,
-            Range = 3500,
-            Capacity = 800,
-            Magnitude = 14,
+            ServiceCoverageRange = 3500,
+            ServiceCoverageCapacity = 800,
+            ServiceCoverageMagnitude = 14,
             Attractiveness = 5,
-            Efficiency = 5
+            LeisureEfficiency = 5
 
             },
 
@@ -658,11 +658,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 500,
             WaterConsumption = 0,
             GarbageAccumulation = 400,
-            Range = 3500,
-            Capacity = 1000,
-            Magnitude = 10,
+            ServiceCoverageRange = 3500,
+            ServiceCoverageCapacity = 1000,
+            ServiceCoverageMagnitude = 10,
             Attractiveness = 5,
-            Efficiency = 5
+            LeisureEfficiency = 5
 
             },
 
@@ -673,11 +673,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 500,
             WaterConsumption = 0,
             GarbageAccumulation = 400,
-            Range = 3500,
-            Capacity = 1000,
-            Magnitude = 10,
+            ServiceCoverageRange = 3500,
+            ServiceCoverageCapacity = 1000,
+            ServiceCoverageMagnitude = 10,
             Attractiveness = 5,
-            Efficiency = 5
+            LeisureEfficiency = 5
 
             },
 
@@ -688,11 +688,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 510,
             WaterConsumption = 0,
             GarbageAccumulation = 400,
-            Range = 3500,
-            Capacity = 800,
-            Magnitude = 14,
+            ServiceCoverageRange = 3500,
+            ServiceCoverageCapacity = 800,
+            ServiceCoverageMagnitude = 14,
             Attractiveness = 5,
-            Efficiency = 5
+            LeisureEfficiency = 5
 
             },
 
@@ -703,11 +703,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 2500,
             WaterConsumption = 0,
             GarbageAccumulation = 1500,
-            Range = 4000,
-            Capacity = 4000,
-            Magnitude = 16,
+            ServiceCoverageRange = 4000,
+            ServiceCoverageCapacity = 4000,
+            ServiceCoverageMagnitude = 16,
             Attractiveness = 25,
-            Efficiency = 25
+            LeisureEfficiency = 25
 
             },
 
@@ -718,11 +718,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 2510,
             WaterConsumption = 0,
             GarbageAccumulation = 1500,
-            Range = 4000,
-            Capacity = 4000,
-            Magnitude = 16,
+            ServiceCoverageRange = 4000,
+            ServiceCoverageCapacity = 4000,
+            ServiceCoverageMagnitude = 16,
             Attractiveness = 25,
-            Efficiency = 20
+            LeisureEfficiency = 20
 
             },
 
@@ -733,11 +733,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 3000,
             WaterConsumption = 10000,
             GarbageAccumulation = 1500,
-            Range = 3500,
-            Capacity = 2000,
-            Magnitude = 16,
+            ServiceCoverageRange = 3500,
+            ServiceCoverageCapacity = 2000,
+            ServiceCoverageMagnitude = 16,
             Attractiveness = 15,
-            Efficiency = 20
+            LeisureEfficiency = 20
 
             },
 
@@ -748,11 +748,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 3500,
             WaterConsumption = 5000,
             GarbageAccumulation = 5700,
-            Range = 7500,
-            Capacity = 6000,
-            Magnitude = 18,
+            ServiceCoverageRange = 7500,
+            ServiceCoverageCapacity = 6000,
+            ServiceCoverageMagnitude = 18,
             Attractiveness = 40,
-            Efficiency = 75
+            LeisureEfficiency = 75
 
             },
 
@@ -763,11 +763,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 3000,
             WaterConsumption = 1000,
             GarbageAccumulation = 1900,
-            Range = 5000,
-            Capacity = 5000,
-            Magnitude = 16,
+            ServiceCoverageRange = 5000,
+            ServiceCoverageCapacity = 5000,
+            ServiceCoverageMagnitude = 16,
             Attractiveness = 50,
-            Efficiency = 25
+            LeisureEfficiency = 25
 
             },
 
@@ -778,11 +778,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 15000,
             WaterConsumption = 20000,
             GarbageAccumulation = 1900,
-            Range = 5000,
-            Capacity = 3000,
-            Magnitude = 16,
+            ServiceCoverageRange = 5000,
+            ServiceCoverageCapacity = 3000,
+            ServiceCoverageMagnitude = 16,
             Attractiveness = 75,
-            Efficiency = 25
+            LeisureEfficiency = 25
 
             },
 
@@ -793,11 +793,11 @@ public class WhitesharkCheatOverhaulOptions
             ElectricityConsumption = 1000,
             WaterConsumption = 1000,
             GarbageAccumulation = 1500,
-            Range = 7500,
-            Capacity = 4000,
-            Magnitude = 16,
+            ServiceCoverageRange = 7500,
+            ServiceCoverageCapacity = 4000,
+            ServiceCoverageMagnitude = 16,
             Attractiveness = 85,
-            Efficiency = 20
+            LeisureEfficiency = 20
 
             }
 
@@ -808,9 +808,9 @@ public class WhitesharkCheatOverhaulOptions
             new WastewaterOptions
             {
                 Name = "WastewaterTreatmentPlant01",
-                UpkeepCost = 120000,
-                Capacity = 400000,
-                Purification = 0.5f,
+                Upkeep = 120000,
+                SewageCapacity = 400000,
+                SewagePurification = 0.5f,
                 GarbageAccumulation = 50000,
                 GroundPollution = 7500,
                 AirPollution = 7500,
@@ -821,9 +821,9 @@ public class WhitesharkCheatOverhaulOptions
             new WastewaterOptions
             {
                 Name = "WastewaterTreatmentPlant01 Advanced Filtering System",
-                UpkeepCost = 20000,
-                Capacity = 0,
-                Purification = 0.1f,
+                Upkeep = 20000,
+                SewageCapacity = 0,
+                SewagePurification = 0.1f,
                 GarbageAccumulation = 12500,
                 GroundPollution = 0,
                 AirPollution = 0,
@@ -834,9 +834,9 @@ public class WhitesharkCheatOverhaulOptions
             new WastewaterOptions
             {
                 Name = "WastewaterTreatmentPlant01 Extra Processing Unit",
-                UpkeepCost = 40000,
-                Capacity = 100000,
-                Purification = 0f,
+                Upkeep = 40000,
+                SewageCapacity = 100000,
+                SewagePurification = 0f,
                 GarbageAccumulation = 10000,
                 GroundPollution = 2500,
                 AirPollution = 2500,
@@ -847,9 +847,9 @@ public class WhitesharkCheatOverhaulOptions
             new WastewaterOptions
             {
                 Name = "SewageOutlet01",
-                UpkeepCost = 20000,
-                Capacity = 100000,
-                Purification = 0f,
+                Upkeep = 20000,
+                SewageCapacity = 100000,
+                SewagePurification = 0f,
                 GarbageAccumulation = 0,
                 GroundPollution = 0,
                 AirPollution = 5000,
@@ -860,9 +860,9 @@ public class WhitesharkCheatOverhaulOptions
             new WastewaterOptions
             {
                 Name = "SewageOutlet01 Chemical Purification",
-                UpkeepCost = 4000,
-                Capacity = 0,
-                Purification = 0.25f,
+                Upkeep = 4000,
+                SewageCapacity = 0,
+                SewagePurification = 0.25f,
                 GarbageAccumulation = 0,
                 GroundPollution = 0,
                 AirPollution = 2500,
@@ -873,9 +873,9 @@ public class WhitesharkCheatOverhaulOptions
             new WastewaterOptions
             {
                 Name = "SewageOutlet01 Extra Settling Tank",
-                UpkeepCost = 10000,
-                Capacity = 0,
-                Purification = 0.1f,
+                Upkeep = 10000,
+                SewageCapacity = 0,
+                SewagePurification = 0.1f,
                 GarbageAccumulation = 0,
                 GroundPollution = 2500,
                 AirPollution = 2500,
@@ -889,15 +889,15 @@ public class WhitesharkCheatOverhaulOptions
             new IncinerationPlantOptions
             {
                 Name = "IncinerationPlant01",
-                Garbagecapacity = 3000000,
-                Vehiclecapacity = 50,
-                Transportcapacity = 1,
-                Processingspeed = 3000000,
-                Electricityproduction = 0,
-                Productionperunit = 7.5f,
+                GarbageCapacity = 3000000,
+                GarbageVehicleCapacity = 50,
+                GarbageTransportCapacity = 1,
+                GarbageProcessingspeed = 3000000,
+                ElectricityProduction = 0,
+                ProductionPerUnit = 7.5f,
                 ProductionCapacity = 400000,
-                UpkeepCost = 210000,
-                Waterconsumption = 25000,
+                Upkeep = 210000,
+                WaterConsumption = 25000,
                 GroundPollution = 40000,
                 AirPollution = 40000,
                 NoisePollution = 40000                
@@ -907,13 +907,13 @@ public class WhitesharkCheatOverhaulOptions
             new IncinerationPlantOptions
             {
                 Name = "Landfill01",
-                Garbagecapacity = 20000,
-                Vehiclecapacity = 20,
-                Transportcapacity = 1,
-                Processingspeed = 100000,
-                UpkeepCost = 30000,
-                Electricityconsumption = 1000,
-                Waterconsumption = 2500,
+                GarbageCapacity = 20000,
+                GarbageVehicleCapacity = 20,
+                GarbageTransportCapacity = 1,
+                GarbageProcessingspeed = 100000,
+                Upkeep = 30000,
+                ElectricityConsumption = 1000,
+                WaterConsumption = 2500,
                 GroundPollution = 20000,
                 AirPollution = 20000,
                 NoisePollution = 40000
@@ -922,13 +922,13 @@ public class WhitesharkCheatOverhaulOptions
             new IncinerationPlantOptions
             {
                 Name = "RecyclingCenter01",
-                Garbagecapacity = 1500000,
-                Vehiclecapacity = 15,
-                Transportcapacity = 1,
-                Processingspeed = 1,
-                UpkeepCost = 1500000,
-                Electricityconsumption = 2500,
-                Waterconsumption = 10000,
+                GarbageCapacity = 1500000,
+                GarbageVehicleCapacity = 15,
+                GarbageTransportCapacity = 1,
+                GarbageProcessingspeed = 1,
+                Upkeep = 1500000,
+                ElectricityConsumption = 2500,
+                WaterConsumption = 10000,
                 GroundPollution = 10000,
                 AirPollution = 5000,
                 NoisePollution = 15000
@@ -937,13 +937,13 @@ public class WhitesharkCheatOverhaulOptions
             new IncinerationPlantOptions
             {
                 Name = "HazardousWasteProcessingSite01",
-                Garbagecapacity = 50000000,
-                Vehiclecapacity = 250,
-                Transportcapacity = 1,
-                Processingspeed = 50000000,
-                UpkeepCost = 450000,
-                Electricityconsumption = 15000,
-                Waterconsumption = 25000,
+                GarbageCapacity = 50000000,
+                GarbageVehicleCapacity = 250,
+                GarbageTransportCapacity = 1,
+                GarbageProcessingspeed = 50000000,
+                Upkeep = 450000,
+                ElectricityConsumption = 15000,
+                WaterConsumption = 25000,
                 CityIndustrialGroundPollution = -0.15f,
                 GroundPollution = 50000,
                 AirPollution = 50000,
@@ -956,104 +956,102 @@ public class WhitesharkCheatOverhaulOptions
             new HealthcareOptions
             {
                 Name = "MedicalClinic01",
-                UpkeepCost = 40000,
-                Waterconsumption = 1000,
-                Electricityconsumption = 2500,
+                Upkeep = 40000,
+                WaterConsumption = 1000,
+                ElectricityConsumption = 2500,
                 GarbageAccumulation = 1900,
-                NoisePollution = 0,
-                Ambulancecapacity = 5,
-                Helicoptercapacity = 0,
-                Patientcapacity = 100,
-                Treatmentbonus = 15,
-                Capacity = 15000,
-                Range = 5000,
-                Magnitude = 5
+                AmbulanceCapacity = 5,
+                HelicopterCapacity = 0,
+                PatientCapacity = 100,
+                TreatmentBonus = 15,
+                ServiceCoverageCapacity = 15000,
+                ServiceCoverageRange = 5000,
+                ServiceCoverageMagnitude = 5
             },
 
             new HealthcareOptions
             {
                 Name = "MedicalClinic01 Ambulance Depot",
-                UpkeepCost = 7000,
-                Waterconsumption = 250,
-                Electricityconsumption = 500,
+                Upkeep = 7000,
+                WaterConsumption = 250,
+                ElectricityConsumption = 500,
                 GarbageAccumulation = 400,
-                Ambulancecapacity = 5,
-                Helicoptercapacity = 0,
-                Patientcapacity = 0,
-                Treatmentbonus = 0
+                AmbulanceCapacity = 5,
+                HelicopterCapacity = 0,
+                PatientCapacity = 0,
+                TreatmentBonus = 0
                 
             },
 
             new HealthcareOptions
             {
                 Name = "MedicalClinic01 Extention Wing",
-                UpkeepCost = 25000,
-                Waterconsumption = 500,
-                Electricityconsumption = 1000,
+                Upkeep = 25000,
+                WaterConsumption = 500,
+                ElectricityConsumption = 1000,
                 GarbageAccumulation = 700,
-                Ambulancecapacity = 0,
-                Helicoptercapacity = 0,
-                Patientcapacity = 25,
-                Treatmentbonus = 0
+                AmbulanceCapacity = 0,
+                HelicopterCapacity = 0,
+                PatientCapacity = 25,
+                TreatmentBonus = 0
 
             },
 
             new HealthcareOptions
             {
                 Name = "Hospital01",
-                UpkeepCost = 450000,
-                Waterconsumption = 5000,
-                Electricityconsumption = 10000,
+                Upkeep = 450000,
+                WaterConsumption = 5000,
+                ElectricityConsumption = 10000,
                 GarbageAccumulation = 9400,
-                NoisePollution = 0,
-                Ambulancecapacity = 30,
-                Helicoptercapacity = 0,
-                Patientcapacity = 500,
-                Treatmentbonus = 30,
-                Capacity = 50000,
-                Range = 7500,
-                Magnitude = 10
+                AmbulanceCapacity = 30,
+                HelicopterCapacity = 0,
+                PatientCapacity = 500,
+                TreatmentBonus = 30,
+                ServiceCoverageCapacity = 50000,
+                ServiceCoverageRange = 7500,
+                ServiceCoverageMagnitude = 10
             },
 
             new HealthcareOptions
             {
                 Name = "Hospital01 Helipad",
-                UpkeepCost = 35000,
-                Waterconsumption = 250,
-                Electricityconsumption = 1000,
+                Upkeep = 35000,
+                WaterConsumption = 250,
+                ElectricityConsumption = 1000,
                 GarbageAccumulation = 1000,
-                Ambulancecapacity = 0,
-                Helicoptercapacity = 1,
-                Patientcapacity = 0,
-                Treatmentbonus = 0
+                AmbulanceCapacity = 0,
+                HelicopterCapacity = 1,
+                PatientCapacity = 0,
+                TreatmentBonus = 0
                 
             },
 
             new HealthcareOptions
             {
                 Name = "Hospital01 Special Ward",
-                UpkeepCost = 100000,
-                Waterconsumption = 2500,
-                Electricityconsumption = 2000,
+                Upkeep = 100000,
+                WaterConsumption = 2500,
+                ElectricityConsumption = 2000,
                 GarbageAccumulation = 3200,
-                Ambulancecapacity = 0,
-                Helicoptercapacity = 0,
-                Patientcapacity = 0,
-                Treatmentbonus = 0
+                AmbulanceCapacity = 0,
+                HelicopterCapacity = 0,
+                PatientCapacity = 0,
+                TreatmentBonus = 0
                 
             },
 
             new HealthcareOptions
             {
                 Name = "Hospital01 Trauma Center",
-                UpkeepCost = 80000,
-                Waterconsumption = 2500,
-                Electricityconsumption = 2000,
+                Upkeep = 80000,
+                WaterConsumption = 2500,
+                ElectricityConsumption = 2000,
                 GarbageAccumulation = 3200,
-                Ambulancecapacity = 0,
-                Helicoptercapacity = 0,
-                Patientcapacity = 0,
-                Treatmentbonus = 15
+                AmbulanceCapacity = 0,
+                HelicopterCapacity = 0,
+                PatientCapacity = 0,
+                TreatmentBonus = 15
                 
             }
         },
@@ -1064,17 +1062,17 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "PostOffice01",
                 Upkeep = 45000,
-                Waterconsumption = 1000,
-                Electricityconsumption = 500,
+                WaterConsumption = 1000,
+                ElectricityConsumption = 500,
                 GarbageAccumulation = 1900,
-                Noisepollution = 5000,
-                Mailboxcapacity = 500,
-                Postvancapacity = 20,
-                PostTruckscapacity = 0,
-                Mailstoragecapacity = 100000,
-                Capacity = 15000,
-                Range = 2000,
-                Magnitude = 2,
+                NoisePollution = 5000,
+                MailboxCapacity = 500,
+                PostVanCapacity = 20,
+                PostTrucksCapacity = 0,
+                MailStorageCapacity = 100000,
+                ServiceCoverageCapacity = 15000,
+                ServiceCoverageRange = 2000,
+                ServiceCoverageMagnitude = 2,
                 SortingRate = 0
 
             },
@@ -1083,14 +1081,14 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "PostOffice01 Post Van Garage",
                 Upkeep = 6000,
-                Waterconsumption = 250,
-                Electricityconsumption = 350,
+                WaterConsumption = 250,
+                ElectricityConsumption = 350,
                 GarbageAccumulation = 900,
-                Noisepollution = 2500,
-                Mailboxcapacity = 0,
-                Postvancapacity = 10,
-                PostTruckscapacity = 0,
-                Mailstoragecapacity = 0,
+                NoisePollution = 2500,
+                MailboxCapacity = 0,
+                PostVanCapacity = 10,
+                PostTrucksCapacity = 0,
+                MailStorageCapacity = 0,
                 SortingRate = 0
 
             },
@@ -1099,14 +1097,14 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "PostOffice01 Mail Storage Extention",
                 Upkeep = 5000,
-                Waterconsumption = 0,
-                Electricityconsumption = 350,
+                WaterConsumption = 0,
+                ElectricityConsumption = 350,
                 GarbageAccumulation = 400,
-                Noisepollution = 2500,
-                Mailboxcapacity = 0,
-                Postvancapacity = 0,
-                PostTruckscapacity = 0,
-                Mailstoragecapacity = 25000,
+                NoisePollution = 2500,
+                MailboxCapacity = 0,
+                PostVanCapacity = 0,
+                PostTrucksCapacity = 0,
+                MailStorageCapacity = 25000,
                 SortingRate = 0
 
             },
@@ -1115,14 +1113,14 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "PostSortingFacility01",
                 Upkeep = 80000,
-                Waterconsumption = 2500,
-                Electricityconsumption = 8000,
+                WaterConsumption = 2500,
+                ElectricityConsumption = 8000,
                 GarbageAccumulation = 9000,
-                Noisepollution = 20000,
-                Mailboxcapacity = 0,
-                Postvancapacity = 0,
-                PostTruckscapacity = 5,
-                Mailstoragecapacity = 500000,
+                NoisePollution = 20000,
+                MailboxCapacity = 0,
+                PostVanCapacity = 0,
+                PostTrucksCapacity = 5,
+                MailStorageCapacity = 500000,
                 SortingRate = 50000
 
             },
@@ -1130,14 +1128,14 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "PostSortingFacility01 Extra Loading Ramp",
                 Upkeep = 10000,
-                Waterconsumption = 0,
-                Electricityconsumption = 0,
+                WaterConsumption = 0,
+                ElectricityConsumption = 0,
                 GarbageAccumulation = 1800,
-                Noisepollution = 5000,
-                Mailboxcapacity = 0,
-                Postvancapacity = 0,
-                PostTruckscapacity = 5,
-                Mailstoragecapacity = 0,
+                NoisePollution = 5000,
+                MailboxCapacity = 0,
+                PostVanCapacity = 0,
+                PostTrucksCapacity = 5,
+                MailStorageCapacity = 0,
                 SortingRate = 0
 
             },
@@ -1145,13 +1143,13 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "PostSortingFacility01 Automated Sorting",
                 Upkeep = 80000,
-                Waterconsumption = 2500,
-                Electricityconsumption = 8000,
+                WaterConsumption = 2500,
+                ElectricityConsumption = 8000,
                 GarbageAccumulation = 9000,
-                Mailboxcapacity = 0,
-                Postvancapacity = 0,
-                PostTruckscapacity = 5,
-                Mailstoragecapacity = 500000,
+                MailboxCapacity = 0,
+                PostVanCapacity = 0,
+                PostTrucksCapacity = 5,
+                MailStorageCapacity = 500000,
                 SortingRate = 50000
 
             },
@@ -1160,14 +1158,14 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "PostSortingFacility01 Mail Storage Extention",
                 Upkeep = 10000,
-                Waterconsumption = 0,
-                Electricityconsumption = 1500,
+                WaterConsumption = 0,
+                ElectricityConsumption = 1500,
                 GarbageAccumulation = 1800,
-                Noisepollution = 5000,
-                Mailboxcapacity = 0,
-                Postvancapacity = 0,
-                PostTruckscapacity = 5,
-                Mailstoragecapacity = 250000,
+                NoisePollution = 5000,
+                MailboxCapacity = 0,
+                PostVanCapacity = 0,
+                PostTrucksCapacity = 5,
+                MailStorageCapacity = 250000,
                 SortingRate = 0
 
             }
@@ -1180,12 +1178,12 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "Cemetery01",
                 Upkeep = 55000,
-                Waterconsumption = 2000,
-                Electricityconsumption = 800,
+                WaterConsumption = 2000,
+                ElectricityConsumption = 800,
                 GarbageAccumulation = 700,
-                Hearsecapacity = 15,
-                Storagecapacity = 5000,
-                Efficiency = 3
+                HearseCapacity = 15,
+                StorageCapacity = 5000,
+                LeisureEfficiency = 3
             }
         },
 
@@ -1195,14 +1193,14 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "Crematorium01",
                 Upkeep = 45000,
-                Waterconsumption = 500,
-                Electricityconsumption = 1300,
+                WaterConsumption = 500,
+                ElectricityConsumption = 1300,
                 GarbageAccumulation = 6300,
-                Hearsecapacity = 10,
-                Storagecapacity = 20,
-                Processingrate = 100,
-                Airpollution = 2500,
-                Noisepollution = 5000
+                HearseCapacity = 10,
+                StorageCapacity = 20,
+                ProcessingRate = 100,
+                AirPollution = 2500,
+                NoisePollution = 5000
             }
         },
 
@@ -1213,8 +1211,8 @@ public class WhitesharkCheatOverhaulOptions
                 Name = "WindTurbine01",
                 Upkeep = 15000,
                 Production = 50000,
-                Maximumwind = 0.4f,
-                Noisepollution = 20000
+                MaximumWind = 0.4f,
+                NoisePollution = 20000
             }
         },
 
@@ -1224,11 +1222,11 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "EmergencyBatteryStation01",
                 Upkeep = 50000,
-                Capacity = 5000000,
-                Poweroutput = 2000000,
-                Noisepollution = 10000,
+                BatteryCapacity = 5000000,
+                PowerOutput = 2000000,
+                NoisePollution = 10000,
                 GarbageAccumulation = 15000,
-                Waterconsumption = 5000
+                WaterConsumption = 5000
             }
         },
 
@@ -1239,7 +1237,7 @@ public class WhitesharkCheatOverhaulOptions
                 Name = "GeothermalPowerPlant01",
                 Upkeep = 300000,
                 Production = 1500000,
-                Maximumgroundwater = 4000,
+                MaximumGroundwater = 4000,
                 GarbageAccumulation = 25000,
                 AirPollution = 15000,
                 GroundPollution = 15000,
@@ -1253,11 +1251,11 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "SolarPowerStation01",
                 Upkeep = 300000,
-                Waterconsumption = 36000,
+                WaterConsumption = 36000,
                 GarbageAccumulation = 30000,
                 Production = 2000000,
-                Poweroutput = 150000,
-                Capacity = 500000,
+                PowerOutput = 150000,
+                BatteryCapacity = 500000,
                 NoisePollution = 50000
             }
         },
@@ -1267,110 +1265,110 @@ public class WhitesharkCheatOverhaulOptions
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialLowSignature01",
-                Wellbeing = 2,
-                Radius = 500
+                LocalWellbeing = 2,
+                LocalWellbeingRadius = 500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialLowSignature02",
-                Wellbeing = 4,
-                Radius = 1000
+                LocalWellbeing = 4,
+                LocalWellbeingRadius = 1000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialLowSignature03",
-                Wellbeing = 6,
-                Radius = 1500
+                LocalWellbeing = 6,
+                LocalWellbeingRadius = 1500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialLowSignature01",
-                Wellbeing = 2,
-                Radius = 500
+                LocalWellbeing = 2,
+                LocalWellbeingRadius = 500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialLowSignature02",
-                Wellbeing = 4,
-                Radius = 1000
+                LocalWellbeing = 4,
+                LocalWellbeingRadius = 1000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialLowSignature03",
-                Wellbeing = 6,
-                Radius = 1500
+                LocalWellbeing = 6,
+                LocalWellbeingRadius = 1500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialMediumSignature01",
-                Wellbeing = 4,
-                Radius = 1000
+                LocalWellbeing = 4,
+                LocalWellbeingRadius = 1000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialMediumSignature02",
-                Wellbeing = 8,
-                Radius = 2000
+                LocalWellbeing = 8,
+                LocalWellbeingRadius = 2000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialMediumSignature03",
-                Wellbeing = 10,
-                Radius = 2500
+                LocalWellbeing = 10,
+                LocalWellbeingRadius = 2500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialMediumSignature01",
-                Wellbeing = 4,
-                Radius = 1000
+                LocalWellbeing = 4,
+                LocalWellbeingRadius = 1000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialMediumSignature02",
-                Wellbeing = 8,
-                Radius = 2000
+                LocalWellbeing = 8,
+                LocalWellbeingRadius = 2000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialMediumSignature03",
-                Wellbeing = 10,
-                Radius = 2500
+                LocalWellbeing = 10,
+                LocalWellbeingRadius = 2500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialHighSignature01",
-                Wellbeing = 6,
-                Radius = 1500
+                LocalWellbeing = 6,
+                LocalWellbeingRadius = 1500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialHighSignature02",
-                Wellbeing = 10,
-                Radius = 2500
+                LocalWellbeing = 10,
+                LocalWellbeingRadius = 2500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "EU_ResidentialHighSignature03",
-                Wellbeing = 12,
-                Radius = 3000
+                LocalWellbeing = 12,
+                LocalWellbeingRadius = 3000
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialHighSignature01",
-                Wellbeing = 6,
-                Radius = 1500
+                LocalWellbeing = 6,
+                LocalWellbeingRadius = 1500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialHighSignature02",
-                Wellbeing = 10,
-                Radius = 2500
+                LocalWellbeing = 10,
+                LocalWellbeingRadius = 2500
             },
             new SignatureResidentialbuildingOptions
             {
                 Name = "NA_ResidentialHighSignature03",
-                Wellbeing = 12,
-                Radius = 3000
+                LocalWellbeing = 12,
+                LocalWellbeingRadius = 3000
             }
 
         },
@@ -1380,121 +1378,121 @@ public class WhitesharkCheatOverhaulOptions
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialLowSignature01",
-                Wellbeing = 3,
-                Radius = 500,
+                LocalWellbeing = 3,
+                LocalWellbeingRadius = 500,
                 CityAttractiveness = 0.005f,
                 CityImportcost = -0.005f,
-                Noisepollution = 1000,
+                NoisePollution = 1000,
                 Attractiveness = 5
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialLowSignature02",
-                Wellbeing = 3,
-                Radius = 1000,
+                LocalWellbeing = 3,
+                LocalWellbeingRadius = 1000,
                 CityAttractiveness = 0.005f,
                 CityImportcost = -0.005f,
-                Noisepollution = 4000,
+                NoisePollution = 4000,
                 Attractiveness = 10
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialLowSignature03",
-                Wellbeing = 3,
-                Radius = 1500,
+                LocalWellbeing = 3,
+                LocalWellbeingRadius = 1500,
                 CityAttractiveness = 0.005f,
                 CityImportcost = -0.005f,
-                Noisepollution = 7000,
+                NoisePollution = 7000,
                 Attractiveness = 15
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialLowSignature01",
-                Wellbeing = 3,
-                Radius = 500,
+                LocalWellbeing = 3,
+                LocalWellbeingRadius = 500,
                 CityAttractiveness = 0.005f,
                 CityImportcost = -0.005f,
-                Noisepollution = 1000,
+                NoisePollution = 1000,
                 Attractiveness = 5
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialLowSignature02",
-                Wellbeing = 3,
-                Radius = 1000,
+                LocalWellbeing = 3,
+                LocalWellbeingRadius = 1000,
                 CityAttractiveness = 0.005f,
                 CityImportcost = -0.005f,
-                Noisepollution = 2000,
+                NoisePollution = 2000,
                 Attractiveness = 10
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialLowSignature03",
-                Wellbeing = 3,
-                Radius = 1500,
+                LocalWellbeing = 3,
+                LocalWellbeingRadius = 1500,
                 CityAttractiveness = 0.005f,
                 CityImportcost = -0.005f,
-                Noisepollution = 4000,
+                NoisePollution = 4000,
                 Attractiveness = 15
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialHighSignature01",
-                Wellbeing = 5,
-                Radius = 1000,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 1000,
                 CityAttractiveness = 0.010f,
                 CityImportcost = -0.010f,
-                Noisepollution = 3000,
+                NoisePollution = 3000,
                 Attractiveness = 10
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialHighSignature02",
-                Wellbeing = 5,
-                Radius = 1500,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 1500,
                 CityAttractiveness = 0.010f,
                 CityImportcost = -0.010f,
-                Noisepollution = 4000,
+                NoisePollution = 4000,
                 Attractiveness = 20
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "EU_CommercialHighSignature03",
-                Wellbeing = 5,
-                Radius = 2000,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 2000,
                 CityAttractiveness = 0.010f,
                 CityImportcost = -0.010f,
-                Noisepollution = 5000,
+                NoisePollution = 5000,
                 Attractiveness = 30
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialHighSignature01",
-                Wellbeing = 5,
-                Radius = 1000,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 1000,
                 CityAttractiveness = 0.010f,
                 CityImportcost = -0.010f,
-                Noisepollution = 3000,
+                NoisePollution = 3000,
                 Attractiveness = 10
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialHighSignature02",
-                Wellbeing = 5,
-                Radius = 1500,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 1500,
                 CityAttractiveness = 0.010f,
                 CityImportcost = -0.010f,
-                Noisepollution = 4000,
+                NoisePollution = 4000,
                 Attractiveness = 20
             },
             new SignatureCommercialbuildingOptions
             {
                 Name = "NA_CommercialHighSignature03",
-                Wellbeing = 5,
-                Radius = 2000,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 2000,
                 CityAttractiveness = 0.010f,
                 CityImportcost = -0.010f,
-                Noisepollution = 5000,
+                NoisePollution = 5000,
                 Attractiveness = 30
             }
         },
@@ -1521,74 +1519,74 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "OfficeHighSignature01",
                 Attractiveness = 10,
-                Wellbeing = 5,
-                Radius = 1000,
-                CityOfficeEfficency = 0.020f,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 1000,
+                CityOfficeEfficiency = 0.020f,
                 CityUniversityInterest = 0.050f,
                 CityUniversityGraduation = 0.010f,
-                Noisepollution = 3000
+                NoisePollution = 3000
 
             },
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeHighSignature02",
                 Attractiveness = 20,
-                Wellbeing = 5,
-                Radius = 1500,
-                CityOfficeEfficency = 0.020f,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 1500,
+                CityOfficeEfficiency = 0.020f,
                 CityUniversityInterest = 0.050f,
                 CityUniversityGraduation = 0.010f,
-                Noisepollution = 1000
+                NoisePollution = 1000
 
             },
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeHighSignature03",
                 Attractiveness = 30,
-                Wellbeing = 5,
-                Radius = 2000,
-                CityOfficeEfficency = 0.020f,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 2000,
+                CityOfficeEfficiency = 0.020f,
                 CityUniversityInterest = 0.050f,
                 CityUniversityGraduation = 0.010f,
-                Noisepollution = 5000
+                NoisePollution = 5000
 
             },
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeLowSignature01",
                 Attractiveness = 5,
-                Wellbeing = 5,
-                Radius = 500,
-                CrimeAccumulation = -2f,
-                CrimeRadius = 500,
-                CityOfficeEfficency = 0.010f,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 500,
+                LocalCrimeAccumulation = -2f,
+                LocalCrimeAccumulationRadius = 500,
+                CityOfficeEfficiency = 0.010f,
                 CityUniversityInterest = 0.050f,
                 CityUniversityGraduation = 0.010f,
-                Noisepollution = 3000
+                NoisePollution = 3000
 
             },
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeLowSignature02",
                 Attractiveness = 10,
-                Wellbeing = 5,
-                Radius = 1000,
-                CityOfficeEfficency = 0.010f,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 1000,
+                CityOfficeEfficiency = 0.010f,
                 CityUniversityInterest = 0.050f,
                 CityUniversityGraduation = 0.010f,
-                Noisepollution = 2000
+                NoisePollution = 2000
 
             },
             new SignatureOfficebuildingOptions
             {
                 Name = "OfficeLowSignature03",
                 Attractiveness = 15,
-                Wellbeing = 5,
-                Radius = 1500,
-                CityOfficeEfficency = 0.010f,
+                LocalWellbeing = 5,
+                LocalWellbeingRadius = 1500,
+                CityOfficeEfficiency = 0.010f,
                 CityUniversityInterest = 0.050f,
                 CityUniversityGraduation = 0.010f,
-                Noisepollution = 3000
+                NoisePollution = 3000
 
             }
 
@@ -1600,60 +1598,60 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "EU_MixedSignature01",
                 Attractiveness = 5,
-                Wellbeing = 4,
-                Radius = 750,
+                LocalWellbeing = 4,
+                LocalWellbeingRadius = 750,
                 CityAttractiveness = 0.010f,
-                Noisepollution = 1500
+                NoisePollution = 1500
 
             },
             new SignatureMixedbuildingOptions
             {
                 Name = "EU_MixedSignature02",
                 Attractiveness = 10,
-                Wellbeing = 8,
-                Radius = 1250,
+                LocalWellbeing = 8,
+                LocalWellbeingRadius = 1250,
                 CityAttractiveness = 0.010f,
-                Noisepollution = 1500
+                NoisePollution = 1500
 
             },
             new SignatureMixedbuildingOptions
             {
                 Name = "EU_MixedSignature03",
                 Attractiveness = 15,
-                Wellbeing = 10,
-                Radius = 2000,
+                LocalWellbeing = 10,
+                LocalWellbeingRadius = 2000,
                 CityAttractiveness = 0.010f,
-                Noisepollution = 1500
+                NoisePollution = 1500
 
             },
             new SignatureMixedbuildingOptions
             {
                 Name = "NA_MixedSignature01",
                 Attractiveness = 5,
-                Wellbeing = 4,
-                Radius = 750,
+                LocalWellbeing = 4,
+                LocalWellbeingRadius = 750,
                 CityAttractiveness = 0.010f,
-                Noisepollution = 1500
+                NoisePollution = 1500
 
             },
             new SignatureMixedbuildingOptions
             {
                 Name = "NA_MixedSignature02",
                 Attractiveness = 10,
-                Wellbeing = 8,
-                Radius = 1250,
+                LocalWellbeing = 8,
+                LocalWellbeingRadius = 1250,
                 CityAttractiveness = 0.010f,
-                Noisepollution = 1500
+                NoisePollution = 1500
 
             },
             new SignatureMixedbuildingOptions
             {
                 Name = "NA_MixedSignature03",
                 Attractiveness = 15,
-                Wellbeing = 10,
-                Radius = 1500,
+                LocalWellbeing = 10,
+                LocalWellbeingRadius = 1500,
                 CityAttractiveness = 0.010f,
-                Noisepollution = 1500
+                NoisePollution = 1500
 
             }
         },
@@ -1667,14 +1665,14 @@ public class WhitesharkCheatOverhaulOptions
                 ElectricityConsumption = 3500,
                 WaterConsumption = 5000,
                 GarbageAccumulation = 3200,
-                Noisepollution = 7500,
+                NoisePollution = 7500,
                 FireEngineCapacity = 10,
                 FireHelicopterCapacity = 0,
                 VehicleEfficiency = 1,
                 DisasterResponseCapacity = 0,
-                Range = 10000,
-                Capacity = 100000,
-                Magnitude = 10
+                ServiceCoverageRange = 10000,
+                ServiceCoverageCapacity = 100000,
+                ServiceCoverageMagnitude = 10
 
             },
             new FireStationOptions
@@ -1684,14 +1682,14 @@ public class WhitesharkCheatOverhaulOptions
                 ElectricityConsumption = 1000,
                 WaterConsumption = 1000,
                 GarbageAccumulation = 700,
-                Noisepollution = 5000,
+                NoisePollution = 5000,
                 FireEngineCapacity = 4,
                 FireHelicopterCapacity = 0,
                 VehicleEfficiency = 1,
                 DisasterResponseCapacity = 0,
-                Range = 5000,
-                Capacity = 25000,
-                Magnitude = 5
+                ServiceCoverageRange = 5000,
+                ServiceCoverageCapacity = 25000,
+                ServiceCoverageMagnitude = 5
 
             }
         },
@@ -1705,7 +1703,7 @@ public class WhitesharkCheatOverhaulOptions
                 ElectricityConsumption = 16000,
                 WaterConsumption = 4000,
                 GarbageAccumulation = 5300,
-                Noisepollution = 25000,
+                NoisePollution = 25000,
                 FireEngineCapacity = 0,
                 FireHelicopterCapacity = 5,
                 VehicleEfficiency = 1,
@@ -1721,10 +1719,10 @@ public class WhitesharkCheatOverhaulOptions
                 Name = "FirewatchtTower01",
                 Upkeep = 25000,
                 ElectricityConsumption = 500,
-                ForestFireResponseTime = -0.8f,
-                ForestResponseRadius = 1000f,
-                ForestFireHazard = -0.1f,
-                ForestFireHazardRadius = 1000f
+                LocalForestFireResponseTime = -0.8f,
+                LocalForestFireResponseTimeRadius = 1000f,
+                LocalForestFireHazard = -0.1f,
+                LocalForestFireHazardRadius = 1000f
 
             }
         },
@@ -1738,13 +1736,13 @@ public class WhitesharkCheatOverhaulOptions
                 ElectricityConsumption = 3500,
                 WaterConsumption = 2500,
                 GarbageAccumulation = 3200,
-                Noisepollution = 20000,
+                NoisePollution = 20000,
                 PatrolCarCapacity = 20,
                 PoliceHelicopterCapacity = 0,
                 JailCapacity = 100,
-                Range = 10000,
-                Capacity = 100000,
-                Magnitude = 8
+                ServiceCoverageRange = 10000,
+                ServiceCoverageCapacity = 100000,
+                ServiceCoverageMagnitude = 8
 
             },
 
@@ -1755,13 +1753,13 @@ public class WhitesharkCheatOverhaulOptions
                 ElectricityConsumption = 2000,
                 WaterConsumption = 1000,
                 GarbageAccumulation = 700,
-                Noisepollution = 5000,
+                NoisePollution = 5000,
                 PatrolCarCapacity = 6,
                 PoliceHelicopterCapacity = 0,
                 JailCapacity = 25,
-                Range = 5000,
-                Capacity = 20000,
-                Magnitude = 4
+                ServiceCoverageRange = 5000,
+                ServiceCoverageCapacity = 20000,
+                ServiceCoverageMagnitude = 4
 
             }
         },
@@ -1771,15 +1769,15 @@ public class WhitesharkCheatOverhaulOptions
             new PrisonOptions
             {
                 Name = "Prison01",
-                UpkeepCost = 200000,
-                Electricityconsumption = 3500,
-                Waterconsumption = 5000,
+                Upkeep = 200000,
+                ElectricityConsumption = 3500,
+                WaterConsumption = 5000,
                 GarbageAccumulation = 6300,
                 NoisePollution = 40000,
                 PrisonVanCapacity = 10,
                 PrisonerCapacity = 500,
-                CrimeAccumulation = -5f,
-                CrimeAccumlationRadius = 800
+                LocalCrimeAccumulation = -5f,
+                LocalCrimeAccumulationRadius = 800
 
             }
 
@@ -1792,11 +1790,11 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "DiseaseControlCenter01",
                 Upkeep = 350000,
-                Electricityconsumption = 10000,
-                Waterconsumption = 5000,
+                ElectricityConsumption = 10000,
+                WaterConsumption = 5000,
                 GarbageAccumulation = 4700,
                 AmbulanceCapacity = 15,
-                MedicalHelicopterCapacity = 2,
+                HelicopterCapacity = 2,
                 PatientCapacity = 250,
                 TreatmentBonus = 45,
                 CityDiseaseprobability = -0.25f,
@@ -1812,8 +1810,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "HeathResearchInstitute01",
                 Upkeep = 160000,
-                Electricityconsumption = 10000,
-                Waterconsumption = 5000,
+                ElectricityConsumption = 10000,
+                WaterConsumption = 5000,
                 GarbageAccumulation = 18800,
                 CityDiseaseprobability = -0.1f,
                 CityParkEntertainment = 0.1f
@@ -1828,8 +1826,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "RadioTelescope01",
                 Upkeep = 200000,
-                Electricityconsumption = 3500,
-                Waterconsumption = 5000,
+                ElectricityConsumption = 3500,
+                WaterConsumption = 5000,
                 GarbageAccumulation = 6300,
                 CityUniversityGraduation = 5f
 
@@ -1843,10 +1841,10 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "GeologicalResearchCenter01",
                 Upkeep = 230000,
-                Electricityconsumption = 3500,
-                Waterconsumption = 10000,
+                ElectricityConsumption = 3500,
+                WaterConsumption = 10000,
                 GarbageAccumulation = 3800,
-                Noisepollution = 15000,
+                NoisePollution = 15000,
                 CityOreResourceAmmount = 2f,
                 CityOilResourceAmmount = 2f,
                 CityCollegegraduation = 3f
@@ -1861,8 +1859,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "TechnicalUniversity01",
                 Upkeep = 160000,
-                Electricityconsumption = 10000,
-                Waterconsumption = 2500,
+                ElectricityConsumption = 10000,
+                WaterConsumption = 2500,
                 GarbageAccumulation = 2900,
                 StudentCapacity = 1500,
                 NoisePollution = 10000,
@@ -1879,8 +1877,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "EarlyDisasterWarningSystem01",
                 Upkeep = 240000,
-                Electricityconsumption = 15000,
-                Waterconsumption = 7500,
+                ElectricityConsumption = 15000,
+                WaterConsumption = 7500,
                 GarbageAccumulation = 6300,
                 CityDisasterWarningTime = 360f,
                 CityDisasterDamageRate = 0.2f
@@ -1895,12 +1893,12 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "WelfareOffice01",
                 Upkeep = 45000,
-                Electricityconsumption = 1500,
-                Waterconsumption = 100,
+                ElectricityConsumption = 1500,
+                WaterConsumption = 100,
                 GarbageAccumulation = 3200,
-                Range = 4000,
-                Capacity = 20000,
-                Magnitude = 12,
+                ServiceCoverageRange = 4000,
+                ServiceCoverageCapacity = 20000,
+                ServiceCoverageMagnitude = 12,
                 NoisePollution = 10000
 
             }
@@ -1913,11 +1911,11 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "CityHall01",
                 Upkeep = 160000,
-                Electricityconsumption = 3500,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 3500,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 2500,
                 CityLoanIntrest = -1f,
-                CityImportCost = -0.02f
+                CityImportcost = -0.02f
                 
             }
 
@@ -1929,14 +1927,14 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "LargeEmergencyShelter01",
                 Upkeep = 60000,
-                Electricityconsumption = 15000,
-                Waterconsumption = 5000,
+                ElectricityConsumption = 15000,
+                WaterConsumption = 5000,
                 GarbageAccumulation = 15700,
                 ShelterCapacity = 25000,
                 VehicleCapacity = 20,
-                Range = 3000,
-                Capacity= 50000,
-                Magnitude = 10
+                ServiceCoverageRange = 3000,
+                ServiceCoverageCapacity= 50000,
+                ServiceCoverageMagnitude = 10
 
             }
 
@@ -1948,11 +1946,11 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "CentralBank01",
                 Upkeep = 60000,
-                Electricityconsumption = 15000,
-                Waterconsumption = 5000,
+                ElectricityConsumption = 15000,
+                WaterConsumption = 5000,
                 GarbageAccumulation = 15700,
                 CityLoanIntrest = -2f,
-                CityImportCost = -0.05f,
+                CityImportcost = -0.05f,
                 CityExportCost = 0.05f
 
             }
@@ -1965,8 +1963,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "MedicalUniversity01",
                 Upkeep = 240000,
-                Electricityconsumption = 8000,
-                Waterconsumption = 2500,
+                ElectricityConsumption = 8000,
+                WaterConsumption = 2500,
                 GarbageAccumulation = 2900,
                 StudentCapacity = 1500,
                 NoisePollution = 10000,
@@ -1983,8 +1981,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "LargeHadronCollider01",
                 Upkeep = 400000,
-                Electricityconsumption = 100000,
-                Waterconsumption = 250000,
+                ElectricityConsumption = 100000,
+                WaterConsumption = 250000,
                 GarbageAccumulation = 18800,
                 CityUniversityInterest = 0.15f,
                 CityOfficeSoftwareDemand = 0.2f,
@@ -2117,8 +2115,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "BusDepot01",
                 Upkeep = 62000,
-                Electricityconsumption = 2000,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 2000,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 700,
                 AirPollution = 2500,
                 NoisePollution = 10000,
@@ -2129,8 +2127,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "TaxiDepot01",
                 Upkeep = 28000,
-                Electricityconsumption = 1500,
-                Waterconsumption = 500,
+                ElectricityConsumption = 1500,
+                WaterConsumption = 500,
                 GarbageAccumulation = 700,
                 AirPollution = 0,
                 NoisePollution = 5000,
@@ -2141,8 +2139,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "RailYard01",
                 Upkeep = 30000,
-                Electricityconsumption = 7000,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 7000,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 1000,
                 AirPollution = 0,
                 NoisePollution = 30000,
@@ -2153,8 +2151,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "TramDepot01",
                 Upkeep = 23000,
-                Electricityconsumption = 5000,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 5000,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 800,
                 AirPollution = 0,
                 NoisePollution = 15000,
@@ -2165,8 +2163,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "SubwayYard01",
                 Upkeep = 48000,
-                Electricityconsumption = 8000,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 8000,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 1000,
                 AirPollution = 0,
                 NoisePollution = 25000,
@@ -2181,8 +2179,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "BusStation01",
                 Upkeep = 56000,
-                Electricityconsumption = 2500,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 2500,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 700,
                 NoisePollution = 10000,
                 ComfortFactor = 0.5f
@@ -2192,8 +2190,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "TrainStation01",
                 Upkeep = 23000,
-                Electricityconsumption = 5000,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 5000,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 600,
                 NoisePollution = 15000,
                 ComfortFactor = 0.5f
@@ -2203,8 +2201,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "CargoTrainTerminal01",
                 Upkeep = 30000,
-                Electricityconsumption = 11600,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 11600,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 1600,
                 NoisePollution = 25000,
                 StorageLimit = 15500000,
@@ -2215,8 +2213,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "SubwayStation01",
                 Upkeep = 10000,
-                Electricityconsumption = 5000,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 5000,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 500,
                 NoisePollution = 5000,
                 ComfortFactor = 0.5f
@@ -2226,8 +2224,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "SubwayStation02",
                 Upkeep = 10000,
-                Electricityconsumption = 8000,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 8000,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 500,
                 NoisePollution = 10000,
                 ComfortFactor = 0.5f
@@ -2237,8 +2235,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "Harbor01",
                 Upkeep = 60000,
-                Electricityconsumption = 16000,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 16000,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 3200,
                 NoisePollution = 25000,
                 ComfortFactor = 0.5f
@@ -2248,8 +2246,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "CargoHarbor01",
                 Upkeep = 67000,
-                Electricityconsumption = 25000,
-                Waterconsumption = 1000,
+                ElectricityConsumption = 25000,
+                WaterConsumption = 1000,
                 GarbageAccumulation = 6300,
                 NoisePollution = 100000,
                 StorageLimit = 15500000,
@@ -2264,27 +2262,27 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "Airport01",
                 Upkeep = 100000,
-                Electricityconsumption = 30000,
-                Waterconsumption = 5000,
+                ElectricityConsumption = 30000,
+                WaterConsumption = 5000,
                 GarbageAccumulation = 6300,
                 Transports = 8,
                 ComfortFactor = 0.5f,
-                Attractiveness = 0.05f,
-                OfficeEfficiency = 0.03f
+                CityAttractiveness = 0.05f,
+                CityOfficeEfficiency = 0.03f
 
             },
             new AirportOptions
             {
                 Name = "InternationalAirport01",
                 Upkeep = 100000,
-                Electricityconsumption = 60000,
-                Waterconsumption = 10000,
+                ElectricityConsumption = 60000,
+                WaterConsumption = 10000,
                 GarbageAccumulation = 31300,
                 Transports = 8,
                 ComfortFactor = 0.9f,
-                Attractiveness = 0.1f,
-                UniversityInterest = 0.1f,
-                OfficeSoftwareDemand = 0.1f
+                CityAttractiveness = 0.1f,
+                CityUniversityInterest = 0.1f,
+                CityOfficeSoftwareDemand = 0.1f
 
             }
         },
@@ -2295,14 +2293,14 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "SpaceCenter01",
                 Upkeep = 480000,
-                Electricityconsumption = 80000,
-                Waterconsumption = 20000,
+                ElectricityConsumption = 80000,
+                WaterConsumption = 20000,
                 GarbageAccumulation = 46900,
                 Attractiveness = 200,
                 CityAttractiveness = 0.1f,
-                UniversityInterest = 0.1f,
-                OfficeSoftwareDemand = 0.1f,
-                IndustrialElectronicsDemand = 0.1f,
+                CityUniversityInterest = 0.1f,
+                CityOfficeSoftwareDemand = 0.1f,
+                CityIndustrialElectronicDemand = 0.1f,
                 LeisureEfficiency = 60,
                 VehicleCapacity = 1,
                 ProductionDuration = 0.01f
@@ -2317,9 +2315,9 @@ public class WhitesharkCheatOverhaulOptions
                 Name = "PostMailbox01",
                 Mailcapacity = 1000,
                 ComfortFactor = 0f,
-                Range = 1000f,
-                Capacity = 2000f,
-                Magnitude = 1f
+                ServiceCoverageRange = 1000f,
+                ServiceCoverageCapacity = 2000f,
+                ServiceCoverageMagnitude = 1f
 
             }
         },
@@ -2330,8 +2328,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "RadioMast01",
                 Upkeep = 5000,
-                Electricityconsumption = 2500,
-                Range = 1000,
+                ElectricityConsumption = 2500,
+                TelecomRange = 1000,
                 NetworkCapacity = 2000,
                 NoisePollution = 2500
 
@@ -2341,8 +2339,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "RadioMast01 Bandwidth Increase",
                 Upkeep = 3000,
-                Electricityconsumption = 1500,
-                Range = 0,
+                ElectricityConsumption = 1500,
+                TelecomRange = 0,
                 NetworkCapacity = 1500
              
 
@@ -2352,8 +2350,8 @@ public class WhitesharkCheatOverhaulOptions
             {
                 Name = "RadioMast01 Wireless Network Antenna",
                 Upkeep = 1500,
-                Electricityconsumption = 1500,
-                Range = 250,
+                ElectricityConsumption = 1500,
+                TelecomRange = 250,
                 NetworkCapacity = 1500
 
             }
@@ -2463,25 +2461,25 @@ public class WhitesharkCheatOverhaulOptions
                 StudentCapacity = 10000,
                 GraduationModifier = 0,
                 AmbulanceCapacity = 30,
-                MedicalHelicopterCapacity = 0,
+                HelicopterCapacity = 0,
                 PatientCapacity = 500,
                 TreatmentBonus = 12,
                 GarbageCapacity = 100000,
                 GarbageVehicleCapacity = 10,
                 GarbageTransportCapacity = 0,
-                GarbageProcessingSpeed = 0,
+                GarbageProcessingspeed = 0,
                 FireEngineCapacity = 10,
                 FireHelicopterCapacity = 0,
                 DisasterResponseCapacity = 10,
-                FireVehicleEfficiency = 1,
-                PolicePatrolCarCapacity = 10,
+                VehicleEfficiency = 1,
+                PatrolCarCapacity = 10,
                 PoliceHelicopterCapacity = 0,
                 JailCapacity = 1000,
                 HearseCapacity = 10,
-                DeathStorageCapacity = 500,
-                DeathProcessingrate = 100000,
-                TaxiVehicleCapacity = 50,
-                TaximaintenanceDuration = 0.007f,
+                StorageCapacity = 500,
+                ProcessingRate = 100000,
+                VehicleCapacity = 50,
+                MaintenanceDuration = 0.007f,
                 TrafficSpawnerRate = 0.3f
 
             }
@@ -3039,26 +3037,26 @@ public class WhitesharkCheatOverhaulOptions
             x.GroundPollution >= 0 &&
             x.NoisePollution >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Waterconsumption >= 0 &&
-            x.Electricityconsumption >= 0);
+            x.WaterConsumption >= 0 &&
+            x.ElectricityConsumption >= 0);
    
         
         Powerplant_Options = Powerplant_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.UpkeepCost >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.Upkeep >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.AirPollution >= 0 &&
             x.GroundPollution >= 0 &&
             x.NoisePollution >= 0 &&
-            x.Storage >= 0 &&
-            x.Production >= 0);
+            x.StorageLimit >= 0 &&
+            x.ElectricityProduction >= 0);
 
         
         Waterpump_Options = Waterpump_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.UpkeepCost >= 0 &&
-            x.Capacity >= 0 &&
+            x.Upkeep >= 0 &&
+            x.PumpCapacity >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.ElectricityConsumption >= 0 &&
             x.Purification >= 0 &&
@@ -3067,19 +3065,19 @@ public class WhitesharkCheatOverhaulOptions
         
         Transformerstation_Options = Transformerstation_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.UpkeepCost >= 0 &&
+            x.Upkeep >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.NoisePollution >= 0);
 
         
         Serverfarm_Options = Serverfarm_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.UpkeepCost >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.Upkeep >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Range >= 0 &&
-            x.Capacity >= 0 &&
+            x.TelecomRange >= 0 &&
+            x.NetworkCapacity >= 0 &&
             x.CityEntertainment >= 0 &&
             x.CityTelecomCapacity >= 0 &&
             x.CityAttractiveness >= 0 &&
@@ -3088,13 +3086,13 @@ public class WhitesharkCheatOverhaulOptions
        
         Garbagetruck_Options = Garbagetruck_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.Capacity >= 0 &&
-            x.Unloadrate >= 0);
+            x.GarbageTruckCapacity >= 0 &&
+            x.GarbageTruckUnloadRate >= 0);
 
 
         PublicTransportVehicle_Options = PublicTransportVehicle_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.Passengercapacity >= 0 &&
+            x.PassengerCapacity >= 0 &&
             x.Maintenancerange >= 0);
 
         
@@ -3102,20 +3100,20 @@ public class WhitesharkCheatOverhaulOptions
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
             x.GarageCapacity >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Noisepollution >= 0 &&
+            x.NoisePollution >= 0 &&
             x.Comfortfactor >= 0);
 
         
         Citypark_Options = Citypark_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Range >= 0 &&
-            x.Capacity >= 0 &&
-            x.Magnitude >= 0 &&
-            x.Efficiency >= 0 &&
+            x.ServiceCoverageRange >= 0 &&
+            x.ServiceCoverageCapacity >= 0 &&
+            x.ServiceCoverageMagnitude >= 0 &&
+            x.LeisureEfficiency >= 0 &&
             x.Attractiveness >= 0 &&
             x.ElectricityConsumption >= 0 &&
             x.WaterConsumption >= 0 &&
@@ -3124,9 +3122,9 @@ public class WhitesharkCheatOverhaulOptions
         
         Wastewater_Options = Wastewater_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.UpkeepCost >= 0 &&
-            x.Capacity >= 0 &&
-            x.Purification >= 0 &&
+            x.Upkeep >= 0 &&
+            x.SewageCapacity >= 0 &&
+            x.SewagePurification >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.GroundPollution >= 0 &&
             x.AirPollution >= 0 &&
@@ -3136,16 +3134,16 @@ public class WhitesharkCheatOverhaulOptions
         
         IncinerationPlant_Options = IncinerationPlant_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.UpkeepCost >= 0 &&
-            x.Garbagecapacity >= 0 &&
-            x.Vehiclecapacity >= 0 &&
-            x.Transportcapacity >= 0 &&
-            x.Processingspeed >= 0 &&
-            x.Electricityproduction >= 0 &&
-            x.Productionperunit >= 0 &&
+            x.Upkeep >= 0 &&
+            x.GarbageCapacity >= 0 &&
+            x.GarbageVehicleCapacity >= 0 &&
+            x.GarbageTransportCapacity >= 0 &&
+            x.GarbageProcessingspeed >= 0 &&
+            x.ElectricityProduction >= 0 &&
+            x.ProductionPerUnit >= 0 &&
             x.ProductionCapacity >= 0 &&
-            x.Waterconsumption >= 0 &&
-            x.Electricityconsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
             x.CityIndustrialGroundPollution <= 0 &&
             x.GroundPollution >= 0 &&
             x.AirPollution >= 0 &&
@@ -3154,79 +3152,78 @@ public class WhitesharkCheatOverhaulOptions
         
         Healthcare_Options = Healthcare_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.UpkeepCost >= 0 &&
-            x.Waterconsumption >= 0 &&
-            x.Electricityconsumption >= 0 &&
+            x.Upkeep >= 0 &&
+            x.WaterConsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.NoisePollution >= 0 &&
-            x.Ambulancecapacity >= 0 &&
-            x.Helicoptercapacity >= 0 &&
-            x.Patientcapacity >= 0 &&
-            x.Treatmentbonus >= 0 &&
-            x.Range >= 0 &&
-            x.Capacity >= 0 &&
-            x.Magnitude >= 0);
+            x.AmbulanceCapacity >= 0 &&
+            x.HelicopterCapacity >= 0 &&
+            x.PatientCapacity >= 0 &&
+            x.TreatmentBonus >= 0 &&
+            x.ServiceCoverageRange >= 0 &&
+            x.ServiceCoverageCapacity >= 0 &&
+            x.ServiceCoverageMagnitude >= 0);
 
         Postoffice_Options = Postoffice_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Waterconsumption >= 0 &&
-            x.Electricityconsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Noisepollution >= 0 &&
-            x.Mailstoragecapacity >= 0 &&
-            x.Mailboxcapacity >= 0 &&
-            x.Postvancapacity >= 0 &&
-            x.PostTruckscapacity >= 0 &&
-            x.Range >= 0 &&
-            x.Capacity >= 0 &&
+            x.NoisePollution >= 0 &&
+            x.MailStorageCapacity >= 0 &&
+            x.MailboxCapacity >= 0 &&
+            x.PostVanCapacity >= 0 &&
+            x.PostTrucksCapacity >= 0 &&
+            x.ServiceCoverageRange >= 0 &&
+            x.ServiceCoverageCapacity >= 0 &&
             x.SortingRate >= 0 &&
-            x.Magnitude >= 0);
+            x.ServiceCoverageMagnitude >= 0);
 
         Cemetery_Options = Cemetery_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Waterconsumption >= 0 &&
-            x.Electricityconsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Hearsecapacity >= 0 &&
-            x.Storagecapacity >= 0 &&
-            x.Efficiency >= 0);
+            x.HearseCapacity >= 0 &&
+            x.StorageCapacity >= 0 &&
+            x.LeisureEfficiency >= 0);
 
         Crematorium_Options = Crematorium_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Waterconsumption >= 0 &&
-            x.Electricityconsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Hearsecapacity >= 0 &&
-            x.Storagecapacity >= 0 &&
-            x.Airpollution >= 0 &&
-            x.Noisepollution >= 0 &&
-            x.Processingrate >= 0);
+            x.HearseCapacity >= 0 &&
+            x.StorageCapacity >= 0 &&
+            x.AirPollution >= 0 &&
+            x.NoisePollution >= 0 &&
+            x.ProcessingRate >= 0);
 
         Windturbine_Options = Windturbine_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
             x.Production >= 0 &&
-            x.Maximumwind >= 0 &&
-            x.Noisepollution >= 0);
+            x.MaximumWind >= 0 &&
+            x.NoisePollution >= 0);
 
         Emergencybattery_Options = Emergencybattery_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Capacity >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.BatteryCapacity >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Poweroutput >= 0 &&
-            x.Noisepollution >= 0);
+            x.PowerOutput >= 0 &&
+            x.NoisePollution >= 0);
 
         Geothermalpowerplant_Options = Geothermalpowerplant_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.Production >= 0 &&
-            x.Maximumgroundwater >= 0 &&
+            x.MaximumGroundwater >= 0 &&
             x.AirPollution >= 0 &&
             x.GroundPollution >= 0 &&
             x.NoisePollution >= 0);
@@ -3234,26 +3231,26 @@ public class WhitesharkCheatOverhaulOptions
         Solarpowerstation_Options = Solarpowerstation_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.Production >= 0 &&
-            x.Poweroutput >= 0 &&
-            x.Capacity >= 0 &&
+            x.PowerOutput >= 0 &&
+            x.BatteryCapacity >= 0 &&
             x.NoisePollution >= 0);
 
         SignatureResidentialbuilding_Options = SignatureResidentialbuilding_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.Wellbeing >= 0 &&
-            x.Radius >= 0);
+            x.LocalWellbeing >= 0 &&
+            x.LocalWellbeingRadius >= 0);
 
         SignatureCommercialbuilding_Options = SignatureCommercialbuilding_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.Wellbeing >= 0 &&
-            x.Radius >= 0 &&
+            x.LocalWellbeing >= 0 &&
+            x.LocalWellbeingRadius >= 0 &&
             x.Attractiveness >= 0 &&
             x.CityImportcost <= 0 &&
             x.CityAttractiveness >= 0 &&
-            x.Noisepollution >= 0);
+            x.NoisePollution >= 0);
 
         PostVan_Options = PostVan_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
@@ -3261,25 +3258,23 @@ public class WhitesharkCheatOverhaulOptions
 
         SignatureOfficebuilding_Options = SignatureOfficebuilding_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.Wellbeing >= 0 &&
-            x.Radius >= 0 &&
+            x.LocalWellbeing >= 0 &&
+            x.LocalWellbeingRadius >= 0 &&
             x.Attractiveness >= 0 &&
-            x.CrimeAccumulation <= 0 &&
-            x.CrimeRadius >= 0 &&
-            x.CityOfficeEfficency >= 0 &&
+            x.LocalCrimeAccumulation <= 0 &&
+            x.LocalCrimeAccumulationRadius >= 0 &&
+            x.CityOfficeEfficiency >= 0 &&
             x.CityUniversityGraduation >= 0 &&
             x.CityUniversityInterest >= 0 &&
-            x.Noisepollution >= 0);
+            x.NoisePollution >= 0);
 
         SignatureMixedbuilding_Options = SignatureMixedbuilding_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.Wellbeing >= 0 &&
-            x.Radius >= 0 &&
+            x.LocalWellbeing >= 0 &&
+            x.LocalWellbeingRadius >= 0 &&
             x.Attractiveness >= 0 &&
-            x.Wellbeing >= 0 &&
-            x.Radius >= 0 &&
             x.CityAttractiveness >= 0 &&
-            x.Noisepollution >= 0);
+            x.NoisePollution >= 0);
 
         FireStation_Options = FireStation_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
@@ -3287,14 +3282,14 @@ public class WhitesharkCheatOverhaulOptions
             x.ElectricityConsumption >= 0 &&
             x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Noisepollution >= 0 &&
+            x.NoisePollution >= 0 &&
             x.FireEngineCapacity >= 0 &&
             x.FireHelicopterCapacity >= 0 &&
             x.VehicleEfficiency >= 0 &&
             x.DisasterResponseCapacity >= 0 &&
-            x.Range >= 0 &&
-            x.Capacity >= 0 &&
-            x.Magnitude >= 0);
+            x.ServiceCoverageRange >= 0 &&
+            x.ServiceCoverageCapacity >= 0 &&
+            x.ServiceCoverageMagnitude >= 0);
 
         FireHelicopterDepot_Options = FireHelicopterDepot_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
@@ -3302,7 +3297,7 @@ public class WhitesharkCheatOverhaulOptions
             x.ElectricityConsumption >= 0 &&
             x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Noisepollution >= 0 &&
+            x.NoisePollution >= 0 &&
             x.FireEngineCapacity >= 0 &&
             x.FireHelicopterCapacity >= 0 &&
             x.VehicleEfficiency >= 0 &&
@@ -3312,10 +3307,10 @@ public class WhitesharkCheatOverhaulOptions
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
             x.ElectricityConsumption >= 0 &&
-            x.ForestFireResponseTime <= 0 &&
-            x.ForestResponseRadius >= 0 &&
-            x.ForestFireHazard <= 0 &&
-            x.ForestFireHazardRadius >= 0);
+            x.LocalForestFireResponseTime <= 0 &&
+            x.LocalForestFireResponseTimeRadius >= 0 &&
+            x.LocalForestFireHazard <= 0 &&
+            x.LocalForestFireHazardRadius >= 0);
 
         PoliceStation_Options = PoliceStation_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
@@ -3326,31 +3321,31 @@ public class WhitesharkCheatOverhaulOptions
             x.PatrolCarCapacity >= 0 &&
             x.PoliceHelicopterCapacity >= 0 &&
             x.JailCapacity >= 0 &&
-            x.Range >= 0 &&
-            x.Capacity >= 0 &&
-            x.Magnitude >= 0 &&
-            x.Noisepollution >= 0);
+            x.ServiceCoverageRange >= 0 &&
+            x.ServiceCoverageCapacity >= 0 &&
+            x.ServiceCoverageMagnitude >= 0 &&
+            x.NoisePollution >= 0);
 
         Prison_Options = Prison_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
-            x.UpkeepCost >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.Upkeep >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.PrisonVanCapacity >= 0 &&
             x.PrisonerCapacity >= 0 &&
-            x.CrimeAccumulation <= 0 &&
-            x.CrimeAccumlationRadius >= 0 &&
+            x.LocalCrimeAccumulation <= 0 &&
+            x.LocalCrimeAccumulationRadius >= 0 &&
             x.NoisePollution >= 0);
 
         DiseaseControlCenter_Options = DiseaseControlCenter_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.AmbulanceCapacity >= 0 &&
-            x.MedicalHelicopterCapacity >= 0 &&
+            x.HelicopterCapacity >= 0 &&
             x.PatientCapacity >= 0 &&
             x.TreatmentBonus >= 0 &&
             x.CityDiseaseprobability <= 0 &&
@@ -3359,8 +3354,8 @@ public class WhitesharkCheatOverhaulOptions
         HeathResearchInstitute_Options = HeathResearchInstitute_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.CityDiseaseprobability <= 0 &&
             x.CityParkEntertainment >= 0);
@@ -3368,18 +3363,18 @@ public class WhitesharkCheatOverhaulOptions
         RadioTelescope_Options = RadioTelescope_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.CityUniversityGraduation >= 0);
 
         GeologicalResearchCenter_Options = GeologicalResearchCenter_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Noisepollution >= 0 &&
+            x.NoisePollution >= 0 &&
             x.CityOreResourceAmmount >= 0 &&
             x.CityOilResourceAmmount >= 0 &&
             x.CityCollegegraduation >= 0);
@@ -3387,8 +3382,8 @@ public class WhitesharkCheatOverhaulOptions
         TechnicalUniversity_Options = TechnicalUniversity_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.StudentCapacity >= 0 &&
             x.NoisePollution >= 0 &&
@@ -3398,8 +3393,8 @@ public class WhitesharkCheatOverhaulOptions
         EarlyDisasterWarningSystem_Options = EarlyDisasterWarningSystem_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.CityDisasterWarningTime >= 0 &&
             x.CityDisasterDamageRate <= 0);
@@ -3407,50 +3402,50 @@ public class WhitesharkCheatOverhaulOptions
         WelfareOffice_Options = WelfareOffice_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Range >= 0 &&
-            x.Capacity >= 0 &&
-            x.Magnitude >= 0 &&
+            x.ServiceCoverageRange >= 0 &&
+            x.ServiceCoverageCapacity >= 0 &&
+            x.ServiceCoverageMagnitude >= 0 &&
             x.NoisePollution >= 0);
 
         CityHall_Options = CityHall_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.CityLoanIntrest <= 0 &&
-            x.CityImportCost <= 0);
+            x.CityImportcost <= 0);
 
         LargeEmergencyShelter_Options = LargeEmergencyShelter_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.ShelterCapacity >= 0 &&
             x.VehicleCapacity >= 0 &&
-            x.Range >= 0 &&
-            x.Capacity >= 0 &&
-            x.Magnitude >= 0);
+            x.ServiceCoverageRange >= 0 &&
+            x.ServiceCoverageCapacity >= 0 &&
+            x.ServiceCoverageMagnitude >= 0);
 
         CentralBank_Options = CentralBank_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.CityLoanIntrest <= 0 &&
-            x.CityImportCost <= 0 &&
+            x.CityImportcost <= 0 &&
             x.CityExportCost >= 0);
 
         MedicalUniversity_Options = MedicalUniversity_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.StudentCapacity >= 0 &&
             x.NoisePollution >= 0 &&
@@ -3460,8 +3455,8 @@ public class WhitesharkCheatOverhaulOptions
         LargeHadronCollider_Options = LargeHadronCollider_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.CityUniversityInterest >= 0 &&
             x.CityOfficeSoftwareDemand >= 0 &&
@@ -3481,8 +3476,8 @@ public class WhitesharkCheatOverhaulOptions
         PublicTransportDepots_Options = PublicTransportDepots_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.AirPollution >= 0 &&
             x.NoisePollution >= 0 &&
@@ -3492,8 +3487,8 @@ public class WhitesharkCheatOverhaulOptions
         PublicTransportStations_Options = PublicTransportStations_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.NoisePollution >= 0 &&
             x.StorageLimit >= 0 &&
@@ -3503,28 +3498,28 @@ public class WhitesharkCheatOverhaulOptions
         Airport_Options = Airport_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.StorageLimit >= 0 &&
             x.Transports >= 0 &&
             x.ComfortFactor >= 0 &&
-            x.Attractiveness >= 0 &&
-            x.OfficeEfficiency >= 0 &&
-            x.UniversityInterest >= 0 &&
-            x.OfficeSoftwareDemand >= 0);
+            x.CityAttractiveness >= 0 &&
+            x.CityOfficeEfficiency >= 0 &&
+            x.CityUniversityInterest >= 0 &&
+            x.CityOfficeSoftwareDemand >= 0);
 
         SpaceCenter_Options = SpaceCenter_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
             x.Attractiveness >= 0 &&
             x.CityAttractiveness >= 0 &&
-            x.UniversityInterest >= 0 &&
-            x.IndustrialElectronicsDemand >= 0 &&
-            x.OfficeSoftwareDemand >= 0 &&
+            x.CityUniversityInterest >= 0 &&
+            x.CityIndustrialElectronicDemand >= 0 &&
+            x.CityOfficeSoftwareDemand >= 0 &&
             x.VehicleCapacity >= 0 &&
             x.ProductionDuration >= 0 &&
             x.LeisureEfficiency >= 0);
@@ -3533,17 +3528,17 @@ public class WhitesharkCheatOverhaulOptions
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Mailcapacity >= 0 &&
             x.ComfortFactor >= 0 &&
-            x.Range >= 0 &&
-            x.Capacity >= 0 &&
-            x.Magnitude >= 0);
+            x.ServiceCoverageRange >= 0 &&
+            x.ServiceCoverageCapacity >= 0 &&
+            x.ServiceCoverageMagnitude >= 0);
 
         RadioMast_Options = RadioMast_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
-            x.Electricityconsumption >= 0 &&
-            x.Waterconsumption >= 0 &&
+            x.ElectricityConsumption >= 0 &&
+            x.WaterConsumption >= 0 &&
             x.GarbageAccumulation >= 0 &&
-            x.Range >= 0 &&
+            x.TelecomRange >= 0 &&
             x.NetworkCapacity >= 0 &&
             x.NoisePollution >= 0);
 
@@ -3575,24 +3570,24 @@ public class WhitesharkCheatOverhaulOptions
         x.StudentCapacity >= 0 &&
         x.GraduationModifier >= 0 &&
         x.AmbulanceCapacity >= 0 &&
-        x.MedicalHelicopterCapacity >= 0 &&
+        x.HelicopterCapacity >= 0 &&
         x.PatientCapacity >= 0 &&
         x.TreatmentBonus >= 0 &&
         x.GarbageCapacity >= 0 &&
         x.GarbageVehicleCapacity >= 0 &&
         x.GarbageTransportCapacity >= 0 &&
-        x.GarbageProcessingSpeed >= 0 &&
+        x.GarbageProcessingspeed >= 0 &&
         x.FireEngineCapacity >= 0 &&
         x.FireHelicopterCapacity >= 0 &&
         x.DisasterResponseCapacity >= 0 &&
-        x.PolicePatrolCarCapacity >= 0 &&
+        x.PatrolCarCapacity >= 0 &&
         x.PoliceHelicopterCapacity >= 0 &&
         x.JailCapacity >= 0 &&
         x.HearseCapacity >= 0 &&
-        x.DeathStorageCapacity >= 0 &&
-        x.DeathProcessingrate >= 0 &&
-        x.TaxiVehicleCapacity >= 0 &&
-        x.TaximaintenanceDuration >= 0 &&
+        x.StorageCapacity >= 0 &&
+        x.ProcessingRate >= 0 &&
+        x.VehicleCapacity >= 0 &&
+        x.MaintenanceDuration >= 0 &&
         x.TrafficSpawnerRate >= 0);
 
 
@@ -3607,9 +3602,9 @@ public class WhitesharkCheatOverhaulOptions
                 Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
                 {
                     Name = "SewageOutlet01 Chemical Purification",
-                    UpkeepCost = 4000,
-                    Capacity = 0,
-                    Purification = 0.25f,
+                    Upkeep = 4000,
+                    SewageCapacity = 0,
+                    SewagePurification = 0.25f,
                     GarbageAccumulation = 0,
                     GroundPollution = 0,
                     AirPollution = 2500,
@@ -3622,9 +3617,9 @@ public class WhitesharkCheatOverhaulOptions
                 Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
                 {
                     Name = "SewageOutlet01 Extra Settling Tank",
-                    UpkeepCost = 10000,
-                    Capacity = 0,
-                    Purification = 0.1f,
+                    Upkeep = 10000,
+                    SewageCapacity = 0,
+                    SewagePurification = 0.1f,
                     GarbageAccumulation = 0,
                     GroundPollution = 2500,
                     AirPollution = 2500,
@@ -3637,9 +3632,9 @@ public class WhitesharkCheatOverhaulOptions
                 Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
                 {
                     Name = "WastewaterTreatmentPlant01 Advanced Filtering System",
-                    UpkeepCost = 20000,
-                    Capacity = 0,
-                    Purification = 0.1f,
+                    Upkeep = 20000,
+                    SewageCapacity = 0,
+                    SewagePurification = 0.1f,
                     GarbageAccumulation = 12500,
                     GroundPollution = 0,
                     AirPollution = 0,
@@ -3652,9 +3647,9 @@ public class WhitesharkCheatOverhaulOptions
                 Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
                 {
                     Name = "WastewaterTreatmentPlant01 Extra Processing Unit",
-                    UpkeepCost = 40000,
-                    Capacity = 100000,
-                    Purification = 0f,
+                    Upkeep = 40000,
+                    SewageCapacity = 100000,
+                    SewagePurification = 0f,
                     GarbageAccumulation = 10000,
                     GroundPollution = 2500,
                     AirPollution = 2500,
@@ -3670,10 +3665,10 @@ public class WhitesharkCheatOverhaulOptions
                     Upkeep = 2200,
                     GarageCapacity = 0,
                     Comfortfactor = 0.5f,
-                    Electricityconsumption = 200,
-                    Waterconsumption = 0,
+                    ElectricityConsumption = 200,
+                    WaterConsumption = 0,
                     GarbageAccumulation = 200,
-                    Noisepollution = 2500
+                    NoisePollution = 2500
 
                 });
 
@@ -3684,10 +3679,10 @@ public class WhitesharkCheatOverhaulOptions
                     Upkeep = 3000,
                     GarageCapacity = 0,
                     Comfortfactor = 0.5f,
-                    Electricityconsumption = 300,
-                    Waterconsumption = 0,
+                    ElectricityConsumption = 300,
+                    WaterConsumption = 0,
                     GarbageAccumulation = 300,
-                    Noisepollution = 2500
+                    NoisePollution = 2500
 
                 });
 
@@ -3698,10 +3693,10 @@ public class WhitesharkCheatOverhaulOptions
                     Upkeep = 7000,
                     GarageCapacity = 0,
                     Comfortfactor = 0.5f,
-                    Electricityconsumption = 700,
-                    Waterconsumption = 0,
+                    ElectricityConsumption = 700,
+                    WaterConsumption = 0,
                     GarbageAccumulation = 700,
-                    Noisepollution = 5000
+                    NoisePollution = 5000
 
                 });
 
@@ -3712,10 +3707,10 @@ public class WhitesharkCheatOverhaulOptions
                     Upkeep = 16000,
                     GarageCapacity = 0,
                     Comfortfactor = 0.5f,
-                    Electricityconsumption = 1600,
-                    Waterconsumption = 0,
+                    ElectricityConsumption = 1600,
+                    WaterConsumption = 0,
                     GarbageAccumulation = 1700,
-                    Noisepollution = 5000
+                    NoisePollution = 5000
 
                 });
 
@@ -3726,8 +3721,8 @@ public class WhitesharkCheatOverhaulOptions
                     Upkeep = 5000,
                     GarageCapacity = 0,
                     Comfortfactor = 0.1f,
-                    Electricityconsumption = 2400,
-                    Waterconsumption = 2000,
+                    ElectricityConsumption = 2400,
+                    WaterConsumption = 2000,
                     GarbageAccumulation = 1600
 
                 });
@@ -3739,10 +3734,10 @@ public class WhitesharkCheatOverhaulOptions
                     Upkeep = 130000,
                     GarageCapacity = 416,
                     Comfortfactor = 0.750f,
-                    Electricityconsumption = 7000,
-                    Waterconsumption = 3000,
+                    ElectricityConsumption = 7000,
+                    WaterConsumption = 3000,
                     GarbageAccumulation = 2500,
-                    Noisepollution = 2500
+                    NoisePollution = 2500
 
                 });
 
@@ -3759,14 +3754,14 @@ public class WhitesharkCheatOverhaulOptions
                 Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
                 {
                     Name = "MedicalClinic01 Ambulance Depot",
-                    UpkeepCost = 7000,
-                    Waterconsumption = 250,
-                    Electricityconsumption = 500,
+                    Upkeep = 7000,
+                    WaterConsumption = 250,
+                    ElectricityConsumption = 500,
                     GarbageAccumulation = 400,
-                    Ambulancecapacity = 5,
-                    Helicoptercapacity = 0,
-                    Patientcapacity = 0,
-                    Treatmentbonus = 0
+                    AmbulanceCapacity = 5,
+                    HelicopterCapacity = 0,
+                    PatientCapacity = 0,
+                    TreatmentBonus = 0
 
                 });
 
@@ -3774,14 +3769,14 @@ public class WhitesharkCheatOverhaulOptions
                 Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
                 {
                     Name = "MedicalClinic01 Extention Wing",
-                    UpkeepCost = 25000,
-                    Waterconsumption = 500,
-                    Electricityconsumption = 1000,
+                    Upkeep = 25000,
+                    WaterConsumption = 500,
+                    ElectricityConsumption = 1000,
                     GarbageAccumulation = 700,
-                    Ambulancecapacity = 0,
-                    Helicoptercapacity = 0,
-                    Patientcapacity = 25,
-                    Treatmentbonus = 0
+                    AmbulanceCapacity = 0,
+                    HelicopterCapacity = 0,
+                    PatientCapacity = 25,
+                    TreatmentBonus = 0
 
                 });
 
@@ -3789,14 +3784,14 @@ public class WhitesharkCheatOverhaulOptions
                 Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
                 {
                     Name = "Hospital01 Helipad",
-                    UpkeepCost = 35000,
-                    Waterconsumption = 250,
-                    Electricityconsumption = 1000,
+                    Upkeep = 35000,
+                    WaterConsumption = 250,
+                    ElectricityConsumption = 1000,
                     GarbageAccumulation = 1000,
-                    Ambulancecapacity = 0,
-                    Helicoptercapacity = 1,
-                    Patientcapacity = 0,
-                    Treatmentbonus = 0
+                    AmbulanceCapacity = 0,
+                    HelicopterCapacity = 1,
+                    PatientCapacity = 0,
+                    TreatmentBonus = 0
 
                 });
 
@@ -3804,14 +3799,14 @@ public class WhitesharkCheatOverhaulOptions
                 Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
                 {
                     Name = "Hospital01 Special Ward",
-                    UpkeepCost = 100000,
-                    Waterconsumption = 2500,
-                    Electricityconsumption = 2000,
+                    Upkeep = 100000,
+                    WaterConsumption = 2500,
+                    ElectricityConsumption = 2000,
                     GarbageAccumulation = 3200,
-                    Ambulancecapacity = 0,
-                    Helicoptercapacity = 0,
-                    Patientcapacity = 0,
-                    Treatmentbonus = 0
+                    AmbulanceCapacity = 0,
+                    HelicopterCapacity = 0,
+                    PatientCapacity = 0,
+                    TreatmentBonus = 0
 
                 });
 
@@ -3819,14 +3814,14 @@ public class WhitesharkCheatOverhaulOptions
                 Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
                 {
                     Name = "Hospital01 Trauma Center",
-                    UpkeepCost = 80000,
-                    Waterconsumption = 2500,
-                    Electricityconsumption = 2000,
+                    Upkeep = 80000,
+                    WaterConsumption = 2500,
+                    ElectricityConsumption = 2000,
                     GarbageAccumulation = 3200,
-                    Ambulancecapacity = 0,
-                    Helicoptercapacity = 0,
-                    Patientcapacity = 0,
-                    Treatmentbonus = 15
+                    AmbulanceCapacity = 0,
+                    HelicopterCapacity = 0,
+                    PatientCapacity = 0,
+                    TreatmentBonus = 15
 
                 });
 
@@ -3941,25 +3936,25 @@ public class WhitesharkCheatOverhaulOptions
                     StudentCapacity = 10000,
                     GraduationModifier = 0f,
                     AmbulanceCapacity = 30,
-                    MedicalHelicopterCapacity = 0,
+                    HelicopterCapacity = 0,
                     PatientCapacity = 500,
                     TreatmentBonus = 12,
                     GarbageCapacity = 100000,
                     GarbageVehicleCapacity = 10,
                     GarbageTransportCapacity = 0,
-                    GarbageProcessingSpeed = 0,
+                    GarbageProcessingspeed = 0,
                     FireEngineCapacity = 10,
                     FireHelicopterCapacity = 0,
                     DisasterResponseCapacity = 10,
-                    FireVehicleEfficiency = 1f,
-                    PolicePatrolCarCapacity = 10,
+                    VehicleEfficiency = 1f,
+                    PatrolCarCapacity = 10,
                     PoliceHelicopterCapacity = 0,
                     JailCapacity = 1000,
                     HearseCapacity = 10,
-                    DeathStorageCapacity = 500,
-                    DeathProcessingrate = 100000f,
-                    TaxiVehicleCapacity = 50,
-                    TaximaintenanceDuration = 0.007f,
+                    StorageCapacity = 500,
+                    ProcessingRate = 100000f,
+                    VehicleCapacity = 50,
+                    MaintenanceDuration = 0.007f,
                     TrafficSpawnerRate = 0.3f
 
                 });

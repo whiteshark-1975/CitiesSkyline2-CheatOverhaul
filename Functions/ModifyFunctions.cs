@@ -2,7 +2,7 @@
 using Game.City;
 using Game.Prefabs;
 using System.Linq;
-using WhitesharkCheatOverhaul.Interfaces;
+
 
 namespace WhitesharkCheatOverhaul;
 
@@ -117,7 +117,7 @@ public class ModifyStats
     public static void ModifyPublicTransportVehicle(PrefabBase prefab, IPublicTransportVehicle options)
     {
         var TransportComponent = prefab.GetComponent<Game.Prefabs.PublicTransport>();
-        TransportComponent.m_PassengerCapacity = options.Passengercapacity;
+        TransportComponent.m_PassengerCapacity = options.PassengerCapacity;
         TransportComponent.m_MaintenanceRange = options.Maintenancerange;
     }
     public static void ModifyParkingFacility(PrefabBase prefab, IParkingFacilityOptions options)

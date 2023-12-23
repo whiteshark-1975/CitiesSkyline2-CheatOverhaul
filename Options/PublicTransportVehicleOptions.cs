@@ -6,7 +6,7 @@ public class PublicTransportVehicleOptions :
 {
     public string Name { get; set; } = null!;
 
-    public int Passengercapacity { get; set; }
+    public int PassengerCapacity { get; set; }
     public int Maintenancerange { get; set; }
     
 

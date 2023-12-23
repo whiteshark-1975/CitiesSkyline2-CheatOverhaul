@@ -21,7 +21,7 @@ public interface ILocalForestFireHazard
     public float LocalForestFireHazardRadius { get; set; }
     }
 
-}
+
 public interface ILocalForestFireResponseTime
 
 {

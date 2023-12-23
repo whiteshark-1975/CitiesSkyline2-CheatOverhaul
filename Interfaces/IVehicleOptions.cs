@@ -44,7 +44,7 @@ public interface IPoliceCarOptions
 public interface IPublicTransportVehicle
 
 {
-    public int Passengercapacity { get; set; }
+    public int PassengerCapacity { get; set; }
     public int Maintenancerange { get; set; }
 
 }
