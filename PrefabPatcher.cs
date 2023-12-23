@@ -287,131 +287,48 @@ public static class PrefabPatcher
         {
             ModifyStats.ModifyServiceConsumption(prefab, TechnicalUniversityOptions);
             ModifyStats.ModifyPollution(prefab, TechnicalUniversityOptions);
-            ModifyStats.(prefab, TechnicalUniversityOptions);
-
-            var SchoolComponent = prefab.GetComponent<Game.Prefabs.School>();
-            SchoolComponent.m_StudentCapacity = TechnicalUniversityoverrides.StudentCapacity;
-
-            var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var IndustryEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialEfficiency);
-            IndustryEffect.m_Delta = TechnicalUniversityoverrides.CityIndustrialEfficiency;
-            var OfficeEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeEfficiency);
-            OfficeEffect.m_Delta = TechnicalUniversityoverrides.CityOfficeEfficiency;
-
+            ModifyStats.ModifySchool(prefab, TechnicalUniversityOptions);
+            ModifyStats.ModifyCityIndustrialEfficiency(prefab, TechnicalUniversityOptions);
+            ModifyStats.ModifyCityOfficeEfficiency(prefab, TechnicalUniversityOptions);
         }
-
-        if (WhitesharkCheatOverhaul.EarlyDisasterWarningSystemOptions.TryGetValue(prefab.name, out var EarlyDisasterWarningSystemOptionsoverrides))
+        if (WhitesharkCheatOverhaul.EarlyDisasterWarningSystemOptions.TryGetValue(prefab.name, out EarlyDisasterWarningSystemOptions EarlyDisasterWarningSystemOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = EarlyDisasterWarningSystemOptionsoverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = EarlyDisasterWarningSystemOptionsoverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = EarlyDisasterWarningSystemOptionsoverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = EarlyDisasterWarningSystemOptionsoverrides.GarbageAccumulation;
-
-            var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var DisasterWarningTimeEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.DisasterWarningTime);
-            DisasterWarningTimeEffect.m_Delta = EarlyDisasterWarningSystemOptionsoverrides.CityDisasterWarningTime;
-            var DisasterDamageRateEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.DisasterDamageRate);
-            DisasterDamageRateEffect.m_Delta = EarlyDisasterWarningSystemOptionsoverrides.CityDisasterDamageRate;
-
+            ModifyStats.ModifyServiceConsumption(prefab, EarlyDisasterWarningSystemOptions);
+            ModifyStats.ModifyCityDisasterDamageRate(prefab, EarlyDisasterWarningSystemOptions);
+            ModifyStats.ModifyCityDisasterWarningTime(prefab, EarlyDisasterWarningSystemOptions);
         }
-
-        if (WhitesharkCheatOverhaul.WelfareOfficeOptions.TryGetValue(prefab.name, out var WelfareOfficeoverrides))
+        if (WhitesharkCheatOverhaul.WelfareOfficeOptions.TryGetValue(prefab.name, out WelfareOfficeOptions WelfareOfficeOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = WelfareOfficeoverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = WelfareOfficeoverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = WelfareOfficeoverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = WelfareOfficeoverrides.GarbageAccumulation;
-
-            var ServiceCoverageComponent = prefab.GetComponent<ServiceCoverage>();
-            ServiceCoverageComponent.m_Range = WelfareOfficeoverrides.Range;
-            ServiceCoverageComponent.m_Capacity = WelfareOfficeoverrides.Capacity;
-            ServiceCoverageComponent.m_Magnitude = WelfareOfficeoverrides.Magnitude;
-
-            var PollutionComponent = prefab.GetComponent<Pollution>();
-
+            ModifyStats.ModifyServiceConsumption(prefab, WelfareOfficeOptions);
+            ModifyStats.ModifyServiceCoverage(prefab, WelfareOfficeOptions);
+            ModifyStats.ModifyPollution(prefab, WelfareOfficeOptions);
         }
-
-        if (WhitesharkCheatOverhaul.CityHallOptions.TryGetValue(prefab.name, out var CityHalloverrides))
+        if (WhitesharkCheatOverhaul.CityHallOptions.TryGetValue(prefab.name, out CityHallOptions CityHallOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = CityHalloverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = CityHalloverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = CityHalloverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = CityHalloverrides.GarbageAccumulation;
-
-            var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var LoanEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.LoanInterest);
-            LoanEffect.m_Delta = CityHalloverrides.CityLoanIntrest;
-            var ImportEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.ImportCost);
-            ImportEffect.m_Delta = CityHalloverrides.CityImportCost;
-
+            ModifyStats.ModifyServiceConsumption(prefab, CityHallOptions);
+            ModifyStats.ModifyCityLoanIntrest(prefab, CityHallOptions);
+            ModifyStats.ModifyCityImportCost(prefab, CityHallOptions);
         }
-
-        if (WhitesharkCheatOverhaul.LargeEmergencyShelterOptions.TryGetValue(prefab.name, out var LargeEmergencyShelteroverrides))
+        if (WhitesharkCheatOverhaul.LargeEmergencyShelterOptions.TryGetValue(prefab.name, out LargeEmergencyShelterOptions LargeEmergencyShelterOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = LargeEmergencyShelteroverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = LargeEmergencyShelteroverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = LargeEmergencyShelteroverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = LargeEmergencyShelteroverrides.GarbageAccumulation;
-
-            var ShelterComponent = prefab.GetComponent<Game.Prefabs.EmergencyShelter>();
-            ShelterComponent.m_ShelterCapacity = LargeEmergencyShelteroverrides.ShelterCapacity;
-            ShelterComponent.m_VehicleCapacity = LargeEmergencyShelteroverrides.VehicleCapacity;
-
-            var ServiceCoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
-            ServiceCoverageComponent.m_Range = LargeEmergencyShelteroverrides.Range;
-            ServiceCoverageComponent.m_Capacity = LargeEmergencyShelteroverrides.Capacity;
-            ServiceCoverageComponent.m_Magnitude = LargeEmergencyShelteroverrides.Magnitude;
-
+            ModifyStats.ModifyServiceConsumption(prefab, LargeEmergencyShelterOptions);
+            ModifyStats.ModifyServiceCoverage(prefab, LargeEmergencyShelterOptions);
+            ModifyStats.ModifyEmergencyShelter(prefab, LargeEmergencyShelterOptions);
         }
-
-        if (WhitesharkCheatOverhaul.CentralBankOptions.TryGetValue(prefab.name, out var CentralBankoverrides))
+        if (WhitesharkCheatOverhaul.CentralBankOptions.TryGetValue(prefab.name, out CentralBankOptions CentralBankOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = CentralBankoverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = CentralBankoverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = CentralBankoverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = CentralBankoverrides.GarbageAccumulation;
-
-            var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var LoanEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.LoanInterest);
-            LoanEffect.m_Delta = CentralBankoverrides.CityLoanIntrest;
-            var ImportEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.ImportCost);
-            ImportEffect.m_Delta = CentralBankoverrides.CityImportCost;
-            var ExportEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.ExportCost);
-            ExportEffect.m_Delta = CentralBankoverrides.CityExportCost;
-
+            ModifyStats.ModifyServiceConsumption(prefab, CentralBankOptions);
+            ModifyStats.ModifyCityLoanIntrest(prefab, CentralBankOptions);
+            ModifyStats.ModifyCityImportCost(prefab, CentralBankOptions);
+            ModifyStats.ModifyCityExportCost(prefab, CentralBankOptions);
         }
-
-        if (WhitesharkCheatOverhaul.MedicalUniversityOptions.TryGetValue(prefab.name, out var MedicalUniversityoverrides))
+        if (WhitesharkCheatOverhaul.MedicalUniversityOptions.TryGetValue(prefab.name, out MedicalUniversityOptions MedicalUniversityOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = MedicalUniversityoverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = MedicalUniversityoverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = MedicalUniversityoverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = MedicalUniversityoverrides.GarbageAccumulation;
-
-            var SchoolComponent = prefab.GetComponent<Game.Prefabs.School>();
-            SchoolComponent.m_StudentCapacity = MedicalUniversityoverrides.StudentCapacity;
-
-            var PollutionComponent = prefab.GetComponent<Pollution>();
-            PollutionComponent.m_NoisePollution = MedicalUniversityoverrides.NoisePollution;
-
-            var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var RecoveryEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.RecoveryFailChange);
-            RecoveryEffect.m_Delta = MedicalUniversityoverrides.CityRecoverFailChange;
-            var HospitalEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.HospitalEfficiency);
-            HospitalEfficiencyEffect.m_Delta = MedicalUniversityoverrides.CityHospitalEfficiency;
-
+            ModifyStats.ModifyServiceConsumption(prefab, MedicalUniversityOptions);
+            ModifyStats.ModifySchool(prefab, MedicalUniversityOptions);
+            ModifyStats.ModifyPollution(prefab, MedicalUniversityOptions);
+            ModifyStats.ModifyCityRecoveryFailChange(prefab, MedicalUniversityOptions);
+            ModifyStats.ModifyCityHospitalEfficiency(prefab, MedicalUniversityOptions);
         }
 
         if (WhitesharkCheatOverhaul.LargeHadronColliderOptions.TryGetValue(prefab.name, out var LargeHadronCollideroverrides))

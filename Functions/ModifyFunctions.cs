@@ -292,18 +292,53 @@ public class ModifyStats
         var CityOilAmmountEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OilResourceAmount);
         CityOilAmmountEffect.m_Delta = options.CityOilResourceAmmount;
     }
-    public static void ModifyCityOilResourceAmount(PrefabBase prefab, ICityOilResourceAmmount options)
+    public static void ModifySchool(PrefabBase prefab, ISchoolOptions options)
+    {
+        var SchoolComponent = prefab.GetComponent<Game.Prefabs.School>();
+        SchoolComponent.m_StudentCapacity = options.StudentCapacity;
+    }
+    public static void ModifyCityIndustrialEfficiency(PrefabBase prefab, ICityIndustrialEfficiency options)
     {
         var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-        var CityOilAmmountEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OilResourceAmount);
-        CityOilAmmountEffect.m_Delta = options.CityOilResourceAmmount;
+        var IndustryEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialEfficiency);
+        IndustryEffect.m_Delta = options.CityIndustrialEfficiency;
     }
-
-
-
-
-
-
+    public static void ModifyCityDisasterDamageRate(PrefabBase prefab, ICityDisasterDamageRate options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var DisasterDamageRateEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.DisasterDamageRate);
+        DisasterDamageRateEffect.m_Delta = options.CityDisasterDamageRate;
+    }
+    public static void ModifyCityDisasterWarningTime(PrefabBase prefab, ICityDisasterWarningTime options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var DisasterWarningTimeEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.DisasterWarningTime);
+        DisasterWarningTimeEffect.m_Delta = options.CityDisasterWarningTime;        
+    }
+    public static void ModifyCityLoanIntrest(PrefabBase prefab, ICityLoanIntrest options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var LoanEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.LoanInterest);
+        LoanEffect.m_Delta = options.CityLoanIntrest;       
+    }
+    public static void ModifyCityExportCost(PrefabBase prefab, ICityExportCost options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var ExportEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.ExportCost);
+        ExportEffect.m_Delta = options.CityExportCost;
+    }
+    public static void ModifyCityRecoveryFailChange(PrefabBase prefab, ICityRecoverFailChange options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var RecoveryEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.RecoveryFailChange);
+        RecoveryEffect.m_Delta = options.CityRecoverFailChange;        
+    }
+    public static void ModifyCityHospitalEfficiency(PrefabBase prefab, ICityHospitalEfficiency options)
+    {
+        var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
+        var HospitalEfficiencyEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.HospitalEfficiency);
+        HospitalEfficiencyEffect.m_Delta = options.CityHospitalEfficiency;
+    }
 
 
 

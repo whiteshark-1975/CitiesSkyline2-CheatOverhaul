@@ -4,7 +4,9 @@
     IBasePrefabOptions,
     IServiceConsumptionOptions,
     IPollutionOptions,
-    ISchoolOptions
+    ISchoolOptions,
+    ICityIndustrialEfficiency,
+    ICityOfficeEfficiency
 {
     public string Name { get; set; } = null!;
 
