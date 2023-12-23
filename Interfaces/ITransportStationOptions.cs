@@ -3,6 +3,6 @@
 public interface ITransportStationOptions
 
 {
-    public int ComfortFactor { get; set; }
+    public float ComfortFactor { get; set; }
 
 }
