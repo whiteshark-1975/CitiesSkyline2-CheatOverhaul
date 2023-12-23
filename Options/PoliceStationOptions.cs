@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class PoliceStationOptions
+public class PoliceStationOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

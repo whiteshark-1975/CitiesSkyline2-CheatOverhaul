@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class LargeHadronColliderOptions
+public class LargeHadronColliderOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

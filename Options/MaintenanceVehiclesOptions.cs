@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class MaintenanceVehiclesOptions
+public class MaintenanceVehiclesOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

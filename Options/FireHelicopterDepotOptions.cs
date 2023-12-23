@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class FireHelicopterDepotOptions
+public class FireHelicopterDepotOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

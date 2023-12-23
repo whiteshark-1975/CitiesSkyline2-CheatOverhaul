@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class WindturbineOptions
+public class WindturbineOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

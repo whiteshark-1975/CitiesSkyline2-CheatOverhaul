@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class EmergencybatteryOptions
+public class EmergencybatteryOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

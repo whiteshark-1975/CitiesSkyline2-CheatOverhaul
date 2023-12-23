@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class PublicTransportDepotsOptions
+public class PublicTransportDepotsOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

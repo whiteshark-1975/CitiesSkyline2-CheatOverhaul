@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class FireStationOptions
+public class FireStationOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class IncinerationPlantOptions :
+    IBasePrefabOptions,
     IServiceConsumptionOptions,
     IPollutionOptions,
     IGarbageFacilityOption,

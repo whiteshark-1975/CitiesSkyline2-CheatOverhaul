@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class SolarpowerstationOptions
+public class SolarpowerstationOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

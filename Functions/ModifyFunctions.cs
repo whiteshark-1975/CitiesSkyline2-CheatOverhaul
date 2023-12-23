@@ -154,7 +154,23 @@ public class ModifyStats
         var CityEfficencyEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialGroundPollution);
         CityEfficencyEffect.m_Delta = options.CityIndustrialGroundPollution;
     }
-
+    public static void ModifyHospital(PrefabBase prefab, IHospitalOptions options)
+    {
+        var HospitalComponent = prefab.GetComponent<Game.Prefabs.Hospital>();
+        HospitalComponent.m_AmbulanceCapacity = options.AmbulanceCapacity;
+        HospitalComponent.m_MedicalHelicopterCapacity = options.HelicopterCapacity;
+        HospitalComponent.m_PatientCapacity = options.PatientCapacity;
+        HospitalComponent.m_TreatmentBonus = options.TreatmentBonus;
+    }
+    public static void ModifyPostOffice(PrefabBase prefab, IPostFacilityOptions options)
+    {
+        var PostofficeComponent = prefab.GetComponent<Game.Prefabs.PostFacility>();
+        PostofficeComponent.m_MailBoxCapacity = options.MailboxCapacity;
+        PostofficeComponent.m_PostVanCapacity = options.PostVanCapacity;
+        PostofficeComponent.m_MailStorageCapacity = options.MailStorageCapacity;
+        PostofficeComponent.m_PostTruckCapacity = options.PostTrucksCapacity;
+        PostofficeComponent.m_SortingRate = options.SortingRate;
+    }
 
 
 

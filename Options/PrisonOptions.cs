@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class PrisonOptions
+public class PrisonOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

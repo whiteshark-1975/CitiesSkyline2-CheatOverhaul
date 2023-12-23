@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class CentralBankOptions
+public class CentralBankOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

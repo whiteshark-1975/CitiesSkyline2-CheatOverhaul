@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class RadioMastOptions
+public class RadioMastOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

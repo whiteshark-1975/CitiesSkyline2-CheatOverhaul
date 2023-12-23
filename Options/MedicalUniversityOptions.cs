@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class MedicalUniversityOptions
+public class MedicalUniversityOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

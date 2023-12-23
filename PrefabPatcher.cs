@@ -128,65 +128,30 @@ public static class PrefabPatcher
                 ModifyStats.ModifyCityIndustrialGroundPollution(prefab, IncinerationPlantOptions);
             }
         }
-        if (WhitesharkCheatOverhaul.HealthcareOptions.TryGetValue(prefab.name, out var Healthcareoverrides))
+        if (WhitesharkCheatOverhaul.HealthcareOptions.TryGetValue(prefab.name, out HealthcareOptions HealthcareOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = Healthcareoverrides.UpkeepCost;
-            ServiceComponent.m_WaterConsumption = Healthcareoverrides.Waterconsumption;
-            ServiceComponent.m_ElectricityConsumption = Healthcareoverrides.Electricityconsumption;
-            ServiceComponent.m_GarbageAccumulation = Healthcareoverrides.GarbageAccumulation;
-
-            var HospitalComponent = prefab.GetComponent<Game.Prefabs.Hospital>();
-            HospitalComponent.m_AmbulanceCapacity = Healthcareoverrides.Ambulancecapacity;
-            HospitalComponent.m_MedicalHelicopterCapacity = Healthcareoverrides.Helicoptercapacity;
-            HospitalComponent.m_PatientCapacity = Healthcareoverrides.Patientcapacity;
-            HospitalComponent.m_TreatmentBonus = Healthcareoverrides.Treatmentbonus;
+            ModifyStats.ModifyServiceConsumption(prefab, HealthcareOptions);
+            ModifyStats.ModifyHospital(prefab, HealthcareOptions);
             if (prefab.name == "MedicalClinic01" || prefab.name == "Hospital01")
             {
-                var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
-                CoverageComponent.m_Range = Healthcareoverrides.Range;
-                CoverageComponent.m_Capacity = Healthcareoverrides.Capacity;
-                CoverageComponent.m_Magnitude = Healthcareoverrides.Magnitude;
+                ModifyStats.ModifyServiceCoverage(prefab, HealthcareOptions);
             }
         }
-
-        if (WhitesharkCheatOverhaul.PostofficeOptions.TryGetValue(prefab.name, out var Postofficeoverrides))
+        if (WhitesharkCheatOverhaul.PostofficeOptions.TryGetValue(prefab.name, out PostofficeOptions PostofficeOptions))
         {
-      
-                var ServiceComponent = prefab.GetComponent<Game.Prefabs.ServiceConsumption>();
-                ServiceComponent.m_Upkeep = Postofficeoverrides.Upkeep;
-                ServiceComponent.m_WaterConsumption = Postofficeoverrides.Waterconsumption;
-                ServiceComponent.m_ElectricityConsumption = Postofficeoverrides.Electricityconsumption;
-                ServiceComponent.m_GarbageAccumulation = Postofficeoverrides.GarbageAccumulation;
-
-          
-                var PostofficeComponent = prefab.GetComponent<Game.Prefabs.PostFacility>();
-                PostofficeComponent.m_MailBoxCapacity = Postofficeoverrides.Mailboxcapacity;
-                PostofficeComponent.m_PostVanCapacity = Postofficeoverrides.Postvancapacity;
-                PostofficeComponent.m_MailStorageCapacity = Postofficeoverrides.Mailstoragecapacity;
-                PostofficeComponent.m_PostTruckCapacity = Postofficeoverrides.PostTruckscapacity;
-                PostofficeComponent.m_SortingRate = Postofficeoverrides.SortingRate;
-
-
-                if (prefab.name == "PostOffice01")
-                {
-                    var CoverageComponent = prefab.GetComponent<Game.Prefabs.ServiceCoverage>();
-                    CoverageComponent.m_Range = Postofficeoverrides.Range;
-                    CoverageComponent.m_Capacity = Postofficeoverrides.Capacity;
-                    CoverageComponent.m_Magnitude = Postofficeoverrides.Magnitude;
-                }
-            
+            ModifyStats.ModifyServiceConsumption(prefab, PostofficeOptions);
+            ModifyStats.ModifyPostOffice(prefab, PostofficeOptions);
+            if (prefab.name == "PostOffice01")
+            {
+                ModifyStats.ModifyServiceCoverage(prefab, PostofficeOptions);
+            }
             if (
                 prefab.name != "PostSortingFacility01 Automated Sorting"
                 )
             {
-                var PollutionComponent = prefab.GetComponent<Game.Prefabs.Pollution>();
-                PollutionComponent.m_NoisePollution = Postofficeoverrides.Noisepollution;
-            }   
-            
+                ModifyStats.ModifyPollution(prefab, PostofficeOptions);
+            }            
         }
-
         if (WhitesharkCheatOverhaul.CemeteryOptions.TryGetValue(prefab.name, out var Cemeteryoverrides))
         {
 

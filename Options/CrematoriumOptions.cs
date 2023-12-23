@@ -1,6 +1,8 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class CrematoriumOptions
+public class CrematoriumOptions :
+    IBasePrefabOptions
+
 {
     public string Name { get; set; } = null!;
 

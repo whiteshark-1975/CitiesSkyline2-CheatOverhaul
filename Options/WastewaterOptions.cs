@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class WastewaterOptions : 
+public class WastewaterOptions :
+    IBasePrefabOptions,
     IServiceConsumptionOptions,
     IPollutionOptions,
     ISewageOutletOptions

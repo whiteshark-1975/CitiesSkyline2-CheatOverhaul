@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class RadioTelescopeOptions
+public class RadioTelescopeOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

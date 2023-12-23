@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class OutsideConnectionOptions
+public class OutsideConnectionOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

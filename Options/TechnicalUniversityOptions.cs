@@ -1,7 +1,8 @@
 ﻿    namespace WhitesharkCheatOverhaul;
 
-    public class TechnicalUniversityOptions
-    {
+    public class TechnicalUniversityOptions :
+    IBasePrefabOptions
+{
     public string Name { get; set; } = null!;
 
     public int Upkeep { get; set; }

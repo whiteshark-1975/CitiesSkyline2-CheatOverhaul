@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class GeothermalpowerplantOptions
+public class GeothermalpowerplantOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

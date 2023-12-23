@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class LargeEmergencyShelterOptions
+public class LargeEmergencyShelterOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

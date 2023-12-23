@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class GeologicalResearchCenterOptions
+public class GeologicalResearchCenterOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

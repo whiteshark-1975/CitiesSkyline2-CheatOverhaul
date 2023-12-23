@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class PostMailboxOptions
+public class PostMailboxOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
   

@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class SignatureMixedbuildingOptions
+public class SignatureMixedbuildingOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

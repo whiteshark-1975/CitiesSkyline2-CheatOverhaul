@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class CityHallOptions
+public class CityHallOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

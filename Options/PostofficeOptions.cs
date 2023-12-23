@@ -1,21 +1,27 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class PostofficeOptions
+public class PostofficeOptions :
+    IBasePrefabOptions,
+    IServiceConsumptionOptions,
+    IServiceCoverageOptions,
+    IPollutionOptions,
+    IPostFacilityOptions
 {
     public string Name { get; set; } = null!;
-
-    public int Mailstoragecapacity { get; set; }
-    public int Mailboxcapacity { get; set; }
-    public int Postvancapacity { get; set; }
-    public int PostTruckscapacity { get; set; }
     public int Upkeep { get; set; }
+    public int ElectricityConsumption { get; set; }
+    public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int Electricityconsumption { get; set; }
-    public int Waterconsumption { get; set; }
-    public int Range { get; set; }
-    public int Capacity { get; set; }
-    public int Magnitude { get; set; }
-    public int Noisepollution { get; set; }
+    public int ServiceCoverageRange { get; set; }
+    public int ServiceCoverageCapacity { get; set; }
+    public int ServiceCoverageMagnitude { get; set; }
+    public int GroundPollution { get; set; }
+    public int AirPollution { get; set; }
+    public int NoisePollution { get; set; }
+    public int MailStorageCapacity { get; set; }
+    public int MailboxCapacity { get; set; }
+    public int PostVanCapacity { get; set; }
+    public int PostTrucksCapacity { get; set; }
     public int SortingRate { get; set; }
 
 }

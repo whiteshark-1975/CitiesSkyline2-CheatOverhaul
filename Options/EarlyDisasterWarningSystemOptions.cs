@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class EarlyDisasterWarningSystemOptions
+public class EarlyDisasterWarningSystemOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 

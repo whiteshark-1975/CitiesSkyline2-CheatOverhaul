@@ -1,6 +1,7 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class SpaceCenterOptions
+public class SpaceCenterOptions :
+    IBasePrefabOptions
 {
     public string Name { get; set; } = null!;
 
