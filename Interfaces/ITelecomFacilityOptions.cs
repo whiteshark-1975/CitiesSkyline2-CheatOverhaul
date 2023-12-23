@@ -4,5 +4,5 @@ public interface ITelecomFacilityOptions
 
 {
     public int TelecomRange { get; set; }
-    public int TelecomCapacity { get; set; }
+    public int NetworkCapacity { get; set; }
 }
