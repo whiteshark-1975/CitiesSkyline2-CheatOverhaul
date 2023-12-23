@@ -2,6 +2,7 @@
 using Game.City;
 using Game.Prefabs;
 using System.Linq;
+using WhitesharkCheatOverhaul.Interfaces;
 
 namespace WhitesharkCheatOverhaul;
 
@@ -380,13 +381,48 @@ public class ModifyStats
         DepotsComponent.m_MaintenanceDuration = options.MaintenanceDuration;
         DepotsComponent.m_ProductionDuration = options.ProductionDuration;
     }
-
-
-
-
-
-
-
+    public static void ModifyPublicTransportStation(PrefabBase prefab, ITransportStationOptions options)
+    {
+        var TransportComponent = prefab.GetComponent<Game.Prefabs.TransportStation>();
+        TransportComponent.m_ComfortFactor = options.ComfortFactor;
+    }
+    public static void ModifyMailbox(PrefabBase prefab, IMailboxOptions options)
+    {
+        var MailboxComponent = prefab.GetComponent<MailBox>();
+        MailboxComponent.m_MailCapacity = options.Mailcapacity;
+        MailboxComponent.m_ComfortFactor = options.ComfortFactor;
+    }
+    public static void ModifyDeliveryTruck(PrefabBase prefab, IDeliveryTruckOptions options)
+    {
+        var DeliveryTruckComponent = prefab.GetComponent<Game.Prefabs.DeliveryTruck>();
+        DeliveryTruckComponent.m_CargoCapacity = options.CargoCapacity;
+        DeliveryTruckComponent.m_CostToDrive = options.CostToDrive;
+    }
+    public static void ModifyMaintenanceVehicle(PrefabBase prefab, IMaintenanceVehicleOptions options)
+    {
+        var MaintenanceVehicleComponent = prefab.GetComponent<Game.Prefabs.MaintenanceVehicle>();
+        MaintenanceVehicleComponent.m_MaintenanceCapacity = options.MaintenanceCapacity;
+        MaintenanceVehicleComponent.m_MaintenanceRate = options.MaintenanceRate;
+    }
+    public static void ModifyFireEngine(PrefabBase prefab, IFireEngineOptions options)
+    {
+        var FireEngineComponent = prefab.GetComponent<Game.Prefabs.FireEngine>();
+        FireEngineComponent.m_ExtinguishingCapacity = options.ExtinguishingCapacity;
+        FireEngineComponent.m_ExtinguishingRate = options.ExtinguishingRate;
+        FireEngineComponent.m_ExtinguishingSpread = options.ExtinguishingSpread;
+        FireEngineComponent.m_DestroyedClearDuration = options.DestroyedClearDuration;
+    }
+    public static void ModifyPoliceCar(PrefabBase prefab, IPoliceCarOptions options)
+    {
+        var PoliceCarComponent = prefab.GetComponent<Game.Prefabs.PoliceCar>();
+        PoliceCarComponent.m_CriminalCapacity = options.CriminalCapacity;
+        PoliceCarComponent.m_CrimeReductionRate = options.CrimeReductionRate;
+    }
+    public static void ModifyTrafficSpawner(PrefabBase prefab, ITrafficSpawnerOptions options)
+    {
+        var TrafficspawnerComponent = prefab.GetComponent<Game.Prefabs.TrafficSpawner>();
+        TrafficspawnerComponent.m_SpawnRate = options.TrafficSpawnerRate;
+    }
 
 
 

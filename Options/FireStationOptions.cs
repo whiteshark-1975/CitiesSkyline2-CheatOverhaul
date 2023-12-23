@@ -18,10 +18,10 @@ public class FireStationOptions :
     public int NoisePollution { get; set; }
     public int FireEngineCapacity { get; set; }
     public int FireHelicopterCapacity { get; set; }
-    public int VehicleEfficiency { get; set; }
+    public float VehicleEfficiency { get; set; }
     public int DisasterResponseCapacity { get; set;}
-    public int ServiceCoverageRange { get; set; }
-    public int ServiceCoverageCapacity { get; set; }
-    public int ServiceCoverageMagnitude { get; set; }
+    public float ServiceCoverageRange { get; set; }
+    public float ServiceCoverageCapacity { get; set; }
+    public float ServiceCoverageMagnitude { get; set; }
 
 }

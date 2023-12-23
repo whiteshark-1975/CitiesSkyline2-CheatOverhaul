@@ -19,9 +19,9 @@ public class PoliceStationOptions :
     public int PatrolCarCapacity { get; set; }
     public int PoliceHelicopterCapacity { get; set; }
     public int JailCapacity { get; set; }
-    public int ServiceCoverageRange { get; set; }
-    public int ServiceCoverageCapacity { get; set; }
-    public int ServiceCoverageMagnitude { get; set; }
+    public float ServiceCoverageRange { get; set; }
+    public float ServiceCoverageCapacity { get; set; }
+    public float ServiceCoverageMagnitude { get; set; }
     
     
 }

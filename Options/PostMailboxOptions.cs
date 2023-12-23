@@ -1,14 +1,16 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class PostMailboxOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IMailboxOptions,
+    IServiceCoverageOptions
 {
     public string Name { get; set; } = null!;
   
     public int Mailcapacity { get; set; }
-    public float Range { get; set; }
-    public float Capacity { get; set; }
-    public float Magnitude { get; set; }
+    public float ServiceCoverageRange { get; set; }
+    public float ServiceCoverageCapacity { get; set; }
+    public float ServiceCoverageMagnitude { get; set; }
     public float ComfortFactor { get; set; }
 
 }

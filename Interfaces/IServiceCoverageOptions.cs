@@ -3,7 +3,7 @@
 public interface IServiceCoverageOptions
 
 {
-    public int ServiceCoverageRange { get; set; }
-    public int ServiceCoverageCapacity { get; set; }
-    public int ServiceCoverageMagnitude { get; set; }
+    public float ServiceCoverageRange { get; set; }
+    public float ServiceCoverageCapacity { get; set; }
+    public float ServiceCoverageMagnitude { get; set; }
 }

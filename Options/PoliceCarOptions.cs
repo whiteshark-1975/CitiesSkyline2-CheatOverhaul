@@ -1,7 +1,8 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class PoliceCarOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IPoliceCarOptions
 {
     public string Name { get; set; } = null!;
 

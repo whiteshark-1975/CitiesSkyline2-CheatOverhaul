@@ -339,9 +339,9 @@ public static class PrefabPatcher
             ModifyStats.ModifyCityIndustrialElectronicsDemand(prefab, LargeHadronColliderOptions);
             ModifyStats.ModifyCityIndustrialElectronicsEfficiency(prefab, LargeHadronColliderOptions);
         }
-        if (WhitesharkCheatOverhaul.PublicTransportStopsOptions.TryGetValue(prefab.name, out PublicTransportStopsoverrides PublicTransportStopsoverrides))
+        if (WhitesharkCheatOverhaul.PublicTransportStopsOptions.TryGetValue(prefab.name, out PublicTransportStopsOptions PublicTransportStopsOptions))
         {
-            ModifyStats.ModifyPublicTransportStops(prefab, PublicTransportStopsoverrides);
+            ModifyStats.ModifyPublicTransportStops(prefab, PublicTransportStopsOptions);
         }
         if (WhitesharkCheatOverhaul.PublicTransportDepotsOptions.TryGetValue(prefab.name, out PublicTransportDepotsOptions PublicTransportDepotsOptions))
         {
@@ -349,240 +349,92 @@ public static class PrefabPatcher
             ModifyStats.ModifyPollution(prefab, PublicTransportDepotsOptions);
             ModifyStats.ModifyPublicTransportDepot(prefab, PublicTransportDepotsOptions);
         }
-
-        if (WhitesharkCheatOverhaul.PublicTransportStationsOptions.TryGetValue(prefab.name, out var PublicTransportStationssoverrides))
+        if (WhitesharkCheatOverhaul.PublicTransportStationsOptions.TryGetValue(prefab.name, out PublicTransportStationsOptions PublicTransportStationsOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = PublicTransportStationssoverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = PublicTransportStationssoverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = PublicTransportStationssoverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = PublicTransportStationssoverrides.GarbageAccumulation;
-
-            var PollutionComponent = prefab.GetComponent<Pollution>();
-            PollutionComponent.m_NoisePollution = PublicTransportStationssoverrides.NoisePollution;
-
+            ModifyStats.ModifyServiceConsumption(prefab, PublicTransportStationsOptions);
+            ModifyStats.ModifyPollution(prefab, PublicTransportStationsOptions);     
             if (prefab.name == "CargoTrainTerminal01" || prefab.name == "CargoHarbor01")
             {
-                var StorageComponent = prefab.GetComponent<Game.Prefabs.StorageLimit>();
-                StorageComponent.storageLimit = PublicTransportStationssoverrides.StorageLimit;
+                ModifyStats.ModifyStorageLimit(prefab, PublicTransportStationsOptions);
 
-                var CargoTransportComponent = prefab.GetComponent<Game.Prefabs.CargoTransportStation>();
-                CargoTransportComponent.transports = PublicTransportStationssoverrides.Transports;
-
+                ModifyStats.ModifyCargoTransportStation(prefab, PublicTransportStationsOptions);
             }
             if (prefab.name != "CargoTrainTerminal01" && prefab.name != "CargoHarbor01")
             {
-                var TransportComponent = prefab.GetComponent<Game.Prefabs.TransportStation>();
-                TransportComponent.m_ComfortFactor = PublicTransportStationssoverrides.ComfortFactor;
+                ModifyStats.ModifyPublicTransportStation(prefab, PublicTransportStationsOptions);                
             }
-
         }
-
-        if (WhitesharkCheatOverhaul.AirportOptions.TryGetValue(prefab.name, out var Airportoverrides))
+        if (WhitesharkCheatOverhaul.AirportOptions.TryGetValue(prefab.name, out AirportOptions AirportOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = Airportoverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = Airportoverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = Airportoverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = Airportoverrides.GarbageAccumulation;
-
+            ModifyStats.ModifyServiceConsumption(prefab, AirportOptions);  
             if (prefab.name == "InternationalAirport01")
             {
-                var StorageComponent = prefab.GetComponent<Game.Prefabs.StorageLimit>();
-                StorageComponent.storageLimit = Airportoverrides.StorageLimit;
-
-                var UniversityComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-                var UniversityEffect = UniversityComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityInterest);
-                UniversityEffect.m_Delta = Airportoverrides.UniversityInterest;
-
-                var OfficeSoftwareComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-                var OfficeSoftwareEffect = OfficeSoftwareComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareDemand);
-                OfficeSoftwareEffect.m_Delta = Airportoverrides.OfficeSoftwareDemand;
-
+                ModifyStats.ModifyStorageLimit(prefab, AirportOptions);
+                ModifyStats.ModifyCityUniversityInterest(prefab, AirportOptions);
+                ModifyStats.ModifyCityOfficeSoftwareDemand(prefab, AirportOptions);
             }
-
-            var CargoTransportComponent = prefab.GetComponent<Game.Prefabs.CargoTransportStation>();
-            CargoTransportComponent.transports = Airportoverrides.Transports;
-
-            var ComfortComponent = prefab.GetComponent<Game.Prefabs.TransportStation>();
-            ComfortComponent.m_ComfortFactor = Airportoverrides.ComfortFactor;
-
-            var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var AttractionEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.Attractiveness);
-            AttractionEffect.m_Delta = Airportoverrides.Attractiveness;
-
+            ModifyStats.ModifyCargoTransportStation(prefab, AirportOptions);
+            ModifyStats.ModifyPublicTransportStation(prefab, AirportOptions);
+            ModifyStats.ModifyCityAttractiveness(prefab, AirportOptions);    
             if (prefab.name == "Airport01")
             {
-                var OfficeComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-                var OfficeEfficiencyEffect = OfficeComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeEfficiency);
-                OfficeEfficiencyEffect.m_Delta = Airportoverrides.OfficeEfficiency;
-
+                ModifyStats.ModifyCityOfficeEfficiency(prefab, AirportOptions);
             }
-
         }
-
-        if (WhitesharkCheatOverhaul.SpaceCenterOptions.TryGetValue(prefab.name, out var SpaceCenteroverrides))
+        if (WhitesharkCheatOverhaul.SpaceCenterOptions.TryGetValue(prefab.name, out SpaceCenterOptions SpaceCenterOptions))
         {
-
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = SpaceCenteroverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = SpaceCenteroverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = SpaceCenteroverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = SpaceCenteroverrides.GarbageAccumulation;
-
-            var TransportComponent = prefab.GetComponent<Game.Prefabs.TransportDepot>();
-            TransportComponent.m_VehicleCapacity = SpaceCenteroverrides.VehicleCapacity;
-            TransportComponent.m_ProductionDuration = SpaceCenteroverrides.ProductionDuration;
-
-            var AttractionComponent = prefab.GetComponent<Game.Prefabs.Attraction>();
-            AttractionComponent.m_Attractiveness = SpaceCenteroverrides.Attractiveness;
-
-            var UniversityComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var UniversityEffect = UniversityComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityInterest);
-            UniversityEffect.m_Delta = SpaceCenteroverrides.UniversityInterest;
-
-            var OfficeSoftwareComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var OfficeSoftwareEffect = OfficeSoftwareComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeSoftwareDemand);
-            OfficeSoftwareEffect.m_Delta = SpaceCenteroverrides.OfficeSoftwareDemand;
-
-            var IndustrialComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var IndustrialEffect = IndustrialComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.IndustrialElectronicsDemand);
-            IndustrialEffect.m_Delta = SpaceCenteroverrides.IndustrialElectronicsDemand;
-
-            var EffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-            var AttractionEffect = EffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.Attractiveness);
-            AttractionEffect.m_Delta = SpaceCenteroverrides.Attractiveness;
-
-            var LeisureComponent = prefab.GetComponent<Game.Prefabs.LeisureProvider>();
-            LeisureComponent.m_Efficiency = SpaceCenteroverrides.LeisureEfficiency;
-
+            ModifyStats.ModifyServiceConsumption(prefab, SpaceCenterOptions);
+            ModifyStats.ModifyPublicTransportDepot(prefab, SpaceCenterOptions);
+            ModifyStats.ModifyAttraction(prefab, SpaceCenterOptions);
+            ModifyStats.ModifyCityUniversityInterest(prefab, SpaceCenterOptions);
+            ModifyStats.ModifyCityOfficeSoftwareDemand(prefab, SpaceCenterOptions);
+            ModifyStats.ModifyCityIndustrialElectronicsDemand(prefab, SpaceCenterOptions);
+            ModifyStats.ModifyCityAttractiveness(prefab, SpaceCenterOptions);
+            ModifyStats.ModifyLeisureProvider(prefab, SpaceCenterOptions);
         }
-
-        if (WhitesharkCheatOverhaul.PostMailboxOptions.TryGetValue(prefab.name, out var PostMailboxoverrides))
+        if (WhitesharkCheatOverhaul.PostMailboxOptions.TryGetValue(prefab.name, out PostMailboxOptions PostMailboxOptions))
         {
-
-            var MailboxComponent = prefab.GetComponent<MailBox>();
-            MailboxComponent.m_MailCapacity = PostMailboxoverrides.Mailcapacity;
-            MailboxComponent.m_ComfortFactor = PostMailboxoverrides.ComfortFactor;
-
-            var CoverageComponent = prefab.GetComponent<ServiceCoverage>();
-            CoverageComponent.m_Range = PostMailboxoverrides.Range;
-            CoverageComponent.m_Capacity = PostMailboxoverrides.Capacity;
-            CoverageComponent.m_Magnitude = PostMailboxoverrides.Magnitude;
-
+            ModifyStats.ModifyMailbox(prefab, PostMailboxOptions);
+            ModifyStats.ModifyServiceCoverage(prefab, PostMailboxOptions);
         }
-
-        if (WhitesharkCheatOverhaul.RadioMastOptions.TryGetValue(prefab.name, out var RadioMastoverrides))
+        if (WhitesharkCheatOverhaul.RadioMastOptions.TryGetValue(prefab.name, out var RadioMastOptions))
         {
-            var ServiceComponent = prefab.GetComponent<ServiceConsumption>();
-            ServiceComponent.m_Upkeep = RadioMastoverrides.Upkeep;
-            ServiceComponent.m_ElectricityConsumption = RadioMastoverrides.Electricityconsumption;
-            ServiceComponent.m_WaterConsumption = RadioMastoverrides.Waterconsumption;
-            ServiceComponent.m_GarbageAccumulation = RadioMastoverrides.GarbageAccumulation;
-
-
-            var RadioMastComponent = prefab.GetComponent<Game.Prefabs.TelecomFacility>();
-            RadioMastComponent.m_Range = RadioMastoverrides.Range;
-            RadioMastComponent.m_NetworkCapacity = RadioMastoverrides.NetworkCapacity;
-
+            ModifyStats.ModifyServiceConsumption(prefab, RadioMastOptions);
+            ModifyStats.ModifyTelecomFacility(prefab, RadioMastOptions);   
             if (prefab.name == "RadioMast01")
             {
-                var PollutionComponent = prefab.GetComponent<Pollution>();
-            PollutionComponent.m_NoisePollution = RadioMastoverrides.NoisePollution;
+                ModifyStats.ModifyPollution(prefab, RadioMastOptions);
             }
-
         }
-
-        if (WhitesharkCheatOverhaul.DeliveryTruckOptions.TryGetValue(prefab.name, out var DeliveryTruckoverrides))
+        if (WhitesharkCheatOverhaul.DeliveryTruckOptions.TryGetValue(prefab.name, out DeliveryTruckOptions DeliveryTruckOptions))
         {
-
-            var DeliveryTruckComponent = prefab.GetComponent<Game.Prefabs.DeliveryTruck>();
-            DeliveryTruckComponent.m_CargoCapacity = DeliveryTruckoverrides.CargoCapacity;
-            DeliveryTruckComponent.m_CostToDrive = DeliveryTruckoverrides.CostToDrive;
-
+            ModifyStats.ModifyDeliveryTruck(prefab, DeliveryTruckOptions);
         }
-
-        if (WhitesharkCheatOverhaul.MaintenanceVehiclesOptions.TryGetValue(prefab.name, out var MaintenanceVehiclesoverrides))
+        if (WhitesharkCheatOverhaul.MaintenanceVehiclesOptions.TryGetValue(prefab.name, out MaintenanceVehiclesOptions MaintenanceVehiclesOptions))
         {
-
-            var MaintenanceVehicleComponent = prefab.GetComponent<Game.Prefabs.MaintenanceVehicle>();
-            MaintenanceVehicleComponent.m_MaintenanceCapacity = MaintenanceVehiclesoverrides.MaintenanceCapacity;
-            MaintenanceVehicleComponent.m_MaintenanceRate = MaintenanceVehiclesoverrides.MaintenanceRate;
-
+            ModifyStats.ModifyMaintenanceVehicle(prefab, MaintenanceVehiclesOptions);
         }
-
-        if (WhitesharkCheatOverhaul.FireEngineOptions.TryGetValue(prefab.name, out var FireEngineoverrides))
+        if (WhitesharkCheatOverhaul.FireEngineOptions.TryGetValue(prefab.name, out FireEngineOptions FireEngineOptions))
         {
-
-            var FireEngineComponent = prefab.GetComponent<Game.Prefabs.FireEngine>();
-            FireEngineComponent.m_ExtinguishingCapacity = FireEngineoverrides.ExtinguishingCapacity;
-            FireEngineComponent.m_ExtinguishingRate = FireEngineoverrides.ExtinguishingRate;
-            FireEngineComponent.m_ExtinguishingSpread = FireEngineoverrides.ExtinguishingSpread;
-            FireEngineComponent.m_DestroyedClearDuration = FireEngineoverrides.DestroyedClearDuration;
-
+            ModifyStats.ModifyFireEngine(prefab, FireEngineOptions);
         }
-
-        if (WhitesharkCheatOverhaul.PoliceCarOptions.TryGetValue(prefab.name, out var PoliceCaroverrides))
+        if (WhitesharkCheatOverhaul.PoliceCarOptions.TryGetValue(prefab.name, out PoliceCarOptions PoliceCarOptions))
         {
-
-            var PoliceCarComponent = prefab.GetComponent<Game.Prefabs.PoliceCar>();
-            PoliceCarComponent.m_CriminalCapacity = PoliceCaroverrides.CriminalCapacity;
-            PoliceCarComponent.m_CrimeReductionRate = PoliceCaroverrides.CrimeReductionRate;
-           
+            ModifyStats.ModifyPoliceCar(prefab, PoliceCarOptions);            
         }
-
-        if (WhitesharkCheatOverhaul.OutsideConnectionOptions.TryGetValue(prefab.name, out var OutsideConnectionoverrides))
+        if (WhitesharkCheatOverhaul.OutsideConnectionOptions.TryGetValue(prefab.name, out OutsideConnectionOptions OutsideConnectionOptions))
         {
-
-            var StorageComponent = prefab.GetComponent<Game.Prefabs.StorageLimit>();
-            StorageComponent.storageLimit = OutsideConnectionoverrides.StorageLimit;
-
-            var SchoolComponent = prefab.GetComponent<Game.Prefabs.School>();
-            SchoolComponent.m_StudentCapacity = OutsideConnectionoverrides.StudentCapacity;
-            SchoolComponent.m_GraduationModifier = OutsideConnectionoverrides.GraduationModifier;
-
-            var HospitalComponent = prefab.GetComponent<Game.Prefabs.Hospital>();
-            HospitalComponent.m_AmbulanceCapacity = OutsideConnectionoverrides.AmbulanceCapacity;
-            HospitalComponent.m_MedicalHelicopterCapacity = OutsideConnectionoverrides.MedicalHelicopterCapacity;
-            HospitalComponent.m_PatientCapacity = OutsideConnectionoverrides.PatientCapacity;
-            HospitalComponent.m_TreatmentBonus = OutsideConnectionoverrides.TreatmentBonus;
-
-            var GarbageComponent = prefab.GetComponent<Game.Prefabs.GarbageFacility>();
-            GarbageComponent.m_GarbageCapacity = OutsideConnectionoverrides.GarbageCapacity;
-            GarbageComponent.m_VehicleCapacity = OutsideConnectionoverrides.GarbageVehicleCapacity;
-            GarbageComponent.m_TransportCapacity = OutsideConnectionoverrides.GarbageTransportCapacity;
-            GarbageComponent.m_ProcessingSpeed = OutsideConnectionoverrides.GarbageProcessingSpeed;
-
-            var FirestationComponent = prefab.GetComponent<Game.Prefabs.FireStation>();
-            FirestationComponent.m_FireEngineCapacity = OutsideConnectionoverrides.FireEngineCapacity;
-            FirestationComponent.m_FireHelicopterCapacity = OutsideConnectionoverrides.FireHelicopterCapacity;
-            FirestationComponent.m_DisasterResponseCapacity = OutsideConnectionoverrides.DisasterResponseCapacity;
-            FirestationComponent.m_VehicleEfficiency = OutsideConnectionoverrides.FireVehicleEfficiency;
-
-            var PoliceStationComponent = prefab.GetComponent<Game.Prefabs.PoliceStation>();
-            PoliceStationComponent.m_PatrolCarCapacity = OutsideConnectionoverrides.PolicePatrolCarCapacity;
-            PoliceStationComponent.m_PoliceHelicopterCapacity = OutsideConnectionoverrides.PoliceHelicopterCapacity;
-            PoliceStationComponent.m_JailCapacity = OutsideConnectionoverrides.JailCapacity;
-
-            var CemeteryComponent = prefab.GetComponent<Game.Prefabs.DeathcareFacility>();
-            CemeteryComponent.m_HearseCapacity = OutsideConnectionoverrides.HearseCapacity;
-            CemeteryComponent.m_StorageCapacity = OutsideConnectionoverrides.DeathStorageCapacity;
-            CemeteryComponent.m_ProcessingRate = OutsideConnectionoverrides.DeathProcessingrate;
-
-            var DepotsComponent = prefab.GetComponent<Game.Prefabs.TransportDepot>();
-            DepotsComponent.m_VehicleCapacity = OutsideConnectionoverrides.TaxiVehicleCapacity;
-            DepotsComponent.m_MaintenanceDuration = OutsideConnectionoverrides.TaximaintenanceDuration;
-
-            var TrafficspawnerComponent = prefab.GetComponent<Game.Prefabs.TrafficSpawner>();
-            TrafficspawnerComponent.m_SpawnRate = OutsideConnectionoverrides.TrafficSpawnerRate;
-
+            ModifyStats.ModifyStorageLimit(prefab, OutsideConnectionOptions);
+            ModifyStats.ModifySchool(prefab, OutsideConnectionOptions);
+            ModifyStats.ModifyHospital(prefab, OutsideConnectionOptions);
+            ModifyStats.ModifyGarbageFacility(prefab, OutsideConnectionOptions);
+            ModifyStats.ModifyFireStation(prefab, OutsideConnectionOptions);
+            ModifyStats.ModifyPoliceStation(prefab, OutsideConnectionOptions);
+            ModifyStats.ModifyIDeathcareFacility(prefab, OutsideConnectionOptions);
+            ModifyStats.ModifyPublicTransportDepot(prefab, OutsideConnectionOptions);
+            ModifyStats.ModifyTrafficSpawner(prefab, OutsideConnectionOptions);
         }
-
-
-        
-
+     
         return true;
     }
 }

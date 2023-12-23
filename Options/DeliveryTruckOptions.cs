@@ -1,7 +1,8 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
 public class DeliveryTruckOptions :
-    IBasePrefabOptions
+    IBasePrefabOptions,
+    IDeliveryTruckOptions
 
 {
     public string Name { get; set; } = null!;

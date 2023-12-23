@@ -2,5 +2,5 @@
 
 {
     public int Mailcapacity { get; set; }
-    public int ComfortFactor { get; set; }
+    public float ComfortFactor { get; set; }
 }
