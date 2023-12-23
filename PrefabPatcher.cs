@@ -4,6 +4,7 @@ using Game.City;
 using Game.Prefabs;
 using HarmonyLib;
 using System.Linq;
+using System;
 
 namespace WhitesharkCheatOverhaul;
 
@@ -13,18 +14,11 @@ public static class PrefabPatcher
     [HarmonyPrefix]
     public static bool Prefix(object __instance, PrefabBase prefab)
     {
-        if (WhitesharkCheatOverhaul.SchoolOptions.TryGetValue(prefab.name, out var Schooloverrides))
+        if (WhitesharkCheatOverhaul.SchoolOptions.TryGetValue(prefab.name, out SchoolOptions SchoolOptions))
         {
 
-            var costComponent = prefab.GetComponent<ServiceConsumption>();
-            costComponent.m_GarbageAccumulation = Schooloverrides.GarbageAccumulation;
-            costComponent.m_WaterConsumption = Schooloverrides.Waterconsumption;
-            costComponent.m_ElectricityConsumption = Schooloverrides.Electricityconsumption;
-
-            var PollutionComponent = prefab.GetComponent<Pollution>();
-            PollutionComponent.m_AirPollution = Schooloverrides.AirPollution;
-            PollutionComponent.m_GroundPollution = Schooloverrides.GroundPollution;
-            PollutionComponent.m_NoisePollution = Schooloverrides.NoisePollution;
+            ModifyServiceConsumption(prefab, SchoolOptions);
+            ModifyPollution(prefab, SchoolOptions);
 
         }
 
