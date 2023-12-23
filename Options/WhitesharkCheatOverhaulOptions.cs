@@ -357,57 +357,57 @@ public class WhitesharkCheatOverhaulOptions
             }
         },
 
-        Transportbus_Options = new List<TransportbusOptions>
+        PublicTransportVehicle_Options = new List<PublicTransportVehicleOptions>
         {
-            new TransportbusOptions
+            new PublicTransportVehicleOptions
             {
                 Name = "Bus01",
                 Passengercapacity = 80,
                 Maintenancerange = 200
             },
-            new TransportbusOptions
+            new PublicTransportVehicleOptions
             {
                 Name = "Bus02",
                 Passengercapacity = 80,
                 Maintenancerange = 250
             },
-            new TransportbusOptions
+            new PublicTransportVehicleOptions
             {
                 Name = "Bus03",
                 Passengercapacity = 80,
                 Maintenancerange = 200
             },
-            new TransportbusOptions
+            new PublicTransportVehicleOptions
             {
                 Name = "TrainPassengerCar01",
                 Passengercapacity = 120,
                 Maintenancerange = 1000
             },
-            new TransportbusOptions
+            new PublicTransportVehicleOptions
             {
                 Name = "TrainPassengerEngine01",
                 Passengercapacity = 120,
                 Maintenancerange = 1000
             },
-            new TransportbusOptions
+            new PublicTransportVehicleOptions
             {
                 Name = "SubwayCar01",
                 Passengercapacity = 150,
                 Maintenancerange = 850
             },
-            new TransportbusOptions
+            new PublicTransportVehicleOptions
             {
                 Name = "SubwayEngine01",
                 Passengercapacity = 120,
                 Maintenancerange = 850
             },
-            new TransportbusOptions
+            new PublicTransportVehicleOptions
             {
                 Name = "TramCar01",
                 Passengercapacity = 80,
                 Maintenancerange = 600
             },
-            new TransportbusOptions
+            new PublicTransportVehicleOptions
             {
                 Name = "TramEngine01",
                 Passengercapacity = 80,
@@ -2499,7 +2499,7 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<TransformerstationOptions> Transformerstation_Options { get; set; } = new List<TransformerstationOptions> ();
     public IEnumerable<ServerfarmOptions> Serverfarm_Options { get; set; } = new List<ServerfarmOptions>();
     public IEnumerable<GarbagetruckOptions> Garbagetruck_Options { get; set; } = new List<GarbagetruckOptions>();
-    public IEnumerable<TransportbusOptions> Transportbus_Options { get; set; } = new List<TransportbusOptions>();
+    public IEnumerable<PublicTransportVehicleOptions> PublicTransportVehicle_Options { get; set; } = new List<PublicTransportVehicleOptions>();
     public IEnumerable<ParkinghallOptions> Parkinghall_Options { get; set; } = new List<ParkinghallOptions>();
     public IEnumerable<CityparkOptions> Citypark_Options { get; set; } = new List<CityparkOptions>();
     public IEnumerable<WastewaterOptions> Wastewater_Options { get; set; } = new List<WastewaterOptions>();
@@ -2602,15 +2602,15 @@ public class WhitesharkCheatOverhaulOptions
         }
         return Garbagetruckdict;
     }
-    public IReadOnlyDictionary<string, TransportbusOptions> GetTransportbusDictionary()
+    public IReadOnlyDictionary<string, PublicTransportVehicleOptions> GetPublicTransportVehicleDictionary()
 
     {
-        var Transportbusdict = new Dictionary<string, TransportbusOptions>();
-        foreach (var Transportbus_option in Transportbus_Options)
+        var PublicTransportVehicledict = new Dictionary<string, PublicTransportVehicleOptions>();
+        foreach (var PublicTransportVehicle_option in PublicTransportVehicle_Options)
         {
-            Transportbusdict.Add(Transportbus_option.Name, Transportbus_option);
+            PublicTransportVehicledict.Add(PublicTransportVehicle_option.Name, PublicTransportVehicle_option);
         }
-        return Transportbusdict;
+        return PublicTransportVehicledict;
     }
     public IReadOnlyDictionary<string, ParkinghallOptions> GetParkinghallDictionary()
     {
@@ -3091,8 +3091,8 @@ public class WhitesharkCheatOverhaulOptions
             x.Capacity >= 0 &&
             x.Unloadrate >= 0);
 
-        
-        Transportbus_Options = Transportbus_Options.Where(
+
+        PublicTransportVehicle_Options = PublicTransportVehicle_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Passengercapacity >= 0 &&
             x.Maintenancerange >= 0);

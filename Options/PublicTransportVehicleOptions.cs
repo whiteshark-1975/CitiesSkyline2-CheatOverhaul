@@ -1,6 +1,8 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class TransportbusOptions
+public class PublicTransportVehicleOptions :
+    IBasePrefabOptions,
+    IPublicTransportVehicle
 {
     public string Name { get; set; } = null!;
 

@@ -7,5 +7,4 @@ public interface IGarbageFacilityOption
     public int GarbageTransportCapacity { get; set; }
     public int GarbageProcessingspeed { get; set; }
 
-
 }

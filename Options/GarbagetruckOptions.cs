@@ -1,10 +1,12 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class GarbagetruckOptions
+public class GarbagetruckOptions :
+    IBasePrefabOptions,
+    IGarbageTruckOptions
 {
     public string Name { get; set; } = null!;
 
-    public int Capacity { get; set; }
-    public int Unloadrate { get; set; }
+    public int GarbageTruckCapacity { get; set; }
+    public int GarbageTruckUnloadRate { get; set; }
 
 }

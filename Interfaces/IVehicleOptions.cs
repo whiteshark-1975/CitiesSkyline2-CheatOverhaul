@@ -1,11 +1,5 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public interface IVehicleOptions
-
-{
-    public int Attractiveness { get; set; }
-
-}
 public interface IFireEngineOptions
 
 {
@@ -26,7 +20,7 @@ public interface IGarbageTruckOptions
 
 {
     public int GarbageTruckCapacity { get; set; }
-    public int GarbaheTruckUnloadRate { get; set; }
+    public int GarbageTruckUnloadRate { get; set; }
 }
 public interface IMaintenanceVehicleOptions
 
@@ -45,6 +39,13 @@ public interface IPoliceCarOptions
 {
     public int CriminalCapacity { get; set; }
     public int CrimeReductionRate { get; set; }
+
+}
+public interface IPublicTransportVehicle
+
+{
+    public int Passengercapacity { get; set; }
+    public int Maintenancerange { get; set; }
 
 }
 

@@ -1,6 +1,11 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class CityparkOptions
+public class CityparkOptions :
+    IBasePrefabOptions,
+    IServiceConsumptionOptions,
+    IServiceCoverageOptions,
+    IAttractionOptions,
+    ILeisureProviderOptions
 {
     public string Name { get; set; } = null!;
 
@@ -8,11 +13,11 @@ public class CityparkOptions
     public int ElectricityConsumption { get; set; }
     public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int Range { get; set; }
-    public int Capacity { get; set; }
-    public int Magnitude { get; set; }
+    public int ServiceCoverageRange { get; set; }
+    public int ServiceCoverageCapacity { get; set; }
+    public int ServiceCoverageMagnitude { get; set; }
     public int Attractiveness { get; set; }
-    public int Efficiency { get; set; }
+    public int LeisureEfficiency { get; set; }
     
     
 

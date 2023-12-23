@@ -22,7 +22,8 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, TransformerstationOptions> TransformerstationOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, ServerfarmOptions> ServerfarmOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, GarbagetruckOptions> GarbagetruckOptions { get; private set; } = null!;
-    public static IReadOnlyDictionary<string, TransportbusOptions> TransportbusOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, PublicTransportVehicleOptions> PublicTransportVehicleOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, PublicTransportVehicleOptions> TransportbusOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, ParkinghallOptions> ParkinghallOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, CityparkOptions> CityparkOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, WastewaterOptions> WastewaterOptions { get; private set; } = null!;
@@ -109,7 +110,7 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.TransformerstationOptions = options.GetTransformerstationDictionary();
         WhitesharkCheatOverhaul.ServerfarmOptions = options.GetServerfarmDictionary();
         WhitesharkCheatOverhaul.GarbagetruckOptions = options.GetGarbagetruckDictionary();
-        WhitesharkCheatOverhaul.TransportbusOptions = options.GetTransportbusDictionary();
+        WhitesharkCheatOverhaul.PublicTransportVehicleOptions = options.GetPublicTransportVehicleDictionary();
         WhitesharkCheatOverhaul.ParkinghallOptions = options.GetParkinghallDictionary();
         WhitesharkCheatOverhaul.CityparkOptions = options.GetCityparkDictionary();
         WhitesharkCheatOverhaul.WastewaterOptions = options.GetWastewaterDictionary();

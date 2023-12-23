@@ -3,5 +3,5 @@
 public interface IWaterPumpingStationOptions
 {
     public int PumpCapacity { get; set; }
-    public int Purification { get; set; }
+    public float Purification { get; set; }
 }
