@@ -15,7 +15,7 @@ public class CemeteryOptions :
 
     public int HearseCapacity { get; set; }
     public int StorageCapacity { get; set; }
-    public int ProcessingRate { get; set; }
+    public float ProcessingRate { get; set; }
     public int LeisureEfficiency { get; set; }
 
 }

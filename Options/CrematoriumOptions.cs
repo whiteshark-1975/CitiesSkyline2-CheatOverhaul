@@ -16,7 +16,7 @@ public class CrematoriumOptions :
     public int GarbageAccumulation { get; set; }
     public int HearseCapacity { get; set; }
     public int StorageCapacity { get; set; }
-    public int ProcessingRate { get; set; }
+    public float ProcessingRate { get; set; }
     public int GroundPollution { get; set; }
     public int AirPollution { get; set; }
     public int NoisePollution { get; set; }

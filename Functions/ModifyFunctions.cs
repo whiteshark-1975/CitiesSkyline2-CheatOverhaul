@@ -227,8 +227,8 @@ public class ModifyStats
     public static void ModifyCityUniversityInterest(PrefabBase prefab, ICityUniversityInterest options)
     {
         var CityEffectsComponent = prefab.GetComponent<Game.Prefabs.CityEffects>();
-        var CityOfficeEfficencyEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.OfficeEfficiency);
-        CityOfficeEfficencyEffect.m_Delta = options.CityUniversityInterest;
+        var CityUniversityInterestEffect = CityEffectsComponent.m_Effects.FirstOrDefault(effect => effect.m_Type == CityModifierType.UniversityInterest);
+        CityUniversityInterestEffect.m_Delta = options.CityUniversityInterest;
     }
     public static void ModifyCityUniversityGraduation(PrefabBase prefab, ICityUniversityGraduation options)
     {
