@@ -15,6 +15,7 @@ public class ModifyStats
         ServiceComponent.m_ElectricityConsumption = options.ElectricityConsumption;
         ServiceComponent.m_WaterConsumption = options.WaterConsumption;
         ServiceComponent.m_GarbageAccumulation = options.GarbageAccumulation;
+        ServiceComponent.m_TelecomNeed = options.TelecomNeed;
     }
     public static void ModifyAttraction(PrefabBase prefab, IAttractionOptions options)
     {

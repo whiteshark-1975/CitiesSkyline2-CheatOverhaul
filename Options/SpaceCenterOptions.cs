@@ -18,6 +18,7 @@ public class SpaceCenterOptions :
     public int ElectricityConsumption { get; set; }
     public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
+    public int TelecomNeed { get; set; }
     public int VehicleCapacity { get; set; }
     public float MaintenanceDuration { get; set; }
     public float ProductionDuration { get; set; }

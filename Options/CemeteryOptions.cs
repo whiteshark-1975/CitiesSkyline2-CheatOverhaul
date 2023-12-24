@@ -12,6 +12,7 @@ public class CemeteryOptions :
     public int ElectricityConsumption { get; set; }
     public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
+    public int TelecomNeed { get; set; }
 
     public int HearseCapacity { get; set; }
     public int StorageCapacity { get; set; }
