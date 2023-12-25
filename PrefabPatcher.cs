@@ -232,11 +232,11 @@ public static class PrefabPatcher
             ModifyStats.ModifyServiceCoverage(prefab, FireStationOptions);
             ModifyStats.ModifyFireStation(prefab, FireStationOptions);
         }
-        if (WhitesharkCheatOverhaul.FireHelicopterDepotOptions.TryGetValue(prefab.name, out FireHelicopterDepotOptions FireHelicopterDepotOptions))
+        if (WhitesharkCheatOverhaul.FireFightingHelicopterDepotOptions.TryGetValue(prefab.name, out FireFightingHelicopterDepotOptions FireFightingHelicopterDepotOptions))
         {
-            ModifyStats.ModifyServiceConsumption(prefab, FireHelicopterDepotOptions);
-            ModifyStats.ModifyPollution(prefab, FireHelicopterDepotOptions);
-            ModifyStats.ModifyFireStation(prefab, FireHelicopterDepotOptions);            
+            ModifyStats.ModifyServiceConsumption(prefab, FireFightingHelicopterDepotOptions);
+            ModifyStats.ModifyPollution(prefab, FireFightingHelicopterDepotOptions);
+            ModifyStats.ModifyFireStation(prefab, FireFightingHelicopterDepotOptions);            
         }
         if (WhitesharkCheatOverhaul.FirewatchTowerOptions.TryGetValue(prefab.name, out FirewatchTowerOptions FirewatchTowerOptions))
         {

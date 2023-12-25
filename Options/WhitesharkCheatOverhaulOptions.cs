@@ -1,4 +1,5 @@
-﻿using Colossal.OdinSerializer.Utilities;
+﻿using Colossal.IO.AssetDatabase.Internal;
+using Colossal.OdinSerializer.Utilities;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.InputSystem.Utilities;
@@ -1919,11 +1920,11 @@ public class WhitesharkCheatOverhaulOptions
             }
         },
 
-        FireHelicopterDepot_Options = new List<FireHelicopterDepotOptions>
+        FireFightingHelicopterDepot_Options = new List<FireFightingHelicopterDepotOptions>
         {
-            new FireHelicopterDepotOptions
+            new FireFightingHelicopterDepotOptions
             {
-                Name = "FireHelicopterDepot01",
+                Name = "FireFightingHelicopterDepot01",
                 Upkeep = 145000,
                 ElectricityConsumption = 16000,
                 WaterConsumption = 4000,
@@ -2858,7 +2859,7 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<SignatureOfficebuildingOptions> SignatureOfficebuilding_Options { get; set; } = new List<SignatureOfficebuildingOptions>();
     public IEnumerable<SignatureMixedbuildingOptions> SignatureMixedbuilding_Options { get; set; } = new List<SignatureMixedbuildingOptions>();
     public IEnumerable<FireStationOptions> FireStation_Options { get; set; } = new List<FireStationOptions>();
-    public IEnumerable<FireHelicopterDepotOptions> FireHelicopterDepot_Options { get; set; } = new List<FireHelicopterDepotOptions>();
+    public IEnumerable<FireFightingHelicopterDepotOptions> FireFightingHelicopterDepot_Options { get; set; } = new List<FireFightingHelicopterDepotOptions>();
     public IEnumerable<FirewatchTowerOptions> FirewatchTower_Options { get; set; } = new List<FirewatchTowerOptions>();
     public IEnumerable<PoliceStationOptions> PoliceStation_Options { get; set; } = new List<PoliceStationOptions>();
     public IEnumerable<PrisonOptions> Prison_Options { get; set; } = new List<PrisonOptions>();
@@ -3114,14 +3115,14 @@ public class WhitesharkCheatOverhaulOptions
         }
         return FireStationdict;
     }
-    public IReadOnlyDictionary<string, FireHelicopterDepotOptions> GetFireHelicopterDepotDictionary()
+    public IReadOnlyDictionary<string, FireFightingHelicopterDepotOptions> GetFireFightingHelicopterDepotDictionary()
     {
-        var FireHelicopterDepotdict = new Dictionary<string, FireHelicopterDepotOptions>();
-        foreach (var FireHelicopterDepot_option in FireHelicopterDepot_Options)
+        var FireFightingHelicopterDepotdict = new Dictionary<string, FireFightingHelicopterDepotOptions>();
+        foreach (var FireFightingHelicopterDepot_option in FireFightingHelicopterDepot_Options)
         {
-            FireHelicopterDepotdict.Add(FireHelicopterDepot_option.Name, FireHelicopterDepot_option);
+            FireFightingHelicopterDepotdict.Add(FireFightingHelicopterDepot_option.Name, FireFightingHelicopterDepot_option);
         }
-        return FireHelicopterDepotdict;
+        return FireFightingHelicopterDepotdict;
     }
     public IReadOnlyDictionary<string, FirewatchTowerOptions> GetFirewatchTowerDictionary()
     {
@@ -3689,7 +3690,7 @@ public class WhitesharkCheatOverhaulOptions
             x.TelecomNeed >= 0 &&
             x.ServiceCoverageMagnitude >= 0);
 
-        FireHelicopterDepot_Options = FireHelicopterDepot_Options.Where(
+        FireFightingHelicopterDepot_Options = FireFightingHelicopterDepot_Options.Where(
             x => !string.IsNullOrEmpty(x.Name) &&
             x.Upkeep >= 0 &&
             x.ElectricityConsumption >= 0 &&
@@ -4041,378 +4042,39 @@ public class WhitesharkCheatOverhaulOptions
         var initialVersion = Version;
         if (Version == 323)
         {
-                if (!Wastewater_Options.Any(o => o.Name == "SewageOutlet01 Chemical Purification"))
-                Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
-                {
-                    Name = "SewageOutlet01 Chemical Purification",
-                    Upkeep = 4000,
-                    SewageCapacity = 0,
-                    SewagePurification = 0.25f,
-                    GarbageAccumulation = 0,
-                    GroundPollution = 0,
-                    AirPollution = 2500,
-                    NoisePollution = 5000,
-                    ElectricityConsumption = 0
-
-                });
-
-            if (!Wastewater_Options.Any(o => o.Name == "SewageOutlet01 Extra Settling Tank"))
-                Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
-                {
-                    Name = "SewageOutlet01 Extra Settling Tank",
-                    Upkeep = 10000,
-                    SewageCapacity = 0,
-                    SewagePurification = 0.1f,
-                    GarbageAccumulation = 0,
-                    GroundPollution = 2500,
-                    AirPollution = 2500,
-                    NoisePollution = 5000,
-                    ElectricityConsumption = 0
-
-                });
-
-            if (!Wastewater_Options.Any(o => o.Name == "WastewaterTreatmentPlant01 Advanced Filtering System"))
-                Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
-                {
-                    Name = "WastewaterTreatmentPlant01 Advanced Filtering System",
-                    Upkeep = 20000,
-                    SewageCapacity = 0,
-                    SewagePurification = 0.1f,
-                    GarbageAccumulation = 12500,
-                    GroundPollution = 0,
-                    AirPollution = 0,
-                    NoisePollution = 0,
-                    ElectricityConsumption = 2000
-
-                });
-
-            if (!Wastewater_Options.Any(o => o.Name == "WastewaterTreatmentPlant01 Extra Processing Unit"))
-                Wastewater_Options = Wastewater_Options.Append(new WastewaterOptions
-                {
-                    Name = "WastewaterTreatmentPlant01 Extra Processing Unit",
-                    Upkeep = 40000,
-                    SewageCapacity = 100000,
-                    SewagePurification = 0f,
-                    GarbageAccumulation = 10000,
-                    GroundPollution = 2500,
-                    AirPollution = 2500,
-                    NoisePollution = 7500,
-                    ElectricityConsumption = 1000
-
-                });
-
-            if (!Parkinghall_Options.Any(o => o.Name == "ParkingLot01"))
-                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
-                {
-                    Name = "ParkingLot01",
-                    Upkeep = 2200,
-                    GarageCapacity = 0,
-                    Comfortfactor = 0.5f,
-                    ElectricityConsumption = 200,
-                    WaterConsumption = 0,
-                    GarbageAccumulation = 200,
-                    NoisePollution = 2500
-
-                });
-
-            if (!Parkinghall_Options.Any(o => o.Name == "ParkingLot02"))
-                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
-                {
-                    Name = "ParkingLot02",
-                    Upkeep = 3000,
-                    GarageCapacity = 0,
-                    Comfortfactor = 0.5f,
-                    ElectricityConsumption = 300,
-                    WaterConsumption = 0,
-                    GarbageAccumulation = 300,
-                    NoisePollution = 2500
-
-                });
-
-            if (!Parkinghall_Options.Any(o => o.Name == "ParkingLot03"))
-                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
-                {
-                    Name = "ParkingLot03",
-                    Upkeep = 7000,
-                    GarageCapacity = 0,
-                    Comfortfactor = 0.5f,
-                    ElectricityConsumption = 700,
-                    WaterConsumption = 0,
-                    GarbageAccumulation = 700,
-                    NoisePollution = 5000
-
-                });
-
-            if (!Parkinghall_Options.Any(o => o.Name == "ParkingLot04"))
-                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
-                {
-                    Name = "ParkingLot04",
-                    Upkeep = 16000,
-                    GarageCapacity = 0,
-                    Comfortfactor = 0.5f,
-                    ElectricityConsumption = 1600,
-                    WaterConsumption = 0,
-                    GarbageAccumulation = 1700,
-                    NoisePollution = 5000
-
-                });
-
-            if (!Parkinghall_Options.Any(o => o.Name == "ParkingHall01 Car Wash"))
-                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
-                {
-                    Name = "ParkingHall01 Car Wash",
-                    Upkeep = 5000,
-                    GarageCapacity = 0,
-                    Comfortfactor = 0.1f,
-                    ElectricityConsumption = 2400,
-                    WaterConsumption = 2000,
-                    GarbageAccumulation = 1600
-
-                });
-
-            if (!Parkinghall_Options.Any(o => o.Name == "AutomatedParkingBuilding01"))
-                Parkinghall_Options = Parkinghall_Options.Append(new ParkinghallOptions
-                {
-                    Name = "AutomatedParkingBuilding01",
-                    Upkeep = 130000,
-                    GarageCapacity = 416,
-                    Comfortfactor = 0.750f,
-                    ElectricityConsumption = 7000,
-                    WaterConsumption = 3000,
-                    GarbageAccumulation = 2500,
-                    NoisePollution = 2500
-
-                });
-
-
-            Wastewater_Options = Wastewater_Options.OrderBy(x => x.Name);
-            Parkinghall_Options = Parkinghall_Options.OrderBy(x => x.Name);
-
-
             Version = 324;
         }
         if (Version == 324)
         {
-            if (!Healthcare_Options.Any(o => o.Name == "MedicalClinic01 Ambulance Depot"))
-                Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
-                {
-                    Name = "MedicalClinic01 Ambulance Depot",
-                    Upkeep = 7000,
-                    WaterConsumption = 250,
-                    ElectricityConsumption = 500,
-                    GarbageAccumulation = 400,
-                    AmbulanceCapacity = 5,
-                    HelicopterCapacity = 0,
-                    PatientCapacity = 0,
-                    TreatmentBonus = 0
-
-                });
-
-            if (!Healthcare_Options.Any(o => o.Name == "MedicalClinic01 Extention Wing"))
-                Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
-                {
-                    Name = "MedicalClinic01 Extention Wing",
-                    Upkeep = 25000,
-                    WaterConsumption = 500,
-                    ElectricityConsumption = 1000,
-                    GarbageAccumulation = 700,
-                    AmbulanceCapacity = 0,
-                    HelicopterCapacity = 0,
-                    PatientCapacity = 25,
-                    TreatmentBonus = 0
-
-                });
-
-            if (!Healthcare_Options.Any(o => o.Name == "Hospital01 Helipad"))
-                Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
-                {
-                    Name = "Hospital01 Helipad",
-                    Upkeep = 35000,
-                    WaterConsumption = 250,
-                    ElectricityConsumption = 1000,
-                    GarbageAccumulation = 1000,
-                    AmbulanceCapacity = 0,
-                    HelicopterCapacity = 1,
-                    PatientCapacity = 0,
-                    TreatmentBonus = 0
-
-                });
-
-            if (!Healthcare_Options.Any(o => o.Name == "Hospital01 Special Ward"))
-                Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
-                {
-                    Name = "Hospital01 Special Ward",
-                    Upkeep = 100000,
-                    WaterConsumption = 2500,
-                    ElectricityConsumption = 2000,
-                    GarbageAccumulation = 3200,
-                    AmbulanceCapacity = 0,
-                    HelicopterCapacity = 0,
-                    PatientCapacity = 0,
-                    TreatmentBonus = 0
-
-                });
-
-            if (!Healthcare_Options.Any(o => o.Name == "Hospital01 Trauma Center"))
-                Healthcare_Options = Healthcare_Options.Append(new HealthcareOptions
-                {
-                    Name = "Hospital01 Trauma Center",
-                    Upkeep = 80000,
-                    WaterConsumption = 2500,
-                    ElectricityConsumption = 2000,
-                    GarbageAccumulation = 3200,
-                    AmbulanceCapacity = 0,
-                    HelicopterCapacity = 0,
-                    PatientCapacity = 0,
-                    TreatmentBonus = 15
-
-                });
-
-            if (!DeliveryTruck_Options.Any(o => o.Name == "CoalTruck01"))
-                DeliveryTruck_Options = DeliveryTruck_Options.Append(new DeliveryTruckOptions
-                {
-                    Name = "CoalTruck01",
-                    CargoCapacity = 20000,
-                    CostToDrive = 150
-
-                });
-
-            if (!DeliveryTruck_Options.Any(o => o.Name == "OilTruck01"))
-                DeliveryTruck_Options = DeliveryTruck_Options.Append(new DeliveryTruckOptions
-                {
-                    Name = "OilTruck01",
-                    CargoCapacity = 20000,
-                    CostToDrive = 150
-
-                });
-
-            if (!MaintenanceVehicles_Options.Any(o => o.Name == "ParkMaintenanceVehicle01"))
-                MaintenanceVehicles_Options = MaintenanceVehicles_Options.Append(new MaintenanceVehiclesOptions
-                {
-                    Name = "ParkMaintenanceVehicle01",
-                    MaintenanceCapacity = 1000,
-                    MaintenanceRate = 200
-
-                });
-
-            if (!MaintenanceVehicles_Options.Any(o => o.Name == "RoadMaintenanceVehicle01"))
-                MaintenanceVehicles_Options = MaintenanceVehicles_Options.Append(new MaintenanceVehiclesOptions
-                {
-                    Name = "RoadMaintenanceVehicle01",
-                    MaintenanceCapacity = 1000,
-                    MaintenanceRate = 200
-
-                });
-
-            if (!FireEngine_Options.Any(o => o.Name == "EU_Firetruck01"))
-                FireEngine_Options = FireEngine_Options.Append(new FireEngineOptions
-                {
-                    Name = "EU_Firetruck01",
-                    ExtinguishingRate = 7,
-                    ExtinguishingSpread = 20,
-                    ExtinguishingCapacity = 0,
-                    DestroyedClearDuration = 10
-
-                });
-
-            if (!FireEngine_Options.Any(o => o.Name == "NA_Firetruck01"))
-                FireEngine_Options = FireEngine_Options.Append(new FireEngineOptions
-                {
-                    Name = "NA_Firetruck01",
-                    ExtinguishingRate = 7,
-                    ExtinguishingSpread = 20,
-                    ExtinguishingCapacity = 0,
-                    DestroyedClearDuration = 10
-
-                });
-
-            if (!PoliceCar_Options.Any(o => o.Name == "EU_PoliceVehicle01"))
-                PoliceCar_Options = PoliceCar_Options.Append(new PoliceCarOptions
-                {
-                    Name = "EU_PoliceVehicle01",
-                    CriminalCapacity = 2,
-                    CrimeReductionRate = 5000
-
-                });
-
-            if (!PoliceCar_Options.Any(o => o.Name == "EU_PoliceVehicle02"))
-                PoliceCar_Options = PoliceCar_Options.Append(new PoliceCarOptions
-                {
-                    Name = "EU_PoliceVehicle02",
-                    CriminalCapacity = 2,
-                    CrimeReductionRate = 10000
-
-                });
-
-            if (!PoliceCar_Options.Any(o => o.Name == "NA_PoliceVehicle01"))
-                PoliceCar_Options = PoliceCar_Options.Append(new PoliceCarOptions
-                {
-                    Name = "NA_PoliceVehicle01",
-                    CriminalCapacity = 2,
-                    CrimeReductionRate = 5000
-
-                });
-
-            if (!PoliceCar_Options.Any(o => o.Name == "NA_PoliceVehicle02"))
-                PoliceCar_Options = PoliceCar_Options.Append(new PoliceCarOptions
-                {
-                    Name = "NA_PoliceVehicle02",
-                    CriminalCapacity = 2,
-                    CrimeReductionRate = 10000
-
-                });
-
-            if (!PoliceCar_Options.Any(o => o.Name == "AdministrationVehicle01"))
-                PoliceCar_Options = PoliceCar_Options.Append(new PoliceCarOptions
-                {
-                    Name = "AdministrationVehicle01",
-                    CriminalCapacity = 2,
-                    CrimeReductionRate = 0
-
-                });
-
-            if (!OutsideConnection_Options.Any(o => o.Name == "Road Outside Connection - Twoway"))
-                OutsideConnection_Options = OutsideConnection_Options.Append(new OutsideConnectionOptions
-                {
-                    Name = "Road Outside Connection - Twoway",
-                    StorageLimit = 62000000,
-                    StudentCapacity = 10000,
-                    GraduationModifier = 0f,
-                    AmbulanceCapacity = 30,
-                    HelicopterCapacity = 0,
-                    PatientCapacity = 500,
-                    TreatmentBonus = 12,
-                    GarbageCapacity = 100000,
-                    GarbageVehicleCapacity = 10,
-                    GarbageTransportCapacity = 0,
-                    GarbageProcessingspeed = 0,
-                    FireEngineCapacity = 10,
-                    FireHelicopterCapacity = 0,
-                    DisasterResponseCapacity = 10,
-                    VehicleEfficiency = 1f,
-                    PatrolCarCapacity = 10,
-                    PoliceHelicopterCapacity = 0,
-                    JailCapacity = 1000,
-                    HearseCapacity = 10,
-                    StorageCapacity = 500,
-                    ProcessingRate = 100000f,
-                    VehicleCapacity = 50,
-                    MaintenanceDuration = 0.007f,
-                    ProductionDuration = 0f,
-                    TrafficSpawnerRate = 0.3f
-
-                });
-
-            Healthcare_Options = Healthcare_Options.OrderBy(x => x.Name);
-            DeliveryTruck_Options = DeliveryTruck_Options.OrderBy(x => x.Name);
-            MaintenanceVehicles_Options = MaintenanceVehicles_Options.OrderBy(x => x.Name);
-            FireEngine_Options = FireEngine_Options.OrderBy(x => x.Name);
-            PoliceCar_Options = PoliceCar_Options.OrderBy(x => x.Name);
-            OutsideConnection_Options = OutsideConnection_Options.OrderBy(x => x.Name);
-
-            Version = 325;
+           Version = 325;
         }
+        if (Version == 325)
+        {
+            string[] addedFireFightingHelicopterDepot = ["FireFightingHelicopterDepot01"];
+            foreach (var FireFightingHelicopterDepot in addedFireFightingHelicopterDepot)
+            {
+                if (FireFightingHelicopterDepot_Options.Any(o => o.Name == FireFightingHelicopterDepot)) continue;
 
+                FireFightingHelicopterDepot_Options = FireFightingHelicopterDepot_Options.Append(new FireFightingHelicopterDepotOptions
+                {
+                    Name = FireFightingHelicopterDepot,
+                    Upkeep = 145000,
+                    ElectricityConsumption = 16000,
+                    WaterConsumption = 4000,
+                    GarbageAccumulation = 5300,
+                    NoisePollution = 25000,
+                    FireEngineCapacity = 0,
+                    FireHelicopterCapacity = 5,
+                    VehicleEfficiency = 1,
+                    DisasterResponseCapacity = 0,
+                    AirPollution = 0,
+                    GroundPollution = 0,
+                    TelecomNeed = 0
+                });
+            }
+            FireFightingHelicopterDepot_Options = FireFightingHelicopterDepot_Options.OrderBy(x => x.Name);
+            Version = 326;
+        }
         return Version - initialVersion;
 
     }

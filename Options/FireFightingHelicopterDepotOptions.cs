@@ -1,6 +1,6 @@
 ﻿namespace WhitesharkCheatOverhaul;
 
-public class FireHelicopterDepotOptions :
+public class FireFightingHelicopterDepotOptions :
     IBasePrefabOptions,
     IServiceConsumptionOptions,
     IPollutionOptions,

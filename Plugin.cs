@@ -11,7 +11,7 @@ using Wayz.CS2;
 
 namespace WhitesharkCheatOverhaul;
 
-[BepInPlugin("WhitesharkCheatOverhaul", "WhitesharkCheatOverhaul", "0.3.24")]
+[BepInPlugin("WhitesharkCheatOverhaul", "WhitesharkCheatOverhaul", "0.3.26")]
 public class WhitesharkCheatOverhaul : BaseUnityPlugin
 {
     public static ManualLogSource GameLogger = null!;
@@ -42,7 +42,7 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, SignatureOfficebuildingOptions> SignatureOfficebuildingOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, SignatureMixedbuildingOptions> SignatureMixedbuildingOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, FireStationOptions> FireStationOptions { get; private set; } = null!;
-    public static IReadOnlyDictionary<string, FireHelicopterDepotOptions> FireHelicopterDepotOptions { get; private set; } = null!;
+    public static IReadOnlyDictionary<string, FireFightingHelicopterDepotOptions> FireFightingHelicopterDepotOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, FirewatchTowerOptions> FirewatchTowerOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, PoliceStationOptions> PoliceStationOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, PrisonOptions> PrisonOptions { get; private set; } = null!;
@@ -129,7 +129,7 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.SignatureOfficebuildingOptions = options.GetSignatureOfficebuildingDictionary();
         WhitesharkCheatOverhaul.SignatureMixedbuildingOptions = options.GetSignatureMixedbuildingDictionary();
         WhitesharkCheatOverhaul.FireStationOptions = options.GetFireStationDictionary();
-        WhitesharkCheatOverhaul.FireHelicopterDepotOptions = options.GetFireHelicopterDepotDictionary();
+        WhitesharkCheatOverhaul.FireFightingHelicopterDepotOptions = options.GetFireFightingHelicopterDepotDictionary();
         WhitesharkCheatOverhaul.FirewatchTowerOptions = options.GetFirewatchTowerDictionary();
         WhitesharkCheatOverhaul.PoliceStationOptions = options.GetPoliceStationDictionary();
         WhitesharkCheatOverhaul.PrisonOptions = options.GetPrisonDictionary();
