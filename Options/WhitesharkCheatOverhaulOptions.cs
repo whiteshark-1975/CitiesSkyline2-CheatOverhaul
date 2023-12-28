@@ -1016,6 +1016,7 @@ public class WhitesharkCheatOverhaulOptions
                 GarbageAccumulation = 0,
                 ElectricityProduction = 0,
                 ProductionPerUnit = 7.5f,
+                ElectricityConsumption = 0,
                 ProductionCapacity = 400000,
                 Upkeep = 210000,
                 WaterConsumption = 25000,
@@ -1023,7 +1024,60 @@ public class WhitesharkCheatOverhaulOptions
                 AirPollution = 40000,
                 NoisePollution = 40000,
                 TelecomNeed = 0
+            },
 
+            new IncinerationPlantOptions
+            {
+                Name = "IncinerationPlant01 Extra Incinerator Furnace",
+                GarbageCapacity = 0,
+                GarbageVehicleCapacity = 0,
+                GarbageTransportCapacity = 0,
+                GarbageProcessingspeed = 1500000,
+                GarbageAccumulation = 0,
+                ElectricityProduction = 0,
+                ProductionPerUnit = 75f,
+                ElectricityConsumption = 0,
+                ProductionCapacity = 200000,
+                Upkeep = 85000,
+                WaterConsumption = 15000,
+                GroundPollution = 20000,
+                AirPollution = 20000,
+                NoisePollution = 20000,
+                TelecomNeed = 0
+            },
+
+            new IncinerationPlantOptions
+            {
+                Name = "IncinerationPlant01 Garbage Truck Depot",
+                GarbageCapacity = 0,
+                GarbageVehicleCapacity = 25,
+                GarbageTransportCapacity = 0,
+                GarbageProcessingspeed = 0,
+                GarbageAccumulation = 0,
+                ElectricityConsumption = 0,
+                Upkeep = 40000,
+                WaterConsumption = 0,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 10000,
+                TelecomNeed = 0
+            },
+
+            new IncinerationPlantOptions
+            {
+                Name = "IncinerationPlant01 Storage Extention",
+                GarbageCapacity = 600000,
+                GarbageVehicleCapacity = 0,
+                GarbageTransportCapacity = 0,
+                GarbageProcessingspeed = 0,
+                GarbageAccumulation = 0,
+                ElectricityConsumption = 0,
+                Upkeep = 30000,
+                WaterConsumption = 0,
+                GroundPollution = 5000,
+                AirPollution = 5000,
+                NoisePollution = 5000,
+                TelecomNeed = 0
             },
 
             new IncinerationPlantOptions
@@ -1045,6 +1099,57 @@ public class WhitesharkCheatOverhaulOptions
 
             new IncinerationPlantOptions
             {
+                Name = "Landfill01 Garbage Truck Depot",
+                GarbageCapacity = 0,
+                GarbageVehicleCapacity = 10,
+                GarbageTransportCapacity = 0,
+                GarbageProcessingspeed = 0,
+                GarbageAccumulation = 0,
+                Upkeep = 20000,
+                ElectricityConsumption = 750,
+                WaterConsumption = 0,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 10000,
+                TelecomNeed = 0
+            },
+
+            new IncinerationPlantOptions
+            {
+                Name = "Landfill01 Hazardous Waste Collection Point",
+                GarbageCapacity = 0,
+                GarbageVehicleCapacity = 0,
+                GarbageTransportCapacity = 0,
+                GarbageProcessingspeed = 50000,
+                GarbageAccumulation = 0,
+                Upkeep = 30000,
+                ElectricityConsumption = 750,
+                WaterConsumption = 0,
+                GroundPollution = 5000,
+                AirPollution = 5000,
+                NoisePollution = 5000,
+                TelecomNeed = 0
+            },
+
+            new IncinerationPlantOptions
+            {
+                Name = "Landfill01Waste Recycling Unit",
+                GarbageCapacity = 0,
+                GarbageVehicleCapacity = 0,
+                GarbageTransportCapacity = 0,
+                GarbageProcessingspeed = 50000,
+                GarbageAccumulation = 0,
+                Upkeep = 30000,
+                ElectricityConsumption = 750,
+                WaterConsumption = 1000,
+                GroundPollution = 5000,
+                AirPollution = 5000,
+                NoisePollution = 5000,
+                TelecomNeed = 0
+            },
+
+            new IncinerationPlantOptions
+            {
                 Name = "RecyclingCenter01",
                 GarbageCapacity = 1500000,
                 GarbageVehicleCapacity = 15,
@@ -1057,6 +1162,57 @@ public class WhitesharkCheatOverhaulOptions
                 GroundPollution = 10000,
                 AirPollution = 5000,
                 NoisePollution = 15000,
+                TelecomNeed = 0
+            },
+
+            new IncinerationPlantOptions
+            {
+                Name = "RecyclingCenter01 Garbage Truck Depot",
+                GarbageCapacity = 0,
+                GarbageVehicleCapacity = 15,
+                GarbageTransportCapacity = 0,
+                GarbageProcessingspeed = 0,
+                GarbageAccumulation = 0,
+                Upkeep = 30000,
+                ElectricityConsumption = 750,
+                WaterConsumption = 1000,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 5000,
+                TelecomNeed = 0
+            },
+
+            new IncinerationPlantOptions
+            {
+                Name = "RecyclingCenter01 Hazardous Waste Collection Point",
+                GarbageCapacity = 0,
+                GarbageVehicleCapacity = 0,
+                GarbageTransportCapacity = 0,
+                GarbageProcessingspeed = 50000,
+                GarbageAccumulation = 0,
+                Upkeep = 40000,
+                ElectricityConsumption = 750,
+                WaterConsumption = 2000,
+                GroundPollution = 5000,
+                AirPollution = 5000,
+                NoisePollution = 5000,
+                TelecomNeed = 0
+            },
+
+            new IncinerationPlantOptions
+            {
+                Name = "RecyclingCenter01 Storage Extention",
+                GarbageCapacity = 100000,
+                GarbageVehicleCapacity = 0,
+                GarbageTransportCapacity = 0,
+                GarbageProcessingspeed = 0,
+                GarbageAccumulation = 0,
+                Upkeep = 30000,
+                ElectricityConsumption = 750,
+                WaterConsumption = 0,
+                GroundPollution = 5000,
+                AirPollution = 5000,
+                NoisePollution = 5000,
                 TelecomNeed = 0
             },
 
@@ -4072,7 +4228,210 @@ public class WhitesharkCheatOverhaulOptions
                     TelecomNeed = 0
                 });
             }
+            string[] addedIncinerationPlant = ["IncinerationPlant01 Extra Incinerator Furnace"];
+            foreach (var IncinerationPlant in addedIncinerationPlant)
+            {
+                if (IncinerationPlant_Options.Any(o => o.Name == IncinerationPlant)) continue;
+
+                IncinerationPlant_Options = IncinerationPlant_Options.Append(new IncinerationPlantOptions
+                {
+                    Name = IncinerationPlant,
+                    GarbageCapacity = 0,
+                    GarbageVehicleCapacity = 0,
+                    GarbageTransportCapacity = 0,
+                    GarbageProcessingspeed = 1500000,
+                    GarbageAccumulation = 0,
+                    ElectricityProduction = 0,
+                    ProductionPerUnit = 75f,
+                    ElectricityConsumption = 0,
+                    ProductionCapacity = 200000,
+                    Upkeep = 85000,
+                    WaterConsumption = 15000,
+                    GroundPollution = 20000,
+                    AirPollution = 20000,
+                    NoisePollution = 20000,
+                    TelecomNeed = 0
+                });
+            }
+            string[] addedIncinerationPlant2 = ["IncinerationPlant01 Garbage Truck Depot"];
+            foreach (var IncinerationPlant in addedIncinerationPlant2)
+            {
+                if (IncinerationPlant_Options.Any(o => o.Name == IncinerationPlant)) continue;
+
+                IncinerationPlant_Options = IncinerationPlant_Options.Append(new IncinerationPlantOptions
+                {
+                    Name = IncinerationPlant,
+                    GarbageCapacity = 0,
+                    GarbageVehicleCapacity = 25,
+                    GarbageTransportCapacity = 0,
+                    GarbageProcessingspeed = 0,
+                    GarbageAccumulation = 0,
+                    ElectricityConsumption = 0,
+                    Upkeep = 40000,
+                    WaterConsumption = 0,
+                    GroundPollution = 0,
+                    AirPollution = 0,
+                    NoisePollution = 10000,
+                    TelecomNeed = 0
+                });
+            }
+            string[] addedIncinerationPlant3 = ["IncinerationPlant01 Storage Extention"];
+            foreach (var IncinerationPlant in addedIncinerationPlant3)
+            {
+                if (IncinerationPlant_Options.Any(o => o.Name == IncinerationPlant)) continue;
+
+                IncinerationPlant_Options = IncinerationPlant_Options.Append(new IncinerationPlantOptions
+                {
+                    Name = IncinerationPlant,
+                    GarbageCapacity = 600000,
+                    GarbageVehicleCapacity = 0,
+                    GarbageTransportCapacity = 0,
+                    GarbageProcessingspeed = 0,
+                    GarbageAccumulation = 0,
+                    ElectricityConsumption = 0,
+                    Upkeep = 30000,
+                    WaterConsumption = 0,
+                    GroundPollution = 5000,
+                    AirPollution = 5000,
+                    NoisePollution = 5000,
+                    TelecomNeed = 0
+                });
+            }
+            string[] addedIncinerationPlant4 = ["Landfill01 Garbage Truck Depot"];
+            foreach (var IncinerationPlant in addedIncinerationPlant4)
+            {
+                if (IncinerationPlant_Options.Any(o => o.Name == IncinerationPlant)) continue;
+
+                IncinerationPlant_Options = IncinerationPlant_Options.Append(new IncinerationPlantOptions
+                {
+                    Name = IncinerationPlant,
+                    GarbageCapacity = 0,
+                    GarbageVehicleCapacity = 10,
+                    GarbageTransportCapacity = 0,
+                    GarbageProcessingspeed = 0,
+                    GarbageAccumulation = 0,
+                    Upkeep = 20000,
+                    ElectricityConsumption = 750,
+                    WaterConsumption = 0,
+                    GroundPollution = 0,
+                    AirPollution = 0,
+                    NoisePollution = 10000,
+                    TelecomNeed = 0                
+                });
+            }
+            string[] addedIncinerationPlant5 = ["Landfill01 Hazardous Waste Collection Point"];
+            foreach (var IncinerationPlant in addedIncinerationPlant5)
+            {
+                if (IncinerationPlant_Options.Any(o => o.Name == IncinerationPlant)) continue;
+
+                IncinerationPlant_Options = IncinerationPlant_Options.Append(new IncinerationPlantOptions
+                {
+                    Name = IncinerationPlant,
+                    GarbageCapacity = 0,
+                    GarbageVehicleCapacity = 0,
+                    GarbageTransportCapacity = 0,
+                    GarbageProcessingspeed = 50000,
+                    GarbageAccumulation = 0,
+                    Upkeep = 30000,
+                    ElectricityConsumption = 750,
+                    WaterConsumption = 0,
+                    GroundPollution = 5000,
+                    AirPollution = 5000,
+                    NoisePollution = 5000,
+                    TelecomNeed = 0
+                });
+            }
+            string[] addedIncinerationPlant6 = ["Landfill01Waste Recycling Unit"];
+            foreach (var IncinerationPlant in addedIncinerationPlant6)
+            {
+                if (IncinerationPlant_Options.Any(o => o.Name == IncinerationPlant)) continue;
+
+                IncinerationPlant_Options = IncinerationPlant_Options.Append(new IncinerationPlantOptions
+                {
+                    Name = IncinerationPlant,
+                    GarbageCapacity = 0,
+                    GarbageVehicleCapacity = 0,
+                    GarbageTransportCapacity = 0,
+                    GarbageProcessingspeed = 50000,
+                    GarbageAccumulation = 0,
+                    Upkeep = 30000,
+                    ElectricityConsumption = 750,
+                    WaterConsumption = 1000,
+                    GroundPollution = 5000,
+                    AirPollution = 5000,
+                    NoisePollution = 5000,
+                    TelecomNeed = 0
+                });
+            }
+            string[] addedIncinerationPlant7 = ["RecyclingCenter01 Garbage Truck Depot"];
+            foreach (var IncinerationPlant in addedIncinerationPlant7)
+            {
+                if (IncinerationPlant_Options.Any(o => o.Name == IncinerationPlant)) continue;
+
+                IncinerationPlant_Options = IncinerationPlant_Options.Append(new IncinerationPlantOptions
+                {
+                    Name = IncinerationPlant,
+                    GarbageCapacity = 0,
+                    GarbageVehicleCapacity = 15,
+                    GarbageTransportCapacity = 0,
+                    GarbageProcessingspeed = 0,
+                    GarbageAccumulation = 0,
+                    Upkeep = 30000,
+                    ElectricityConsumption = 750,
+                    WaterConsumption = 1000,
+                    GroundPollution = 0,
+                    AirPollution = 0,
+                    NoisePollution = 5000,
+                    TelecomNeed = 0
+                });
+            }
+            string[] addedIncinerationPlant8 = ["RecyclingCenter01 Hazardous Waste Collection Point"];
+            foreach (var IncinerationPlant in addedIncinerationPlant8)
+            {
+                if (IncinerationPlant_Options.Any(o => o.Name == IncinerationPlant)) continue;
+
+                IncinerationPlant_Options = IncinerationPlant_Options.Append(new IncinerationPlantOptions
+                {
+                    Name = IncinerationPlant,
+                    GarbageCapacity = 0,
+                    GarbageVehicleCapacity = 0,
+                    GarbageTransportCapacity = 0,
+                    GarbageProcessingspeed = 50000,
+                    GarbageAccumulation = 0,
+                    Upkeep = 40000,
+                    ElectricityConsumption = 750,
+                    WaterConsumption = 2000,
+                    GroundPollution = 5000,
+                    AirPollution = 5000,
+                    NoisePollution = 5000,
+                    TelecomNeed = 0
+                });
+            }
+            string[] addedIncinerationPlant9 = ["RecyclingCenter01 Storage Extention"];
+            foreach (var IncinerationPlant in addedIncinerationPlant9)
+            {
+                if (IncinerationPlant_Options.Any(o => o.Name == IncinerationPlant)) continue;
+
+                IncinerationPlant_Options = IncinerationPlant_Options.Append(new IncinerationPlantOptions
+                {
+                    Name = IncinerationPlant,
+                    GarbageCapacity = 100000,
+                    GarbageVehicleCapacity = 0,
+                    GarbageTransportCapacity = 0,
+                    GarbageProcessingspeed = 0,
+                    GarbageAccumulation = 0,
+                    Upkeep = 30000,
+                    ElectricityConsumption = 750,
+                    WaterConsumption = 0,
+                    GroundPollution = 5000,
+                    AirPollution = 5000,
+                    NoisePollution = 5000,
+                    TelecomNeed = 0
+                });
+            }
+
             FireFightingHelicopterDepot_Options = FireFightingHelicopterDepot_Options.OrderBy(x => x.Name);
+            IncinerationPlant_Options = IncinerationPlant_Options.OrderBy(x => x.Name);
             Version = 326;
         }
         return Version - initialVersion;

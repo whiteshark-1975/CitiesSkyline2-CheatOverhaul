@@ -118,7 +118,7 @@ public static class PrefabPatcher
             ModifyStats.ModifyServiceConsumption(prefab, IncinerationPlantOptions);
             ModifyStats.ModifyPollution(prefab, IncinerationPlantOptions);
             ModifyStats.ModifyGarbageFacility(prefab, IncinerationPlantOptions);
-            if (prefab.name == "IncinerationPlant01")
+            if (prefab.name == "IncinerationPlant01" || prefab.name == "IncinerationPlant01 Extra Incinerator Furnace")
             {
                 ModifyStats.ModifyPowerPlant(prefab, IncinerationPlantOptions);
                 ModifyStats.ModifyGarbagePowered(prefab, IncinerationPlantOptions);                               
