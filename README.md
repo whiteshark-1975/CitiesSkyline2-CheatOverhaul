@@ -15,8 +15,8 @@
 * ParkinghallOptions - Upgrades Completed 
 * CityparkOptions - Upgrades Completed 
 * WastewaterOptions - Upgrades Completed 
-* IncinerationPlantOptions
-* HealthcareOptions
+* IncinerationPlantOptions - Upgrades Completed 
+* HealthcareOptions - Upgrades Completed
 * PostofficeOptions - Upgrades Completed 
 * CemeteryOptions
 * CrematoriumOptions

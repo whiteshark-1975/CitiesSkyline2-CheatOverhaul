@@ -1,7 +1,5 @@
 ## DO NOT ADD CONFIG TO THE FILE ONLY THE VALUES IN THE FILE CAN BE EDITED.
-* DELETE YOUR SettingsFile for this version.
-* Past days i have been cleaning up the code and making the statnames more Clean this will require you to delete the settings file.
-* The used structure will not change anymore so this will be the last time im asking to delete the file.
+* NEW UPDATE METHOD YOU DO NOT NEED TO DELETE your settings file after using 0.3.23
 * NEXT update all your settings will remain and only the new items will be added to your settings file.
 * Should you have messed up please delete the settingsfile and the mod will create a new file on next startup.
 * \AppData\LocalLow\Colossal Order\Cities Skylines II\ModSettings\WhitesharkCheatOverhaul\settings.json
@@ -17,8 +15,8 @@
 * ParkinghallOptions - Upgrades Completed 
 * CityparkOptions - Upgrades Completed 
 * WastewaterOptions - Upgrades Completed 
-* IncinerationPlantOptions
-* HealthcareOptions
+* IncinerationPlantOptions - Upgrades Completed 
+* HealthcareOptions - Upgrades Completed
 * PostofficeOptions - Upgrades Completed 
 * CemeteryOptions
 * CrematoriumOptions
