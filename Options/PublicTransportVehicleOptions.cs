@@ -7,7 +7,7 @@ public class PublicTransportVehicleOptions :
     public string Name { get; set; } = null!;
 
     public int PassengerCapacity { get; set; }
-    public int Maintenancerange { get; set; }
+    public float Maintenancerange { get; set; }
     
 
 }

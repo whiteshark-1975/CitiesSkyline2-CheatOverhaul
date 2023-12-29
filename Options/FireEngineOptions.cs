@@ -6,9 +6,9 @@ public class FireEngineOptions :
 {
     public string Name { get; set; } = null!;
 
-    public int ExtinguishingRate { get; set; }
-    public int ExtinguishingSpread { get; set; }
-    public int ExtinguishingCapacity { get; set; }
-    public int DestroyedClearDuration { get; set; }
+    public float ExtinguishingRate { get; set; }
+    public float ExtinguishingSpread { get; set; }
+    public float ExtinguishingCapacity { get; set; }
+    public float DestroyedClearDuration { get; set; }
 
 }

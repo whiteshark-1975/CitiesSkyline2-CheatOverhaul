@@ -18,7 +18,7 @@ public class AirportOptions :
     public int ElectricityConsumption { get; set; }
     public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int TelecomNeed { get; set; }
+    public float TelecomNeed { get; set; }
     public int StorageLimit { get; set; }
     public int Transports { get; set; }
     public float ComfortFactor { get; set; }

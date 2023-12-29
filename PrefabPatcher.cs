@@ -155,14 +155,14 @@ public static class PrefabPatcher
         if (WhitesharkCheatOverhaul.CemeteryOptions.TryGetValue(prefab.name, out CemeteryOptions CemeteryOptions))
         {
             ModifyStats.ModifyServiceConsumption(prefab, CemeteryOptions);
-            ModifyStats.ModifyIDeathcareFacility(prefab, CemeteryOptions);
+            ModifyStats.ModifyDeathcareFacility(prefab, CemeteryOptions);
             ModifyStats.ModifyLeisureProvider(prefab, CemeteryOptions);
         }
         if (WhitesharkCheatOverhaul.CrematoriumOptions.TryGetValue(prefab.name, out CrematoriumOptions CrematoriumOptions))
         {
             ModifyStats.ModifyServiceConsumption(prefab, CrematoriumOptions);
             ModifyStats.ModifyPollution(prefab, CrematoriumOptions);
-            ModifyStats.ModifyIDeathcareFacility(prefab, CrematoriumOptions);            
+            ModifyStats.ModifyDeathcareFacility(prefab, CrematoriumOptions);            
         }
         if (WhitesharkCheatOverhaul.WindturbineOptions.TryGetValue(prefab.name, out WindturbineOptions WindturbineOptions))
         {
@@ -430,7 +430,7 @@ public static class PrefabPatcher
             ModifyStats.ModifyGarbageFacility(prefab, OutsideConnectionOptions);
             ModifyStats.ModifyFireStation(prefab, OutsideConnectionOptions);
             ModifyStats.ModifyPoliceStation(prefab, OutsideConnectionOptions);
-            ModifyStats.ModifyIDeathcareFacility(prefab, OutsideConnectionOptions);
+            ModifyStats.ModifyDeathcareFacility(prefab, OutsideConnectionOptions);
             ModifyStats.ModifyPublicTransportDepot(prefab, OutsideConnectionOptions);
             ModifyStats.ModifyTrafficSpawner(prefab, OutsideConnectionOptions);
         }

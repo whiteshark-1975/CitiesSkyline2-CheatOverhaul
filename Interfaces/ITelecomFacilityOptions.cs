@@ -3,6 +3,6 @@
 public interface ITelecomFacilityOptions
 
 {
-    public int TelecomRange { get; set; }
-    public int NetworkCapacity { get; set; }
+    public float TelecomRange { get; set; }
+    public float NetworkCapacity { get; set; }
 }

@@ -33,7 +33,7 @@ public class ModifyStats
         var CargoTransportComponent = prefab.GetComponent<Game.Prefabs.CargoTransportStation>();
         CargoTransportComponent.transports = options.Transports;
     }
-    public static void ModifyIDeathcareFacility(PrefabBase prefab, IDeathcareFacilityOptions options)
+    public static void ModifyDeathcareFacility(PrefabBase prefab, IDeathcareFacilityOptions options)
     {
         var DeathcareFacilityComponent = prefab.GetComponent<Game.Prefabs.DeathcareFacility>();
         DeathcareFacilityComponent.m_HearseCapacity = options.HearseCapacity;

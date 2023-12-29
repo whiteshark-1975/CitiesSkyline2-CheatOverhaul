@@ -15,7 +15,7 @@ public class MaintenanceDepotOptions :
     public int ElectricityConsumption { get; set; }
     public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int TelecomNeed { get; set; }
+    public float TelecomNeed { get; set; }
     public int VehicleCapacity { get; set; }
     public float VehicleEfficiency { get; set; }
     public int GroundPollution { get; set; }

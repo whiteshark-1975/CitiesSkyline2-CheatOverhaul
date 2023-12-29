@@ -3,10 +3,10 @@
 public interface IFireEngineOptions
 
 {
-    public int ExtinguishingCapacity { get; set; }
-    public int ExtinguishingRate { get; set; }
-    public int ExtinguishingSpread { get; set; }
-    public int DestroyedClearDuration { get; set; }
+    public float ExtinguishingCapacity { get; set; }
+    public float ExtinguishingRate { get; set; }
+    public float ExtinguishingSpread { get; set; }
+    public float DestroyedClearDuration { get; set; }
 
 }
 public interface IDeliveryTruckOptions
@@ -38,14 +38,14 @@ public interface IPoliceCarOptions
 
 {
     public int CriminalCapacity { get; set; }
-    public int CrimeReductionRate { get; set; }
+    public float CrimeReductionRate { get; set; }
 
 }
 public interface IPublicTransportVehicle
 
 {
     public int PassengerCapacity { get; set; }
-    public int Maintenancerange { get; set; }
+    public float Maintenancerange { get; set; }
 
 }
 

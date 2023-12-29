@@ -12,7 +12,7 @@ public class LargeEmergencyShelterOptions :
     public int ElectricityConsumption { get; set; }
     public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int TelecomNeed { get; set; }
+    public float TelecomNeed { get; set; }
     public float ServiceCoverageRange { get; set; }
     public float ServiceCoverageCapacity { get; set; }
     public float ServiceCoverageMagnitude { get; set; }

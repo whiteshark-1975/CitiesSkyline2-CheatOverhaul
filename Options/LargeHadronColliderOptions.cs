@@ -16,7 +16,7 @@ public class LargeHadronColliderOptions :
     public int ElectricityConsumption { get; set; }
     public int WaterConsumption { get; set; }
     public int GarbageAccumulation { get; set; }
-    public int TelecomNeed { get; set; }
+    public float TelecomNeed { get; set; }
     public float CityUniversityInterest { get; set; }
     public float CityOfficeSoftwareDemand { get; set; }
     public float CityIndustrialElectronicDemand { get; set; }
