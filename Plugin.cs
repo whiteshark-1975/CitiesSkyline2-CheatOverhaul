@@ -11,7 +11,7 @@ using Wayz.CS2;
 
 namespace WhitesharkCheatOverhaul;
 
-[BepInPlugin("WhitesharkCheatOverhaul", "WhitesharkCheatOverhaul", "0.3.26")]
+[BepInPlugin("WhitesharkCheatOverhaul", "WhitesharkCheatOverhaul", "0.3.27")]
 public class WhitesharkCheatOverhaul : BaseUnityPlugin
 {
     public static ManualLogSource GameLogger = null!;
@@ -70,7 +70,7 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
     public static IReadOnlyDictionary<string, FireEngineOptions> FireEngineOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, PoliceCarOptions> PoliceCarOptions { get; private set; } = null!;
     public static IReadOnlyDictionary<string, OutsideConnectionOptions> OutsideConnectionOptions { get; private set; } = null!;
-
+    public static IReadOnlyDictionary<string, MaintenanceDepotOptions> MaintenanceDepotOptions { get; private set; } = null!;
 
     private void Awake()
     {
@@ -157,10 +157,10 @@ public class WhitesharkCheatOverhaul : BaseUnityPlugin
         WhitesharkCheatOverhaul.FireEngineOptions = options.GetFireEngineDictionary();
         WhitesharkCheatOverhaul.PoliceCarOptions = options.GetPoliceCarDictionary();
         WhitesharkCheatOverhaul.OutsideConnectionOptions = options.GetOutsideConnectionDictionary();
-
-
-
+        WhitesharkCheatOverhaul.MaintenanceDepotOptions = options.GetMaintenanceDepotDictionary();
         
+
+
 
         var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
 

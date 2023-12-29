@@ -2984,6 +2984,84 @@ public class WhitesharkCheatOverhaulOptions
 
             }
         },
+        MaintenanceDepot_Options = new List<MaintenanceDepotOptions>
+        {
+            new MaintenanceDepotOptions
+            {
+                Name = "RoadMaintenanceDepot01",
+                Upkeep = 30000,
+                ElectricityConsumption = 1000,
+                WaterConsumption = 1000,
+                GarbageAccumulation = 5000,
+                TelecomNeed = 0,
+                VehicleCapacity = 10,
+                VehicleEfficiency = 1f,
+                GroundPollution = 0,
+                AirPollution = 0,   
+                NoisePollution = 5000
+
+            },
+            new MaintenanceDepotOptions
+            {
+                Name = "RoadMaintenanceDepot01 Extra Garage",
+                Upkeep = 15000,
+                ElectricityConsumption = 500,
+                WaterConsumption = 500,
+                GarbageAccumulation = 1000,
+                TelecomNeed = 0,
+                VehicleCapacity = 5,
+                VehicleEfficiency = 1f,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 2500
+
+            },
+            new MaintenanceDepotOptions
+            {
+                Name = "ParkMaintenanceDepot01",
+                Upkeep = 40000,
+                ElectricityConsumption = 1500,
+                WaterConsumption = 2000,
+                GarbageAccumulation = 700,
+                TelecomNeed = 0,
+                VehicleCapacity = 10,
+                VehicleEfficiency = 1f,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 5000
+
+            },
+            new MaintenanceDepotOptions
+            {
+                Name = "ParkMaintenanceDepot01 Extra Garage",
+                Upkeep = 12500,
+                ElectricityConsumption = 750,
+                WaterConsumption = 250,
+                GarbageAccumulation = 400,
+                TelecomNeed = 0,
+                VehicleCapacity = 5,
+                VehicleEfficiency = 1f,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 1500
+
+            },
+            new MaintenanceDepotOptions
+            {
+                Name = "ParkMaintenanceDepot01 Supply Storage",
+                Upkeep = 11500,
+                ElectricityConsumption = 750,
+                WaterConsumption = 250,
+                GarbageAccumulation = 400,
+                TelecomNeed = 0,
+                VehicleCapacity = 0,
+                VehicleEfficiency = 0.5f,
+                GroundPollution = 0,
+                AirPollution = 0,
+                NoisePollution = 1500
+
+            }
+        }
 
 
     };
@@ -3043,7 +3121,7 @@ public class WhitesharkCheatOverhaulOptions
     public IEnumerable<FireEngineOptions> FireEngine_Options { get; set; } = new List<FireEngineOptions>();
     public IEnumerable<PoliceCarOptions> PoliceCar_Options { get; set; } = new List<PoliceCarOptions>();
     public IEnumerable<OutsideConnectionOptions> OutsideConnection_Options { get; set; } = new List<OutsideConnectionOptions>();
-
+    public IEnumerable<MaintenanceDepotOptions> MaintenanceDepot_Options { get; set; } = new List<MaintenanceDepotOptions>();
 
     public IReadOnlyDictionary<string, SchoolOptions> GetSchoolDictionary()
     {
@@ -3523,7 +3601,15 @@ public class WhitesharkCheatOverhaulOptions
         }
         return OutsideConnectiondict;
     }
-
+    public IReadOnlyDictionary<string, MaintenanceDepotOptions> GetMaintenanceDepotDictionary()
+    {
+        var MaintenanceDepotdict = new Dictionary<string, MaintenanceDepotOptions>();
+        foreach (var MaintenanceDepot_option in MaintenanceDepot_Options)
+        {
+            MaintenanceDepotdict.Add(MaintenanceDepot_option.Name, MaintenanceDepot_option);
+        }
+        return MaintenanceDepotdict;
+    }
 
 
 
@@ -4189,7 +4275,19 @@ public class WhitesharkCheatOverhaulOptions
         x.MaintenanceDuration >= 0 &&
         x.ProductionDuration >= 0 &&
         x.TrafficSpawnerRate >= 0);
-
+        
+        MaintenanceDepot_Options = MaintenanceDepot_Options.Where(
+        x => !string.IsNullOrEmpty(x.Name) &&
+        x.Upkeep >= 0 &&
+        x.ElectricityConsumption >= 0 &&
+        x.WaterConsumption >= 0 &&
+        x.GarbageAccumulation >= 0 &&
+        x.TelecomNeed >= 0 &&
+        x.AirPollution >= 0 &&
+        x.GroundPollution >= 0 &&
+        x.NoisePollution >= 0 &&
+        x.VehicleCapacity >= 0 &&
+        x.VehicleEfficiency >= 0);
 
     }
 
@@ -4433,6 +4531,112 @@ public class WhitesharkCheatOverhaulOptions
             FireFightingHelicopterDepot_Options = FireFightingHelicopterDepot_Options.OrderBy(x => x.Name);
             IncinerationPlant_Options = IncinerationPlant_Options.OrderBy(x => x.Name);
             Version = 326;
+        }
+        if (Version == 326)
+        {
+            string[] addedMaintenanceDepot = ["RoadMaintenanceDepot01"];
+            foreach (var MaintenanceDepot in addedMaintenanceDepot)
+            {
+                if (MaintenanceDepot_Options.Any(o => o.Name == MaintenanceDepot)) continue;
+
+                MaintenanceDepot_Options = MaintenanceDepot_Options.Append(new MaintenanceDepotOptions
+                {
+                    Name = MaintenanceDepot,
+                    Upkeep = 30000,
+                    ElectricityConsumption = 1000,
+                    WaterConsumption = 1000,
+                    GarbageAccumulation = 5000,
+                    TelecomNeed = 0,
+                    VehicleCapacity = 10,
+                    VehicleEfficiency = 1f,
+                    GroundPollution = 0,
+                    AirPollution = 0,
+                    NoisePollution = 5000
+                });
+            }
+            string[] addedMaintenanceDepot2 = ["ParkMaintenanceDepot01"];
+            foreach (var MaintenanceDepot in addedMaintenanceDepot2)
+            {
+                if (MaintenanceDepot_Options.Any(o => o.Name == MaintenanceDepot)) continue;
+
+                MaintenanceDepot_Options = MaintenanceDepot_Options.Append(new MaintenanceDepotOptions
+                {
+                    Name = MaintenanceDepot,
+                    Upkeep = 40000,
+                    ElectricityConsumption = 1000,
+                    WaterConsumption = 2000,
+                    GarbageAccumulation = 700,
+                    TelecomNeed = 0,
+                    VehicleCapacity = 10,
+                    VehicleEfficiency = 1f,
+                    GroundPollution = 0,
+                    AirPollution = 0,
+                    NoisePollution = 5000
+                });
+            }
+            string[] addedMaintenanceDepot3 = ["RoadMaintenanceDepot01 Extra Garage"];
+            foreach (var MaintenanceDepot in addedMaintenanceDepot3)
+            {
+                if (MaintenanceDepot_Options.Any(o => o.Name == MaintenanceDepot)) continue;
+
+                MaintenanceDepot_Options = MaintenanceDepot_Options.Append(new MaintenanceDepotOptions
+                {
+                    Name = MaintenanceDepot,
+                    Upkeep = 15000,
+                    ElectricityConsumption = 500,
+                    WaterConsumption = 500,
+                    GarbageAccumulation = 1000,
+                    TelecomNeed = 0,
+                    VehicleCapacity = 5,
+                    VehicleEfficiency = 1f,
+                    GroundPollution = 0,
+                    AirPollution = 0,
+                    NoisePollution = 2500
+                });
+            }
+            string[] addedMaintenanceDepot4 = ["ParkMaintenanceDepot01 Extra Garage"];
+            foreach (var MaintenanceDepot in addedMaintenanceDepot4)
+            {
+                if (MaintenanceDepot_Options.Any(o => o.Name == MaintenanceDepot)) continue;
+
+                MaintenanceDepot_Options = MaintenanceDepot_Options.Append(new MaintenanceDepotOptions
+                {
+                    Name = MaintenanceDepot,
+                    Upkeep = 12500,
+                    ElectricityConsumption = 750,
+                    WaterConsumption = 250,
+                    GarbageAccumulation = 400,
+                    TelecomNeed = 0,
+                    VehicleCapacity = 5,
+                    VehicleEfficiency = 1f,
+                    GroundPollution = 0,
+                    AirPollution = 0,
+                    NoisePollution = 1500
+                });
+            }
+            string[] addedMaintenanceDepot5 = ["ParkMaintenanceDepot01 Supply Storage"];
+            foreach (var MaintenanceDepot in addedMaintenanceDepot5)
+            {
+                if (MaintenanceDepot_Options.Any(o => o.Name == MaintenanceDepot)) continue;
+
+                MaintenanceDepot_Options = MaintenanceDepot_Options.Append(new MaintenanceDepotOptions
+                {
+                    Name = MaintenanceDepot,
+                    Upkeep = 11500,
+                    ElectricityConsumption = 750,
+                    WaterConsumption = 250,
+                    GarbageAccumulation = 400,
+                    TelecomNeed = 0,
+                    VehicleCapacity = 0,
+                    VehicleEfficiency = 0.5f,
+                    GroundPollution = 0,
+                    AirPollution = 0,
+                    NoisePollution = 1500
+                });
+            }
+
+
+            Version = 327;
         }
         return Version - initialVersion;
 

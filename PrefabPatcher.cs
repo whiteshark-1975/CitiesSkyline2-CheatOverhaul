@@ -434,7 +434,13 @@ public static class PrefabPatcher
             ModifyStats.ModifyPublicTransportDepot(prefab, OutsideConnectionOptions);
             ModifyStats.ModifyTrafficSpawner(prefab, OutsideConnectionOptions);
         }
-     
+        if (WhitesharkCheatOverhaul.MaintenanceDepotOptions.TryGetValue(prefab.name, out MaintenanceDepotOptions MaintenanceDepotOptions))
+        {
+            ModifyStats.ModifyServiceConsumption(prefab, MaintenanceDepotOptions);
+            ModifyStats.ModifyMaintenanceDepot(prefab, MaintenanceDepotOptions);
+            ModifyStats.ModifyPollution(prefab, MaintenanceDepotOptions);
+        }
+
         return true;
     }
 }

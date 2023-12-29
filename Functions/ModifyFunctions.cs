@@ -425,7 +425,12 @@ public class ModifyStats
         TrafficspawnerComponent.m_SpawnRate = options.TrafficSpawnerRate;
     }
 
-
+    public static void ModifyMaintenanceDepot(PrefabBase prefab, IMaintenanceDepotOptions options)
+    {
+        var MaintenanceDepotComponent = prefab.GetComponent<Game.Prefabs.MaintenanceDepot>();
+        MaintenanceDepotComponent.m_VehicleCapacity = options.VehicleCapacity;
+        MaintenanceDepotComponent.m_VehicleEfficiency = options.VehicleEfficiency;
+    }
 
 
 
